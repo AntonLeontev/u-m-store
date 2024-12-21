@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><span>Профиль</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Профиль</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user active"><a href="#">Профиль</a></li>
+                                <li><a href="#">Настройки Профиля</a></li>
+                                <li><a href="#">Уведомления</a></li>
+                                <li class="menu__arrow menu__arrow--one" id="menuArrowOne"><a href="#">Заказы</a>
+                                    <div class="hide__list hide__list--one" id="hideListOne">
+                                        <ul>
+                                            <li><a href="#">Доставки</a></li>
+                                            <li><a href="#">История заказов</a></li>
+                                            <li><a href="#">Отзывы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__arrow menu__arrow--two"  id="menuArrowTwo"><a href="#">Бонусы и промокоды</a>
+                                    <div class="hide__list hide__list--two" id="hideListTwo">
+                                        <ul>
+                                            <li><a href="#">Бонусы</a></li>
+                                            <li><a href="#">Промокоды</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Реферальная программа</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="profile__bigboxing">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Уведомления</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox5" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Бонусы и промокоды</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox6" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox6">Доставки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox7" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox7">Электронные чеки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox8" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox8">Реферальная программа</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox9" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Выйти</label>
+                                </div>
+                            </div>
+                            <div class="profile__info">
+                                <div class="profile__item">
+                                    <div class="profile__description">Личная информация</div>
+                                    <div class="profile__row">
+                                        <div class="profile__one">Имя:</div>
+                                        <div class="profile__one">Иван</div>
+                                    </div>
+                                    <div class="profile__row">
+                                        <div class="profile__one">Фамилия:</div>
+                                        <div class="profile__one">Иванов</div>
+                                    </div>
+                                    <div class="profile__row">
+                                        <div class="profile__one">Телефон:</div>
+                                        <div class="profile__one">+7999999</div>
+                                    </div>
+                                    <div class="profile__row">
+                                        <div class="profile__one">E-mail:</div>
+                                        <div class="profile__one">kizhukova@gmail.com</div>
+                                    </div>
+                                    <div class="profile__more">
+                                        <a class="profile__exit" href="#">Выйти</a>
+                                    </div>
+                                    <div class="profile__set">
+                                        <a href="#"><img src="images/set.svg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="profile__item">
+                                    <div class="profile__description">Доставки</div>
+                                    <div class="profile__row">
+                                        <div class="profile__one">Дата:</div>
+                                        <div class="profile__one">20.06.2021</div>
+                                    </div>
+                                    <div class="profile__row">
+                                        <div class="profile__one">Номер заказа:</div>
+                                        <div class="profile__one">123456</div>
+                                    </div>
+                                    <div class="profile__more">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="profile__item">
+                                    <div class="profile__description">Бонусы и промокоды</div>
+                                    <div class="profile__row">
+                                        <div class="profile__one">Количество бонусов:</div>
+                                        <div class="profile__one">650</div>
+                                    </div>
+                                    <div class="profile__row">
+                                        <div class="profile__one profile__italic">Вы можете оплатить ими до 50% заказа</div>
+                                    </div>
+                                    <div class="profile__row">
+                                        <div class="profile__one profile__active">Активные промокоды</div>
+                                        <div class="profile__one"></div>
+                                    </div>
+                                    <div class="profile__more">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="profile__item">
+                                    <div class="profile__description">Электронные чеки</div>
+                                    <div class="profile__nochek">
+                                        <div class="profile__row">
+                                            <div class="profile__one">Все Ваши чеки будут отображаться в этом разделе</div>
+                                        </div>
+                                    </div>
+                                    <div class="profile__chek">
+                                        <div class="profile__row">
+                                            <div class="profile__one">Дата:</div>
+                                            <div class="profile__one">20.06.2021</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Номер заказа:</div>
+                                            <div class="profile__one">123456</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Сумма:</div>
+                                            <div class="profile__one">100 000 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="profile__more">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

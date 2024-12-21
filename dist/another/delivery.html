@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/file.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Заказы</a></li>
+                            <li><span>Доставки</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Профиль</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user active"><a href="#">Профиль</a></li>
+                                <li><a href="#">Настройки Профиля</a></li>
+                                <li><a href="#">Уведомления</a></li>
+                                <li class="menu__arrow menu__arrow--one" id="menuArrowOne"><a href="#" class="clicked">Заказы</a>
+                                    <div class="hide__list hide__list--one" id="hideListOne" style="display: block;">
+                                        <ul>
+                                            <li class="active"><a href="#">Доставки</a></li>
+                                            <li><a href="#">История заказов</a></li>
+                                            <li><a href="#">Отзывы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__arrow menu__arrow--two" id="menuArrowTwo"><a href="#">Бонусы и промокоды</a>
+                                    <div class="hide__list hide__list--two" id="hideListTwo">
+                                        <ul>
+                                            <li><a href="#">Бонусы</a></li>
+                                            <li><a href="#">Промокоды</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Реферальная программа</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="delivery__inner">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Уведомления</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox5" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Бонусы и промокоды</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox6" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox6">Доставки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox7" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox7">Электронные чеки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox8" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox8">Реферальная программа</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox9" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Выйти</label>
+                                </div>
+                            </div>
+                            <div class="delivery__top">
+                                <div class="delivery__data">Дата</div>
+                                <div class="delivery__num">№ заказа</div>
+                                <div class="delivery__address">Адрес</div>
+                                <div class="delivery__sum">Сумма</div>
+                                <div class="delivery__pos">Статус заказа</div>
+                            </div>
+                            <div class="delivery__block">
+                                <div class="delivery__item">
+                                    <div class="delivery__when">10.06.2021</div>
+                                    <div class="delivery__trek">012354</div>
+                                    <div class="delivery__image">
+                                        <img src="images/empty.svg" alt="">
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                    <div class="delivery__money">1000 ₽</div>
+                                    <div class="delivery__description">Формирование заказа</div>
+                                </div>
+                                <div class="delivery__mob">
+                                    <div class="delivery__one">
+                                        <div class="delivery__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="delivery__info">
+                                            <div class="delivery__row">
+                                                <div class="delivery__data">Дата</div>
+                                                <div class="delivery__when">10.06.2021</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__num">№ заказа</div>
+                                                <div class="delivery__trek">012354</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__sum">Сумма</div>
+                                                <div class="delivery__money">1000 Р</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__pos">Статус заказа</div>
+                                                <div class="delivery__description">Готов к выдаче</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                </div>
+                            </div>
+                            <div class="delivery__block">
+                                <div class="delivery__item">
+                                    <div class="delivery__when">10.06.2021</div>
+                                    <div class="delivery__trek">012354</div>
+                                    <div class="delivery__image">
+                                        <img src="images/empty.svg" alt="">
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                    <div class="delivery__money">1000 ₽</div>
+                                    <div class="delivery__description">Формирование заказа</div>
+                                </div>
+                                <div class="delivery__mob">
+                                    <div class="delivery__one">
+                                        <div class="delivery__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="delivery__info">
+                                            <div class="delivery__row">
+                                                <div class="delivery__data">Дата</div>
+                                                <div class="delivery__when">10.06.2021</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__num">№ заказа</div>
+                                                <div class="delivery__trek">012354</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__sum">Сумма</div>
+                                                <div class="delivery__money">1000 Р</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__pos">Статус заказа</div>
+                                                <div class="delivery__description">Формирование заказа</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                </div>
+                            </div>
+                            <div class="delivery__block">
+                                <div class="delivery__item">
+                                    <div class="delivery__when">10.06.2021</div>
+                                    <div class="delivery__trek">012354</div>
+                                    <div class="delivery__image">
+                                        <img src="images/empty.svg" alt="">
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                    <div class="delivery__money">1000 ₽</div>
+                                    <div class="delivery__description">Формирование заказа</div>
+                                </div>
+                                <div class="delivery__mob">
+                                    <div class="delivery__one">
+                                        <div class="delivery__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="delivery__info">
+                                            <div class="delivery__row">
+                                                <div class="delivery__data">Дата</div>
+                                                <div class="delivery__when">10.06.2021</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__num">№ заказа</div>
+                                                <div class="delivery__trek">012354</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__sum">Сумма</div>
+                                                <div class="delivery__money">1000 Р</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__pos">Статус заказа</div>
+                                                <div class="delivery__description">Формирование заказа</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                </div>
+                            </div>
+                            <div class="delivery__block">
+                                <div class="delivery__item">
+                                    <div class="delivery__when">10.06.2021</div>
+                                    <div class="delivery__trek">012354</div>
+                                    <div class="delivery__image">
+                                        <img src="images/empty.svg" alt="">
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                    <div class="delivery__money">1000 ₽</div>
+                                    <div class="delivery__description">Формирование заказа</div>
+                                </div>
+                                <div class="delivery__mob">
+                                    <div class="delivery__one">
+                                        <div class="delivery__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="delivery__info">
+                                            <div class="delivery__row">
+                                                <div class="delivery__data">Дата</div>
+                                                <div class="delivery__when">10.06.2021</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__num">№ заказа</div>
+                                                <div class="delivery__trek">012354</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__sum">Сумма</div>
+                                                <div class="delivery__money">1000 Р</div>
+                                            </div>
+                                            <div class="delivery__row">
+                                                <div class="delivery__pos">Статус заказа</div>
+                                                <div class="delivery__description">Формирование заказа</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery__where">Москва, ул Тимирязевская, д. 6 4, стр. 1, кв. 24</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

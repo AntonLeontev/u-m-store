@@ -1,0 +1,417 @@
+@push('head')
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{asset('css/normilze.css')}}">
+    <link rel="stylesheet" href="{{asset('css/doc.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+@endpush
+<div>
+    <div class="wrapper">
+        <div class="content">
+            <section class="major">
+                <div class="container">
+                    <div class="major__inner">
+                        <div class="major__breadcrumbs">
+                            <ul>
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Профиль партнера</a></li>
+                                <li><span>Кошелёк</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="profile">
+                <div class="container">
+                    <div class="profile__inner">
+                        <div class="profile__title active">Профиль партнера</div>
+                        <div class="profile__wrapper">
+                            @include('livewire.admin.includes.main-menu')
+                            <div class="profile__bigboxing">
+                                @include('livewire.admin.includes.mobile-main-menu')
+                                <div class="wallet__inner">
+                                    <div class="wallet__card">
+                                        <div class="wallet__left">
+                                            <div class="wallet__text">UM Кошелёк</div>
+                                            <div class="wallet__dots">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <div class="wallet__right">
+                                            <div class="wallet__name">Ваш баланс</div>
+                                            <div class="wallet__balance">2500 ₽</div>
+                                            <div class="wallet__num">4100 1685 7038 095</div>
+                                            <div class="wallet__viv"><a href="#">Вывести средства</a></div>
+                                            <div class="wallet__action">
+                                                <div class="wallet__add">
+                                                    <a href="#" class="active">Пополнить</a>
+                                                </div>
+                                                <div class="wallet__tranz">
+                                                    <a href="#">Транзакции</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet__input wallet__vivInput">
+                                        <label><input type="text">₽</label>
+                                    </div>
+                                    <div class="wallet__choose">
+                                        <div class="wallet__ways">Выберете способ пополнения</div>
+                                        <div class="wallet__kassa wallet__kassaOne">
+                                            <a href="#">Пополнение UM кошелька через <img src="images/kassa.png" alt=""></a>
+                                        </div>
+                                        <div class="wallet__schet wallet__schetOne">
+                                            <a href="#">Пополнение UM кошелька через расчетный счет</a>
+                                        </div>
+                                    </div>
+                                    <div class="wallet__outmoney">
+                                        <div class="wallet__ways">Выберете способ вывода средств</div>
+                                        <div class="wallet__kassa wallet__kassaTwo">
+                                            <a href="#">На банковскую карту</a>
+                                        </div>
+                                        <div class="wallet__schet wallet__schetTwo">
+                                            <a href="#">На расчетный счет</a>
+                                        </div>
+                                    </div>
+                                    <div class="wallet__tranzaction">
+                                        <div class="wallet__tranzact">
+                                            <div class="wallet__znak">
+                                                <img src="images/wallet_minus.svg" alt="">
+                                            </div>
+                                            <div class="wallet__texting">
+                                                <div class="wallet__data">20.01.2021</div>
+                                                <div class="wallet__where">Пополнение UM Кошелька</div>
+                                                <div class="wallet__way">Visa *1234</div>
+                                            </div>
+                                            <div class="wallet__price">1500 ₽</div>
+                                        </div>
+                                        <div class="wallet__tranzact">
+                                            <div class="wallet__znak">
+                                                <img src="images/wallet_plus.svg" alt="">
+                                            </div>
+                                            <div class="wallet__texting">
+                                                <div class="wallet__data">20.01.2021</div>
+                                                <div class="wallet__where">Оплата заказа</div>
+                                                <div class="wallet__way">Номер заказа: 012345678</div>
+                                            </div>
+                                            <div class="wallet__price">2500 ₽</div>
+                                        </div>
+                                        <div class="wallet__tranzact">
+                                            <div class="wallet__znak">
+                                                <img src="images/wallet_minus.svg" alt="">
+                                            </div>
+                                            <div class="wallet__texting">
+                                                <div class="wallet__data">20.01.2021</div>
+                                                <div class="wallet__where">Пополнение UM Кошелька</div>
+                                                <div class="wallet__way">Расчетный счет</div>
+                                            </div>
+                                            <div class="wallet__price">1500 ₽</div>
+                                        </div>
+                                        <div class="wallet__tranzact">
+                                            <div class="wallet__znak">
+                                                <img src="images/wallet_minus.svg" alt="">
+                                            </div>
+                                            <div class="wallet__texting">
+                                                <div class="wallet__data">20.01.2021</div>
+                                                <div class="wallet__where">Пополнение UM Кошелька</div>
+                                                <div class="wallet__way">Расчетный счет</div>
+                                            </div>
+                                            <div class="wallet__price">1500 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="wallet__vivod wallet__bank">
+        <div class="viv__title">Вывод средств на банковскую карту</div>
+        <div class="viv__description">Сумма 1500 ₽</div>
+        <div class="viv__form">
+            <form>
+                <div class="viv__wrapper">
+                    <div class="viv__one">
+                        <div class="viv__top">Наименование банка</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">Номер счета</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">БИК</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">Имя</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">Фамилия</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">Отчество</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="viv__addition">– поля обязательные для заполнения</div>
+                <div class="viv__button">
+                    <button>Вывести</button>
+                </div>
+            </form>
+        </div>
+        <div class="viv__close vivBankClose">
+            <img src="{{asset('images/closeBlack.svg')}}" alt="">
+        </div>
+    </div>
+
+    <div class="wallet__vivod viv__schet">
+        <div class="viv__title">Вывод средств на расчетный счет</div>
+        <div class="viv__description">Сумма 1500 ₽</div>
+        <div class="viv__form">
+            <form>
+                <div class="viv__wrapper">
+                    <div class="viv__one">
+                        <div class="viv__top">Получатель</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">ИНН получателя</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">КПП получателя</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">Наименование банка</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">Корр. счёт</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="viv__one">
+                        <div class="viv__top">Расчетный счёт</div>
+                        <div class="viv__input">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="viv__addition">– поля обязательные для заполнения</div>
+                <div class="viv__button">
+                    <button>Вывести</button>
+                </div>
+            </form>
+        </div>
+        <div class="viv__close vivSchetClose">
+            <img src="{{asset('images/closeBlack.svg')}}" alt="">
+        </div>
+    </div>
+
+    <div class="add__wallet">
+        <div class="wallet__title">
+            Пополнение кошелька через <img src="{{asset('images/kassa.png')}}" alt="">
+        </div>
+        <iframe src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&amp;targets=United%20Market&amp;targets-hint=&amp;default-sum=9940&amp;button-text=12&amp;payment-type-choice=on&amp;mobile-payment-type-choice=on&amp;fio=on&amp;phone=on&amp;comment=on&amp;mail=on&amp;hint=%D0%92%D0%B0%D1%88%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&amp;successURL=&amp;quickpay=shop&amp;account=4100115579671387" width="462px" height="313" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+        <div class="add__wallet__close">
+            <img src="{{asset('images/closeBlack.svg')}}" alt="">
+        </div>
+    </div>
+
+    <div class="wallet__personalData">
+        <div class="personalData__title">Пополнение кошелька через расчетный счет</div>
+        <div class="personalData__form">
+            <form>
+                <div class="personalData__one">
+                    <div class="personalData__top">ФИО</div>
+                    <input type="text" >
+                </div>
+                <div class="personalData__one">
+                    <div class="personalData__top">Адрес</div>
+                    <input type="text" >
+                </div>
+                <button>Продолжить</button>
+            </form>
+        </div>
+        <div class="personalData__close">
+            <img src="{{asset('images/closeBlack.svg')}}" alt="">
+        </div>
+    </div>
+
+    <div class="wallet__receipt">
+        <div class="receipt__title">Пополнение кошелька через расчетный счет</div>
+        <div class="receipt__uno">
+            <div class="receipt__table">
+                <div class="receipt__left">
+                    <div class="receipt__top">Извещение</div>
+                    <div class="receipt__bottom">Кассир</div>
+                </div>
+                <div class="receipt__right">
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            ООО "ЮНАЙТЕД МАРКЕТ"
+                        </div>
+                        <div class="receipt__text">Получатель платежа</div>
+                    </div>
+                    <div class="receipt__flex">
+                        <div class="receipt__one">
+                            <div class="receipt__line">
+                                7841090220
+                            </div>
+                            <div class="receipt__text">ИНН</div>
+                        </div>
+                        <div class="receipt__one">
+                            <div class="receipt__line">
+                                784101001
+                            </div>
+                            <div class="receipt__text">КПП</div>
+                        </div>
+                        <div class="receipt__one">
+                            <div class="receipt__line">
+                                40702810402500094317
+                            </div>
+                            <div class="receipt__text">Расчетный счет</div>
+                        </div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ" г. Москва, БИК: 044525999, К/с 30101810845250000999
+                        </div>
+                        <div class="receipt__text">Банк Получателя</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            Иванов Иван Иванович
+                        </div>
+                        <div class="receipt__text">Иванов Иван Иванович</div>
+                    </div>
+                    <div class="receipt__one receipt__one--margin">
+                        <div class="receipt__line">
+                            г. Москва, ул. Тимирязевская 1 стр 10
+                        </div>
+                        <div class="receipt__text">Адрес Платильщика</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line receipt__line--left">
+                            Пополнение баланса UM Кошелька для оплаты услуг по счёту № 02-673210967 (номер Личного кабинета 69156683) от 16.09.2021
+                        </div>
+                        <div class="receipt__text">Назначение платежа</div>
+                    </div>
+                    <div class="receipt__last">
+                        <div class="receipt__money">
+                            <div class="receipt__sum">Сумма</div>
+                            <div class="receipt__line">
+                                1500 руб. 00 коп.
+                            </div>
+                        </div>
+                        <div class="receipt__signature">Подпись Плательщика</div>
+                    </div>
+                </div>
+            </div>
+            <div class="receipt__table receipt__table--last">
+                <div class="receipt__left">
+                    <div class="receipt__top">Извещение</div>
+                    <div class="receipt__bottom">Кассир</div>
+                </div>
+                <div class="receipt__right">
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            ООО "ЮНАЙТЕД МАРКЕТ"
+                        </div>
+                        <div class="receipt__text">Получатель платежа</div>
+                    </div>
+                    <div class="receipt__flex">
+                        <div class="receipt__one">
+                            <div class="receipt__line">
+                                7841090220
+                            </div>
+                            <div class="receipt__text">ИНН</div>
+                        </div>
+                        <div class="receipt__one">
+                            <div class="receipt__line">
+                                784101001
+                            </div>
+                            <div class="receipt__text">КПП</div>
+                        </div>
+                        <div class="receipt__one">
+                            <div class="receipt__line">
+                                40702810402500094317
+                            </div>
+                            <div class="receipt__text">Расчетный счет</div>
+                        </div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ" г. Москва, БИК: 044525999, К/с 30101810845250000999
+                        </div>
+                        <div class="receipt__text">Банк Получателя</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            Иванов Иван Иванович
+                        </div>
+                        <div class="receipt__text">Иванов Иван Иванович</div>
+                    </div>
+                    <div class="receipt__one receipt__one--margin">
+                        <div class="receipt__line">
+                            г. Москва, ул. Тимирязевская 1 стр 10
+                        </div>
+                        <div class="receipt__text">Адрес Платильщика</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line receipt__line--left">
+                            Пополнение баланса UM Кошелька для оплаты услуг по счёту № 02-673210967 (номер Личного кабинета 69156683) от 16.09.2021
+                        </div>
+                        <div class="receipt__text">Назначение платежа</div>
+                    </div>
+                    <div class="receipt__last">
+                        <div class="receipt__money">
+                            <div class="receipt__sum">Сумма</div>
+                            <div class="receipt__line">
+                                1500 руб. 00 коп.
+                            </div>
+                        </div>
+                        <div class="receipt__signature">Подпись Плательщика</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="receipt__button">
+            <a href="/" download>Скачать</a>
+        </div>
+        <div class="receipt__close">
+            <img src="{{asset('images/closeBlack.svg')}}" alt="">
+        </div>
+    </div>
+</div>

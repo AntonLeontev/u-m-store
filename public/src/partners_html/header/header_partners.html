@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie = edge">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style/normilze.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav>
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__top header__top_partners">
+            <div class="header__city header__city_partners" id="headerCity">
+              санкт-петербург
+            </div>
+
+            <div class="header__logo header__logo_partners">
+              <a href="#"><img src="images/logo.svg" alt="#"></a>
+            </div>
+
+            <div class="header__phone header__phone_partners">
+              <a href="tel:79993335401">+7 999 333 54 01</a>
+            </div>
+          </div>
+
+          <div class="header__middle header__middle_partners">
+            <div class="header__search">
+              <input type="text" placeholder="Поиск">
+              <button class="header__btn"></button>
+            </div>
+            <div class="header__logo">
+              <a href="#"><img src="images/logo.svg" alt="#"></a>
+            </div>
+            <div class="header__lk header__lk_partners">
+              <div class="header__main">
+                <a href="#">
+                  <div class="header__img">
+                    <img src="images/headerLogo.svg" alt="">
+                  </div>
+                </a>
+              </div>
+              <div class="header__login" id="headerLogin" style="display: none;">
+                <a href="#">
+                  <div class="header__img">
+                    <svg width="18" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.631 13.373c1.563-.9 3.45-1.373 5.37-1.373 1.919 0 3.805.474 5.368 1.373 1.562.9 2.75 2.197 3.3 3.738a1 1 0 01-1.883.672c-.361-1.01-1.182-1.967-2.415-2.676C12.14 14.397 10.603 14 9.001 14c-1.604 0-3.14.398-4.372 1.107-1.232.709-2.053 1.665-2.415 2.677a1 1 0 11-1.883-.673c.55-1.54 1.738-2.839 3.3-3.738zM9 2a3 3 0 100 6 3 3 0 000-6zM4 5a5 5 0 1110 0A5 5 0 014 5z" />
+                    </svg>
+                  </div>
+                  <div class="header__name">Войти</div>
+                </a>
+              </div>
+              <div class="header__profile" style="display: block;">
+                <a href="#">
+                  <div class="header__img">
+                    <svg width="34" height="53" viewBox="0 0 34 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="colorBorder" cx="17" cy="15" r="14" fill="white" stroke="#BFC6E0"
+                        stroke-width="2" />
+                      <mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="0" width="30"
+                        height="30">
+                        <circle cx="17" cy="15" r="15" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <circle class="colorCircle" cx="17" cy="36.5895" r="16.1364" fill="#BFC6E0" />
+                      </g>
+                      <circle class="colorCircle" cx="17" cy="12.2738" r="6.36364" fill="#BFC6E0" />
+                    </svg>
+                  </div>
+                  <div class="profile__circle">12</div>
+                </a>
+                <div class="headerSignIn" id="headerSignInId">
+                  <a href="#">Войти</a>
+                </div>
+                <div class="profileZakaz" id="profileZakazId">
+                  <div class="profileZakaz__name">Новое уведомление:</div>
+                  <div class="profileZakaz__description">Изменения по Вашему заказу</div>
+                  <div class="profileZakaz__link">
+                    <a href="#">Перейти к сообщению</a>
+                  </div>
+                  <div class="profileZakaz__close" id="profileZakazClose">
+                    <img src="images/close.svg" alt="">
+                  </div>
+                </div>
+                <div class="item__profile">
+                  <ul>
+                    <li><a href="#">Настройки профиля</a></li>
+                    <li><a href="#">Уведомления (<div class="item__uved">6</div>)</a></li>
+                    <li><a href="#">История заказов</a></li>
+                    <li><a href="#">Бонусы</a></li>
+                    <li><a href="#">Выйти</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__save">
+                <a href="#">
+                  <div class="header__img">
+                    <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M24.4583 4.75367C22.3068 1.93205 17.9884 2.40525 16.4767 5.62827C15.6832 7.31994 13.3168 7.31994 12.5233 5.62827C11.0116 2.40526 6.69315 1.93205 4.54174 4.75367L4.10155 5.331C2.21038 7.81129 2.48344 11.3483 4.73202 13.4977L14.5 22.8348L24.268 13.4977C26.5166 11.3483 26.7896 7.81129 24.8985 5.33099L24.4583 4.75367ZM14.5 3.33194C17.3131 -0.869114 23.5058 -1.21964 26.7068 2.97852L27.1469 3.55584C29.9379 7.21628 29.535 12.4363 26.2165 15.6083L16.3233 25.0651C16.314 25.074 16.3045 25.0831 16.2948 25.0924C16.1504 25.2306 15.9762 25.3973 15.8089 25.5284C15.6113 25.6832 15.3148 25.8787 14.911 25.9593C14.6396 26.0135 14.3604 26.0135 14.089 25.9593C13.6852 25.8787 13.3887 25.6832 13.1911 25.5284C13.0238 25.3973 12.8497 25.2306 12.7052 25.0924C12.6955 25.0832 12.686 25.0741 12.6767 25.0651L2.78351 15.6083C-0.534952 12.4363 -0.937933 7.21629 1.85306 3.55585L2.29325 2.97853C5.49424 -1.21963 11.6869 -0.869115 14.5 3.33194Z"
+                        fill="#0B1331" stroke="none" />
+                    </svg>
+                  </div>
+                </a>
+                <div class="item__save">
+                  <ul>
+                    <li><a href="#">Загрузка товаров (услуг)</a></li>
+                    <li><a href="#">Настройка пользователя</a></li>
+                    <li><a href="#">Сделки</a></li>
+                    <li><a href="#">Склад</a></li>
+                    <li><a href="#">Выйти</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__basket">
+                <a href="#">
+                  <div class="header__img">
+                    <svg width="21" height="28" viewBox="0 0 19 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.55789 11.1172C4.94398 11.1172 4.44631 10.6195 4.44631 10.0056L4.44631 5.00351C4.44631 2.24093 6.68583 0.00141296 9.44841 0.0014144C12.211 0.00141393 14.4505 2.24093 14.4505 5.00351L14.4505 10.0056C14.4505 10.6195 13.9528 11.1172 13.3389 11.1172C12.725 11.1172 12.2274 10.6195 12.2274 10.0056L12.2274 5.00351C12.2274 3.46874 10.9832 2.22457 9.44841 2.22457C7.91364 2.22457 6.66947 3.46874 6.66947 5.00351L6.66947 10.0056C6.66947 10.6195 6.1718 11.1172 5.55789 11.1172Z"
+                        fill="#0B1331" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.48472 6.48438C5.50903 6.48438 5.53342 6.48438 5.55789 6.48438L13.4121 6.48438C14.3975 6.48432 15.2465 6.48427 15.9265 6.57569C16.6551 6.67365 17.3536 6.89457 17.9201 7.4611C18.4866 8.02763 18.7076 8.72609 18.8055 9.45475C18.8969 10.1347 18.8969 10.9837 18.8968 11.9691L18.8968 16.1886C18.8968 17.9558 18.8969 19.3807 18.763 20.5133C18.6244 21.6856 18.3293 22.6887 17.6352 23.5345C17.4043 23.8159 17.1462 24.0739 16.8648 24.3049C16.0191 24.999 15.0159 25.2941 13.8437 25.4326C12.711 25.5665 11.2862 25.5665 9.51893 25.5665H9.3779C7.61064 25.5665 6.1858 25.5665 5.05313 25.4326C3.88089 25.2941 2.87777 24.999 2.03201 24.3049C1.75059 24.0739 1.49254 23.8159 1.26159 23.5345C0.567485 22.6887 0.272412 21.6856 0.133849 20.5133C-3.7575e-05 19.3807 -1.87545e-05 17.9558 4.83232e-06 16.1886L5.36236e-06 12.0423C5.36236e-06 12.0178 4.03726e-06 11.9934 2.71215e-06 11.9691C-5.26772e-05 10.9837 -0.000100252 10.1347 0.0913109 9.45475C0.189276 8.72609 0.410197 8.02763 0.976726 7.4611C1.54325 6.89457 2.24171 6.67365 2.97037 6.57569C3.65028 6.48427 4.49932 6.48432 5.48472 6.48438ZM3.2666 8.77902C2.78447 8.84384 2.63335 8.94849 2.54873 9.03311C2.46412 9.11773 2.35946 9.26884 2.29464 9.75098C2.22552 10.2651 2.22316 10.9628 2.22316 12.0423V16.1181C2.22316 17.9724 2.22498 19.2655 2.34163 20.2524C2.45539 21.2147 2.66495 21.7401 2.98011 22.1241C3.11868 22.293 3.27351 22.4478 3.44236 22.5864C3.82639 22.9015 4.35174 23.1111 5.3141 23.2248C6.30099 23.3415 7.59404 23.3433 9.44841 23.3433C11.3028 23.3433 12.5958 23.3415 13.5827 23.2248C14.5451 23.1111 15.0704 22.9015 15.4545 22.5864C15.6233 22.4478 15.7781 22.293 15.9167 22.1241C16.2319 21.7401 16.4414 21.2147 16.5552 20.2524C16.6718 19.2655 16.6737 17.9724 16.6737 16.118V12.0423C16.6737 10.9628 16.6713 10.2651 16.6022 9.75098C16.5374 9.26884 16.4327 9.11773 16.3481 9.03311C16.2635 8.94849 16.1124 8.84384 15.6302 8.77902C15.1161 8.7099 14.4184 8.70754 13.3389 8.70754H5.55789C4.47846 8.70754 3.78071 8.7099 3.2666 8.77902Z"
+                        fill="#0B1331" />
+                    </svg>
+                  </div>
+                  <div class="basket__circle">5</div>
+                </a>
+                <div class="item__basket">
+                  <div class="item__basket--row">
+                    <div class="item__basket--left">Мангал с крышей 150х70см</div>
+                    <div class="item__basket--right">1000 ₽</div>
+                  </div>
+                  <div class="item__basket--row">
+                    <div class="item__basket--left">База отдыха Окуневская</div>
+                    <div class="item__basket--right">1000 ₽</div>
+                  </div>
+                  <div class="item__basket--row">
+                    <div class="item__basket--left">Табурет</div>
+                    <div class="item__basket--right">1000 ₽</div>
+                  </div>
+                  <div class="item__basket--row">
+                    <div class="item__basket--left">Девичник</div>
+                    <div class="item__basket--right">1000 ₽</div>
+                  </div>
+                  <div class="item__basket--row">
+                    <div class="item__basket--left">Мальчишник</div>
+                    <div class="item__basket--right">1000 ₽</div>
+                  </div>
+                  <div class="item__basket--row item__basket--last">
+                    <div class="item__basket--left">Семейная съемка</div>
+                    <div class="item__basket--right">1000 ₽</div>
+                  </div>
+                  <div class="item__itog">
+                    <div class="item__itog--left">Итог</div>
+                    <div class="item__itog--right">6000 ₽</div>
+                  </div>
+                  <div class="item__btn">
+                    <a href="#">Перейти в корзину</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

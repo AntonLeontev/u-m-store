@@ -1,0 +1,10 @@
+/*Cелектор быборо категории в карточке товара*/
+option[selected] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.panel-body, p {
+    font-weight: 500;
+    color: #3c3434;
+}

@@ -1,0 +1,235 @@
+.umcity-popup {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    left: 0;
+    width: 100%;
+    max-width: 958px;
+    min-width: 360px;
+    margin: 0 auto;
+    padding: 20px 26px 64px;
+    -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    overflow-x: hidden;
+  }
+  
+  .umcity-popup__wrap-btn-close {
+    text-align: right;
+  }
+  
+  .umcity-popup__btn-close {
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+  }
+  
+  .umcity-popup__btn-close:hover, .umcity-popup__btn-close:focus {
+    color: #1F40B2;
+  }
+  
+  .umcity-popup__wrap-my-city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .umcity-popup__name-city {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.0275em;
+    color: #1F40B2;
+  }
+  
+  .umcity-popup__wrap-search {
+    position: relative;
+    min-width: 260px;
+    width: 100%;
+    max-width: 448px;
+    margin-bottom: 26px;
+  }
+  
+  .umcity-popup__search {
+    width: 100%;
+    padding: 20px 20px 15px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 4px 4px 10px #DFE2EE;
+            box-shadow: 4px 4px 10px #DFE2EE;
+    border-radius: 66px;
+  }
+  
+  .umcity-popup__search-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 20px;
+  }
+  
+  .umcity-popular-city {
+    display: none;
+    margin-bottom: 46px;
+  }
+  
+  .umcity-popular-city__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #1F40B2;
+    -webkit-box-shadow: 4px 4px 10px #DFE2EE;
+            box-shadow: 4px 4px 10px #DFE2EE;
+    border-radius: 66px;
+    margin-right: 20px;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    cursor: pointer;
+  }
+  
+  .umcity-popular-city__item:hover, .umcity-popular-city__item:focus {
+    color: #FFFFFF;
+    background-color: #1F40B2;
+  }
+  
+  .umcity-popular-city__item:active {
+    color: #1F40B2;
+    background-color: #FFFFFF;
+  }
+  
+  .umcity-popular-city__item--active {
+    color: #FFFFFF;
+    background-color: #1F40B2;
+  }
+  
+  .umcity-list-city {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  
+  .umcity-list-city__m-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  
+  .umcity-list-city__title {
+    margin-right: 7px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #3657C8;
+  }
+  
+  .umcity-list-city__item {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #0B1331;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    cursor: pointer;
+  }
+  
+  .umcity-list-city__item--active {
+    font-weight: 700;
+    color: #3657C8;
+  }
+  
+  .umcity-list-city__item--strong {
+    color: #0B1331;
+    font-weight: 700;
+  }
+  
+  .umcity-list-city__item:hover, .umcity-list-city__item:focus {
+    color: #3657C8;
+  }
+  
+  .umcity-list-city__item:active {
+    color: #0B1331;
+  }
+  
+  .swiper-slide {
+    width: auto;
+  }
+  
+  .umcity-swiper-container {
+    margin-bottom: 44px;
+  }
+  
+  @media (min-width: 768px) {
+    .umcity-popup__wrap-my-city {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+    .umcity-popup__name-city {
+      margin-right: 5px;
+    }
+    .umcity-popular-city {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+    }
+    .umcity-swiper-container {
+      display: none;
+    }
+    .umcity-list-city {
+      width: 100%;
+      max-height: 379px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+    }
+  }
+  /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><span>Профиль инвестора</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Профиль инвестора</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user"><a href="#">Профиль</a></li>
+                                <li><a href="#">Настройки профиля</a></li>
+                                <li><a href="#">Мои покупки</a></li>
+                                <li class="active"><a href="#">Заказы</a></li>
+                                <li><a href="#">Кошелёк</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="profile__bigboxing">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Мои покупки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox5" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Кошелёк</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox9" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Выйти</label>
+                                </div>
+                            </div>
+                            <div class="investorOrder__inner">
+                                <div class="investorOrder__top">
+                                    <div class="investorOrder__btn">
+                                        <a href="#" class="active">Доставка буктов</a>
+                                    </div>
+                                    <div class="investorOrder__btn">
+                                        <a href="#">Клининг</a>
+                                    </div>
+                                </div>
+                                <div class="investorOrder__month">
+                                    <div class="map__block">
+                                        <div class="map__input">
+                                            <input type="text" placeholder="Июнь" value="Июнь">
+                                        </div>
+                                        <div class="map__arrow">
+                                            <img src="images/blueArrow.svg" alt="">
+                                        </div>
+                                        <div class="map__list">
+                                            <div class="my__city">Январь</div>
+                                            <div class="my__city">Февраль</div>
+                                            <div class="my__city">Март</div>
+                                            <div class="my__city">Апрель</div>
+                                            <div class="my__city">Май</div>
+                                            <div class="my__city">Июнь</div>
+                                            <div class="my__city">Июль</div>
+                                            <div class="my__city">Август</div>
+                                            <div class="my__city">Сентябрь</div>
+                                            <div class="my__city">Октябрь</div>
+                                            <div class="my__city">Ноябрь</div>
+                                            <div class="my__city">Декабрь</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="investorOrder__table">
+                                    <div class="investorOrder__desk">
+                                        <div class="investorOrder__row investorOrder__row--top">
+                                            <div class="investorOrder__one">Дата</div>
+                                            <div class="investorOrder__one">№ заказа</div>
+                                            <div class="investorOrder__one">Категория</div>
+                                            <div class="investorOrder__one">Название</div>
+                                            <div class="investorOrder__one">Сумма</div>
+                                            <div class="investorOrder__one">Доставка</div>
+                                        </div>
+                                        <div class="investorOrder__row">
+                                            <div class="investorOrder__one">10.06.2021</div>
+                                            <div class="investorOrder__one">012354</div>
+                                            <div class="investorOrder__one">Категория товара</div>
+                                            <div class="investorOrder__one">Розы 50 см</div>
+                                            <div class="investorOrder__one">1000 ₽</div>
+                                            <div class="investorOrder__one">Самовывоз</div>
+                                        </div>
+                                        <div class="investorOrder__row">
+                                            <div class="investorOrder__one">10.06.2021</div>
+                                            <div class="investorOrder__one">012354</div>
+                                            <div class="investorOrder__one">Категория товара</div>
+                                            <div class="investorOrder__one">Розы 50 см</div>
+                                            <div class="investorOrder__one">1000 ₽</div>
+                                            <div class="investorOrder__one">г. Москва, ул. Тимирязевская, д. 10,стр. 1, кв. 24</div>
+                                        </div>
+                                        <div class="investorOrder__row">
+                                            <div class="investorOrder__one">10.06.2021</div>
+                                            <div class="investorOrder__one">012354</div>
+                                            <div class="investorOrder__one">Категория товара</div>
+                                            <div class="investorOrder__one">Розы 50 см</div>
+                                            <div class="investorOrder__one">1000 ₽</div>
+                                            <div class="investorOrder__one">Самовывоз</div>
+                                        </div>
+                                        <div class="investorOrder__row">
+                                            <div class="investorOrder__one">10.06.2021</div>
+                                            <div class="investorOrder__one">012354</div>
+                                            <div class="investorOrder__one">Категория товара</div>
+                                            <div class="investorOrder__one">Розы 50 см</div>
+                                            <div class="investorOrder__one">1000 ₽</div>
+                                            <div class="investorOrder__one">г. Москва, ул. Тимирязевская, д. 10,стр. 1, кв. 24</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="investorOrder__mob">
+                                        <div class="investorOrder__item">
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Дата:</div>
+                                                <div class="investorOrder__right">10.06.2021</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">№ заказа:</div>
+                                                <div class="investorOrder__right">0123456789</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Категория:</div>
+                                                <div class="investorOrder__right">Категория товара</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Название:</div>
+                                                <div class="investorOrder__right">Роза</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Сумма:</div>
+                                                <div class="investorOrder__right"> 200 000 ₽</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Доставка:</div>
+                                                <div class="investorOrder__right">г. Москва, ул. Тимирязевская, д. 64</div>
+                                            </div>
+                                        </div>
+                                        <div class="investorOrder__item">
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Дата:</div>
+                                                <div class="investorOrder__right">10.06.2021</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">№ заказа:</div>
+                                                <div class="investorOrder__right">0123456789</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Категория:</div>
+                                                <div class="investorOrder__right">Категория товара</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Название:</div>
+                                                <div class="investorOrder__right">Роза</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Сумма:</div>
+                                                <div class="investorOrder__right"> 200 000 ₽</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Доставка:</div>
+                                                <div class="investorOrder__right">г. Москва, ул. Тимирязевская, д. 64</div>
+                                            </div>
+                                        </div>
+                                        <div class="investorOrder__item">
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Дата:</div>
+                                                <div class="investorOrder__right">10.06.2021</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">№ заказа:</div>
+                                                <div class="investorOrder__right">0123456789</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Категория:</div>
+                                                <div class="investorOrder__right">Категория товара</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Название:</div>
+                                                <div class="investorOrder__right">Роза</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Сумма:</div>
+                                                <div class="investorOrder__right"> 200 000 ₽</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Доставка:</div>
+                                                <div class="investorOrder__right">г. Москва, ул. Тимирязевская, д. 64</div>
+                                            </div>
+                                        </div>
+                                        <div class="investorOrder__item">
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Дата:</div>
+                                                <div class="investorOrder__right">10.06.2021</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">№ заказа:</div>
+                                                <div class="investorOrder__right">0123456789</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Категория:</div>
+                                                <div class="investorOrder__right">Категория товара</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Название:</div>
+                                                <div class="investorOrder__right">Роза</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Сумма:</div>
+                                                <div class="investorOrder__right"> 200 000 ₽</div>
+                                            </div>
+                                            <div class="investorOrder__stroka">
+                                                <div class="investorOrder__left">Доставка:</div>
+                                                <div class="investorOrder__right">г. Москва, ул. Тимирязевская, д. 64</div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                       
+                                         
+                                    </div>
+                                    <div class="investorOrder__final">
+                                        <div class="investorOrder__uno">
+                                            <div class="investorOrder__pos">Количество заказов</div>
+                                            <div class="investorOrder__pos">4</div>
+                                        </div>
+                                        <div class="investorOrder__uno">
+                                            <div class="investorOrder__pos">Сумма</div>
+                                            <div class="investorOrder__pos">4000 ₽</div>
+                                        </div>
+                                        <div class="investorOrder__uno">
+                                            <div class="investorOrder__pos">Начислено на балланс</div>
+                                            <div class="investorOrder__pos">720 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

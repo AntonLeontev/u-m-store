@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><span>Профиль инвестора</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Профиль инвестора</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user active"><a href="#">Профиль</a></li>
+                                <li><a href="#">Настройки Профиля</a></li>
+                                <li><a href="#">Мои покупки</a></li>
+                                <li><a href="#">Заказы</a></li>
+                                <li><a href="#">Кошелёк</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="profile__bigboxing">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Мои покупки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox5" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Кошелёк</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox9" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Выйти</label>
+                                </div>
+                            </div>
+                            <div class="profile__info profile__info--investor">
+                                <div class="profile__welcome">
+                                    <div class="investor__welcomeback">С возвращением, Иван!</div>
+                                    <div class="investor__bottom">
+                                        <img src="images/investorBottom.svg" alt="">
+                                    </div>
+                                    <div class="investor__logo">
+                                        <img src="images/investorLogo.svg" alt="">
+                                    </div>
+                                    <div class="investor__image">
+                                        <div class="investor__photo">
+                                            <img src="images/investorPhoto.png" alt="">
+                                        </div>
+                                        <div class="investor__newphoto">
+                                            <img src="images/investorAddPhoto.png" alt="">
+                                        </div>
+                                        <div class="investor__addPhoto">
+                                            <div class="investor__addPhoto--text">Обновить фото профиля</div>
+                                            <div class="investor__addPhoto--add">
+                                                <input type="file" class="investor__addPhoto--download">
+                                                <a href="#" class="investor__addPhoto--fake">Загрузить фото</a>
+                                            </div>
+                                            <div class="investor__addPhoto--close">
+                                                <img src="images/close.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile__investor">
+                                    <div class="investor__item">
+                                        <div class="profile__description">Личная информация</div>
+                                        <div class="profile__row profile__row--top">
+                                            <div class="profile__one">ФИО:</div>
+                                            <div class="profile__one">Иванов Иван Иванович</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Организация:</div>
+                                            <div class="profile__one">ООО «ВИАКОМ»</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Телефон:</div>
+                                            <div class="profile__one">+7999999</div>
+                                        </div>
+                                        <!-- <div class="profile__more">
+                                            <a class="profile__exit" href="#">
+                                                <img src="images/arrow.svg" alt="">
+                                            </a>
+                                        </div> -->
+                                        <div class="profile__set">
+                                            <a href="#">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.25 9H15.75" stroke="#ACB1C8" stroke-width="2" stroke-linecap="round"/>
+                                                    <path d="M11.25 13.5L15.75 9L11.25 4.5" stroke="#ACB1C8" stroke-width="2" stroke-linecap="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="investor__item">
+                                        <div class="profile__description">Мои Покупки</div>
+                                        <div class="profile__row profile__row--top">
+                                            <div class="profile__one">Номер заказа:</div>
+                                            <div class="profile__one">0123456</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Сумма:</div>
+                                            <div class="profile__one">300 000 ₽</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Статус:</div>
+                                            <div class="profile__one">Доставляется</div>
+                                        </div>
+                                        <!-- <div class="profile__more">
+                                            <a class="profile__exit" href="#">
+                                                <img src="images/arrow.svg" alt="">
+                                            </a>
+                                        </div> -->
+                                        <div class="profile__set">
+                                            <a href="#">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.25 9H15.75" stroke="#ACB1C8" stroke-width="2" stroke-linecap="round"/>
+                                                    <path d="M11.25 13.5L15.75 9L11.25 4.5" stroke="#ACB1C8" stroke-width="2" stroke-linecap="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="investor__item">
+                                        <div class="profile__description">Заказы</div>
+                                        <div class="profile__row profile__row--top">
+                                            <div class="profile__one">Дата:</div>
+                                            <div class="profile__one">20.06.2021</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Категория:</div>
+                                            <div class="profile__one">Доставка букетов</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Сумма:</div>
+                                            <div class="profile__one">1200 ₽</div>
+                                        </div>
+                                        <!-- <div class="profile__more">
+                                            <a class="profile__exit" href="#">
+                                                <img src="images/arrow.svg" alt="">
+                                            </a>
+                                        </div> -->
+                                        <div class="profile__set">
+                                            <a href="#">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.25 9H15.75" stroke="#ACB1C8" stroke-width="2" stroke-linecap="round"/>
+                                                    <path d="M11.25 13.5L15.75 9L11.25 4.5" stroke="#ACB1C8" stroke-width="2" stroke-linecap="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="investor__item">
+                                        <div class="profile__description">Транзакции</div>
+                                        <div class="profile__row profile__row--top">
+                                            <div class="profile__one">Дата:</div>
+                                            <div class="profile__one">20.06.2021</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Назначение:</div>
+                                            <div class="profile__one">Пополнение UM Кошелька</div>
+                                        </div>
+                                        <div class="profile__row">
+                                            <div class="profile__one">Сумма:</div>
+                                            <div class="profile__one">1200 ₽</div>
+                                        </div>
+                                        <!-- <div class="profile__more">
+                                            <a class="profile__exit" href="#">
+                                                <img src="images/arrow.svg" alt="">
+                                            </a>
+                                        </div> -->
+                                        <div class="profile__set">
+                                            <a href="#">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.25 9H15.75" stroke-width="2" stroke-linecap="round"/>
+                                                    <path d="M11.25 13.5L15.75 9L11.25 4.5" stroke-width="2" stroke-linecap="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.css" integrity="sha512-85xVunKWH9+w3fBf0ndSXOkkCuEWPbhAtnKKaFM7032omgb+gpRZXxs3bzs8mICAi8lASiYxHBxMcLYJdeJozA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        span.ruble-icon {
+          font-family: "Helvetica Neue", sans-serif;
+          margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <nav class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#" id="contentForBlock">Доставка букетов</a></li>
+                            <li><a href="#">Цветы</a></li>
+                            <li><a href="#">Розы</a></li>
+                            <li><span>21 Роза в крафте</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <article class="product">
+            <div class="container">
+                <div class="product__inner">
+                    <div class="row">
+                        <div class="col-12 d-flex product__topClass">
+                            <header><h1 class="product__title">21 Роза в крафте</h1></header>
+                            <div class="product__ocenka">
+                                <div class="product__stars">
+                                    <div class="product__star">
+                                        <img src="images/fullStarSmall.svg" alt="оценка товара">
+                                    </div>
+                                    <div class="product__star">
+                                        <img src="images/fullStarSmall.svg" alt="оценка товара">
+                                    </div>
+                                    <div class="product__star">
+                                        <img src="images/fullStarSmall.svg" alt="оценка товара">
+                                    </div>
+                                    <div class="product__star">
+                                        <img src="images/emptyStarSmall.svg" alt="оценка товара">
+                                    </div>
+                                    <div class="product__star">
+                                        <img src="images/emptyStarSmall.svg" alt="оценка товара">
+                                    </div>
+                                </div>
+                                <div class="product__point">4.8</div>
+                                <div class="product__number">(131 отзыв)</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-3 col-sm-5 col__first">
+                            <div class="product__image product__image--tovar" id="photoProduct">
+                                <img src="images/product.jpg" alt="продукт">
+                            </div>
+                            <div class="product__text">
+                                Артикул: 4475177
+                            </div>
+                            <div class="product__text">
+                                Продавец: ООО Кимчи
+                            </div>
+                        </div>
+                        <div class="col-xl-1 d-sm-none"></div>
+                        <div class="col-12 col-sm-7 productTop">
+                            <div class="row">
+                                <div class="col-6 col-sm-2 product__price">
+                                    <span class="product__grey">3000 <span class="ruble-icon">₽</span></span>
+                                    <span class="product__pink">2854 <span class="ruble-icon">₽</span></span>
+                                </div>
+                                <div class="col-2 empty__col"></div>
+                            </div>
+                            <div class="row product__flower" id="productFlower">
+                                <div class="col-12">
+                                    <div class="product__structure product__structure--ruler" id="productRuler">Длина цветка (<span>см</span>):</div>
+                                    <div class="product__choose" id="productChoose">
+                                        <div class="promotion__br">
+                                            <input class="custom-checkbox" id="checkbox1" type="checkbox"><label for="checkbox1">40</label>
+                                        </div>
+                                        <div class="promotion__br">
+                                            <input class="custom-checkbox" id="checkbox2" type="checkbox"><label for="checkbox2">50</label>
+                                        </div>
+                                        <div class="promotion__br">
+                                            <input class="custom-checkbox" id="checkbox3" type="checkbox"><label for="checkbox3">60</label>
+                                        </div>
+                                    </div>
+                                    <div class="product__num">
+                                        <div class="product__kol">Количество: </div>
+                                        <div class="basket__kol">
+                                            <div class="basket__min">
+                                                <img src="images/minus.svg" alt="убрать товар">
+                                            </div>
+                                            <div class="basket__num">2</div>
+                                            <div class="basket__plus">
+                                                <img src="images/plusProduct.svg" alt="добавить товар">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__other">
+                                        <div class="product__btn common__buy" id="productBuy">
+                                            <a href="#">
+                                                <svg width="17" height="23" viewBox="0 0 17 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 9L5 4.5C5 2.567 6.567 1 8.5 1V1C10.433 1 12 2.567 12 4.5L12 9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    <path d="M1 10.832C1 8.94641 1 8.0036 1.58579 7.41782C2.17157 6.83203 3.11438 6.83203 5 6.83203H12C13.8856 6.83203 14.8284 6.83203 15.4142 7.41782C16 8.0036 16 8.94641 16 10.832V17.832C16 19.7176 16 20.6605 15.4142 21.2462C14.8284 21.832 13.8856 21.832 12 21.832H5C3.11438 21.832 2.17157 21.832 1.58579 21.2462C1 20.6605 1 19.7176 1 17.832V10.832Z" stroke="white" stroke-width="2"/>
+                                                </svg>                                                
+                                                <span>Добавить в корзину</span>
+                                            </a>
+                                        </div>
+                                        <div class="product__like" id="likeProduct">
+                                            <a href="#">
+                                                <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M25.4473 2.75435C23.9628 1.19651 21.9951 0.245686 19.8995 0.0736445C17.8039 -0.0983972 15.7187 0.519683 14.0204 1.81624C12.2386 0.429055 10.0209 -0.199961 7.81387 0.0558604C5.60681 0.311682 3.57432 1.43334 2.1257 3.19495C0.677073 4.95657 -0.0800771 7.22729 0.00671527 9.54985C0.0935077 11.8724 1.0178 14.0743 2.59345 15.7121L11.2897 24.8294C12.0179 25.5796 12.9986 26 14.0204 26C15.0421 26 16.0228 25.5796 16.7511 24.8294L25.4473 15.7121C27.0823 13.9901 28 11.661 28 9.23322C28 6.80544 27.0823 4.47628 25.4473 2.75435ZM23.4728 13.6893L14.7765 22.7919C14.6776 22.8965 14.5598 22.9795 14.43 23.0362C14.3002 23.0929 14.161 23.122 14.0204 23.122C13.8797 23.122 13.7405 23.0929 13.6107 23.0362C13.4809 22.9795 13.3631 22.8965 13.2642 22.7919L4.56795 13.6453C3.46974 12.4702 2.85477 10.8917 2.85477 9.24787C2.85477 7.60402 3.46974 6.02553 4.56795 4.85046C5.68706 3.69392 7.19638 3.04542 8.76902 3.04542C10.3417 3.04542 11.851 3.69392 12.9701 4.85046C13.1003 4.98784 13.2552 5.09689 13.4258 5.17131C13.5964 5.24573 13.7795 5.28404 13.9643 5.28404C14.1492 5.28404 14.3322 5.24573 14.5029 5.17131C14.6735 5.09689 14.8284 4.98784 14.9586 4.85046C16.0777 3.69392 17.587 3.04542 19.1597 3.04542C20.7323 3.04542 22.2416 3.69392 23.3607 4.85046C24.474 6.01013 25.1092 7.58007 25.1301 9.22396C25.1511 10.8679 24.5561 12.455 23.4728 13.6453V13.6893Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-lg-8 product__icons">
+                                        <div class="product__item">Доставка 40 минут</div>
+                                        <div class="product__item">300 <span class="ruble-icon">₽</span></div>
+                                        <div class="product__item">28 бонусов за покупку</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row product__one">
+                        <div class="col-12">
+                            <div class="product__structure">О товаре:</div>
+                            <p class="product__description">Очаровательный букет, созданный с любовью руками наших флористов, - это отличный подарок для ваших близких. Доставим в любой уголок вашего города!</p>
+                            <p class="product__description product__description--another">Купить или заказать красивый букет цветов [товар] с доставкой на дом в городе [город] можно добавив товар в корзину и заполнив данные о доставке.</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="product__structure">Состав:</div>
+                            <div class="product__block">
+                                <div class="product__uno">Роза красная</div>
+                                <div class="product__how">21 шт</div>
+                            </div>
+                            <div class="product__block">
+                                <div class="product__uno">Упаковка крафт</div>
+                                <div class="product__how">1 шт</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="product__wrapper">
+                                <div class="product__top product__top--choose">
+                                    <div class="product__name common__choose active">Отзывы о товаре (52)</div>
+                                    <div class="product__name common__choose">О магазине </div>
+                                </div>
+                                <div class="product__review">
+                                    <div class="product__unit">
+                                        <div class="product__up">
+                                            <div class="product__image product__person">
+                                                <img src="images/person.svg" alt="пользователь">
+                                            </div>
+                                            <div class="product__info">
+                                                <div class="product__information">
+                                                    <div class="product__who">Екатерина</div>
+                                                    <div class="product__when">6 мая 16:22</div>
+                                                </div>
+                                                <div class="product__stars">
+                                                    <div class="product__star">
+                                                        <img src="images/fullStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/fullStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/fullStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/emptyStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/emptyStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                </div>
+                                                <div class="product__texting">Вкусный суп. Доставили менее чем за 30 минут. Буду заказывать еще.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__unit">
+                                        <div class="product__up">
+                                            <div class="product__image product__person">
+                                                <img src="images/person.svg" alt="пользователь">
+                                            </div>
+                                            <div class="product__info">
+                                                <div class="product__information">
+                                                    <div class="product__who">Екатерина</div>
+                                                    <div class="product__when">6 мая 16:22</div>
+                                                </div>
+                                                <div class="product__stars">
+                                                    <div class="product__star">
+                                                        <img src="images/fullStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/fullStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/fullStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/emptyStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                    <div class="product__star">
+                                                        <img src="images/emptyStarSmall.svg" alt="оценка пользователя">
+                                                    </div>
+                                                </div>
+                                                <div class="product__texting">Вкусный суп. Доставили менее чем за 30 минут. Буду заказывать еще.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__button common__btn" id="productButton">
+                                        <a href="#">Оставить отзыв</a>
+                                    </div>
+                                    <div class="product__review__hide" id="reviewProduct">
+                                        <div class="review__choose">
+                                            <div class="review__item">Добавить отзыв</div>
+                                            <!-- <div class="review__item">Мои отзывы (2)</div> -->
+                                        </div>
+                                        <div class="review__block common__form">
+                                            <form class="review__form">
+                                                <div class="review__top">
+                                                    Добавить оценку <span>(необязательное поле)</span>
+                                                    <div class="rating-area">
+                                                        <input type="radio" id="star-5" name="rating" value="5">
+                                                        <label for="star-5" title="Оценка «5»"></label>	
+                                                        <input type="radio" id="star-4" name="rating" value="4">
+                                                        <label for="star-4" title="Оценка «4»"></label>    
+                                                        <input type="radio" id="star-3" name="rating" value="3">
+                                                        <label for="star-3" title="Оценка «3»"></label>  
+                                                        <input type="radio" id="star-2" name="rating" value="2">
+                                                        <label for="star-2" title="Оценка «2»"></label>    
+                                                        <input type="radio" id="star-1" name="rating" value="1">
+                                                        <label for="star-1" title="Оценка «1»"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="review__top">Тема</div>
+                                                <div class="review__unit">
+                                                    <div class="review__field">
+                                                        <input type="text" placeholder="Пожелания / Замечания" value="Пожелания / Замечания" id="reviewTheme" readonly>
+                                                        <div class="review__arrow" id="reviewArrow1">
+                                                            <img src="images/arrowMenu.svg" alt="стрелочка">
+                                                        </div>
+                                                        <div class="review__items" id="reviewItems">
+                                                            <div class="review__point added" id="reviewPoint">Пожелания/ Замечания</div>
+                                                            <div class="review__point" id="reviewPoint">Оформление заказ</div>
+                                                            <div class="review__point" id="reviewPoint">Оплата заказа </div>
+                                                            <div class="review__point" id="reviewPoint">Доставка</div>
+                                                            <div class="review__point" id="reviewPoint">Возврат</div>
+                                                            <div class="review__point" id="reviewPoint">Благодарность</div>
+                                                            <div class="review__point" id="reviewPoint">Вопросы по акциям и скидкам</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="review__top">Категория</div>
+                                                <div class="review__unit">
+                                                    <div class="review__field">
+                                                        <input type="text" value="Доставка букетов" placeholder="Категория" id="reviewKategoryItem" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="review__top">Текст</div>
+                                                <textarea type="text" placeholder="Введите текст отзыва ..."></textarea>
+                                                <button class="common__close">Отправить</button>
+                                            </form>
+                                        </div>
+                                        <div class="product__closeBtn" id="productCloseBtn">
+                                            <img src="images/closeBlack.svg" alt="закрыть">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__review">
+                                    <div class="product__review--man">
+                                        <div class="product__man">
+                                            <img src="images/man.jpg" alt="поставщик">
+                                        </div>
+                                        <div class="product__review__text">
+                                            <p>Почти всегда в наших магазинах вы найдёте широкий выбор  и высокое качество цветов. Конечно, есть дни перед поставкой, когда выбор уже не так велик, ведь мы берём столько цветов, сколько можем продать. Именно благодаря такому подходу, вы приобретаете у нас только свежие цветы.</p>
+                                            <p>Мы постоянно работаем над улучшением нашего сервиса, думаем над тем, как стать лучше. Конечно, не может всё получатся идеальным, ведь все в нашем коллективе живые люди,  но та обратная связь, которую мы получаем, говорит нам, что мы движемся в правильном направлении и подсказывает, как стать ещё лучше.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <section class="different">
+            <div class="container">
+                <div class="different__inner">
+                    <h2 class="different__title">Вам может понравиться</h2>
+                    <div class="different__wrapper">
+                        <div class="popular__item">
+                            <div class="popular__img popularImg">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="букет">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 <span class="ruble-icon">₽</span></div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__oldprice">15000 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="букет">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="букет">
+                                    </a>
+                                </div>
+                                <div class="popular__like popularLike">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular__item">
+                            <div class="popular__img popularImg">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="букет">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 <span class="ruble-icon">₽</span></div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__oldprice">15000 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="букет">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="букет">
+                                    </a>
+                                </div>
+                                <div class="popular__like popularLike">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular__item">
+                            <div class="popular__img popularImg">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="букет">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 <span class="ruble-icon">₽</span></div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__oldprice">15000 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="букет">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="букет">
+                                    </a>
+                                </div>
+                                <div class="popular__like popularLike">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular__item">
+                            <div class="popular__img popularImg">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="букет">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 <span class="ruble-icon">₽</span></div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__oldprice">15000 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="букет">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="букет">
+                                    </a>
+                                </div>
+                                <div class="popular__like popularLike">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular__item">
+                            <div class="popular__img popularImg">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="букет">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 <span class="ruble-icon">₽</span></div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__oldprice">15000 <span class="ruble-icon">₽</span></div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="букет">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="букет">
+                                    </a>
+                                </div>
+                                <div class="popular__like popularLike">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="productImage__popup" id="productImagePopup">
+    <div class="productImage__inner">
+        <div class="productImage__img">
+            <img src="images/product.jpg" alt="полная версия продукта">
+        </div>
+        <div class="productImage__close" id="productImageClose">
+            <img src="images/closeBlack.svg" alt="закрыть попап">
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+.page-section {
+  padding-bottom: 50px;
+}
+
+.franchise__hero {
+  background: linear-gradient(rgba(194, 240, 255, 0.63), rgba(194, 240, 255, 0.63)), url('./img/franchise-hero.jpg') center/cover;
+  border-radius: 5px;
+  padding: 55px 0 80px;
+  margin-bottom: 100px;
+}
+
+.franchise__container {
+  max-width: 1000px;
+  display: flex;
+  grid-gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.franchise__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #0B1331;
+  text-transform: uppercase;
+}
+
+.franchise__desc {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #0B1331;
+  max-width: 583px;
+  margin: 0 auto;
+}
+
+.franchise__map-img {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  max-height: 450px;
+  object-fit: cover;
+  min-height: 170px;
+}
+
+.franchise__button {
+  cursor: pointer;
+  background: #D24B6C;
+  border-radius: 66px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  min-width: 280px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  padding: 16px;
+  text-transform: none;
+  border: none;
+  margin: 0 auto;
+  transition: color .3s ease-in-out;
+}
+
+.franchise__button.franchise__button_blue {
+  background: #6ACDF8;
+}
+
+.franchise__button:hover {
+  color: #0B1331;
+}
+
+.franchise__popup {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFFFFF;
+  z-index: 10;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+
+.franchise__popup.is-active {
+  display: block;
+}
+
+.franchise__popup-wrapper {
+  padding: 80px;
+  padding-top: 50px;
+}
+
+.franchise__close-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.franchise__popup-close {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.franchise__popup-close img {
+  width: 40px;
+  height: 40px;
+}
+
+.franchise__form-content:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.franchise__form-content {
+  display: none;
+}
+
+.franchise__form-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.franchise__form-title {
+  position: relative;
+  align-items: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  color: #0B1331;
+  display: inline-flex;
+  grid-gap: 0 14px;
+  margin-bottom: 32px;
+}
+
+.franchise__form-title::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #0B1331;
+  border-radius: 50%;
+  flex: 1 0 30px;
+}
+
+.franchise__form-title::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #0B1331;
+  border-radius: 50%;
+  flex: 1 0 8px;
+}
+
+.franchise__form-input {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  color: #BFC6E0;
+  margin-bottom: 4px;
+}
+
+.franchise__form-content input {
+  max-width: 550px;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border: 2px solid #BFC6E0;
+  border-radius: 55px;
+}
+
+.franchise__form-content input:focus {
+  outline: none;
+}
+
+.franchise__form-input input:last-child {
+  margin-bottom: 36px;
+}
+
+.franchise__form-radio {
+  display: none;
+}
+
+.franchise__form-radio:checked+.franchise__form-label+.franchise__form-content {
+  display: block;
+}
+
+.franchise__form-radio:checked+.franchise__form-label .franchise__form-title::after {
+  display: block;
+}
+
+.no-scrolling {
+  overflow: hidden;
+}
+
+@media(max-width: 1024px) {
+  .franchise__hero {
+    padding: 55px 0 36px;
+    margin-bottom: 60px;
+  }
+
+  .franchise__popup-wrapper {
+    padding: 24px;
+    padding-top: 50px;
+  }
+
+  .franchise__form-title {
+    font-size: 20px;
+  }
+
+  .franchise__form-title img {
+    width: 90px;
+  }
+
+  .franchise__desc {
+    font-size: 20px;
+    line-height: 140%;
+  }
+}

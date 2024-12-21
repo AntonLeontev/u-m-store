@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>download product</title>
+
+    <link rel="stylesheet" href="../../css/normilze.css">
+    <link rel="stylesheet" href="../../css/css">
+    <link rel="stylesheet" href="../../css/app.css">
+    <link rel="stylesheet" href="../../css/catalog.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/custom.css">
+    <link rel="stylesheet" href="../../css/doc.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/file.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="download-product.css">
+    <script defer src="download-product.js"></script>
+
+    <script defer src="../../js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="major">
+                <div class="container">
+                    <div class="major__inner">
+                        <div class="major__breadcrumbs">
+                            <ul>
+                                <li><a href="#">Главная</a></li>
+                                <li><span>Профиль</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="profile">
+                <div class="container">
+                    <div class="profile__inner">
+                        <div class="profile__title active">Профиль партнера</div>
+
+                        <div class="profile__wrapper">
+                            <div class="profile__menu">
+                                <ul>
+                                    <li class="user"><a href="#">Профиль</a></li>
+                                    <li class="active"><a href="#">Загрузка товаров (услуг)</a></li>
+                                    <li><a href="#">Настройка профиля</a></li>
+                                    <li><a href="#">Заказы</a></li>
+                                    <li><a href="#">Склад</a></li>
+                                    <li class="exit"><a href="#">Выйти</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="tovar__inner" style="display: flex; flex-direction: column;">
+                                <div class="promotions__choose promotions__choose_bg" id="promotionsChoose"></div>
+
+                                <div class="promotions__hide" id="promotionsHide">
+                                    <div class="promotion__br">
+                                        <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'"
+                                            class="promotions__mobClick" type="checkbox"><label
+                                            for="checkbox1">Настройки профиля</label>
+                                    </div>
+                                    <div class="promotion__br">
+                                        <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'"
+                                            class="promotions__mobClick" type="checkbox"><label
+                                            for="checkbox2">Заказы</label>
+                                    </div>
+                                    <div class="promotion__br">
+                                        <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'"
+                                            class="promotions__mobClick" type="checkbox"><label for="checkbox3">Загрузка
+                                            товара (услуг)</label>
+                                    </div>
+                                    <div class="promotion__br">
+                                        <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'"
+                                            class="promotions__mobClick" type="checkbox"><label
+                                            for="checkbox4">Склад</label>
+                                    </div>
+                                </div>
+
+                                <!-- добавление товара -->
+                                <div class="download-product">
+                                    <div class="download-product__head">
+                                        <button class="download-product__prev js-prev-btn">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 12L3 12" stroke="#3657C8" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                                <path d="M9 6L3 12L9 18" stroke="#3657C8" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </button>
+
+                                        <div class="download-product__pagination-wrapper">
+                                            <button class="download-product__bullet is-active js-tab-btn"
+                                                data-target="#tab-files"><span>1</span>Добавить фото
+                                            </button>
+
+                                            <button class="download-product__bullet js-tab-btn"
+                                                data-target="#tab-info"><span>2</span>
+                                                Добавить описание
+                                            </button>
+
+                                            <button class="download-product__bullet js-tab-btn"
+                                                data-target="#tab-price"><span>3</span>
+                                                Установить цену
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <form class="download-product__form is-visible js-tab-item" id="tab-files">
+                                        <input class="download-product__file" multiple type="file"
+                                            accept=".jpg, .jpeg, .png" id="file-uploader">
+
+                                        <div class="download-product__file-grid">
+                                            <label for="file-uploader" class="download-product__label">
+                                                <span class="plug">
+                                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M1.66664 1.66664H18.3333V9.16664C18.3333 9.625 18.7083 10 19.1666 10H26.6666V15.8334H28.3333V9.16672C28.3333 9.08336 28.3083 9.00008 28.2833 8.91672C28.2749 8.89172 28.2749 8.87508 28.2666 8.85008C28.225 8.74172 28.1583 8.65008 28.075 8.56672L19.7584 0.241641C19.6 0.0916406 19.3916 0 19.1666 0H0.833359C0.375 0 0 0.375 0 0.833359V35.8334C0 36.2917 0.375 36.6667 0.833359 36.6667H17.5V35H1.66664V1.66664ZM20 2.85L25.4834 8.33336H20V2.85Z"
+                                                            fill="#828282" />
+                                                        <path
+                                                            d="M29.1673 18.332C23.184 18.332 18.334 23.182 18.334 29.1654C18.334 35.1487 23.1841 39.9987 29.1673 39.9987C35.1506 39.9987 40.0007 35.1487 40.0007 29.1653C39.9923 23.182 35.1507 18.3403 29.1673 18.332ZM29.1673 38.332C24.1007 38.332 20.0007 34.232 20.0007 29.1653C20.0007 24.0986 24.1007 19.9987 29.1673 19.9987C34.234 19.9987 38.334 24.0987 38.334 29.1653C38.3257 34.2237 34.2257 38.3237 29.1673 38.332Z"
+                                                            fill="#828282" />
+                                                        <path
+                                                            d="M32.2495 29.4653L29.9995 31.7153V24.6403C29.9995 24.2237 29.6995 23.8487 29.2912 23.7903C28.7745 23.7153 28.3328 24.1153 28.3328 24.6153V31.6987L26.0995 29.4653C25.7745 29.1403 25.2411 29.1403 24.9078 29.4653C24.5828 29.7903 24.5828 30.3237 24.9078 30.657L28.5745 34.3236C28.8995 34.6486 29.4328 34.6486 29.7661 34.3236L33.4327 30.657C33.7577 30.3236 33.7494 29.7903 33.4161 29.4653C33.0912 29.1487 32.5745 29.1487 32.2495 29.4653Z"
+                                                            fill="#828282" />
+                                                    </svg>
+                                                    Загрузить фото
+                                                </span>
+
+                                                <span class="download-product__label-btn">+ Добавить фото</span>
+                                            </label>
+                                        </div>
+
+                                        <button class="download-product__btn js-next-btn">Продолжить</button>
+                                    </form>
+
+                                    <form class="download-product__form js-tab-item" id="tab-info">
+                                        <div class="download-product__form-group">
+                                            <span class="download-product__select js-download-product-select">
+                                                <input type="text" readonly placeholder="Выберите фильтр"
+                                                    class="download-product__form-input">
+                                                <span class="download-product__select-content">
+                                                    <span class="download-product__select-item">1</span>
+                                                    <span class="download-product__select-item">2</span>
+                                                    <span class="download-product__select-item">3</span>
+                                                    <span class="download-product__select-item">...</span>
+                                                </span>
+
+                                                <span class="download-product__arrow">
+                                                    <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <span class="download-product__select js-download-product-select">
+                                                <input type="text" readonly placeholder="Выберите категорию"
+                                                    class="download-product__form-input">
+                                                <span class="download-product__select-content">
+                                                    <span class="download-product__select-item">1</span>
+                                                    <span class="download-product__select-item">2</span>
+                                                    <span class="download-product__select-item">3</span>
+                                                    <span class="download-product__select-item">...</span>
+                                                </span>
+
+                                                <span class="download-product__arrow">
+                                                    <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <button class="download-product__add">+ Добавить новую категорию</button>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <input type="text" placeholder="Название"
+                                                class="download-product__form-input">
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <textarea class="download-product__textarea"
+                                                placeholder="Описание"></textarea>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <button class="download-product__acc-btn js-acc-action">Состав</button>
+
+                                            <div class="download-product__content">
+                                                <div class="download-product__form-label">
+                                                    Состав. Впишите в поля составляющие товары и укажите их количество
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <div class="download-product__counter-wrapper">
+                                                        <input type="text" placeholder="Составляющее 1"
+                                                            class="download-product__form-input">
+
+                                                        <div class="download-product__counter">
+                                                            <button disabled class="download-product__counter-btn">
+                                                                <svg width="14" height="2" viewBox="0 0 14 2"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <line x1="0.75" y1="1.25" x2="13.25" y2="1.25"
+                                                                        stroke="#BFC6E0" stroke-width="1.5"
+                                                                        stroke-linecap="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <input type="number" class="download-product__input-number"
+                                                                value="0">
+                                                            <button class="download-product__counter-btn">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <line x1="0.75" y1="6.66406" x2="13.25" y2="6.66406"
+                                                                        stroke="white" stroke-width="1.5"
+                                                                        stroke-linecap="round" />
+                                                                    <line x1="7.33789" y1="0.75" x2="7.33789" y2="13.25"
+                                                                        stroke="white" stroke-width="1.5"
+                                                                        stroke-linecap="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <div class="download-product__counter-wrapper">
+                                                        <input type="text" placeholder="Составляющее 2"
+                                                            class="download-product__form-input">
+
+                                                        <div class="download-product__counter">
+                                                            <button disabled class="download-product__counter-btn">
+                                                                <svg width="14" height="2" viewBox="0 0 14 2"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <line x1="0.75" y1="1.25" x2="13.25" y2="1.25"
+                                                                        stroke="#BFC6E0" stroke-width="1.5"
+                                                                        stroke-linecap="round" />
+                                                                </svg>
+                                                            </button>
+                                                            <input type="number" class="download-product__input-number"
+                                                                value="0">
+                                                            <button class="download-product__counter-btn">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <line x1="0.75" y1="6.66406" x2="13.25" y2="6.66406"
+                                                                        stroke="white" stroke-width="1.5"
+                                                                        stroke-linecap="round" />
+                                                                    <line x1="7.33789" y1="0.75" x2="7.33789" y2="13.25"
+                                                                        stroke="white" stroke-width="1.5"
+                                                                        stroke-linecap="round" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <button class="download-product__add">+ Добавить поле</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <button class="download-product__acc-btn js-acc-action">Параметры</button>
+
+                                            <div class="download-product__content">
+                                                <div class="download-product__form-label">
+                                                    Состав. Впишите в поля составляющие товары и укажите их
+                                                    количество
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Высота, см"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Ширина, см"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Глубина, см"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Вес, кг"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="объем, л"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="гарантия, месяцев"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="модель"
+                                                        class="download-product__form-input">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <button class="download-product__acc-btn js-acc-action">Технические
+                                                характеристики</button>
+
+                                            <div class="download-product__content">
+                                                <div class="download-product__form-group">
+                                                    <input type="text" class="download-product__form-input">
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <button class="download-product__add">+ Добавить поле</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <button class="download-product__acc-btn js-acc-action">Материалы</button>
+
+                                            <div class="download-product__content">
+                                                <div class="download-product__form-group">
+                                                    <input type="text" class="download-product__form-input">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <button class="download-product__acc-btn js-acc-action">Дополнительная
+                                                информация</button>
+
+                                            <div class="download-product__content">
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Вес, кг"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Вид"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Глубина, см"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Высота, см"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Диаметр, см"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Высота, см"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Особенности"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Возрастное ограничение"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="number" placeholder="Количество элементов"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Назначение"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Вкус"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Срок годности"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Упаковка"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Страна производитель"
+                                                        class="download-product__form-input">
+                                                </div>
+                                                <div class="download-product__form-group">
+                                                    <input type="text" placeholder="Комплектация"
+                                                        class="download-product__form-input">
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <button class="download-product__add">+ Добавить поле</button>
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <div class="download-product__form-label">
+                                                        Выберете цвет товара
+                                                    </div>
+
+                                                    <div class="download-product__radio-wrapper">
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color" checked
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #FF0000;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #FFFFFF; border: 1px solid #BFC6E0"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #FF92D3;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #4CD964;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #FFD600;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #AB0000;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #6803B8;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #228300;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #FF6C01;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #AD7BFF;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #EC126E;"></span>
+                                                        </div>
+                                                        <div class="download-product__radio-item">
+                                                            <input type="radio" name="product_color"
+                                                                class="download-product__form-radio">
+                                                            <span class="download-product__radio-bg"
+                                                                style="background-color: #3657C8;"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <button class="download-product__add">+ Добавить видео</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <button class="download-product__acc-btn js-acc-action">Другие
+                                                функции</button>
+
+                                            <div class="download-product__content">
+                                                <div class="download-product__form-group">
+                                                    <span class="download-product__select js-download-product-select">
+                                                        <input type="text" readonly placeholder="Транспортировка"
+                                                            class="download-product__form-input">
+                                                        <span class="download-product__select-content">
+                                                            <span class="download-product__select-item">Опасный
+                                                                груз</span>
+                                                            <span class="download-product__select-item">не опасный
+                                                                груз</span>
+                                                        </span>
+
+                                                        <span class="download-product__arrow">
+                                                            <img src="https://umclone.pp.ua/images/timeArrow.svg"
+                                                                alt="time">
+                                                        </span>
+                                                    </span>
+                                                </div>
+
+                                                <div class="download-product__form-group">
+                                                    <span class="download-product__select js-download-product-select">
+                                                        <input type="text" readonly placeholder="Хрупкое"
+                                                            class="download-product__form-input">
+                                                        <span class="download-product__select-content">
+                                                            <span class="download-product__select-item">Хрупкое</span>
+                                                            <span class="download-product__select-item">не
+                                                                хрупкое</span>
+                                                        </span>
+
+                                                        <span class="download-product__arrow">
+                                                            <img src="https://umclone.pp.ua/images/timeArrow.svg"
+                                                                alt="time">
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="download-product__btn js-next-btn">Продолжить</button>
+                                    </form>
+
+                                    <form class="download-product__form js-tab-item" id="tab-price">
+                                        <div class="download-product__form-heading">Укажице цену и можете добавить
+                                            скидку</div>
+
+                                        <div class="download-product__form-group">
+                                            <div class="download-product__form-label">
+                                                Укажите цену, ₽
+                                            </div>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <input type="number" placeholder="Цена"
+                                                class="download-product__form-input">
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <div class="download-product__form-label">
+                                                Установите скидку, %
+                                            </div>
+                                        </div>
+
+                                        <div class="download-product__form-group">
+                                            <input type="number" placeholder="Скидка"
+                                                class="download-product__form-input">
+                                        </div>
+
+                                        <div class="download-product__form-calc">
+                                            <div class="download-product__form-desc">При продаже товара после вычета
+                                                комиссии вы получите:</div>
+
+                                            <div class="download-product__form-price">0₽</div>
+                                        </div>
+
+                                        <button class="download-product__btn js-next-btn">Сохранить</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

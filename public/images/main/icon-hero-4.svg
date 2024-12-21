@@ -1,0 +1,21 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="10.891" width="40" height="40" rx="6" transform="rotate(-15.7997 0 10.891)" fill="#E27721"/>
+<g filter="url(#filter0_b_164_213)">
+<rect x="14" y="7.68991" width="34" height="34" rx="5.1" fill="white" fill-opacity="0.43"/>
+</g>
+<rect x="21" y="15" width="20" height="20" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+<path d="M30 20H36" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M30 25H36" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M30 30H36" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26 21C26.5523 21 27 20.5523 27 20C27 19.4477 26.5523 19 26 19C25.4477 19 25 19.4477 25 20C25 20.5523 25.4477 21 26 21Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26 26C26.5523 26 27 25.5523 27 25C27 24.4477 26.5523 24 26 24C25.4477 24 25 24.4477 25 25C25 25.5523 25.4477 26 26 26Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26 31C26.5523 31 27 30.5523 27 30C27 29.4477 26.5523 29 26 29C25.4477 29 25 29.4477 25 30C25 30.5523 25.4477 31 26 31Z" fill="white"/>
+<defs>
+<filter id="filter0_b_164_213" x="2" y="-4.31009" width="58" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="6"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_164_213"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_164_213" result="shape"/>
+</filter>
+</defs>
+</svg>

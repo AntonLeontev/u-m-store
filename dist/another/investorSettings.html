@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><span>Профиль инвестора</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Настройки профиля</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user"><a href="#">Профиль</a></li>
+                                <li class="active"><a href="#">Настройки Профиля</a></li>
+                                <li><a href="#">Мои покупки</a></li>
+                                <li><a href="#">Заказы</a></li>
+                                <li><a href="#">Кошелёк</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="profile__bigboxing">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Мои покупки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox5" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Кошелёк</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox9" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Выйти</label>
+                                </div>
+                            </div>
+                            <div class="profile__info profile__info--investor">
+                                <div class="investor__persona">
+                                    <div class="investor__name">Иванов Иван Иванович</div>
+                                    <div class="investor__description">ООО «ВИАКОМ»</div>
+                                    <div class="investor__contacts">
+                                        <div class="investor__phone">
+                                            <a href="tel:79999999" >+79999999</a>
+                                        </div>
+                                        <div class="investor__mail">
+                                            <a href="mailto:kizhukova@gmail.com">kizhukova@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="investor__image">
+                                        <div class="investor__photo">
+                                            <img src="images/investorPhoto.png" alt="">
+                                        </div>
+                                        <div class="investor__newphoto">
+                                            <img src="images/investorAddPhoto.png" alt="">
+                                        </div>
+                                        <div class="investor__addPhoto">
+                                            <div class="investor__addPhoto--text">Обновить фото профиля</div>
+                                            <div class="investor__addPhoto--add">
+                                                <input type="file" class="investor__addPhoto--download">
+                                                <a href="#" class="investor__addPhoto--fake">Загрузить фото</a>
+                                            </div>
+                                            <div class="investor__addPhoto--close">
+                                                <img src="images/close.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="investor__payments">
+                                    <div class="investor__name">Платежи и выплаты</div>
+                                    <div class="payments__blocks">
+                                        <div class="payments__item">
+                                            <div class="payments__name">Master Card</div>
+                                            <div class="payments__card">**** 1234</div>
+                                            <div class="payments__menu">
+                                                <div class="payments__point"></div>
+                                                <div class="payments__point"></div>
+                                                <div class="payments__point"></div>
+                                                <div class="payments__del">
+                                                    <a href="#">Удалить</a>
+                                                </div>
+                                            </div>
+                                            <div class="payments__main">Основная карта</div>
+                                        </div>
+                                        <div class="payments__item">
+                                            <div class="payments__name">Master Card</div>
+                                            <div class="payments__card">**** 1234</div>
+                                            <div class="payments__menu">
+                                                <div class="payments__point"></div>
+                                                <div class="payments__point"></div>
+                                                <div class="payments__point"></div>
+                                                <div class="payments__del">
+                                                    <a href="#">Удалить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="payments__item payments__item--add">
+                                            <div class="payments__add">
+                                                <a href="#">Добавить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="investor__address">
+                                    <div class="investor__name">Адреса</div>
+                                    <div class="investor__place">г. Москва, ул. Тимирязевская, д.14, офис 56</div>
+                                    <div class="investor__place investor__place--two">г. Москва, Ленинградское шоссе, д.258, кв. 15</div>
+                                    <div class="address__add">
+                                        <a href="#">Добавить адрес</a>
+                                    </div>
+                                </div>
+                                <div class="investor__delete">
+                                    <a href="#">Удалить профиль</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="payments__addCard">
+    <div class="addCard__title">Добавить Способ платежей и выплат</div>
+    <div class="addCard__box">
+        <div class="addCard__card">
+            <a href="#" class="active">Банковская карта</a>
+        </div>
+        <div class="addCard__bank">
+            <a href="#">Расчетный счет</a>
+        </div>
+    </div>
+    <div class="addCard__form addCard__form--one">
+        <form>
+            <div class="addCard__pay">
+                <div class="addCard__logos">
+                    <div class="addCard__logo">
+                        <img src="images/cardOne.svg" alt="">
+                    </div>
+                    <div class="addCard__logo">
+                        <img src="images/cardTwo.png" alt="">
+                    </div>
+                    <div class="addCard__logo">
+                        <img src="images/cardThree.png" alt="">
+                    </div>
+                    <div class="addCard__logo">
+                        <img src="images/cardFour.svg" alt="">
+                    </div>
+                </div>
+                <div class="addCard__num">
+                    <div class="addCard__top">Номер карты</div>
+                    <div class="addCard__input">
+                        <input type="text" id="addCardCard" placeholder="0000 0000 0000 0000">
+                    </div>
+                </div>
+                <div class="addCard__inner">
+                    <div class="addCard__one">
+                        <div class="addCard__top">Срок действия</div>
+                        <div class="addCard__wrapper">
+                            <div class="addCard__input">
+                                <input type="text" id="addCardTwo" placeholder="MM">
+                            </div>
+                            <div class="addCard__input">
+                                <input type="text" id="addCardFour" placeholder="YYYY">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addCard__one">
+                        <div class="addCard__three">
+                            <div class="addCard__top">CVV/CVV</div>
+                            <div class="addCard__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addCard__num">
+                    <div class="addCard__top">Держатель карты</div>
+                    <div class="addCard__input">
+                        <input type="text" placeholder="Ivan Ivanov">
+                    </div>
+                </div>
+            </div>
+            <div class="addCard__save">
+                <button>Сохранить</button>
+            </div>
+        </form>
+    </div>
+    <div class="addCard__form addCard__form--two">
+        <form>
+            <div class="addCard__pay">
+                <div class="addCard__num">
+                    <div class="addCard__top">ФИО</div>
+                    <div class="addCard__input">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="addCard__num">
+                    <div class="addCard__wrapper addCard__wrapper--grid">
+                        <div class="addCard__input">
+                            <div class="addCard__top">ИНН</div>
+                            <input type="text">
+                        </div>
+                        <div class="addCard__input">
+                            <div class="addCard__top">КПП</div>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="addCard__num">
+                    <div class="addCard__top">Наименование банка</div>
+                    <div class="addCard__input">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="addCard__num">
+                    <div class="addCard__top">Корр. счет</div>
+                    <div class="addCard__input">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="addCard__num">
+                    <div class="addCard__top">Расчетный счет</div>
+                    <div class="addCard__input">
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="addCard__save">
+                <button>Сохранить</button>
+            </div>
+        </form>
+    </div>
+    <div class="addCard__close">
+        <img src="images/closeBlack.svg" alt="">
+    </div>
+</div>
+
+<div class="payments__delete">
+    <div class="payments__delText">Как только Ваш профиль будет удален, Вы автоматически выйдете из системы и больше не сможете войти в этот аккаунт.</div>
+    <div class="payments__delBtn">
+        <a href="#">Удалить профиль</a>
+    </div>
+    <div class="payments__delClose">
+        <img src="images/closeBlack.svg" alt="">
+    </div>
+</div>
+
+<div class="payments__addAddress">
+    <div class="addAddress__form">
+        <form>
+            <div class="addAddress__one">
+                <div class="addAddress__top">Регион</div>
+                <div class="addAddress__input">
+                    <input type="text" placeholder="Москва">
+                </div>
+            </div>
+            <div class="addAddress__one">
+                <div class="addAddress__top">Город</div>
+                <div class="addAddress__input">
+                    <input type="text" placeholder="Москва">
+                </div>
+            </div>
+            <div class="addAddress__one">
+                <div class="addAddress__top">Улица</div>
+                <div class="addAddress__input">
+                    <input type="text" placeholder="Тимирязевская">
+                </div>
+            </div>
+            <div class="addAddress__one">
+                <div class="addAddress__top">Дом</div>
+                <div class="addAddress__input">
+                    <input type="text" placeholder="25">
+                </div>
+            </div>
+            <div class="addAddress__one">
+                <div class="addAddress__top">Строение</div>
+                <div class="addAddress__input">
+                    <input type="text" placeholder="1">
+                </div>
+            </div>
+            <div class="addAddress__one">
+                <div class="addAddress__top">Квартира</div>
+                <div class="addAddress__input">
+                    <input type="text" placeholder="10">
+                </div>
+            </div>
+            <div class="addAddress__checkbox">
+                <div class="addAddress__input">
+                    <input type="checkbox" id="cb2"><label for="cb2">Основной адрес</label>
+                </div>
+            </div>
+            <div class="addAddress__btn">
+                <button>Сохранить</button>
+            </div>
+        </form>
+    </div>
+    <div class="addAddress__close">
+        <img src="images/closeBlack.svg" alt="">
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js" integrity="sha512-6Jym48dWwVjfmvB0Hu3/4jn4TODd6uvkxdi9GNbBHwZ4nGcRxJUCaTkL3pVY6XUQABqFo3T58EMXFQztbjvAFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    jQuery(function($){
+        $("#addCardCard").inputmask("**** **** **** ****");
+        $("#addCardTwo").inputmask("**");
+        $("#addCardFour").inputmask("****");
+    });
+    </script>
+</body>
+</html>

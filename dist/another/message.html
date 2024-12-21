@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/file.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Уведомления</a></li>
+                            <li><span>Сообщение</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title">Профиль</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user"><a href="#">Профиль</a></li>
+                                <li><a href="#">Настройки Профиля</a></li>
+                                <li class="active"><a href="#">Уведомления</a></li>
+                                <li class="menu__arrow menu__arrow--one" id="menuArrowOne"><a href="#">Заказы</a>
+                                    <div class="hide__list hide__list--one" id="hideListOne">
+                                        <ul>
+                                            <li><a href="#">Доставки</a></li>
+                                            <li><a href="#">История заказов</a></li>
+                                            <li><a href="#">Отзывы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__arrow menu__arrow--two" id="menuArrowTwo"><a href="#">Бонусы и промокоды</a>
+                                    <div class="hide__list hide__list--two" id="hideListTwo">
+                                        <ul>
+                                            <li><a href="#">Бонусы</a></li>
+                                            <li><a href="#">Промокоды</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Реферальная программа</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="newuved__inner">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Уведомления</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox5" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Бонусы и промокоды</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox6" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox6">Доставки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox7" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox7">Электронные чеки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox8" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox8">Реферальная программа</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox9" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Выйти</label>
+                                </div>
+                            </div>
+                            <div class="message__item">
+                                <div class="message__name">Заказ № 012354</div>
+                                <div class="message__data">12.08.2021</div>
+                                <div class="message__box">
+                                    <div class="message__image">
+                                        <img src="images/cleaningOne.jpg" alt="">
+                                    </div>
+                                    <div class="message__info">
+                                        <div class="message__type">Клининг</div>
+                                        <div class="message__uno">Тип услуги: Квартира</div>
+                                        <div class="message__uno">Тип уборки: Поддерживающая уборка</div>
+                                        <div class="message__uno">Площадь: 55м2</div>
+                                        <div class="message__uno">Дата и время: 24.08.2021 18:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message__text">
+                                <p>Уважаемый клиент!</p>
+                                <p>Выбранное Вами время для данной услуги занято. Вы можете выбрать другое свободное время</p>
+                            </div>
+                            <div class="message__choose">
+                                <div class="message__day">24.08.2021</div>
+                                <div class="message__times">
+                                    <a href="#" class="message__time timeItem">11:00</a>
+                                    <a href="#" class="message__time timeItem">13:00</a>
+                                </div>
+                            </div>
+                            <div class="message__choose">
+                                <div class="message__day">25.08.2021</div>
+                                <div class="message__times">
+                                    <a href="#" class="message__time timeItem">09:00</a>
+                                    <a href="#" class="message__time timeItem">11:00</a>
+                                    <a href="#" class="message__time timeItem">13:00</a>
+                                    <a href="#" class="message__time timeItem">15:00</a>
+                                    <a href="#" class="message__time timeItem">17:00</a>
+                                    <a href="#" class="message__time timeItem">18:00</a>
+                                </div>
+                            </div>
+                            <a href="#" class="message__chat">Написать в чат</a>
+                            <a href="#" class="message__cancellation" id="messageCancellation">Отменить заказ</a>
+                            <div class="message__text">Приносим свои извинения за предоставленные неудобства!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="zakaz__changed" id="zakazChanged">
+    <div class="changed__text">Изменения были успешно внесены! Спасибо за заказ.</div>
+    <div class="changed__close" id="changedClose">
+        <img src="images/closeImage.svg" alt="">
+    </div>
+</div>
+
+<div class="zakaz__cancellation" id="zakazCancellation">
+    <div class="cancellation__text">Ваш заказ успешно отменен</div>
+    <div class="cancellation__close" id="cancellationClose">
+        <img src="images/closeImage.svg" alt="">
+    </div>
+</div>
+
+<div class="zakaz__confirmation" id="zakazConfirmation">
+    <div class="confirmation__text">Подтвердите изменения в заказе № 012354</div>
+    <div class="confirmation__data">Дата и время: 25.08.2021 18:00</div>
+    <div class="confirmation__choose">
+        <a href="#" class="confirmation__cancellation" id="confirmationNo">Отмена</a>
+        <a href="#" class="confirmation__confirm" id="confirmationYes">Подтвердить</a>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

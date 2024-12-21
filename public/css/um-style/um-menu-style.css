@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "opensans", sans-serif;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+fieldset {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+input,
+textarea,
+fieldset {
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.um-button-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 42px;
+  height: 42px;
+  background: #3657C8;
+  border-radius: 50px;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.um-button-menu:hover, .um-button-menu:focus {
+  background: #2b5dff;
+}
+
+.um-button-menu:active {
+  background: #3657C8;
+}
+
+.um-button-menu__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  background-image: url("../../images/img/svg/um-menu.svg");
+}
+
+.um-menu {
+  position: absolute;
+  left: -400px;
+  max-width: 212px;
+  padding-top: 26px;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.um-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 28px;
+}
+
+.um-menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 16px;
+  letter-spacing: 0.0275em;
+  color: #0B1331;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.um-menu__link:hover, .um-menu__link:focus {
+  color: #3657C8;
+}
+
+.um-menu__link:active {
+  color: #0B1331;
+}
+
+.um-menu__link:hover > i,
+.um-menu__link:focus > i {
+  color: #3657C8;
+}
+
+.um-menu__link:active > i {
+  color: #0B1331;
+}
+
+.um-menu__link-active {
+  color: #3657C8;
+}
+
+.um-menu__link:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+}
+
+.um-menu__icon-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22px;
+  height: 22px;
+  background: #0B1331;
+}
+
+.um-menu__services-goods {
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  overflow: hidden;
+  height: 0;
+}
+
+.um-menu__services-goods--active {
+  overflow: hidden;
+  height: 108px;
+}
+
+.icon-um-user {
+  font-size: 22px;
+  margin-right: 12px;
+  margin-bottom: 3px;
+}
+
+.icon-um-arrow {
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  margin-left: auto;
+  font-size: 12px;
+  color: #BFC6E0;
+}
+
+.icon-um-arrow--active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.icon-um-exit {
+  margin-right: 12px;
+  margin-bottom: 4px;
+}
+
+.um-menu--active {
+  left: 15px;
+}
+
+@media (min-width: 768px) {
+  .um-button-menu {
+    display: none;
+  }
+  .um-menu {
+    left: 15px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

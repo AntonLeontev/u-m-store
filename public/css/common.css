@@ -1,0 +1,460 @@
+.popular__item .popular__img a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.popular__item .popular__img a{
+    width: 100%;
+    height: 100%;
+}
+.popular__item .popular__buy.none a{
+    background-color: #BFC6E0;
+}
+.popular__item .popular__img{
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 14px;
+}
+
+.common__btn a{
+    background: #3657C8;
+    border-radius: 66px;
+    padding: 17px 56px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    text-transform: none;
+    max-width: max-content;
+}
+.common__third{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #2C2C39;
+}
+.common__close,
+.iamPartner form button{
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background: #3657C8;
+    border-radius: 66px;
+    padding: 17px 65px;
+    max-width: max-content;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.iamPartner form button{
+    margin-top: 25px;
+}
+.iamPartner form button::after{
+    content: none;
+}
+
+
+/*product__like - добавить товар в избранное*/
+.product__like a{
+    height: 56px;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3657C8;
+    border-radius: 50%;
+}
+.product__like svg{
+    max-width: 22px;
+    max-height: 21px;
+}
+.product__like a path {
+    transition: all .5s;
+    fill: #fff;
+}
+.product__like a:hover path{
+    fill: #D24B6C;
+}
+
+/*common__choose - кнопка при выборе между чем-то и чем-то*/
+.common__choose{
+    background: transparent;
+    border-radius: 55px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0275em;
+    color: #BFC6E0;
+    padding: 13px 21px;
+    cursor: pointer;
+}
+.common__choose.active{
+    background: #fff;
+    box-shadow: 10px 10px 20px rgba(100, 106, 127, 0.05);
+    color: #3657C8;
+}
+
+/*index__btn - кнопка на главной странице*/
+.index__btn a,
+.new__scores a {
+    background: #6ACDF8;
+    border-radius: 66px;
+    max-width: 228px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding: 17px 20px 17px 0;
+    position: relative;
+    text-transform: none;
+    transition: all .3s;
+}
+.index__btn a:hover,
+.new__scores a:hover{
+    color: #0B1331;
+}
+.index__btn a:hover:after,
+.new__scores a:hover:after{
+    background-image: url('../images/rightBlackArrow.svg');
+}
+.index__btn a::after,
+.new__scores a::after{
+    content: '';
+    position: absolute;
+    background-image: url('../images/whiteRight.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 13px;
+    width: 13px;
+    top: 23px;
+    right: 41px;
+    transition: all .3s;
+}
+
+.new__scores a::after {
+    right: 30px;
+}
+
+/*common__buy - кнопка для добавления товара в корзину*/
+.common__buy {
+    max-width: 290px;
+    width: 100%;
+    transition: all .5s;
+}
+.common__buy a {
+    width: 100%;
+    text-align: center;
+    background: #6acdf8;
+    border-radius: 66px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    max-width: 290px;
+    color: #FFFFFF;
+    padding: 17px 0;
+    position: relative;
+}
+.common__buy a span{
+    padding-left: 12px;
+}
+.common__buy:hover svg path{
+    stroke: #0B1331;
+}
+.common__buy:hover a{
+    color: #0B1331;
+    filter: drop-shadow(4px 4px 8px #DFE2EE);
+}
+.common__buy.added:hover svg path:nth-child(1),
+.common__buy.added:hover svg path:nth-child(2){
+    stroke: #fff !important;
+}
+.common__buy.added:hover svg path:nth-child(3){
+    fill: #fff !important;
+    stroke: none;
+}
+.common__buy.added:hover a{
+    color: #fff;
+}
+
+.common__buy.none:hover svg path:nth-child(1),
+.common__buy.none:hover svg path:nth-child(2){
+    stroke: #fff !important;
+}
+.common__buy.none:hover svg path:nth-child(3){
+    fill: #fff !important;
+    stroke: none;
+}
+.common__buy.none a{
+    background-color: #BFC6E0;
+}
+.common__buy.none:hover a{
+    color: #fff;
+}
+
+
+/*common__form - класс для общих форм*/
+.common__form form input {
+    max-width: 642px;
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    caret-color: #03174a;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #03174a;
+    border: 2px solid #BFC6E0;
+    border-radius: 55px;
+    padding: 13px 28px;
+}
+.iamPartner form input::placeholder{
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.0275em;
+    color: #BFC6E0;
+}
+.common__form form input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+.common__form form input::placeholder {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 160%;
+    color: #03174a;
+}
+
+
+
+
+.iamPartner{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 91px 220px 159px 117px;
+}
+.kategory__arrow{
+    top: 44px;
+    height: 10px;
+    width: 15px;
+}
+.kategory__list{
+    top: 84px;
+}
+.kategory__list li{
+    padding-left: 25px;
+}
+.application__title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+    color: #0B1331;    
+}
+.label__partner{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+    padding-bottom: 4px;
+    color: #BFC6E0;
+    position: relative;
+}
+.label__partner::before{
+    content: '*';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    color: #D24B6C;
+}
+.iamPartner form input::placeholder{
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.0275em;
+    color: #BFC6E0;
+}
+.iamPartner form input{
+    border: 2px solid #BFC6E0;
+    border-radius: 55px;
+    padding: 13px 28px;
+}
+
+.thanks{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 163px 300px;
+}
+.thanks__title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #0B1331;
+    margin-bottom: 47px;
+    max-width: 400px;
+}
+.thanks__btn{
+    margin-top: 0;
+}
+.common__buy.added:hover a {
+    filter: none;
+}
+@media (max-width: 1600px){
+    .iamPartner{
+        padding-bottom: 91px;
+        transform: translateY(-50%) scale(0.8);
+    }
+}
+@media (max-width: 1300px){
+    .thanks{
+        padding: 150px 200px;
+    }
+}
+@media (max-width: 800px){
+    .popular__item {
+        margin: 0 auto;
+        /*max-width: max-content;*/
+    }
+    .popular__item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    .popular__item .popular__img {
+        max-width: 140px;
+        width: 100%;
+        margin: 0;
+        max-height: 167px;
+        height: 100%;
+    }
+    .popular__item .popular__img a {
+        width: 100%;
+        height: 100%;
+    }
+    .popular__item .popular__img a img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .popular__item .popular__like {
+        right: auto;
+        left: 136px;
+    } 
+}
+
+@media (max-width: 500px){
+    .product__button.common__btn a{
+        font-size: 14px;
+    }
+    .common__buy{
+        max-width: 262px;
+    }
+    .common__buy a{
+        max-width: 262px;
+    }
+    .common__buy:hover a{
+        filter: none;
+    }
+    .common__choose{
+        font-size: 14px;
+        line-height: 160%;
+        padding: 14px 22px;
+    }
+    .common__choose.active{
+        padding: 14px 22px;
+    }
+    .iamPartner form button{
+        margin-top: 0;
+    }
+    .common__third{
+        font-size: 20px;
+    }
+    .thanks{
+        padding: 60px 15px;
+    }
+    .thanks__close{
+        max-width: 40px;
+    }
+    .thanks__title{
+        font-size: 18px;
+        margin-bottom: 33px;
+    }
+    .common__close{
+        font-size: 16px;
+        line-height: 22px;
+        padding: 17px 94px;
+    }
+    .iamPartner{
+        padding: 60px 15px;
+        transform: translateY(-50%) scale(1);
+        max-height: 97vh;
+        top: 50vh;
+        overflow: scroll;
+    }
+    .hood{
+        max-width: 40px;
+        width: 100%;
+    }
+    .hood img{
+        width: 100%;
+    }
+    .application__title{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.05em;
+        color: #0B1331;
+    }
+    .popular__item .popular__img {
+        max-width: 131px;
+        width: 100%;
+        margin: 0;
+        max-height: 157px;
+        height: 100%;
+    }
+    .popular__item .popular__img a {
+        width: 100%;
+        height: 100%;
+    }
+    .popular__item .popular__img a img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .popular__item .popular__like {
+        right: auto;
+        left: 136px;
+    } 
+    .popular__item .popular__like {
+        top: 10px;
+    }
+    .popular__item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 14px
+    }
+}
+@media (max-width: 355px){
+    .popular__item{
+        /*display: grid;*/
+        /*grid-gap: 0;*/
+        /*grid-template-columns: 100px 44vw;*/
+    }
+    .popular__item .popular__like {
+        left: 105px;
+    }
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Заказы</a></li>
+                            <li><span>История заказов</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title">Профиль</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user"><a href="#">Профиль</a></li>
+                                <li><a href="#">Настройки Профиля</a></li>
+                                <li><a href="#">Уведомления</a></li>
+                                <li class="menu__arrow menu__arrow--one clicked" id="menuArrowOne"><a href="#">Заказы</a>
+                                    <div class="hide__list hide__list--one" id="hideListOne" style="display: block;">
+                                        <ul>
+                                            <li><a href="#">Доставки</a></li>
+                                            <li class="active"><a href="#">История заказов</a></li>
+                                            <li><a href="#">Отзывы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__arrow menu__arrow--two" id="menuArrowTwo"><a href="#">Бонусы и промокоды</a>
+                                    <div class="hide__list hide__list--two" id="hideListTwo">
+                                        <ul>
+                                            <li><a href="#">Бонусы</a></li>
+                                            <li><a href="#">Промокоды</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Реферальная программа</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="story__inner">
+                            <div class="story__wrapper">
+                                <div class="story__month">Январь 2021</div>
+                                <div class="story__block">
+                                    <div class="story__item">
+                                        <div class="story__data">10.01.2021</div>
+                                        <div class="story__description">
+                                            <div class="story__pos">Мальчишник</div>
+                                            <div class="story__pos">Табурет</div>
+                                            <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                        </div>
+                                        <div class="story__price">200 000 ₽</div>
+                                        <div class="story__again">
+                                            <a href="#">Повторить заказ</a>
+                                        </div>
+                                    </div>
+                                    <div class="story__mob">
+                                        <div class="story__one">
+                                            <div class="story__row">
+                                                <div class="story__name">Дата</div>
+                                                <div class="story__data">10.01.2021</div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Перечень товаров (услуг)</div>
+                                                <div class="story__description">
+                                                    <div class="story__pos">Мальчишник</div>
+                                                    <div class="story__pos">Табурет</div>
+                                                    <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                                </div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Сумма: </div>
+                                                <div class="story__price">200 000 P</div>
+                                            </div>
+                                        </div>
+                                        <div class="story__again">
+                                            <a href="#">
+                                                <img src="images/againMob.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story__block">
+                                    <div class="story__item">
+                                        <div class="story__data">10.01.2021</div>
+                                        <div class="story__description">
+                                            <div class="story__pos">Мальчишник</div>
+                                            <div class="story__pos">Табурет</div>
+                                            <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                        </div>
+                                        <div class="story__price">200 000 ₽</div>
+                                        <div class="story__again">
+                                            <a href="#">Повторить заказ</a>
+                                        </div>
+                                    </div>
+                                    <div class="story__mob">
+                                        <div class="story__one">
+                                            <div class="story__row">
+                                                <div class="story__name">Дата</div>
+                                                <div class="story__data">10.01.2021</div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Перечень товаров (услуг)</div>
+                                                <div class="story__description">
+                                                    <div class="story__pos">Мальчишник</div>
+                                                    <div class="story__pos">Табурет</div>
+                                                    <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                                </div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Сумма: </div>
+                                                <div class="story__price">200 000 P</div>
+                                            </div>
+                                        </div>
+                                        <div class="story__again">
+                                            <a href="#">
+                                                <img src="images/againMob.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story__block">
+                                    <div class="story__item">
+                                        <div class="story__data">10.01.2021</div>
+                                        <div class="story__description">
+                                            <div class="story__pos">Мальчишник</div>
+                                            <div class="story__pos">Табурет</div>
+                                            <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                        </div>
+                                        <div class="story__price">200 000 ₽</div>
+                                        <div class="story__again">
+                                            <a href="#">Повторить заказ</a>
+                                        </div>
+                                    </div>
+                                    <div class="story__mob">
+                                        <div class="story__one">
+                                            <div class="story__row">
+                                                <div class="story__name">Дата</div>
+                                                <div class="story__data">10.01.2021</div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Перечень товаров (услуг)</div>
+                                                <div class="story__description">
+                                                    <div class="story__pos">Мальчишник</div>
+                                                    <div class="story__pos">Табурет</div>
+                                                    <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                                </div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Сумма: </div>
+                                                <div class="story__price">200 000 P</div>
+                                            </div>
+                                        </div>
+                                        <div class="story__again">
+                                            <a href="#">
+                                                <img src="images/againMob.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story__wrapper">
+                                <div class="story__month">Февраль 2021</div>
+                                <div class="story__block">
+                                    <div class="story__item">
+                                        <div class="story__data">10.01.2021</div>
+                                        <div class="story__description">
+                                            <div class="story__pos">Мальчишник</div>
+                                            <div class="story__pos">Табурет</div>
+                                            <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                        </div>
+                                        <div class="story__price">200 000 ₽</div>
+                                        <div class="story__again">
+                                            <a href="#">Повторить заказ</a>
+                                        </div>
+                                    </div>
+                                    <div class="story__mob">
+                                        <div class="story__one">
+                                            <div class="story__row">
+                                                <div class="story__name">Дата</div>
+                                                <div class="story__data">10.01.2021</div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Перечень товаров (услуг)</div>
+                                                <div class="story__description">
+                                                    <div class="story__pos">Мальчишник</div>
+                                                    <div class="story__pos">Табурет</div>
+                                                    <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                                </div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Сумма: </div>
+                                                <div class="story__price">200 000 P</div>
+                                            </div>
+                                        </div>
+                                        <div class="story__again">
+                                            <a href="#">
+                                                <img src="images/againMob.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story__block">
+                                    <div class="story__item">
+                                        <div class="story__data">10.01.2021</div>
+                                        <div class="story__description">
+                                            <div class="story__pos">Мальчишник</div>
+                                            <div class="story__pos">Табурет</div>
+                                            <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                        </div>
+                                        <div class="story__price">200 000 ₽</div>
+                                        <div class="story__again">
+                                            <a href="#">Повторить заказ</a>
+                                        </div>
+                                    </div>
+                                    <div class="story__mob">
+                                        <div class="story__one">
+                                            <div class="story__row">
+                                                <div class="story__name">Дата</div>
+                                                <div class="story__data">10.01.2021</div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Перечень товаров (услуг)</div>
+                                                <div class="story__description">
+                                                    <div class="story__pos">Мальчишник</div>
+                                                    <div class="story__pos">Табурет</div>
+                                                    <div class="story__pos">Подписка на тренировки 1 месяц</div>
+                                                </div>
+                                            </div>
+                                            <div class="story__row">
+                                                <div class="story__name">Сумма: </div>
+                                                <div class="story__price">200 000 P</div>
+                                            </div>
+                                        </div>
+                                        <div class="story__again">
+                                            <a href="#">
+                                                <img src="images/againMob.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

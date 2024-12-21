@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><span>Профиль</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Профиль</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user"><a href="#">Профиль</a></li>
+                                <li><a href="#">Настройки Профиля</a></li>
+                                <li class="active"><a href="#">Кошелек</a></li>
+                                <li><a href="#">Уведомления</a></li>
+                                <li class="menu__arrow menu__arrow--one" id="menuArrowOne"><a href="#">Заказы</a>
+                                    <div class="hide__list hide__list--one" id="hideListOne">
+                                        <ul>
+                                            <li><a href="#">Доставки</a></li>
+                                            <li><a href="#">История заказов</a></li>
+                                            <li><a href="#">Отзывы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__arrow menu__arrow--two"  id="menuArrowTwo"><a href="#">Бонусы и промокоды</a>
+                                    <div class="hide__list hide__list--two" id="hideListTwo">
+                                        <ul>
+                                            <li><a href="#">Бонусы</a></li>
+                                            <li><a href="#">Промокоды</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Реферальная программа</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="profile__bigboxing">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox22" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox22">Кошелек</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Уведомления</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox5" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Бонусы и промокоды</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox6" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox6">Доставки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox7" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox7">Электронные чеки</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox8" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox8">Реферальная программа</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox9" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Выйти</label>
+                                </div>
+                            </div>
+                            <div class="wallet__inner">
+                                <div class="wallet__card">
+                                    <div class="wallet__left">
+                                        <div class="wallet__text">UM Кошелёк</div>
+                                        <div class="wallet__dots">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet__right">
+                                        <div class="wallet__name">Ваш баланс</div>
+                                        <div class="wallet__balance">2500 ₽</div>
+                                        <div class="wallet__num">4100 1685 7038 095</div>
+                                        <div class="wallet__action">
+                                            <div class="wallet__add">
+                                                <a href="#" class="active">Пополнить</a>
+                                            </div>
+                                            <div class="wallet__tranz">
+                                                <a href="#">Транзакции</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wallet__input">
+                                    <label><input type="text">₽</label>
+                                </div>
+                                <div class="wallet__choose">
+                                    <div class="wallet__ways">Выберете способ пополнения</div>
+                                    <div class="wallet__kassa">
+                                        <a href="#">Пополнение UM кошелька через <img src="images/kassa.png" alt=""></a>
+                                    </div>
+                                    <div class="wallet__schet">
+                                        <a href="#">Пополнение UM кошелька через расчетный счет</a>
+                                    </div>
+                                </div>
+                                <div class="wallet__tranzaction">
+                                    <div class="wallet__tranzact">
+                                        <div class="wallet__znak">
+                                            <img src="images/wallet_minus.svg" alt="">
+                                        </div>
+                                        <div class="wallet__texting">
+                                            <div class="wallet__data">20.01.2021</div>
+                                            <div class="wallet__where">Пополнение UM Кошелька</div>
+                                            <div class="wallet__way">Visa *1234</div>
+                                        </div>
+                                        <div class="wallet__price">1500 ₽</div>
+                                    </div>
+                                    <div class="wallet__tranzact">
+                                        <div class="wallet__znak">
+                                            <img src="images/wallet_plus.svg" alt="">
+                                        </div>
+                                        <div class="wallet__texting">
+                                            <div class="wallet__data">20.01.2021</div>
+                                            <div class="wallet__where">Оплата заказа</div>
+                                            <div class="wallet__way">Номер заказа: 012345678</div>
+                                        </div>
+                                        <div class="wallet__price">2500 ₽</div>
+                                    </div>
+                                    <div class="wallet__tranzact">
+                                        <div class="wallet__znak">
+                                            <img src="images/wallet_minus.svg" alt="">
+                                        </div>
+                                        <div class="wallet__texting">
+                                            <div class="wallet__data">20.01.2021</div>
+                                            <div class="wallet__where">Пополнение UM Кошелька</div>
+                                            <div class="wallet__way">Расчетный счет</div>
+                                        </div>
+                                        <div class="wallet__price">1500 ₽</div>
+                                    </div>
+                                    <div class="wallet__tranzact">
+                                        <div class="wallet__znak">
+                                            <img src="images/wallet_minus.svg" alt="">
+                                        </div>
+                                        <div class="wallet__texting">
+                                            <div class="wallet__data">20.01.2021</div>
+                                            <div class="wallet__where">Пополнение UM Кошелька</div>
+                                            <div class="wallet__way">Расчетный счет</div>
+                                        </div>
+                                        <div class="wallet__price">1500 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="add__wallet">
+    <div class="wallet__title">
+        Пополнение кошелька через <img src="images/kassa.png" alt="">
+    </div>
+    <iframe src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&amp;targets=United%20Market&amp;targets-hint=&amp;default-sum=9940&amp;button-text=12&amp;payment-type-choice=on&amp;mobile-payment-type-choice=on&amp;fio=on&amp;phone=on&amp;comment=on&amp;mail=on&amp;hint=%D0%92%D0%B0%D1%88%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&amp;successURL=&amp;quickpay=shop&amp;account=4100115579671387" width="462px" height="313" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+    <div class="add__wallet__close">
+        <img src="images/closeBlack.svg" alt="">
+    </div>
+</div>
+
+<div class="wallet__personalData">
+    <div class="personalData__title">Пополнение кошелька через расчетный счет</div>
+    <div class="personalData__form">
+        <form>
+            <div class="personalData__one">
+                <div class="personalData__top">ФИО</div>
+                <input type="text" >
+            </div>
+            <div class="personalData__one">
+                <div class="personalData__top">Адрес</div>
+                <input type="text" >
+            </div>
+            <button>Продолжить</button>
+        </form>
+    </div>
+    <div class="personalData__close">
+        <img src="images/closeBlack.svg" alt="">
+    </div>
+</div>
+
+<div class="wallet__receipt">
+    <div class="receipt__title">Пополнение кошелька через расчетный счет</div>
+    <div class="receipt__uno">
+        <div class="receipt__table">
+            <div class="receipt__left">
+                <div class="receipt__top">Извещение</div>
+                <div class="receipt__bottom">Кассир</div>
+            </div>
+            <div class="receipt__right">
+                <div class="receipt__one">
+                    <div class="receipt__line">
+                        ООО "ЮНАЙТЕД МАРКЕТ"
+                    </div>
+                    <div class="receipt__text">Получатель платежа</div>
+                </div>
+                <div class="receipt__flex">
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            7841090220
+                        </div>
+                        <div class="receipt__text">ИНН</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            784101001
+                        </div>
+                        <div class="receipt__text">КПП</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            40702810402500094317
+                        </div>
+                        <div class="receipt__text">Расчетный счет</div>
+                    </div>
+                </div>
+                <div class="receipt__one">
+                    <div class="receipt__line">
+                        ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ" г. Москва, БИК: 044525999, К/с 30101810845250000999
+                    </div>
+                    <div class="receipt__text">Банк Получателя</div>
+                </div>
+                <div class="receipt__one">
+                    <div class="receipt__line">
+                        Иванов Иван Иванович
+                    </div>
+                    <div class="receipt__text">Иванов Иван Иванович</div>
+                </div>
+                <div class="receipt__one receipt__one--margin">
+                    <div class="receipt__line">
+                        г. Москва, ул. Тимирязевская 1 стр 10
+                    </div>
+                    <div class="receipt__text">Адрес Платильщика</div>
+                </div>
+                <div class="receipt__one">
+                    <div class="receipt__line receipt__line--left">
+                        Пополнение баланса UM Кошелька для оплаты услуг по счёту № 02-673210967 (номер Личного кабинета 69156683) от 16.09.2021
+                    </div>
+                    <div class="receipt__text">Назначение платежа</div>
+                </div>
+                <div class="receipt__last">
+                    <div class="receipt__money">
+                        <div class="receipt__sum">Сумма</div>
+                        <div class="receipt__line">
+                            1500 руб. 00 коп.
+                        </div>
+                    </div>
+                    <div class="receipt__signature">Подпись Плательщика</div>
+                </div>
+            </div>
+        </div>
+        <div class="receipt__table receipt__table--last">
+            <div class="receipt__left">
+                <div class="receipt__top">Извещение</div>
+                <div class="receipt__bottom">Кассир</div>
+            </div>
+            <div class="receipt__right">
+                <div class="receipt__one">
+                    <div class="receipt__line">
+                        ООО "ЮНАЙТЕД МАРКЕТ"
+                    </div>
+                    <div class="receipt__text">Получатель платежа</div>
+                </div>
+                <div class="receipt__flex">
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            7841090220
+                        </div>
+                        <div class="receipt__text">ИНН</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            784101001
+                        </div>
+                        <div class="receipt__text">КПП</div>
+                    </div>
+                    <div class="receipt__one">
+                        <div class="receipt__line">
+                            40702810402500094317
+                        </div>
+                        <div class="receipt__text">Расчетный счет</div>
+                    </div>
+                </div>
+                <div class="receipt__one">
+                    <div class="receipt__line">
+                        ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ" г. Москва, БИК: 044525999, К/с 30101810845250000999
+                    </div>
+                    <div class="receipt__text">Банк Получателя</div>
+                </div>
+                <div class="receipt__one">
+                    <div class="receipt__line">
+                        Иванов Иван Иванович
+                    </div>
+                    <div class="receipt__text">Иванов Иван Иванович</div>
+                </div>
+                <div class="receipt__one receipt__one--margin">
+                    <div class="receipt__line">
+                        г. Москва, ул. Тимирязевская 1 стр 10
+                    </div>
+                    <div class="receipt__text">Адрес Платильщика</div>
+                </div>
+                <div class="receipt__one">
+                    <div class="receipt__line receipt__line--left">
+                        Пополнение баланса UM Кошелька для оплаты услуг по счёту № 02-673210967 (номер Личного кабинета 69156683) от 16.09.2021
+                    </div>
+                    <div class="receipt__text">Назначение платежа</div>
+                </div>
+                <div class="receipt__last">
+                    <div class="receipt__money">
+                        <div class="receipt__sum">Сумма</div>
+                        <div class="receipt__line">
+                            1500 руб. 00 коп.
+                        </div>
+                    </div>
+                    <div class="receipt__signature">Подпись Плательщика</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="receipt__button">
+        <a href="/" download>Скачать</a>
+    </div>
+    <div class="receipt__close">
+        <img src="images/closeBlack.svg" alt="">
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

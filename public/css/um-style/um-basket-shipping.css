@@ -1,0 +1,31 @@
+.um-basket-shipping__label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+  min-width: 280px;
+  max-width: 550px;
+  width: 100%;
+}
+.um-basket-shipping__text {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  color: #BFC6E0;
+}
+.um-basket-shipping__input {
+padding: 10px 25px;
+background: #FFFFFF;
+border: 2px solid #BFC6E0;
+border-radius: 49px;
+-webkit-appearance: none;
+  -moz-appearance: none;
+      appearance: none;
+}

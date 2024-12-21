@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <div class="header__city">
+                            санкт-петербург
+                        </div>
+                        <div class="header__moblogo">
+                            <a href="#">
+                                <img src="images/logo.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__phone">
+                            <a href="tel:79993335401">+7 999 333 54 01</a>
+                        </div>
+                    </div>
+                    <div class="header__middle">
+                        <div class="header__mobmenu">
+                            <img src="images/btn.svg" alt="">
+                        </div>
+                        <div class="header__search">
+                            <input type="text" placeholder="Искать на Onion Market">
+                            <button class="header__btn"></button>
+                        </div>
+                        <div class="header__logo">
+                            <a href="#"><img src="images/logo.svg" alt=""></a>
+                        </div>
+                        <div class="header__lk">
+                            <!-- <div class="header__bonus">
+                                <a href="#">
+                                    <div class="header__img">
+                                        <img src="images/bonus.svg" alt="">
+                                    </div>
+                                    <div class="header__name">Бонус</div>
+                                </a>
+                            </div> -->
+                            <div class="header__main">
+                                <a href="#">
+                                    <div class="header__img">
+                                        <img src="images/headerLogo.svg" alt="">
+                                    </div>
+                                    <div class="header__name">Главная</div>
+                                </a>
+                            </div>
+                            <div class="header__login">
+                                <a href="#">
+                                    <div class="header__img">
+                                        <svg width="18" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.631 13.373c1.563-.9 3.45-1.373 5.37-1.373 1.919 0 3.805.474 5.368 1.373 1.562.9 2.75 2.197 3.3 3.738a1 1 0 01-1.883.672c-.361-1.01-1.182-1.967-2.415-2.676C12.14 14.397 10.603 14 9.001 14c-1.604 0-3.14.398-4.372 1.107-1.232.709-2.053 1.665-2.415 2.677a1 1 0 11-1.883-.673c.55-1.54 1.738-2.839 3.3-3.738zM9 2a3 3 0 100 6 3 3 0 000-6zM4 5a5 5 0 1110 0A5 5 0 014 5z"/></svg>
+                                    </div>
+                                    <div class="header__name">Войти</div>
+                                </a>
+                            </div>
+                            <div class="header__profile">
+                                <a href="#">
+                                    <div class="header__img">
+                                        <img src="images/profile.svg" alt="">
+                                    </div>
+                                    <div class="header__name">Профиль</div>
+                                    <div class="profile__circle">12</div>
+                                </a>
+                            </div>
+                            <div class="header__save">
+                                <a href="#">
+                                    <div class="header__img">
+                                        <svg width="22" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.45 10.908l6.953 6.531c.24.225.36.338.5.366a.5.5 0 00.193 0c.142-.028.261-.14.5-.366l6.953-6.53a5.203 5.203 0 00.549-6.983l-.31-.399c-1.968-2.536-5.918-2.111-7.301.787a.54.54 0 01-.974 0C9.13 1.416 5.18.99 3.212 3.527l-.31.4a5.203 5.203 0 00.549 6.981z" stroke-width="2"/></svg>
+                                    </div>
+                                    <div class="header__name">Сохранено</div>
+                                </a>
+                            </div>
+                            <div class="header__basket">
+                                <a href="#">
+                                    <div class="header__img">
+                                        <svg width="17" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 10a1 1 0 01-1-1V4.5a4.5 4.5 0 019 0V9a1 1 0 11-2 0V4.5a2.5 2.5 0 10-5 0V9a1 1 0 01-1 1z" fill="#0B1331"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.934 5.833h7.132c.886 0 1.65 0 2.262.083.655.088 1.284.287 1.793.796.51.51.709 1.138.797 1.794C17 9.117 17 9.88 17 10.768v3.796c0 1.59 0 2.871-.12 3.89-.125 1.055-.39 1.957-1.015 2.718-.208.253-.44.485-.693.693-.76.625-1.663.89-2.718 1.015-1.019.12-2.3.12-3.89.12h-.127c-1.59 0-2.872 0-3.891-.12-1.055-.125-1.957-.39-2.718-1.015a5 5 0 01-.693-.693C.51 20.412.245 19.51.12 18.454 0 17.435 0 16.154 0 14.564v-3.796c0-.887 0-1.65.082-2.262C.17 7.85.37 7.222.88 6.712s1.138-.708 1.793-.796c.612-.083 1.376-.083 2.262-.083zM2.94 7.899c-.434.058-.57.152-.646.228-.076.077-.17.212-.229.646C2.002 9.235 2 9.862 2 10.834V14.5c0 1.668.002 2.832.107 3.72.102.865.29 1.338.574 1.683.125.152.264.292.416.416.345.284.818.472 1.684.575.888.105 2.05.106 3.719.106 1.668 0 2.832-.002 3.72-.106.865-.103 1.338-.291 1.683-.575.152-.124.291-.264.416-.416.284-.345.472-.818.574-1.683.105-.888.107-2.052.107-3.72v-3.666c0-.972-.002-1.6-.064-2.062-.059-.434-.153-.57-.229-.646-.076-.076-.212-.17-.646-.228-.462-.062-1.09-.064-2.061-.064H5c-.971 0-1.599.002-2.061.064z" fill="#0B1331"/></svg>
+                                    </div>
+                                    <div class="header__name">Корзина</div>
+                                    <div class="basket__circle">5</div>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__bottom">
+                        <div class="header__catalog">
+                            <ul>
+                                <li class="header__click">
+                                    <a href="#" class="header__a">каталог</a>
+                                    <div class="header__window">
+                                        <div class="window__left">
+                                            <ul class="left__list">
+                                                <li><a href="#" class="first__act">Акции</a></li>
+                                                <li>
+                                                    <a href="#" class="click__kat active">Доставка букетов</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Цветы</a></li>
+                                                        <li><a href="#" class="window__grey">Альстромерии</a></li>
+                                                        <li><a href="#" class="window__grey">Розы</a></li>
+                                                        <li><a href="#" class="window__grey">Хризантемы</a></li>
+                                                        <li><a href="#" class="window__grey">Лилии</a></li>
+                                                        <li><a href="#" class="window__grey">Герберы</a></li>
+                                                        <li><a href="#" class="window__grey">Орхидеи</a></li>
+                                                        <li><a href="#" class="window__grey">Ирисы</a></li>
+                                                        <li><a href="#" class="window__grey">Гвоздики</a></li>
+                                                        <li><a href="#">Монобукеты</a></li>
+                                                        <li><a href="#">Композиции в коробках</a></li>
+                                                        <li><a href="#">Композиции в корзинах</a></li>
+                                                        <li><a href="#">Авторские букеты</a></li>
+                                                        <li><a href="#">Съедобные букеты</a></li>
+                                                        <li><a href="#">Подарки</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Авто</a>
+                                                    <ul class="window__posmob">
+                                                        <li>Автосервис</li>
+                                                        <li><a href="#">Шиномонтаж</a></li>
+                                                        <li><a href="#">Ремонт Авто</a></li>
+                                                        <li><a href="#" class="window__grey">Диагностика</a></li>
+                                                        <li><a href="#" class="window__grey">Слесарные работы</a></li>
+                                                        <li><a href="#" class="window__grey">Кузовной и малярный ремонт</a></li>
+                                                        <li><a href="#" class="window__grey">ТО</a></li>
+                                                        <li><a href="#">Автомойка</a></li>
+                                                        <li><a href="#">Эвакуатор</a></li>
+                                                        <li>Автотовары</li>
+                                                        <li><a href="#">Аварийные принадлежности</a></li>
+                                                        <li><a href="#">Автоаксессуары</a></li>
+                                                        <li><a href="#">Автозапчасти</a></li>
+                                                        <li><a href="#">Автомобильная электроника</a></li>
+                                                        <li><a href="#">Внешний декор</a></li>
+                                                        <li><a href="#">Инструменты и оборудование</a></li>
+                                                        <li><a href="#">Мототовары</a></li>
+                                                        <li><a href="#">Обустройство салона</a></li>
+                                                        <li><a href="#">Уход за автомобилем</a></li>
+                                                        <li><a href="#">Шины и Диски</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Детские игрушки</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Антистресс</a></li>
+                                                        <li><a href="#">Для малышей</a></li>
+                                                        <li><a href="#">Для песочницы</a></li>
+                                                        <li><a href="#">Игровые комплексы</a></li>
+                                                        <li><a href="#">Игровые наборы</a></li>
+                                                        <li><a href="#">Игрушечное оружие</a></li>
+                                                        <li><a href="#">Игрушечный транспорт</a></li>
+                                                        <li><a href="#">Игрушки для ванной</a></li>
+                                                        <li><a href="#">Интерактивные</a></li>
+                                                        <li><a href="#">Кинетический песок</a></li>
+                                                        <li><a href="#">Конструкторы</a></li>
+                                                        <li><a href="#">Конструкторы LEGO</a></li>
+                                                        <li><a href="#">Куклы и аксессуары</a></li>
+                                                        <li><a href="#">Музыкальные</a></li>
+                                                        <li><a href="#">Мыльные пузыри</a></li>
+                                                        <li><a href="#">Мягкие игрушки</a></li>
+                                                        <li><a href="#">Наборы для опытов</a></li>
+                                                        <li><a href="#">Настольные игры</a></li>
+                                                        <li><a href="#">Радиоуправляемые</a></li>
+                                                        <li><a href="#">Развивающие игрушки</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Дизайн Интерьеров</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Дизайн квартир</a></li>
+                                                        <li><a href="#">Дизайн загородных домов</a></li>
+                                                        <li><a href="#">Дизайн кафе и ресторанов</a></li>
+                                                        <li><a href="#">Дизайн магазина</a></li>
+                                                        <li><a href="#">Дизайн офиса</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Доставка еды</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Европейская кухня</a></li>
+                                                        <li><a href="#" class="window__grey">Салаты и закуски</a></li>
+                                                        <li><a href="#" class="window__grey">Супы</a></li>
+                                                        <li><a href="#" class="window__grey">Горячее Мясо</a></li>
+                                                        <li><a href="#" class="window__grey">Горячее Рыба</a></li>
+                                                        <li><a href="#" class="window__grey">Гарниры</a></li>
+                                                        <li><a href="#" class="window__grey">Десерты</a></li>
+                                                        <li><a href="#" class="window__grey">Напитки</a></li>
+                                                        <li><a href="#">Фитнес меню</a></li>
+                                                        <li><a href="#">Торты</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Зоотовары</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Для кошек</a></li>
+                                                        <li><a href="#">Для собак</a></li>
+                                                        <li><a href="#">Для птиц</a></li>
+                                                        <li><a href="#">Для грызунов и хорьков</a></li>
+                                                        <li><a href="#">Для лошадей</a></li>
+                                                        <li><a href="#">Аквариумистика</a></li>
+                                                        <li><a href="#">Террариумистика</a></li>
+                                                        <li><a href="#">Фермерство</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Кальянные</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Кальянные</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Клининг</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Квартира и Дом</a></li>
+                                                        <li><a href="#">Офис и Помещения</a></li>
+                                                        <li><a href="#">Химчистка</a></li>
+                                                        <li><a href="#" class="window__grey">Мягкая мебель</a></li>
+                                                        <li><a href="#" class="window__grey">Ковры и ковролин</a></li>
+                                                        <li><a href="#" class="window__grey">Шторы и жалюзи</a></li>
+                                                        <li><a href="#" class="window__grey">Матрасы</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Кузнечные мастерские</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Художественная ковка</a></li>
+                                                        <li><a href="#">Готовые изделия</a></li>
+                                                        <li><a href="#" class="window__grey">Для Дома и Дачи</a></li>
+                                                        <li><a href="#" class="window__grey">Для спальни</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Мелкий ремонт- муж на час</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Муж на час</a></li>
+                                                        <li><a href="#">Услуги Сантехника</a></li>
+                                                        <li><a href="#">Отделочные работы</a></li>
+                                                        <li><a href="#">Сборка мебели</a></li>
+                                                        <li><a href="#">Услуги Электрика</a></li>
+                                                        <li><a href="#">Плотник</a></li>
+                                                        <li><a href="#">Бытовая техника</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Организация праздников</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Свадьба</a></li>
+                                                        <li><a href="#">Копроратив</a></li>
+                                                        <li><a href="#">День рождения</a></li>
+                                                        <li><a href="#">Другие мероприятия</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Подарки ручной работы</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Украшения</a></li>
+                                                        <li><a href="#" class="window__grey">Браслеты</a></li>
+                                                        <li><a href="#" class="window__grey">Серьги</a></li>
+                                                        <li><a href="#" class="window__grey">Колье</a></li>
+                                                        <li><a href="#">Игрушки</a></li>
+                                                        <li><a href="#">Деревянные изделия</a></li>
+                                                        <li><a href="#">Декоративная посуда</a></li>
+                                                        <li><a href="#">Мыло</a></li>
+                                                        <li><a href="#">Картины</a></li>
+                                                        <li><a href="#">Изделия из кожи</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Пошив и ремонт одежды</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Пошив изделий из ткани и меха</a></li>
+                                                        <li><a href="#">Ремонт одежды и тканей</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Салон красоты</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Парикмахерские услуги</a></li>
+                                                        <li><a href="#" class="window__grey">Стрижка</a></li>
+                                                        <li><a href="#" class="window__grey">Окрашивание</a></li>
+                                                        <li><a href="#" class="window__grey">Укладка волос</a></li>
+                                                        <li><a href="#" class="window__grey">Кератиновое выпрямление</a></li>
+                                                        <li><a href="#" class="window__grey">Наращивание волос</a></li>
+                                                        <li><a href="#">Ногтевой сервис</a></li>
+                                                        <li><a href="#" class="window__grey">Маникюр</a></li>
+                                                        <li><a href="#" class="window__grey">Педикюр</a></li>
+                                                        <li><a href="#">Косметология</a></li>
+                                                        <li><a href="#" class="window__grey">Эстетическая косметология</a></li>
+                                                        <li><a href="#" class="window__grey">Инъекционная косметология</a></li>
+                                                        <li><a href="#" class="window__grey">Аппаратная косметология</a></li>
+                                                        <li><a href="#">Визаж</a></li>
+                                                        <li><a href="#" class="window__grey">Макияж</a></li>
+                                                        <li><a href="#" class="window__grey">Перманентный макияж</a></li>
+                                                        <li><a href="#" class="window__grey">Брови и Ресницы</a></li>
+                                                        <li><a href="#">Барбершоп</a></li>
+                                                        <li><a href="#" class="window__grey">Стрижка</a></li>
+                                                        <li><a href="#" class="window__grey">Окрашивание</a></li>
+                                                        <li><a href="#" class="window__grey">Борода и усы</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Сервисный центр – ремонт техники</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Крупная бытовая техника</a></li>
+                                                        <li><a href="#">Мобильные телефоны</a></li>
+                                                        <li><a href="#">Мелкая бытовая техника</a></li>
+                                                        <li><a href="#">Аудио и видео техника</a></li>
+                                                        <li><a href="#">Офисная и Оргтехника</a></li>
+                                                        <li><a href="#">Компьютерная техника</a></li>
+                                                        <li><a href="#" class="window__grey">ПК</a></li>
+                                                        <li><a href="#" class="window__grey">Ноутбуки</a></li>
+                                                        <li><a href="#" class="window__grey">Мониторы</a></li>
+                                                        <li><a href="#" class="window__grey">Сетевое оборудование</a></li>
+                                                        <li><a href="#" class="window__grey">Планшеты</a></li>
+                                                        <li><a href="#" class="window__grey">Программное обеспечение</a></li>
+                                                        <li><a href="#">Электроинструмент</a></li>
+                                                        <li><a href="#">Садовая техника</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Столярные мастерские</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Производство мебели</a></li>
+                                                        <li><a href="#">Реставрация мебели</a></li>
+                                                        <li><a href="#">Столярные работы</a></li>
+                                                        <li><a href="#">Готовые изделия</a></li>
+                                                        <li><a href="#" class="window__grey">Для Кухни</a></li>
+                                                        <li><a href="#" class="window__grey">Для Дома и Дачи</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Строительство</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Строительтво Домов</a></li>
+                                                        <li><a href="#">Строительство заборов</a></li>
+                                                        <li><a href="#">Инженерные сети </a></li>
+                                                        <li><a href="#">Отделочные работы</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Товары 18+</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Одежда</a></li>
+                                                        <li><a href="#">Секс игрушки</a></li>
+                                                        <li><a href="#">Уход</a></li>
+                                                        <li><a href="#">Презервативы и лубриканты</a></li>
+                                                        <li><a href="#">БДСМ</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Туры и отели</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Туры</a></li>
+                                                        <li><a href="#">Гостиницы и хостелы</a></li>
+                                                        <li><a href="#">Загородные дома и отели</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Фитнес и спорт</a>
+                                                    <ul class="window__posmob">
+                                                        <li class="window__theme window__theme--none">Фитнес тренировки</li>
+                                                        <li class="window__theme">Спортивное питание</li>
+                                                        <li><a href="#">Протеины</a></li>
+                                                        <li><a href="#">Аминокислоты</a></li>
+                                                        <li><a href="#">Креатины</a></li>
+                                                        <li><a href="#">Витамины и минералы</a></li>
+                                                        <li><a href="#">Батончики</a></li>
+                                                        <li><a href="#">Гейнеры</a></li>
+                                                        <li><a href="#">Специальные препараты</a></li>
+                                                        <li><a href="#">Средства для снижения веса</a></li>
+                                                        <li><a href="#">Энергетики и изотоники</a></li>
+                                                        <li><a href="#">Шейкеры</a></li>
+                                                        <li><a href="#">Спортивные бутылки</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="click__kat">Фотоуслуги и видео услуги</a>
+                                                    <ul class="window__posmob">
+                                                        <li><a href="#">Фото</a></li>
+                                                        <li><a href="#">Видео</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="window__right">
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Цветы</a></li>
+                                                    <li><a href="#" class="window__grey">Альстромерии</a></li>
+                                                    <li><a href="#" class="window__grey">Розы</a></li>
+                                                    <li><a href="#" class="window__grey">Хризантемы</a></li>
+                                                    <li><a href="#" class="window__grey">Лилии</a></li>
+                                                    <li><a href="#" class="window__grey">Герберы</a></li>
+                                                    <li><a href="#" class="window__grey">Орхидеи</a></li>
+                                                    <li><a href="#" class="window__grey">Ирисы</a></li>
+                                                    <li><a href="#" class="window__grey">Гвоздики</a></li>
+                                                    <li><a href="#">Монобукеты</a></li>
+                                                    <li><a href="#">Композиции в коробках</a></li>
+                                                    <li><a href="#">Композиции в корзинах</a></li>
+                                                    <li><a href="#">Авторские букеты</a></li>
+                                                    <li><a href="#">Съедобные букеты</a></li>
+                                                    <li><a href="#">Подарки</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li class="window__theme window__theme--none">Автосервис</li>
+                                                    <li><a href="#">Шиномонтаж</a></li>
+                                                    <li><a href="#">Ремонт Авто</a></li>
+                                                    <li><a href="#" class="window__grey">Диагностика</a></li>
+                                                    <li><a href="#" class="window__grey">Слесарные работы</a></li>
+                                                    <li><a href="#" class="window__grey">Кузовной и малярный ремонт</a></li>
+                                                    <li><a href="#" class="window__grey">ТО</a></li>
+                                                    <li><a href="#">Автомойка</a></li>
+                                                    <li><a href="#">Эвакуатор</a></li>
+                                                    <li class="window__theme">Автотовары</li>
+                                                    <li><a href="#">Аварийные принадлежности</a></li>
+                                                    <li><a href="#">Автоаксессуары</a></li>
+                                                    <li><a href="#">Автозапчасти</a></li>
+                                                    <li><a href="#">Автомобильная электроника</a></li>
+                                                    <li><a href="#">Внешний декор</a></li>
+                                                    <li><a href="#">Инструменты и оборудование</a></li>
+                                                    <li><a href="#">Мототовары</a></li>
+                                                    <li><a href="#">Обустройство салона</a></li>
+                                                    <li><a href="#">Уход за автомобилем</a></li>
+                                                    <li><a href="#">Шины и Диски</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Антистресс</a></li>
+                                                    <li><a href="#">Для малышей</a></li>
+                                                    <li><a href="#">Для песочницы</a></li>
+                                                    <li><a href="#">Игровые комплексы</a></li>
+                                                    <li><a href="#">Игровые наборы</a></li>
+                                                    <li><a href="#">Игрушечное оружие</a></li>
+                                                    <li><a href="#">Игрушечный транспорт</a></li>
+                                                    <li><a href="#">Игрушки для ванной</a></li>
+                                                    <li><a href="#">Интерактивные</a></li>
+                                                    <li><a href="#">Кинетический песок</a></li>
+                                                    <li><a href="#">Конструкторы</a></li>
+                                                    <li><a href="#">Конструкторы LEGO</a></li>
+                                                    <li><a href="#">Куклы и аксессуары</a></li>
+                                                    <li><a href="#">Музыкальные</a></li>
+                                                    <li><a href="#">Мыльные пузыри</a></li>
+                                                    <li><a href="#">Мягкие игрушки</a></li>
+                                                    <li><a href="#">Наборы для опытов</a></li>
+                                                    <li><a href="#">Настольные игры</a></li>
+                                                    <li><a href="#">Радиоуправляемые</a></li>
+                                                    <li><a href="#">Развивающие игрушки</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Дизайн квартир</a></li>
+                                                    <li><a href="#">Дизайн загородных домов</a></li>
+                                                    <li><a href="#">Дизайн кафе и ресторанов</a></li>
+                                                    <li><a href="#">Дизайн магазина</a></li>
+                                                    <li><a href="#">Дизайн офиса</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Европейская кухня</a></li>
+                                                    <li><a href="#" class="window__grey">Салаты и закуски</a></li>
+                                                    <li><a href="#" class="window__grey">Супы</a></li>
+                                                    <li><a href="#" class="window__grey">Горячее Мясо</a></li>
+                                                    <li><a href="#" class="window__grey">Горячее Рыба</a></li>
+                                                    <li><a href="#" class="window__grey">Гарниры</a></li>
+                                                    <li><a href="#" class="window__grey">Десерты</a></li>
+                                                    <li><a href="#" class="window__grey">Напитки</a></li>
+                                                    <li><a href="#">Фитнес меню</a></li>
+                                                    <li><a href="#">Торты</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Для кошек</a></li>
+                                                    <li><a href="#">Для собак</a></li>
+                                                    <li><a href="#">Для птиц</a></li>
+                                                    <li><a href="#">Для грызунов и хорьков</a></li>
+                                                    <li><a href="#">Для лошадей</a></li>
+                                                    <li><a href="#">Аквариумистика</a></li>
+                                                    <li><a href="#">Террариумистика</a></li>
+                                                    <li><a href="#">Фермерство</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Кальянные</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Квартира и Дом</a></li>
+                                                    <li><a href="#">Офис и Помещения</a></li>
+                                                    <li><a href="#">Химчистка</a></li>
+                                                    <li><a href="#" class="window__grey">Мягкая мебель</a></li>
+                                                    <li><a href="#" class="window__grey">Ковры и ковролин</a></li>
+                                                    <li><a href="#" class="window__grey">Шторы и жалюзи</a></li>
+                                                    <li><a href="#" class="window__grey">Матрасы</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Художественная ковка</a></li>
+                                                    <li><a href="#">Готовые изделия</a></li>
+                                                    <li><a href="#" class="window__grey">Для Дома и Дачи</a></li>
+                                                    <li><a href="#" class="window__grey">Для спальни</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Муж на час</a></li>
+                                                    <li><a href="#">Услуги Сантехника</a></li>
+                                                    <li><a href="#">Отделочные работы</a></li>
+                                                    <li><a href="#">Сборка мебели</a></li>
+                                                    <li><a href="#">Услуги Электрика</a></li>
+                                                    <li><a href="#">Плотник</a></li>
+                                                    <li><a href="#">Бытовая техника</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Свадьба</a></li>
+                                                    <li><a href="#">Копроратив</a></li>
+                                                    <li><a href="#">День рождения</a></li>
+                                                    <li><a href="#">Другие мероприятия</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Украшения</a></li>
+                                                    <li><a href="#" class="window__grey">Браслеты</a></li>
+                                                    <li><a href="#" class="window__grey">Серьги</a></li>
+                                                    <li><a href="#" class="window__grey">Колье</a></li>
+                                                    <li><a href="#">Игрушки</a></li>
+                                                    <li><a href="#">Деревянные изделия</a></li>
+                                                    <li><a href="#">Декоративная посуда</a></li>
+                                                    <li><a href="#">Мыло</a></li>
+                                                    <li><a href="#">Картины</a></li>
+                                                    <li><a href="#">Изделия из кожи</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Пошив изделий из ткани и меха</a></li>
+                                                    <li><a href="#">Ремонт одежды и тканей</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Парикмахерские услуги</a></li>
+                                                    <li><a href="#" class="window__grey">Стрижка</a></li>
+                                                    <li><a href="#" class="window__grey">Окрашивание</a></li>
+                                                    <li><a href="#" class="window__grey">Укладка волос</a></li>
+                                                    <li><a href="#" class="window__grey">Кератиновое выпрямление</a></li>
+                                                    <li><a href="#" class="window__grey">Наращивание волос</a></li>
+                                                    <li><a href="#">Ногтевой сервис</a></li>
+                                                    <li><a href="#" class="window__grey">Маникюр</a></li>
+                                                    <li><a href="#" class="window__grey">Педикюр</a></li>
+                                                    <li><a href="#">Косметология</a></li>
+                                                    <li><a href="#" class="window__grey">Эстетическая косметология</a></li>
+                                                    <li><a href="#" class="window__grey">Инъекционная косметология</a></li>
+                                                    <li><a href="#" class="window__grey">Аппаратная косметология</a></li>
+                                                    <li><a href="#">Визаж</a></li>
+                                                    <li><a href="#" class="window__grey">Макияж</a></li>
+                                                    <li><a href="#" class="window__grey">Перманентный макияж</a></li>
+                                                    <li><a href="#" class="window__grey">Брови и Ресницы</a></li>
+                                                    <li><a href="#">Барбершоп</a></li>
+                                                    <li><a href="#" class="window__grey">Стрижка</a></li>
+                                                    <li><a href="#" class="window__grey">Окрашивание</a></li>
+                                                    <li><a href="#" class="window__grey">Борода и усы</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Крупная бытовая техника</a></li>
+                                                    <li><a href="#">Мобильные телефоны</a></li>
+                                                    <li><a href="#">Мелкая бытовая техника</a></li>
+                                                    <li><a href="#">Аудио и видео техника</a></li>
+                                                    <li><a href="#">Офисная и Оргтехника</a></li>
+                                                    <li><a href="#">Компьютерная техника</a></li>
+                                                    <li><a href="#" class="window__grey">ПК</a></li>
+                                                    <li><a href="#" class="window__grey">Ноутбуки</a></li>
+                                                    <li><a href="#" class="window__grey">Мониторы</a></li>
+                                                    <li><a href="#" class="window__grey">Сетевое оборудование</a></li>
+                                                    <li><a href="#" class="window__grey">Планшеты</a></li>
+                                                    <li><a href="#" class="window__grey">Программное обеспечение</a></li>
+                                                    <li><a href="#">Электроинструмент</a></li>
+                                                    <li><a href="#">Садовая техника</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Производство мебели</a></li>
+                                                    <li><a href="#">Реставрация мебели</a></li>
+                                                    <li><a href="#">Столярные работы</a></li>
+                                                    <li><a href="#">Готовые изделия</a></li>
+                                                    <li><a href="#" class="window__grey">Для Кухни</a></li>
+                                                    <li><a href="#" class="window__grey">Для Дома и Дачи</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Строительтво Домов</a></li>
+                                                    <li><a href="#">Строительство заборов</a></li>
+                                                    <li><a href="#">Инженерные сети </a></li>
+                                                    <li><a href="#">Отделочные работы</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Одежда</a></li>
+                                                    <li><a href="#">Секс игрушки</a></li>
+                                                    <li><a href="#">Уход</a></li>
+                                                    <li><a href="#">Презервативы и лубриканты</a></li>
+                                                    <li><a href="#">БДСМ</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Туры</a></li>
+                                                    <li><a href="#">Гостиницы и хостелы</a></li>
+                                                    <li><a href="#">Загородные дома и отели</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li class="window__theme window__theme--none">Фитнес тренировки</li>
+                                                    <li class="window__theme">Спортивное питание</li>
+                                                    <li><a href="#">Протеины</a></li>
+                                                    <li><a href="#">Аминокислоты</a></li>
+                                                    <li><a href="#">Креатины</a></li>
+                                                    <li><a href="#">Витамины и минералы</a></li>
+                                                    <li><a href="#">Батончики</a></li>
+                                                    <li><a href="#">Гейнеры</a></li>
+                                                    <li><a href="#">Специальные препараты</a></li>
+                                                    <li><a href="#">Средства для снижения веса</a></li>
+                                                    <li><a href="#">Энергетики и изотоники</a></li>
+                                                    <li><a href="#">Шейкеры</a></li>
+                                                    <li><a href="#">Спортивные бутылки</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="window__item">
+                                                <ul class="window__position">
+                                                    <li><a href="#">Фото</a></li>
+                                                    <li><a href="#">Видео</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="window__close">
+                                            <img src="images/katclose.svg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#" class="click__flower">доставка букетов</a></li>
+                                <li><a href="#">доставка еды</a></li>
+                                <li><a href="#">клининг</a></li>
+                                <li><a href="#">муж на час</a></li>
+                                <li><a href="#">туры</a></li>
+                                <li><a href="#">фитнесс</a></li>
+                                <li><a href="#">автосервис</a></li>
+                                <li><a href="#">СЕРВИСНЫЙ ЦЕНТР</a></li>
+                                <li><a href="#">кальянные</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="slider">
+            <div class="container">
+                <div class="slider__inner">
+                    <div class="slider__slider">
+                        <div class="swiper-container swiper-container-3">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="slider__item slider__item--one">
+                                        <div class="container container__slider">
+                                            <div class="slider__left">
+                                                <div class="slider__title">Доcтавка за <br class="title__break"> 40 минут</div>
+                                                <div class="slider__description">Не успеваете подготовить подарок любимому человеку, а недостаток времени дает о себе знать? Доставка букета <span>за 40 минут</span> решит ваш вопрос!</div>
+                                                <div class="slider__btn">
+                                                    <a href="#">Перейти к покупкам</a>
+                                                </div>
+                                            </div>
+                                            <div class="slider__right">
+                                                <div class="slider__img">
+                                                    <img src="images/car.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider__item slider__item--two">
+                                        <div class="container container__slider">
+                                            <div class="slider__left">
+                                                <div class="slider__title slider__title--up">Скидка 15% на <br class="title__break"> следующий заказ</div>
+                                                <div class="slider__description slider__description--bold">при покупке букета из <img src="images/101.svg" alt=""></div>
+                                                <div class="slider__btn">
+                                                    <a href="#">заказать</a>
+                                                </div>
+                                            </div>
+                                            <div class="slider__right">
+                                                <div class="slider__img">
+                                                    <img src="images/101.png" alt="">
+                                                </div>
+                                                <div class="slider__img slider__img--mobile">
+                                                    <img src="images/flowers.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                          
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="popular">
+            <div class="container">
+                <div class="popular__inner">
+                    <h2 class="popular__title">Популярное</h2>
+                    <div class="popular__mobile">
+                        <div class="popular__item">
+                            <div class="popular__img">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 ₽</div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 ₽</div>
+                                    <div class="popular__oldprice">15000 ₽</div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="popular__like">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular__item">
+                            <div class="popular__img">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 ₽</div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 ₽</div>
+                                    <div class="popular__oldprice">15000 ₽</div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="popular__like">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular__item">
+                            <div class="popular__img">
+                                <a href="#">
+                                    <img src="images/bouquet1.jpg" alt="">
+                                </a>
+                                <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                            </div>
+                            <div class="popular__right">
+                                <div class="popular__delivery">300 ₽</div>
+                                <div class="popular__review">
+                                    4,8 <span>(131 отзыв)</span>
+                                </div>
+                                <div class="popular__name">
+                                    <a href="#">
+                                        101 Розовая роза
+                                    </a>
+                                </div>
+                                <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                <div class="popular__bottom">
+                                    <div class="popular__price">13284 ₽</div>
+                                    <div class="popular__oldprice">15000 ₽</div>
+                                    <div class="popular__buy">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="popular__buy popular__buy--second">
+                                    <a href="#">
+                                        <img src="images/basket(1).svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="popular__like">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                    </svg>                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular__slider">
+                        <div class="swiper-container swiper-container-1">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="popular__item">
+                                        <div class="popular__img">
+                                            <a href="#">
+                                                <img src="images/bouquet1.jpg" alt="">
+                                            </a>
+                                            <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                        </div>
+                                        <div class="popular__right">
+                                            <div class="popular__delivery">300 ₽</div>
+                                            <div class="popular__review">
+                                                4,8 <span>(131 отзыв)</span>
+                                            </div>
+                                            <div class="popular__name">
+                                                <a href="#">
+                                                    101 Розовая роза
+                                                </a>
+                                            </div>
+                                            <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                            <div class="popular__bottom">
+                                                <div class="popular__price">13284 ₽</div>
+                                                <div class="popular__oldprice">15000 ₽</div>
+                                                <div class="popular__buy">
+                                                    <a href="#">
+                                                        <img src="images/basket(1).svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="popular__buy popular__buy--second">
+                                                <a href="#">
+                                                    <img src="images/basket(1).svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="popular__like">
+                                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                                </svg>                                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="popular__item">
+                                        <div class="popular__img">
+                                            <a href="#">
+                                                <img src="images/bouquet1.jpg" alt="">
+                                            </a>
+                                            <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                        </div>
+                                        <div class="popular__right">
+                                            <div class="popular__delivery">300 ₽</div>
+                                            <div class="popular__review">
+                                                4,8 <span>(131 отзыв)</span>
+                                            </div>
+                                            <div class="popular__name">
+                                                <a href="#">
+                                                    101 Розовая роза
+                                                </a>
+                                            </div>
+                                            <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                            <div class="popular__bottom">
+                                                <div class="popular__price">13284 ₽</div>
+                                                <div class="popular__oldprice">15000 ₽</div>
+                                                <div class="popular__buy">
+                                                    <a href="#">
+                                                        <img src="images/basket(1).svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="popular__buy popular__buy--second">
+                                                <a href="#">
+                                                    <img src="images/basket(1).svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="popular__like">
+                                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                                </svg>                                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="popular__item">
+                                        <div class="popular__img">
+                                            <a href="#">
+                                                <img src="images/bouquet1.jpg" alt="">
+                                            </a>
+                                            <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                        </div>
+                                        <div class="popular__right">
+                                            <div class="popular__delivery">300 ₽</div>
+                                            <div class="popular__review">
+                                                4,8 <span>(131 отзыв)</span>
+                                            </div>
+                                            <div class="popular__name">
+                                                <a href="#">
+                                                    101 Розовая роза
+                                                </a>
+                                            </div>
+                                            <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                            <div class="popular__bottom">
+                                                <div class="popular__price">13284 ₽</div>
+                                                <div class="popular__oldprice">15000 ₽</div>
+                                                <div class="popular__buy">
+                                                    <a href="#">
+                                                        <img src="images/basket(1).svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="popular__buy popular__buy--second">
+                                                <a href="#">
+                                                    <img src="images/basket(1).svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="popular__like">
+                                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                                </svg>                                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="popular__item">
+                                        <div class="popular__img">
+                                            <a href="#">
+                                                <img src="images/bouquet1.jpg" alt="">
+                                            </a>
+                                            <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                        </div>
+                                        <div class="popular__right">
+                                            <div class="popular__delivery">300 ₽</div>
+                                            <div class="popular__review">
+                                                4,8 <span>(131 отзыв)</span>
+                                            </div>
+                                            <div class="popular__name">
+                                                <a href="#">
+                                                    101 Розовая роза
+                                                </a>
+                                            </div>
+                                            <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                            <div class="popular__bottom">
+                                                <div class="popular__price">13284 ₽</div>
+                                                <div class="popular__oldprice">15000 ₽</div>
+                                                <div class="popular__buy">
+                                                    <a href="#">
+                                                        <img src="images/basket(1).svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="popular__buy popular__buy--second">
+                                                <a href="#">
+                                                    <img src="images/basket(1).svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="popular__like">
+                                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                                </svg>                                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="popular__item">
+                                        <div class="popular__img">
+                                            <a href="#">
+                                                <img src="images/bouquet1.jpg" alt="">
+                                            </a>
+                                            <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                        </div>
+                                        <div class="popular__right">
+                                            <div class="popular__delivery">300 ₽</div>
+                                            <div class="popular__review">
+                                                4,8 <span>(131 отзыв)</span>
+                                            </div>
+                                            <div class="popular__name">
+                                                <a href="#">
+                                                    101 Розовая роза
+                                                </a>
+                                            </div>
+                                            <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                            <div class="popular__bottom">
+                                                <div class="popular__price">13284 ₽</div>
+                                                <div class="popular__oldprice">15000 ₽</div>
+                                                <div class="popular__buy">
+                                                    <a href="#">
+                                                        <img src="images/basket(1).svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="popular__buy popular__buy--second">
+                                                <a href="#">
+                                                    <img src="images/basket(1).svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="popular__like">
+                                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                                </svg>                                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                          
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                          
+                        </div>
+                    </div>
+                    <div class="popular__btn">
+                        <a href="#">показать все</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <div class="catalog__inner">
+                    <h2 class="catalog__title">каталог</h2>
+                    <div class="catalog__wrapper">
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Доставка цветов</div>
+                        </div>
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Доставка еды</div>
+                        </div>
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Клининг</div>
+                        </div>
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Подарки ручной работы</div>
+                        </div>
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Автосервис</div>
+                        </div>
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Муж<br> на час</div>
+                        </div>
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Ремонт одежды</div>
+                        </div>
+                        <div class="catalog__slide">
+                            <div class="catalog__name">Салон красоты</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Туры</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Строительство</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Кальянные</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Кузнечные мастерские</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Организация свадеб</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Дизайн интерьеров</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Фотоуслуги</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Столярные мастерские</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Ремонт техники</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Зоотовары</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Автотовары</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Детские игрушки</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Спортивное питание</div>
+                        </div>
+                        <div class="catalog__slide catalog__hide">
+                            <div class="catalog__name">Товары для взрослых</div>
+                        </div>
+                    </div>
+                    <div class="catalog__btn catalog__btn--one">Все категории</div>
+                    <div class="catalog__btn catalog__btn--two">Скрыть</div>
+                </div>
+            </div>
+        </section>
+        <section class="new">
+            <div class="container">
+                <div class="new__inner">
+                    <h2 class="new__title">новинки</h2>
+                    <div class="new__wrapper">
+                        <div class="new__gift">
+                            <div class="new__name">дарим<br> скидку за отзыв!</div>
+                            <!-- <div class="new__scores">
+                                <a href="#">получить баллы</a>
+                            </div> -->
+                            <div class="new__description">Оставь отзыв о понравившемся товаре и получи скидку на следующий заказ</div>
+                        </div>
+                        <div class="new__bouquets">
+                            <div class="popular__item">
+                                <div class="popular__new">New</div>
+                                <div class="popular__img">
+                                    <a href="#">
+                                        <img src="images/bouquet1.jpg" alt="">
+                                    </a>
+                                    <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                </div>
+                                <div class="popular__right">
+                                    <div class="popular__delivery">300 ₽</div>
+                                    <div class="popular__review">
+                                        4,8 <span>(131 отзыв)</span>
+                                    </div>
+                                    <div class="popular__name">
+                                        <a href="#">
+                                            101 Розовая роза
+                                        </a>
+                                    </div>
+                                    <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                    <div class="popular__bottom">
+                                        <div class="popular__price">13284 ₽</div>
+                                        <div class="popular__oldprice">15000 ₽</div>
+                                        <div class="popular__buy">
+                                            <a href="#">
+                                                <img src="images/basket(1).svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="popular__buy popular__buy--second">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="popular__like">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                        </svg>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular__item">
+                                <div class="popular__new">New</div>
+                                <div class="popular__img">
+                                    <a href="#">
+                                        <img src="images/bouquet1.jpg" alt="">
+                                    </a>
+                                    <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                </div>
+                                <div class="popular__right">
+                                    <div class="popular__delivery">300 ₽</div>
+                                    <div class="popular__review">
+                                        4,8 <span>(131 отзыв)</span>
+                                    </div>
+                                    <div class="popular__name">
+                                        <a href="#">
+                                            101 Розовая роза
+                                        </a>
+                                    </div>
+                                    <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                    <div class="popular__bottom">
+                                        <div class="popular__price">13284 ₽</div>
+                                        <div class="popular__oldprice">15000 ₽</div>
+                                        <div class="popular__buy">
+                                            <a href="#">
+                                                <img src="images/basket(1).svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="popular__buy popular__buy--second">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="popular__like">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                        </svg>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular__item">
+                                <div class="popular__new">New</div>
+                                <div class="popular__img">
+                                    <a href="#">
+                                        <img src="images/bouquet1.jpg" alt="">
+                                    </a>
+                                    <div class="popular__delivery popular__delivery--mob">300 Р</div>
+                                </div>
+                                <div class="popular__right">
+                                    <div class="popular__delivery">300 ₽</div>
+                                    <div class="popular__review">
+                                        4,8 <span>(131 отзыв)</span>
+                                    </div>
+                                    <div class="popular__name">
+                                        <a href="#">
+                                            101 Розовая роза
+                                        </a>
+                                    </div>
+                                    <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                    <div class="popular__bottom">
+                                        <div class="popular__price">13284 ₽</div>
+                                        <div class="popular__oldprice">15000 ₽</div>
+                                        <div class="popular__buy">
+                                            <a href="#">
+                                                <img src="images/basket(1).svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="popular__buy popular__buy--second">
+                                        <a href="#">
+                                            <img src="images/basket(1).svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="popular__like">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.45067 10.9082L10.4033 17.4395C10.6428 17.6644 10.7625 17.7769 10.9037 17.8046C10.9673 17.8171 11.0327 17.8171 11.0963 17.8046C11.2375 17.7769 11.3572 17.6644 11.5967 17.4395L18.5493 10.9082C20.5055 9.07059 20.743 6.0466 19.0978 3.92607L18.7885 3.52734C16.8203 0.99058 12.8696 1.41601 11.4867 4.31365C11.2913 4.72296 10.7087 4.72296 10.5133 4.31365C9.13037 1.41601 5.17972 0.990584 3.21154 3.52735L2.90219 3.92607C1.25695 6.0466 1.4945 9.07059 3.45067 10.9082Z" stroke-width="2"/>
+                                        </svg>                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new__btn">
+                        <a href="#">показать все</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tell">
+            <div class="container">
+                <div class="tell__inner">
+                    <div class="tell__one">
+                        <h2 class="tell__title">Герберовый бум!</h2>
+                        <div class="tell__description">на все букеты с герберами!</div>
+                        <div class="tell__btn">
+                            <a href="#">заказать</a>
+                        </div>
+                        <div class="tell__addition">*акция действует с 01.06 по 30.06.2021</div>
+                    </div>
+                    <!-- <div class="tell__two">
+                        <img src="images/gerb.svg" alt="">
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <section class="stock">
+            <div class="container">
+                <div class="stock__inner">
+                    <h2 class="stock__title">акции</h2>
+                    <div class="stock__slider">
+                        <div class="swiper-container swiper-container-2">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="stock__item">
+                                        <img src="images/stock1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stock__item">
+                                        <img src="images/stock3.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stock__item">
+                                        <img src="images/stock4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stock__item">
+                                        <img src="images/stock2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stock__item">
+                                        <img src="images/stock5.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="follow">
+            <div class="container">
+                <div class="follow__inner">
+                    <h2 class="follow__title">Подпишись на наш инстаграм</h2>
+                    <div class="follow__wrapper">
+                        <div class="follow__item">
+                            <img src="images/follow1.jpg" alt="">
+                        </div>
+                        <div class="follow__item">
+                            <img src="images/follow2.jpg" alt="">
+                        </div>
+                        <div class="follow__item">
+                            <img src="images/follow3.jpg" alt="">
+                        </div>
+                        <div class="follow__item">
+                            <img src="images/follow4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="follow__btn">
+                        <a href="#">подписаться</a>
+                    </div>
+                    <div class="follow__blog">
+                        <div class="follow__text">
+                            <div class="follow__name">Lorem ipsum</div>
+                            <div class="follow__info">dolor sit amet, consectetur adipiscing elit. Cras lacus neque, varius sit amet sapien eu, feugiat luctus leo. Curabitur ut semper mi. In augue metus, ultricies id diam aliquet, porttitor facilisis justo. Sed elementum justo non erat posuere, at scelerisque sem varius. Duis suscipit, enim ut luctus elementum, arcu lectus cursus diam, eget facilisis lacus mauris et mauris. Curabitur aliquet diam in ligula accumsan condimentum. Etiam tristique blandit varius. Sed tincidunt massa arcu, sit amet condimentum metus sagittis id.</div>
+                        </div>
+                        <div class="follow__text">
+                            <div class="follow__name">Lorem ipsum</div>
+                            <div class="follow__info">dolor sit amet, consectetur adipiscing elit. Cras lacus neque, varius sit amet sapien eu, feugiat luctus leo. Curabitur ut semper mi. In augue metus, ultricies id diam aliquet, porttitor facilisis justo. Sed elementum justo non erat posuere, at scelerisque sem varius. Duis suscipit, enim ut luctus elementum, arcu lectus cursus diam, eget facilisis lacus mauris et mauris. Curabitur aliquet diam in ligula accumsan condimentum. Etiam tristique blandit varius. Sed tincidunt massa arcu, sit amet condimentum metus sagittis id.</div>
+                        </div>
+                        <div class="follow__text">
+                            <div class="follow__name">Lorem ipsum</div>
+                            <div class="follow__info">dolor sit amet, consectetur adipiscing elit. Cras lacus neque, varius sit amet sapien eu, feugiat luctus leo. Curabitur ut semper mi. In augue metus, ultricies id diam aliquet, porttitor facilisis justo. Sed elementum justo non erat posuere, at scelerisque sem varius. Duis suscipit, enim ut luctus elementum, arcu lectus cursus diam, eget facilisis lacus mauris et mauris. Curabitur aliquet diam in ligula accumsan condimentum. Etiam tristique blandit varius. Sed tincidunt massa arcu, sit amet condimentum metus sagittis id.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__wrapper">
+                    <div class="footer__major">
+                        <div class="footer__logo">
+                            <a href="#">
+                                <img src="images/footerlogo.svg" alt="">
+                            </a>
+                            <div class="footer__description">
+                                Сервис по доставке товаров и оказанию услуг в России
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__buy">
+                        <div class="footer__title">Покупателям</div>
+                        <ul class="footer__list">
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Как сделать заказ</a></li>
+                            <li><a href="#">Политика Конфиденциальности</a></li>
+                            <li><a href="#">Гарантия качества</a></li>
+                            <li><a href="#">Реферальная программа</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__partner">
+                        <div class="footer__title">партнерам</div>
+                        <ul class="footer__list">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Сотрудничество</a></li>
+                            <li><a href="#">Действующим партнерам</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact">
+                        <div class="footer__title">контакты</div>
+                        <ul class="footer__list">
+                            <li><a href="tel:+79993335401">+7 999 333 54 01</a></li>
+                            <li><a href="mailto:hello@united-market.ru">hello@united-market.ru</a></li>
+                            <li>Санкт-Петербург,<br> Улица Маяковского,<br> ДОМ 37, c. ЛИТЕР В, офис 20</li>
+                            <li>
+                                <a href="#"><img src="images/vkfooter.svg" alt=""></a>
+                                <a href="#"><img src="images/instfooter.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__rights">©Onion Market, 2021</div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="city">
+    <div class="city__name">Ваш город:<div class="city__itog">Санкт-Петербург</div></div>
+    <div class="city__searching">
+        <input class="city__search" type="text" placeholder="Поиск города">
+        <button class="city__btn"></button>
+    </div>
+    <div class="city__list">
+        <ul>
+            <li class="city__position">Архангельск</li>
+            <li class="city__position">Астрахань</li>
+            <li class="city__position">Балашиха</li>
+            <li class="city__position">Барнаул</li>
+            <li class="city__position">Белгород</li>
+            <li class="city__position">Бийск</li>
+            <li class="city__position">Великий Новгород</li>
+            <li class="city__position">Волгоград</li>
+            <li class="city__position">Вологда</li>
+            <li class="city__position">Дедовск</li>
+            <li class="city__position">Дзержинский</li>
+            <li class="city__position">Екатеринбург</li>
+            <li class="city__position">Зеленоград</li>
+            <li class="city__position">Иваново</li>
+            <li class="city__position">Ижевск</li>
+            <li class="city__position">Иркутск</li>
+            <li class="city__position">Калининград</li>
+            <li class="city__position">Киров</li>
+            <li class="city__position">Ковров</li>
+            <li class="city__position">Кострома</li>
+            <li class="city__position">Красногорск</li>
+            <li class="city__position">Краснодар</li>
+            <li class="city__position">Липецк</li>
+            <li class="city__position">Магнитогорск</li>
+            <li class="city__position">Миасс</li>
+            <li class="city__position">Москва</li>
+            <li class="city__position">Москва ЮВАО</li>
+            <li class="city__position">Мурманск</li>
+            <li class="city__position">Набережные Челны</li>
+            <li class="city__position">Нальчик</li>
+            <li class="city__position">Нижний Новгород</li>
+            <li class="city__position">Новокузнецк</li>
+            <li class="city__position">Новосибирск</li>
+            <li class="city__position">Ногинск</li>
+            <li class="city__position">Норильск</li>
+            <li class="city__position">Омск</li>
+            <li class="city__position">Пенза</li>
+            <li class="city__position">Пермь</li>
+            <li class="city__position">Псков</li>
+            <li class="city__position">Раменское</li>
+            <li class="city__position">Рубцовск</li>
+            <li class="city__position">Рязань</li>
+            <li class="city__position">Самара</li>
+            <li class="city__position active">Санкт-Петербург</li>
+            <li class="city__position">Саранск</li>
+            <li class="city__position">Солнечногорск</li>
+            <li class="city__position">Ставрополь</li>
+            <li class="city__position">Старый Оскол</li>
+            <li class="city__position">Тамбов</li>
+            <li class="city__position">Тверь</li>
+            <li class="city__position">Тольятти</li>
+            <li class="city__position">Томск</li>
+            <li class="city__position">Тула</li>
+            <li class="city__position">Уфа</li>
+            <li class="city__position">Химки</li>
+            <li class="city__position">Чебоксары</li>
+            <li class="city__position">Челябинск</li>
+            <li class="city__position">Чита</li>
+            <li class="city__position">Ярославль</li>
+        </ul>
+    </div>
+    <div class="city__close">
+        <img src="images/close.svg" alt="">
+    </div>
+</div>
+
+<div class="gorod">
+    <div class="gorod__title">ваш город москва?</div>
+    <div class="gorod__choose">
+        <div class="gorod__da">да</div>
+        <div class="gorod__net">нет</div>
+    </div>
+</div>
+
+<script src="js/main.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper1 = new Swiper('.swiper-container-1', {
+      loop: true,
+      slidesPerView: 5,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1000: {
+            slidesPerView: 3,
+          },
+          1300: {
+            slidesPerView: 5,
+          },
+        }
+    });
+    const swiper2 = new Swiper('.swiper-container-2', {
+      loop: true,
+      slidesPerView: 4,
+      breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesPerView: 'auto'
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1000: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1050: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }
+    });
+    const swiper3 = new Swiper('.swiper-container-3', {
+      loop: true,
+      slidesPerView: 1,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+</script>
+</body>
+</html>

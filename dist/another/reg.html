@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Корзина</a></li>
+                            <li><span>Оформление заказа</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reg">
+            <div class="container">
+                <div class="reg__inner">
+                    <div class="reg__title">Оформление заказа</div>
+                    <div class="reg__wrapper">
+                        <div class="reg__info">
+                            <div class="reg__step">1. Ваши данные:</div>
+                            <div class="reg__description">Авторизуйтесь, необходима авторизация</div>
+                            <div class="reg__choose" id="regChoose">
+                                
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Новый пользователь</label>
+                                </div>
+                                <!-- <label><input type="checkbox">Новый пользователь</label> -->
+                                <div class="reg__signin">
+                                    <a href="#">Войти</a>
+                                </div>
+                            </div>
+                            <div class="reg__another another__me" id="anotherMe">
+                                <form>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Имя</div>
+                                        <input type="text" placeholder="Иван">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Фамилия</div>
+                                        <input type="text" placeholder="Иванов">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Номер телефона</div>
+                                        <input type="text" placeholder="+79999999">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">E-mail</div>
+                                        <input type="text" placeholder="kizhukova@gmail.com">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="reg__step">2. Получатель:</div>
+                            <div class="reg__who" id="regWho">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" name="reg__who" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Я</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox reg__him promotions__mobClick regHim" id="checkbox3" name="reg__who" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Другой человек</label>
+                                </div>
+                                <!-- <label><input type="checkbox" name="reg__who">Я</label>
+                                <label><input type="checkbox" name="reg__who" class="reg__him">Другой человек</label> -->
+                            </div>
+                            <div class="reg__another another__man" id="anotherMan">
+                                <form>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Имя</div>
+                                        <input type="text" placeholder="Иван">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Фамилия</div>
+                                        <input type="text" placeholder="Иванов">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Номер телефона</div>
+                                        <input type="text" placeholder="+7">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="reg__step">3. Способ оплаты:</div>
+                            <div class="reg__how">
+                                <label><input type="radio" class="reg__how__choose" name="reg__pay__input">Онлайн банковской картой</label>
+                            </div>
+                            <div class="reg__zar">
+                                <div class="reg__how">
+                                    <label><input type="radio">Онлайн банковской картой</label>
+                                </div>
+                                <div class="reg__how">
+                                    <label><input type="radio">Онлайн новой банковской картой</label>
+                                </div>
+                            </div>
+                            <div class="reg__one__choose">
+                                <div class="reg__op">
+                                    <div class="reg__one reg__card">
+                                        <div class="reg__name">Номер карты</div>
+                                        <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000">
+                                    </div>
+                                    <div class="reg__one reg__small">
+                                        <div class="reg__name">Срок действия</div>
+                                        <input type="text" id="fourNumeral" class="reg__data" placeholder="00/00">
+                                    </div>
+                                </div>
+                                <div class="reg__op">
+                                    <div class="reg__one reg__persone">
+                                        <div class="reg__name">Имя и фамилия держателя карты</div>
+                                        <input type="text" placeholder="GDJDLDLDODODKKDLLL GDJDLDLDODODKKDLLL">
+                                    </div>
+                                    <div class="reg__one reg__small">
+                                        <div class="reg__name">CVC код</div>
+                                        <input type="text" class="reg__save" id="threeNumeral" placeholder="000">
+                                    </div>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" name="reg__who" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4" class="reg__memory">Запомнить карту</label>
+                                </div>
+                            </div>
+                           
+                            <div class="reg__how reg__how--cash">
+                                <label><input type="radio" class="reg__how--two" name="reg__pay__input">UM Кошелек</label>
+                            </div>
+                            <div class="reg__how--two--block">
+                                Баланс <div class="reg__balance">0₽</div>
+                                <div class="reg__none__money">
+                                    Недостаточно средств
+                                    <a href="" class="reg__none__money--link">Пополнить</a>
+                                </div>
+                            </div>
+                            <!-- <label class="reg__memory"><input type="checkbox">Запомнить карту</label> -->
+                            <div class="reg__step">4. Способ доставки (для товаров):</div>
+                            <div class="reg__del" id="regDel">
+                                <label><input type="radio" name="reg__del" >Самовывоз<br><span>г. Москва, ул. Тимирязевская, 25</span></label>
+                                <label><input type="radio" name="reg__del" class="reg__place">Доставка по адресу</label>
+                            </div>
+                            <div class="reg__another another__city" id="anotherCity">
+                                <form>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Город</div>
+                                        <input type="text" placeholder="Москва">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Улица</div>
+                                        <input type="text" placeholder="Тимирязевская">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Дом</div>
+                                        <input type="text" placeholder="25">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Строение</div>
+                                        <input type="text" placeholder="1">
+                                    </div>
+                                    <div class="reg__point">
+                                        <div class="reg__information">Квартира</div>
+                                        <input type="text" placeholder="10">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="reg__right">
+                            <div class="reg__schet">
+                                <div class="reg__finally">
+                                    <div class="reg__itog">Итого</div>
+                                    <div class="reg__money">1000 руб.</div>
+                                </div>
+                                <div class="reg__row">
+                                    <div class="reg__pos">Товары (услуги), шт.</div>
+                                    <div class="reg__znac">5</div>
+                                </div>
+                                <div class="reg__row">
+                                    <div class="reg__pos">Скидка, руб.</div>
+                                    <div class="reg__znac">200</div>
+                                </div>
+                                <div class="reg__row">
+                                    <div class="reg__pos">Доставка, руб.</div>
+                                    <div class="reg__znac">1000</div>
+                                </div>
+                                <div class="reg__click">
+                                    <button class="reg__btn">Подтвердить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="thanksZakaz">
+    <div class="thanksZakaz__title">Спасибо за Ваш заказ! </div>
+    <div class="thanksZakaz__text">В ближайшее время мы свяжемся с Вами <br> в Телеграм для уточнения <br> деталей заказа</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js" integrity="sha512-6Jym48dWwVjfmvB0Hu3/4jn4TODd6uvkxdi9GNbBHwZ4nGcRxJUCaTkL3pVY6XUQABqFo3T58EMXFQztbjvAFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+jQuery(function($){
+    $("#cardNumber").inputmask("**** **** **** ****");
+    $("#fourNumeral").inputmask("**/**");
+    $("#threeNumeral").inputmask("***");
+});
+</script>
+</body>
+</html>

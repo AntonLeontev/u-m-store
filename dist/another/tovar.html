@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><span>Профиль</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Профиль партнера</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user"><a href="#">Профиль</a></li>
+                                <li class="active"><a href="#">Загрузка товаров (услуг)</a></li>
+                                <li><a href="#">Настройка профиля</a></li>
+                                <li><a href="#">Заказы</a></li>
+                                <li><a href="#">Склад</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="tovar__inner">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Загрузка товара (услуг)</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Склад</label>
+                                </div>
+                            </div>
+                            <div class="tovar__add" id="tovadAdd">
+                                <a href="#">Загрузить товар</a>
+                            </div>
+                            <div class="tovar__wrapper">
+                                <div class="tovar__item tovar__top">
+                                    <div class="tovar__one"></div>
+                                    <div class="tovar__one">Дата</div>
+                                    <div class="tovar__one">Категория</div>
+                                    <div class="tovar__one">Название</div>
+                                    <div class="tovar__one">Сумма</div>
+                                    <div class="tovar__one">Статус</div>
+                                </div>
+                                <div class="tovar__unit">
+                                    <div class="tovar__item">
+                                        <div class="tovar__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="tovar__data">10.06.2021</div>
+                                        <div class="tovar__kategory">Категория товара</div>
+                                        <div class="tovar__name">Розы 50 см</div>
+                                        <div class="tovar__price">1000 ₽</div>
+                                        <div class="tovar__status">На рассмотрении</div>
+                                        <div class="tovar__delete">
+                                            <img src="images/basket(2).svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tovar__mob">
+                                        <div class="tovar__one">
+                                            <div class="tovar__image">
+                                                <img src="images/empty.svg" alt="">
+                                            </div>
+                                            <div class="tovar__info">
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Дата</div>
+                                                    <div class="tovar__when">10.06.2021</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Категория</div>
+                                                    <div class="tovar__kategory">Категория товара</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__naz">Название</div>
+                                                    <div class="tovar__name">Розы 50 см</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__sum">Сумма</div>
+                                                    <div class="tovar__money">1000 ₽</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__pos">Статус</div>
+                                                    <div class="tovar__description">На рассмотрении</div>
+                                                </div>
+                                            </div>
+                                            <div class="tovar__delete">
+                                                <img src="images/basket(2).svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tovar__unit">
+                                    <div class="tovar__item">
+                                        <div class="tovar__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="tovar__data">10.06.2021</div>
+                                        <div class="tovar__kategory">Категория товара</div>
+                                        <div class="tovar__name">Розы 50 см</div>
+                                        <div class="tovar__price">1000 ₽</div>
+                                        <div class="tovar__status">На рассмотрении</div>
+                                        <div class="tovar__delete">
+                                            <img src="images/basket(2).svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tovar__mob">
+                                        <div class="tovar__one">
+                                            <div class="tovar__image">
+                                                <img src="images/empty.svg" alt="">
+                                            </div>
+                                            <div class="tovar__info">
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Дата</div>
+                                                    <div class="tovar__when">10.06.2021</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Категория</div>
+                                                    <div class="tovar__kategory">Категория товара</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__naz">Название</div>
+                                                    <div class="tovar__name">Розы 50 см</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__sum">Сумма</div>
+                                                    <div class="tovar__money">1000 ₽</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__pos">Статус</div>
+                                                    <div class="tovar__description">На рассмотрении</div>
+                                                </div>
+                                            </div>
+                                            <div class="tovar__delete">
+                                                <img src="images/basket(2).svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tovar__unit">
+                                    <div class="tovar__item">
+                                        <div class="tovar__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="tovar__data">10.06.2021</div>
+                                        <div class="tovar__kategory">Категория товара</div>
+                                        <div class="tovar__name">Розы 50 см</div>
+                                        <div class="tovar__price">1000 ₽</div>
+                                        <div class="tovar__status">На рассмотрении</div>
+                                        <div class="tovar__delete">
+                                            <img src="images/basket(2).svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tovar__mob">
+                                        <div class="tovar__one">
+                                            <div class="tovar__image">
+                                                <img src="images/empty.svg" alt="">
+                                            </div>
+                                            <div class="tovar__info">
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Дата</div>
+                                                    <div class="tovar__when">10.06.2021</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Категория</div>
+                                                    <div class="tovar__kategory">Категория товара</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__naz">Название</div>
+                                                    <div class="tovar__name">Розы 50 см</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__sum">Сумма</div>
+                                                    <div class="tovar__money">1000 ₽</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__pos">Статус</div>
+                                                    <div class="tovar__description">На рассмотрении</div>
+                                                </div>
+                                            </div>
+                                            <div class="tovar__delete">
+                                                <img src="images/basket(2).svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tovar__unit">
+                                    <div class="tovar__item">
+                                        <div class="tovar__image">
+                                            <img src="images/empty.svg" alt="">
+                                        </div>
+                                        <div class="tovar__data">10.06.2021</div>
+                                        <div class="tovar__kategory">Категория товара</div>
+                                        <div class="tovar__name">Розы 50 см</div>
+                                        <div class="tovar__price">1000 ₽</div>
+                                        <div class="tovar__status">На рассмотрении</div>
+                                        <div class="tovar__delete">
+                                            <img src="images/basket(2).svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tovar__mob">
+                                        <div class="tovar__one">
+                                            <div class="tovar__image">
+                                                <img src="images/empty.svg" alt="">
+                                            </div>
+                                            <div class="tovar__info">
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Дата</div>
+                                                    <div class="tovar__when">10.06.2021</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__data">Категория</div>
+                                                    <div class="tovar__kategory">Категория товара</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__naz">Название</div>
+                                                    <div class="tovar__name">Розы 50 см</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__sum">Сумма</div>
+                                                    <div class="tovar__money">1000 ₽</div>
+                                                </div>
+                                                <div class="tovar__row">
+                                                    <div class="tovar__pos">Статус</div>
+                                                    <div class="tovar__description">На рассмотрении</div>
+                                                </div>
+                                            </div>
+                                            <div class="tovar__delete">
+                                                <img src="images/basket(2).svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="downloadTovar" id="tovarDownload">
+    <form class="downloadTovar__form">
+        <input type="file" class="downloadTovar__hide">
+        <a href="#" class="downloadTovar__photo">Выбрать фото</a>
+        <div class="downloadTovar__choose">
+            <input type="text" class="downloadTovar__input" id="downloadTovarKategory"  placeholder="Выбор категории">
+            <div class="downloadTovar__arrow" id="downloadTovarArrow">
+                <img src="images/arrowMenu.svg" alt="">
+            </div>
+            <div class="downloadTovar__block downloadTovar__block--one" id="downloadTovarBlock">
+                <div class="promotion__br">
+                    <input class="custom-checkbox downloadTovarInput" id="checkbox5" type="checkbox"><label for="checkbox5">Цветы</label>
+                </div>
+                <div class="promotion__br">
+                    <input class="custom-checkbox downloadTovarInput" id="checkbox6" type="checkbox"><label for="checkbox6">Монобукеты</label>
+                </div>
+                <div class="promotion__br">
+                    <input class="custom-checkbox downloadTovarInput" id="checkbox7" type="checkbox"><label for="checkbox7">Композиции в коробках</label>
+                </div>
+                <div class="promotion__br">
+                    <input class="custom-checkbox downloadTovarInput" id="checkbox8" type="checkbox"><label for="checkbox8">Композиции в корзинах</label>
+                </div>
+                <div class="promotion__br">
+                    <input class="custom-checkbox downloadTovarInput" id="checkbox9" type="checkbox"><label for="checkbox9">Авторские букеты</label>
+                </div>
+                <div class="promotion__br">
+                    <input class="custom-checkbox" class="downloadTovarInput" id="checkbox10" type="checkbox"><label for="checkbox10">Съедобные букеты</label>
+                </div>
+                <div class="promotion__br">
+                    <input class="custom-checkbox downloadTovarInput" id="checkbox11" type="checkbox"><label for="checkbox11">Подарки</label>
+                </div>
+            </div>
+        </div>
+        <input type="text" class="downloadTovar__input" placeholder="Название">
+        <input type="text" class="downloadTovar__input" placeholder="Описание">
+        <input type="text" class="downloadTovar__input" placeholder="Состав">
+        <input type="text" class="downloadTovar__input" placeholder="Цена">
+        <div class="downloadTovar__text">Добавьте конфигурацию товара (длина, размер или другие параметры), от которой зависит цена</div>
+        <input type="text" class="downloadTovar__input" placeholder="Конфигурация">
+        <input type="text" class="downloadTovar__input" placeholder="Цена">
+        <div class="tovar__plus" id="tovarPlus">Добавить Конфигурацию</div>
+        <div class="tovar__hideBlock" id="tovarHideBlock">
+            <input type="text" class="downloadTovar__input" placeholder="Конфигурация">
+            <input type="text" class="downloadTovar__input" placeholder="Цена">
+        </div>
+        <button class="downloadTovar__btn">Отправить</button>
+    </form>
+    <div class="downloadTovar__close" id="tovarDownloadClose">
+        <img src="images/close.svg" alt="">
+    </div>
+</div>
+
+<div class="exiting" id="cardExit">
+    <div class="exiting__text">Вы уверены,что хотите выйти?</div>
+    <div class="exiting__buttons">
+        <div class="exiting__btn" id="exitNo">
+            <a href="#">Отмена</a>
+        </div>
+        <div class="exiting__btn" id="exitYes">
+            <a href="#">Да</a>
+        </div>
+    </div>
+    <div class="exiting__close" id="exitClose">
+        <img src="images/closeImage.svg" alt="">
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

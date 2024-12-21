@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie = edge">
+    <title>Title</title>
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normilze.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="content">
+        <section class="major">
+            <div class="container">
+                <div class="major__inner">
+                    <div class="major__breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Профиль</a></li>
+                            <li><span>Настройки профиля</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__inner">
+                    <div class="profile__title active">Профиль партнера</div>
+                    <div class="profile__wrapper">
+                        <div class="profile__menu">
+                            <ul>
+                                <li class="user"><a href="#">Профиль партнера</a></li>
+                                <li class="active"><a href="#">Настройки Профиля</a></li>
+                                <li><a href="#">Уведомления</a></li>
+                                <li class="menu__arrow menu__arrow--one" id="menuArrowOne"><a href="#">Заказы</a>
+                                    <div class="hide__list hide__list--one" id="hideListOne">
+                                        <ul>
+                                            <li><a href="#">Доставки</a></li>
+                                            <li><a href="#">История заказов</a></li>
+                                            <li><a href="#">Отзывы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__arrow menu__arrow--two" id="menuArrowTwo"><a href="#">Бонусы и промокоды</a>
+                                    <div class="hide__list hide__list--two" id="hideListTwo">
+                                        <ul>
+                                            <li><a href="#">Бонусы</a></li>
+                                            <li><a href="#">Промокоды</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Реферальная программа</a></li>
+                                <li class="exit"><a href="#">Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="set__inner">
+                            <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
+                            <div class="promotions__hide" id="promotionsHide">
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox1" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Настройки профиля</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox2" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Заказы</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox3" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox3">Загрузка товара (услуг)</label>
+                                </div>
+                                <div class="promotion__br">
+                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Склад</label>
+                                </div>
+                            </div>
+                            <div class="set__one">
+                                <div class="set__step">1. Информация об организации:</div>
+                                <div class="set__form">
+                                    <form>
+                                        <div class="set__pos">Название организации</div>
+                                        <input type="text" placeholder="ООО «ВИАКОМ»">
+                                        <div class="set__pos">Контактное лицо (ФИО, должность)</div>
+                                        <input type="text" placeholder="Иванов Иван Иванович, директор">
+                                        <div class="set__pos">Номер телефона</div>
+                                        <input type="text" placeholder="+79999999">
+                                        <div class="set__pos">E-mail</div>
+                                        <input type="email" placeholder="kizhukova@gmail.com">
+                                        <div class="set__pos">ИНН</div>
+                                        <input type="text" placeholder="0123456789">
+                                        <div class="set__pos">ОГРН</div>
+                                        <input type="text" placeholder="0123456789">
+                                        <div class="set__pos">БИК</div>
+                                        <input type="text" placeholder="0123456789">
+                                        <div class="set__pos">Кор. сч.</div>
+                                        <input type="text" placeholder="0123456789">
+                                        <div class="set__pos">Счет</div>
+                                        <input type="text" placeholder="0123456789019295к0606">
+                                        <div class="set__pos">Юридический адрес</div>
+                                        <input type="text" placeholder="201234, г. Москва, ул. Тимирязевская, д.14, офис 56">
+                                        <div class="set__pos">Адрес</div>
+                                        <input type="text" placeholder="201234, г. Москва, ул. Тимирязевская, д.14, офис 56">
+                                        <div class="reg__flex">
+                                            <button>Сохранить</button>
+                                            <a href="#" class="set__logout">Выйти</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

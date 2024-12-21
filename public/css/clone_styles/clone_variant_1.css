@@ -1,0 +1,109 @@
+/* ссылка телефон в хедере */
+.header__phone a {
+  color: #0066FF !important;
+}
+
+.header__phone a::before {
+  background-image: url('img/variant_1_img/phone_variant_1.svg') !important;
+}
+
+/* кнопка меню */
+.header__catalog ul li.header__click .header__a {
+  background: #000000;
+}
+
+/*кнопки блоков популярные, скидка 50%, новинки, подписаться */
+.index__btn a, .new__scores a {
+  background: #0066FF !important;
+}
+
+/* футер */
+.footer {
+  background: #FFFFFF !important;
+}
+
+.footer__description,
+.footer__title,
+.footer__list li a,
+.footer__rights {
+  color: #000 !important;
+}
+
+.footer__item-link {
+  color: #fff !important;
+}
+
+.footer__item-link:hover {
+  color: #fff !important;
+}
+
+.footer__item-link::after {
+  background: #000 !important;
+}
+
+/* filters */
+.noUi-connect {
+  background: #000 !important;
+}
+
+.flowers__price input {
+  border: 2px solid #000 !important;
+}
+
+/* card */
+.popular__item .popular__price {
+  color: #000 !important;
+}
+
+.popular__item .popular__buy a {
+  background: transparent !important;
+  border: 2px solid #000000 !important;
+  border-radius: 39px !important;
+  color: #000 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 8px 30px !important;
+}
+
+.popular__item .popular__buy a:hover {
+  background: #0066FF !important;
+  color: #FFFFFF !important;
+}
+
+/* slider */
+.slider__item--one {
+  background: transparent !important;
+}
+
+.slider .swiper-slide.swiper-slide-small .slider__item {
+  padding-top: 70px !important;
+}
+
+.slider__left {
+  margin-right: auto !important;
+}
+
+.slider .swiper-slide.swiper-slide-small .slider__item .slider__title {
+  font-weight: 700 !important;
+  font-size: 48px !important;
+  line-height: 65px !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+  color: #1C2024 !important;
+}
+
+.slider__item .slider__btn a {
+  margin-bottom: 0 !important;
+  border: 2px solid #FFFFFF !important;
+  border-radius: 61px !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  text-align: center;
+  background: transparent !important;
+}
+
+@media(max-width: 800px) {
+  .slider {
+    display: none;
+  }
+}

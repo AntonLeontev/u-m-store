@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>intelligence</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../another/css/normilze.css">
+  <link rel="stylesheet" href="../../another/css/another.css">
+  <link rel="stylesheet" href="../../another/css/app.css">
+  <link rel="stylesheet" href="../../another/css/catalog.css">
+  <link rel="stylesheet" href="../../another/css/common.css">
+  <link rel="stylesheet" href="../../another/css/custom.css">
+  <link rel="stylesheet" href="../../another/css/doc.css">
+  <link rel="stylesheet" href="../../another/css/file.css">
+  <link rel="stylesheet" href="../../another/css/footer.css">
+  <link rel="stylesheet" href="intelligence.css">
+  <script defer src="intelligence.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <section class="intelligence">
+      <h2 class="intelligence__title">Искусственный интеллект</h2>
+
+      <p class="intelligence__desc">
+        Мы разработываем искусственный интеллект, который будет упрощать вам поиск товаров на нашем маркет плейс.
+        Помогите нам
+        сделать сервис более удобный для вас, ответьте на несколько вопросов
+      </p>
+
+      <form class="intelligence__form">
+        <label class="intelligence__form-label">
+          <span class="intelligence__form-title">Имя</span>
+
+          <input type="text" class="intelligence__form-input">
+        </label>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Пол</span>
+
+          <span class="intelligence__radio-group">
+            <span class="intelligence__radio-item">
+              <input type="radio" name="gender" checked class="intelligence__form-radio">
+
+              <img class="intelligence__radio-img" src="img/gender-1.png" alt="#">
+            </span>
+
+            <span class="intelligence__radio-item">
+              <input type="radio" name="gender" class="intelligence__form-radio">
+
+              <img class="intelligence__radio-img" src="img/gender-2.png" alt="#">
+            </span>
+          </span>
+        </div>
+
+        <label class="intelligence__form-label">
+          <span class="intelligence__form-title">Возраст</span>
+
+          <input type="text" class="intelligence__form-input">
+        </label>
+
+        <label class="intelligence__form-label">
+          <span class="intelligence__form-title">
+            Место рождения
+          </span>
+
+          <span class="intelligence__form-subtitle">
+            Например, Юг России, Северо-Запад, Приволжье, Север, Урал,
+            Сибирь, Дальний Восток, Центр + город
+          </span>
+
+          <input type="text" class="intelligence__form-input">
+        </label>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Знак зодиака</span>
+
+          <span class="intelligence__select js-intelligence-select">
+            <input type="text" readonly placeholder="Овен (с 21 марта по 20 апреля)" class="intelligence__form-input">
+            <span class="intelligence__select-content">
+              <span class="intelligence__select-item">Овен (с 21 марта по 20 апреля)</span>
+              <span class="intelligence__select-item">Телец (с 21 по 21 мая)</span>
+              <span class="intelligence__select-item">Близнецы (с 22 мая по 21 июня)</span>
+              <span class="intelligence__select-item">Рак (с 22 июня по 22 июля)</span>
+              <span class="intelligence__select-item">Лев (с 23 июля по 21 августа)</span>
+              <span class="intelligence__select-item">Дева (с 22 августа по 23 сентября)</span>
+              <span class="intelligence__select-item">Весы (с 24 сентября по 23 октября)</span>
+              <span class="intelligence__select-item">Скорпион (с 24 октября по 22 ноября)</span>
+              <span class="intelligence__select-item">Стрелец (с 23 ноября по 22 декабря)</span>
+              <span class="intelligence__select-item">Козерог (с 23 декабря по 20 января)</span>
+              <span class="intelligence__select-item">Водолей (с 21 января по 19 февраля)</span>
+              <span class="intelligence__select-item">2Рыбы (с 20 февраля по 20 марта)</span>
+            </span>
+
+            <span class="intelligence__arrow">
+              <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+            </span>
+          </span>
+        </div>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Цвет глаз</span>
+
+          <span class="intelligence__radio-group">
+            <span class="intelligence__radio-item">
+              <input type="radio" name="eye-color" checked class="intelligence__form-radio">
+
+              <img class="intelligence__radio-img" src="img/color-1.png" alt="#">
+            </span>
+
+            <span class="intelligence__radio-item">
+              <input type="radio" name="eye-color" class="intelligence__form-radio">
+
+              <img class="intelligence__radio-img" src="img/color-2.png" alt="#">
+            </span>
+
+            <span class="intelligence__radio-item">
+              <input type="radio" name="eye-color" class="intelligence__form-radio">
+
+              <img class="intelligence__radio-img" src="img/color-3.png" alt="#">
+            </span>
+
+            <span class="intelligence__radio-item">
+              <input type="radio" name="eye-color" class="intelligence__form-radio">
+
+              <img class="intelligence__radio-img" src="img/color-4.png" alt="#">
+            </span>
+          </span>
+        </div>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Цвет волос</span>
+
+          <span class="intelligence__select js-intelligence-select">
+            <input type="text" readonly placeholder="Блондин (-ка)" class="intelligence__form-input">
+            <span class="intelligence__select-content">
+              <span class="intelligence__select-item">Блондин (-ка)</span>
+              <span class="intelligence__select-item">Брюнет (-ка)</span>
+              <span class="intelligence__select-item">Шатен (-ка)</span>
+              <span class="intelligence__select-item">Русый (-ая)</span>
+              <span class="intelligence__select-item">Рыжий (-ая)</span>
+              <span class="intelligence__select-item">Красный (-ая)</span>
+              <span class="intelligence__select-item">Синий (-ая)</span>
+              <span class="intelligence__select-item">Зеленый (-ая)</span>
+            </span>
+
+            <span class="intelligence__arrow">
+              <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+            </span>
+          </span>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">На какое событие вы дарите цветы?</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">День рождения</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">8 марта</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">14 февраля</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Годовщина свадьбы/отношений</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Первое свидание</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Подарок без причины</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Подарок себе</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Подарок родным</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+
+          </div>
+        </div>
+
+        <label class="intelligence__form-label">
+          <span class="intelligence__form-title">Какое ближайшее событие планируется у вас?</span>
+
+          <input type="text" class="intelligence__form-input">
+        </label>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Какой размер букета вы бы выбрали для подарка/заказа?</span>
+
+          <span class="intelligence__select js-intelligence-select">
+            <input class="intelligence__form-input" type="text" readonly placeholder="Большой">
+            <span class="intelligence__select-content">
+              <span class="intelligence__select-item">Большой</span>
+              <span class="intelligence__select-item">Средний</span>
+              <span class="intelligence__select-item">Шатен (-ка)</span>
+            </span>
+
+            <span class="intelligence__arrow">
+              <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+            </span>
+          </span>
+        </div>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Какие цветы вы хотели бы видеть в букете?</span>
+
+          <span class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Розы</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Тюльпаны</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Хризантемы</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Лилии</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Орхидеи</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Пионы</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Сухоцветы</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </span>
+        </div>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Какую упаковку вы бы выбрали для букета?</span>
+
+          <span class="intelligence__select js-intelligence-select">
+            <input class="intelligence__form-input" type="text" readonly placeholder="крафтовая">
+            <span class="intelligence__select-content">
+              <span class="intelligence__select-item">крафтовая</span>
+              <span class="intelligence__select-item">без упаковки</span>
+              <span class="intelligence__select-item">прозрачная пленка</span>
+              <span class="intelligence__select-item">цветная пленка</span>
+              <span class="intelligence__select-item">прозрачная пленка</span>
+              <span class="intelligence__select-item">матовая пленка</span>
+              <span class="intelligence__select-item">корзинка, кашпо, ящик</span>
+              <span class="intelligence__select-item">пальмовое волокно</span>
+              <span class="intelligence__select-item">рогожка, сетка</span>
+              <span class="intelligence__select-item">фетр</span>
+              <span class="intelligence__select-item">креп бумага</span>
+              <span class="intelligence__select-item">шляпная коробка</span>
+              <span class="intelligence__select-item">каркас</span>
+            </span>
+
+            <span class="intelligence__arrow">
+              <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+            </span>
+          </span>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">Какого цвета цветы вы бы хотели видеть в своем букете?</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">белый (молочный)</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">красный</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">розовый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">бордо</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">зеленый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">желтый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">синий</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">фиолетовый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">Какой цвет ленты вы бы выбрали?</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">белый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">красный</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">синий</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">зеленый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">желтый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">оранжевый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">фиолетовый</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">золотой</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">серебрянный</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">Какой высоты букет вы бы выбрали?</span>
+
+          <span class="intelligence__select js-intelligence-select">
+            <input type="text" readonly placeholder="маленький (до 50 см)" class="intelligence__form-input">
+            <span class="intelligence__select-content">
+              <span class="intelligence__select-item">маленький (до 50 см)</span>
+              <span class="intelligence__select-item">средний (60 см)</span>
+              <span class="intelligence__select-item">высокий (больше 70 см)</span>
+            </span>
+
+            <span class="intelligence__arrow">
+              <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+            </span>
+          </span>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">Как вы предпочитаете проводить свободное время?</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">встречаюсь с друзьями, личные разговоры</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">большие шумные компании</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">с родными, с семьей</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">вечеринка</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">отдых на природе</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">На что тратите больше времени</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">чтение книг</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">социальные сети ( общение, просмотр новостей)</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">интернет (поиск интересной информации)</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">занятия спортом</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">интеллектуальные игры</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">прогулка</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">просмотр ТВ</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">поход в театр, музей</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">Семейное положение</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">замужем/женат</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">холост/свободен</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">встречаешься/влюблен</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">есть дети</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">Как часто вы сами получаете букеты?</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">только по праздникам</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">никогда</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">каждый месяц</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">каждую неделю</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </div>
+        </div>
+
+        <label class="intelligence__form-label">
+          <span class="intelligence__form-title">
+            Какую должность вы занимаете?
+          </span>
+
+          <span class="intelligence__form-subtitle">Например, менеджер, директор, учитель, строитель и т.д.</span>
+
+          <input type="text" class="intelligence__form-input">
+        </label>
+
+        <label class="intelligence__form-label">
+          <span class="intelligence__form-title">
+            В какой области вы работаете?
+          </span>
+
+          <span class="intelligence__form-subtitle">Например, цветы, финансы, реклама и т.д.</span>
+
+          <input type="text" class="intelligence__form-input">
+        </label>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">Какие социальные сети вы используете?</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/fb.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/Inst.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/ok.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/vk.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/tiktok.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/whats.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/vk.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">
+                <img class="intelligence__checkbox-img" src="img/wiber.png" alt="#">
+              </span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">Другое:</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="intelligence__form-label">
+          <div class="intelligence__form-title">Какой транспорт используете для передвижения?</div>
+
+          <div class="intelligence__checkbox-wrapper">
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">встречаюсь с друзьями, личные разговоры</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Такси</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Своя машина</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Общественный транспорт</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Велосипед</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text">Метро</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="intelligence__checkbox">
+              <span class="intelligence__checkbox-text intelligence-last-checkbox">
+                Другое:
+              </span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="intelligence__form-label">
+          <span class="intelligence__form-title">
+            Как часто выбираетесь на мероприятия?
+          </span>
+
+          <span class="intelligence__form-subtitle">Например, театр, кино, музей и т.д.</span>
+
+          <span class="intelligence__select js-intelligence-select">
+            <input type="text" readonly placeholder="Раз в неделю" class="intelligence__form-input">
+            <span class="intelligence__select-content">
+              <span class="intelligence__select-item">Раз в неделю</span>
+              <span class="intelligence__select-item">Раз в месяц</span>
+              <span class="intelligence__select-item">Раз в полгода</span>
+              <span class="intelligence__select-item">Раз в год</span>
+              <span class="intelligence__select-item">Никогда</span>
+            </span>
+
+            <span class="intelligence__arrow">
+              <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+            </span>
+          </span>
+        </div>
+
+        <button class="intelligence__form-btn">Отправить</button>
+      </form>
+    </section>
+  </div>
+</body>
+
+</html>
