@@ -9,6 +9,7 @@
         "ext-json": "*",
         "akaunting/laravel-firewall": "^1.3",
         "barryvdh/laravel-dompdf": "^0.9.0",
+        "deployer/deployer": "^7.5",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "greensms/greensms": "^1.7",
