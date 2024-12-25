@@ -25,7 +25,8 @@
                             </a>
                         </div>
                         <div class="header__phone">
-                            <a href="tel:{{ setting('site.phone') }}">{{ setting('site.phone') }}</a>
+                            {{-- <a href="tel:{{ setting('site.phone') }}">{{ setting('site.phone') }}</a> --}}
+                            <a target="_blank" href="https://t.me/riowl">@riowl</a>
                         </div>
                     </div>
                     <div class="header__middle">
