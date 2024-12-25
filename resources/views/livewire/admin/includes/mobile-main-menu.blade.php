@@ -24,20 +24,28 @@
         <input class="custom-checkbox" id="checkbox2" name="menu" onclick="location.href = '{{ route('admin.categories') }}'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Категории</label>
     </div>
 
-{{--    @if(Route::is('admin.settings'))--}}
-        @if (!is_numeric($hash = Auth::user()->telegram_id))
-            <div class="promotion__br">
-                <input class="custom-checkbox" id="checkbox5" name="menu" onclick="location.href = 'https://t.me/umhelp_bot?start={{$hash}}'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Телеграм уведомления</label>
-            </div>
-        @else
-            <div class="promotion__br">
-                <input class="custom-checkbox" id="checkbox5" name="menu" class="promotions__mobClick" type="checkbox" disabled><label for="checkbox5" style="color: #2bbf69">Телеграм уведомления Активны</label>
-            </div>
-        @endif
-{{--    @endif--}}
-    {{--                                <div class="promotion__br">--}}
-    {{--                                    <input class="custom-checkbox" id="checkbox4" onclick="location.href = '#'" class="promotions__mobClick" type="checkbox"><label for="checkbox4">Склад</label>--}}
-{{--                                    </div>--}}
+	@if (!is_numeric($hash = Auth::user()->telegram_id))
+		<div class="promotion__br">
+			<input class="custom-checkbox" id="checkbox5" name="menu" onclick="location.href = 'https://t.me/umhelp_bot?start={{$hash}}'" class="promotions__mobClick" type="checkbox"><label for="checkbox5">Телеграм уведомления</label>
+		</div>
+	@else
+		<div class="promotion__br">
+			<input class="custom-checkbox" id="checkbox5" name="menu" class="promotions__mobClick" type="checkbox" disabled><label for="checkbox5" style="color: #2bbf69">Телеграм уведомления Активны</label>
+		</div>
+	@endif
+
+	<div class="promotion__br">
+		<input class="custom-checkbox" id="checkbox6" name="menu" class="promotions__mobClick" type="checkbox" disabled><label for="checkbox6">Реклама</label>
+	</div>
+	<div class="promotion__br">
+		<input class="custom-checkbox" id="checkbox7" name="menu" class="promotions__mobClick" type="checkbox" disabled><label for="checkbox7">Маркетплейсы</label>
+	</div>
+	<div class="promotion__br">
+        <input class="custom-checkbox" id="checkbox9" name="menu" onclick="location.href = '{{ route('admin.accounting') }}'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Бухгалтерия бесплатно</label>
+    </div>
+	<div class="promotion__br">
+		<input class="custom-checkbox" id="checkbox8" name="menu" class="promotions__mobClick" type="checkbox" disabled><label for="checkbox8">Партнеры</label>
+	</div>
 </div>
 
 

@@ -12,6 +12,7 @@ use App\Http\Controllers\Payment\YookassaController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\Voyager\ProductsController;
+use App\Http\Livewire\Admin\AdminAccountingComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
@@ -387,6 +388,7 @@ Route::group(['middleware' => 'firewall.all'], function () {
         Route::get('/admin/product/edit/product_id={product_id}', AdminEditProductComponent::class)->name('admin.editproduct');
         Route::get('/admin/settings', AdminSettingsComponent::class)->name('admin.settings');
         Route::get('/admin/orders', AdminOrdersComponent::class)->name('admin.orders');
+        Route::get('/admin/accounting', AdminAccountingComponent::class)->name('admin.accounting');
 
 
         Route::get('/admin/download_contract', [PDFController::class, 'generatePDF'])->name('download.contract');

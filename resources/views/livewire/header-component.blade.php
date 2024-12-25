@@ -44,7 +44,7 @@
                     </div>
                     @include('livewire.includes.login-component')
 
-					@unless (Route::is('user.*'))
+					@unless (Route::is('user.*') || Route::is('admin.*'))
 						<div class="header__bottom">
 							<div class="header__catalog">
 								<ul style="justify-content: flex-start">
