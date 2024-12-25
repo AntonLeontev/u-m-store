@@ -145,17 +145,7 @@ class HomeComponent extends Component
 
     public function render(Request $request)
     {
-    //    dd(session()->all());
-        #Определяем наш ли это домен или партнера если нет то редирект на страницу магазина города партнера.
-//        if (session()->get('domain')) {
-//            $clone_info = CloneSiteInformation::getInfo();
-//            if($clone_info)
-//            {
-////                dd($clone_info['city_slug'], $clone_info['direction_slug']);
-//                redirect()->route('shop', ['city_slug'=>$clone_info['city_slug'], 'direction_slug'=>$clone_info['direction_slug']]);
-//            }
-//
-//        }
+		// dd(auth()->user());
 
 
         $store_id = Store::store_id();

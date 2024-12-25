@@ -49,12 +49,11 @@ class AuthByCall extends Component
     public function mount($referral_slug = 0)
     {
         $this->count_input_digits = 0;
-//        $this->phone = '7(918) 098 46 56';
-//    $this->phone = '7(927) 390 67 57';
         if (Auth::check()) $this->redirect(url()->previous());
 
         if (session()->has('user') && isset(session('user')['phone'])) {
             $user = User::firstWhere('phone', session('user')['phone']);
+			
             if ($user && session('user')['phone'] == $user->phone) {
                 $this->phone = session('user')['phone'];
                 $this->user_id = $user->id;
@@ -65,6 +64,7 @@ class AuthByCall extends Component
         } else {
             $this->submit_method = 'wire:submit.prevent=sendCode()';
         }
+
         if ($referral_slug) {
             $this->referral_slug = $referral_slug;
         }

@@ -14,7 +14,7 @@
           <div class="sign-input">
               <div class="sign-input__block">
 {{--                  <span>+7</span>--}}
-                  <input type="text" wire:model="phone" wire:keyup="phoneMask()" placeholder="7(555)55 55 555"></div>
+                <input type="text" wire:model="phone" wire:keyup="phoneMask()" placeholder="7(555)55 55 555"></div>
           </div>
            @if(isset(Session('user')['phone']))
                 <button type="submit">Войти</button>
@@ -57,7 +57,7 @@
     <div class="number__text">Ввести код</div>
     <form id="accept">
         @csrf
-       <input name="code" type="text" class="number__input" wire:model="code" wire:keyup="getCode()" placeholder="0000" >
+        <input name="code" type="text" class="number__input" wire:model="code" wire:keyup="getCode()" placeholder="0000" >
         @if(session()->has('error_code')) <span class="error"> {{ session('error_code') }}</span> @endif
     </form>
         <div class="number__new">

@@ -58,6 +58,7 @@ use App\Http\Livewire\SuccessComponent;
 use App\Http\Livewire\Telegram\SendError500Component;
 
 use App\Http\Livewire\User\UserBonusComponent;
+use App\Http\Livewire\User\UserCreateShopComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 
 // For manager
@@ -83,10 +84,12 @@ use App\Jobs\ChainApi\UMTApproveBuyerToMarketplace;
 use App\Jobs\ChainApi\UMTIssue;
 use App\Models\ChainStatusTransaction;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 
 
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
@@ -335,8 +338,9 @@ Route::group(['middleware' => 'firewall.all'], function () {
 
 
 // for User or Customer
-    Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+        Route::get('/user/create_shop', UserCreateShopComponent::class)->name('user.create-shop');
         Route::get('/user/settings', UserSettingsComponent::class)->name('user.settings');
         Route::get('/user/notifications', UserNotificationsComponent::class)->name('user.notifications');
         Route::get('/user/delivery', UserDeliveryComponent::class)->name('user.delivery');

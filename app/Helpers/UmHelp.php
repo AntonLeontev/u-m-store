@@ -356,7 +356,7 @@ class UmHelp
     public static function checkOurDomain()
     {
         $domain = self::getDomain();
-        $ourDomain = ['unitedmarket.org', 'unitedmarket.loc', '127.0.0.1', 'onionmarket.ru', 'u-m.store'];
+        $ourDomain = ['unitedmarket.org', 'unitedmarket.loc', 'u-m.loc', '127.0.0.1', 'onionmarket.ru', 'u-m.store'];
         if ($out = in_array($domain, $ourDomain) or str_contains($domain,'umflowers.ru')) {
             return false;
         } else {

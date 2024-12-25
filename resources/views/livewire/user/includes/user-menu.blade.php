@@ -2,6 +2,11 @@
     <ul>
         <li class="user @if (Route::is('user.dashboard')) active @endif"><a
                 href="{{ route('user.dashboard') }}">Профиль</a></li>
+		
+		@unless (auth()->user()->partner_id)
+			<li class="@if (Route::is('user.create-shop')) active @endif"><a
+					href="{{ route('user.create-shop') }}">Создать магазин</a></li>
+		@endunless
         <li class="@if (Route::is('user.settings')) active @endif"><a href="{{ route('user.settings') }}">Настройки
                 Профиля</a></li>
         <li class="@if (Route::is('user.notifications')) active @endif"><a

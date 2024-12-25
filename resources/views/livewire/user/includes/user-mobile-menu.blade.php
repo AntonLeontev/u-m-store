@@ -3,6 +3,9 @@
         <input class="custom-checkbox" id="checkbox1" onclick="location.href = '{{ route('user.dashboard') }}'" class="promotions__mobClick" type="checkbox"><label for="checkbox1">Профиль</label>
     </div>
     <div class="promotion__br">
+        <input class="custom-checkbox" id="checkbox10" onclick="location.href = '{{ route('user.create-shop') }}'" class="promotions__mobClick" type="checkbox"><label for="checkbox10">Создать интернет-магазин</label>
+    </div>
+    <div class="promotion__br">
         <input class="custom-checkbox" id="checkbox2" onclick="location.href = '{{ route('user.settings') }}'" class="promotions__mobClick" type="checkbox"><label for="checkbox2">Настройки профиля</label>
     </div>
     <div class="promotion__br">
