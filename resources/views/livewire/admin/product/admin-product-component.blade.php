@@ -26,27 +26,6 @@
                       @include('livewire.admin.includes.main-menu')
 
                         <div class="tovar__inner">
-                            <p style="margin-bottom: 8px">
-                                <strong>
-                                    1. Изменения в  условиях ценообразования:
-                                 </strong>
-                            </p>
-                            <p style="margin-bottom: 8px">
-                                <strong>
-                                    1.1 Партнёр устанавливает цену на товар на сайте Onion Market, равную цене указанной на витрине магазина.
-                                </strong>
-                            </p>
-                            <p style="margin-bottom: 8px">
-                                <strong>
-                                    1.2 Сервисный сбор установленный по условиям сотрудничества взимается от стоимости товара.
-                                </strong>
-                            </p>
-                            <p style="margin-bottom: 16px">
-                                <strong>
-                                    1.3 Партнёр сам несёт ответственность за сопоставление цен сервиса Onion Market и магазина.
-                                </strong>
-                            </p>
-
                             @include('livewire.admin.includes.mobile-main-menu')
 
                                 <div class="tovar__add" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 36px;">

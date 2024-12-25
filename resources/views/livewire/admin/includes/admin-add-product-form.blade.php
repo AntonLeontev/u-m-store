@@ -3,12 +3,12 @@
 
     <div wire:ignore.self class="download-product__form is-visible js-tab-item" id="tab-files">
         <input class="download-product__file" wire:model="images" multiple type="file"
-               accept=".jpg, .jpeg, .png" id="file-uploader">
+               accept=".jpg, .jpeg, .png, .webp" id="file-uploader">
         <input class="download-product__file" wire:model="additional_images" multiple type="file"
-               accept=".jpg, .jpeg, .png" id="file-add-image-uploader">
+               accept=".jpg, .jpeg, .png, .webp" id="file-add-image-uploader">
 
         <div class="download-product__file-grid">
-            <h3>Загрузите не менее трех фото</h3>
+            <h3>Загрузка не более 10 фото за раз. Разрешенные форматы: jpg, png, webp</h3>
             <!-- скрываем, если есть добавленные изображения -->
             @if(!$images)
             <label for="file-uploader" class="download-product__label">
@@ -36,7 +36,7 @@
                 @foreach($images as $key => $image)
                         <div class="download-product__file-item">
                                 <img class="download-product__file-img" src="{{ $image->temporaryUrl() }}" alt="img_2.jpg">
-                                <input class="download-product__file" wire:model="edit_images.{{ $key }}.edit_image" type="file" accept=".jpg, .jpeg, .png" id="file-edit-image-uploader-{{$key}}">
+                                <input class="download-product__file" wire:model="edit_images.{{ $key }}.edit_image" type="file" accept=".jpg, .jpeg, .png, .webp" id="file-edit-image-uploader-{{$key}}">
                                 <label for="file-edit-image-uploader-{{$key}}"><span class="download-product__file-setting"></span></label>
                                 <div class="download-product__file-del" wire:click="deleteTmpFile('{{$image->getFilename()}}')">
                             </div>
@@ -63,7 +63,7 @@
     <div wire:ignore.self class="download-product__form js-tab-item" id="tab-info">
 
         <!-- фильры товара -->
-        <div class="download-product__form-group">
+        {{-- <div class="download-product__form-group">
             <!-- вывод ошибок валидации -->
             @error('over_filter_count') <span class="error">{{ $message }}</span> @enderror
             <div class="selectBox js-download-product-select">
@@ -75,7 +75,7 @@
                     @endif
                 </select>
                 <span class="download-product__arrow">
-                     <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+                     <img src="/images/timeArrow.svg" alt="time">
                 </span>
                 <div class="overSelect"></div>
             </div>
@@ -87,7 +87,7 @@
                         @endforeach
                 </div>
             @endif
-        </div>
+        </div> --}}
 
         <!-- категории товара -->
         <div class="download-product__form-group">
@@ -103,7 +103,7 @@
                 </select>
                 <div class="overSelect"></div>
                 <span class="download-product__arrow">
-                     <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+                     <img src="/images/timeArrow.svg" alt="time">
                 </span>
             </div>
             @if(count($categories) > 0)
@@ -522,7 +522,7 @@
                                                         </select>
 
                                                         <span class="download-product__arrow">
-                                                            <img src="https://umclone.pp.ua/images/timeArrow.svg"
+                                                            <img src="/images/timeArrow.svg"
                                                                  alt="time">
                                                         </span>
                                                     </span>
@@ -537,7 +537,7 @@
                                                         </select>
 
                                                         <span class="download-product__arrow">
-                                                            <img src="https://umclone.pp.ua/images/timeArrow.svg"
+                                                            <img src="/images/timeArrow.svg"
                                                                  alt="time">
                                                         </span>
                                                     </span>

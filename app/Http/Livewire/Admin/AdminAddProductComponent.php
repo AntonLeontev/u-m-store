@@ -183,7 +183,7 @@ class AdminAddProductComponent extends Component
         'discount' => 'required|lt:100',
         'description' => 'max:2000',
         'images' => 'required|array|max:10', // максимально 10 фотографий
-        'images.*' => 'mimes:jpeg,jpg,png|max:10000',
+        'images.*' => 'mimes:jpeg,jpg,png,webp|max:10000',
         'video_links.*.video_link' => 'required|url',
         // 'sFilters' => 'max:3',
         // 'sCategories' => 'max:3',
@@ -259,13 +259,13 @@ class AdminAddProductComponent extends Component
                     $image_path_300 = $this->resizeImg($image, 300, $folder_with_month, $timestamp);
 
 
-                  DB::table('media')->insert([
-                      'image_path' => $image_path_800,
-                      'resize_image_path' => $image_path_300,
-                      'product_id' => $this->product_id,
-                      'created_at' => now(),
-                      'updated_at' => now()
-                  ]);
+					DB::table('media')->insert([
+						'image_path' => $image_path_800,
+						'resize_image_path' => $image_path_300,
+						'product_id' => $this->product_id,
+						'created_at' => now(),
+						'updated_at' => now()
+					]);
 
                 }
             }
