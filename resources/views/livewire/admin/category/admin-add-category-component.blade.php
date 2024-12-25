@@ -1,5 +1,5 @@
 @push('head')
-    <link rel="stylesheet" href="https://umclone.pp.ua/css/download-product.css">
+    <link rel="stylesheet" href="/css/download-product.css">
 @endpush
 
 <div class="container" style="padding: 30px 0;">
@@ -27,7 +27,7 @@
                     @csrf
                     <div class="download-product__form-group">
                         <label for="parent-category" >Название</label>
-                        <input type="text" placeholder="Имя категории" class="download-product__form-input form-control input-md" wire:model="name" wire:input="generateslug" required>
+                        <input type="text" placeholder="Имя категории" class="download-product__form-input form-control input-md" wire:model="name" wire:input="generateSlug" required>
                     </div>
 
 
@@ -40,9 +40,6 @@
                         <label for="description" >SEO описание</label>
                         <textarea id="seo-description" type="text" placeholder="SEO description"  class="download-product__form-input form-control input-md" wire:model="seo_text"> </textarea>
                     </div>
-                    {{--                    <div class="download-product__form-group">--}}
-                    {{--                        <input type="text" placeholder="Мета-тег Title" class="download-product__form-input form-control input-md" wire:model="slug">--}}
-                    {{--                    </div>--}}
                     <div class="download-product__form-group">
                         <label for="parent-category" >Родительская категория</label>
 
@@ -56,12 +53,12 @@
                     @if(Session::has('domain'))
                     <div class="download-product__form-group">
                         <label for="parent-category" >Показать в главном меню</label>
-                                <span class="download-product__select js-download-product-select">
-                                    <select placeholder="Статус" class="download-product__form-input download-product__text-grey" wire:change="updateMenuStatus($event.target.value)" style="color: #000000" >
-                                            <option value="1">Да</option>
-                                            <option value="0" selected="true">Нет</option>
-                                    </select>
-                                </span>
+							<span class="download-product__select js-download-product-select">
+								<select placeholder="Статус" class="download-product__form-input download-product__text-grey" wire:change="updateMenuStatus($event.target.value)" style="color: #000000" >
+										<option value="1">Да</option>
+										<option value="0" selected="true">Нет</option>
+								</select>
+							</span>
                     </div>
                     @endif
                     <div class="download-product__form-group">

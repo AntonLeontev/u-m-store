@@ -27,7 +27,7 @@ class AdminAddCategoryComponent extends Component
         $this->category_id = $this->category->id;
     }
 
-    public function generateslug()
+    public function generateSlug()
     {
         $this->slug = Str::slug($this->name);
     }
@@ -67,8 +67,8 @@ class AdminAddCategoryComponent extends Component
 
     public function render()
     {
-//        $categories = Category::where('partner_id', Auth::user()->partner_id);
         $categories = Category::where('partner_id', Auth::user()->partner_id)->get();
+
         return view('livewire.admin.category.admin-add-category-component', compact('categories'))->layout('layouts.base');
     }
 }
