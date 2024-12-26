@@ -178,14 +178,10 @@
     </section>
     <section class="tell" wire:ignore>
         <div class="container">
-            <div class="tell__inner">
+
+			@livewire('for-clone.clone-shop-bottom-slider')
+            {{-- <div class="tell__inner">
                 <div class="tell__one">
-                    {{--                        <h2 class="tell__title">Герберовый бум!</h2> --}}
-                    {{--                        <div class="tell__description">на все букеты с герберами!</div> --}}
-                    {{--                        <div class="tell__btn"> --}}
-                    {{--                            <a href="#">заказать</a> --}}
-                    {{--                        </div> --}}
-                    {{--                        <div class="tell__addition">*акция действует с 01.10 по 30.10.2021</div> --> --}}
                     <div class="tell__image">
                         <img src="{{ asset('images/newPromo-1.jpg') }}" alt="promo">
                     </div>
@@ -193,7 +189,7 @@
                 <!-- <div class="tell__two">
                         <img src="images/gerb.svg" alt="">
                     </div> -->
-            </div>
+            </div> --}}
         </div>
     </section>
 

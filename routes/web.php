@@ -25,6 +25,7 @@ use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\Admin\AdminSettingsComponent;
 use App\Http\Livewire\Admin\CloneWebSite\SiteCloneSeoSetting;
 use App\Http\Livewire\Admin\CloneWebSite\SiteCloneSettingsComponent;
+use App\Http\Livewire\Admin\CloneWebSite\SiteCloneShopBottomSliderSettings;
 use App\Http\Livewire\Admin\CloneWebSite\SiteCloneShopSliderSettings;
 use App\Http\Livewire\Admin\PartnerFormRegistrationComponent;
 use App\Http\Livewire\Admin\WalletComponent;
@@ -51,45 +52,45 @@ use App\Http\Livewire\Partner\FranchiseSaleAprile;
 use App\Http\Livewire\Partner\FranchiseSaleComponet;
 use App\Http\Livewire\PromotionsComponent;
 use App\Http\Livewire\PWA\OfflineComponent;
-use App\Http\Livewire\SearchComponent;
 
+use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\SEO\SiteMapComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\SuccessComponent;
-use App\Http\Livewire\Telegram\SendError500Component;
 
+use App\Http\Livewire\Telegram\SendError500Component;
 use App\Http\Livewire\User\UserBonusComponent;
 use App\Http\Livewire\User\UserCreateShopComponent;
-use App\Http\Livewire\User\UserDashboardComponent;
 
 // For manager
+use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\User\UserDeliveryComponent;
 use App\Http\Livewire\User\UserNotificationsComponent;
 use App\Http\Livewire\User\UserOrdersHistoryComponent;
-use App\Http\Livewire\User\UserPromoComponent;
 
 //For SiteClone
+use App\Http\Livewire\User\UserPromoComponent;
 use App\Http\Livewire\User\UserReferralComponent;
 use App\Http\Livewire\User\UserReviewComponent;
 use App\Http\Livewire\User\UserSettingsComponent;
 use App\Http\Livewire\WishlistComponent;
 use App\Jobs\ChainApi\generateWallet;
-use App\Jobs\ChainApi\MarketplaceBuyProduct;
 
 //For new INFO
+use App\Jobs\ChainApi\MarketplaceBuyProduct;
 use App\Jobs\ChainApi\MarketplaceCreateProduct;
-use App\Jobs\ChainApi\MarketplaceRegisterBuyer;
 //For Auth
-use App\Jobs\ChainApi\UMTApproveBuyerToMarketplace;
+use App\Jobs\ChainApi\MarketplaceRegisterBuyer;
 //Blockchain
+use App\Jobs\ChainApi\UMTApproveBuyerToMarketplace;
 use App\Jobs\ChainApi\UMTIssue;
 use App\Models\ChainStatusTransaction;
 use App\Models\User;
 use Illuminate\Http\Request;
+
+
+
 use Illuminate\Support\Facades\Artisan;
-
-
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Route;
@@ -366,6 +367,7 @@ Route::group(['middleware' => 'firewall.all'], function () {
             //Для сайтов клонов
             Route::get('/site_settings', SiteCloneSettingsComponent::class)->name('admin.site.settings');
             Route::get('/shops_slider', SiteCloneShopSliderSettings::class)->name('admin.shop.slider');
+            Route::get('/shops_slider_bottom', SiteCloneShopBottomSliderSettings::class)->name('admin.shop.slider-bottom');
             Route::get('/site_seo_settings', SiteCloneSeoSetting::class)->name('admin.seo.settings');
         });
 

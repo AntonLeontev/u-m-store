@@ -76,7 +76,6 @@ class HomeComponent extends Component
         $this->emitTo('includes.cart-count-component', 'refreshComponent');
 
         session()->flash('success_massage', 'Item added in Cart');
-//          return redirect()->route('product.cart');
     }
 
 
@@ -94,7 +93,6 @@ class HomeComponent extends Component
                 $this->emitTo('includes.wishlist-count-component', 'refreshComponent');
             }
         }
-
     }
 
 
@@ -103,7 +101,7 @@ class HomeComponent extends Component
     {
 
         $this->validate([
-//            'questions_name' => 'required|max:60',
+			// 'questions_name' => 'required|max:60',
             'questions_email' => 'required|max:60',
             'questions_message' => 'required|max:250',
         ]);
@@ -145,9 +143,6 @@ class HomeComponent extends Component
 
     public function render(Request $request)
     {
-		// dd(auth()->user());
-
-
         $store_id = Store::store_id();
         Cart::instance('cart')->store($request->ip() . $store_id);
         Cart::instance('wishlist')->store($request->ip() . $store_id);
@@ -166,7 +161,6 @@ class HomeComponent extends Component
 //
         if (session()->get('domain') && $clone_info = CloneSiteInformation::getInfo()) {
 
-
                 $seo = PartnerSeo::select('home_tags')->where('partner_id', CloneInfo::getParnterId())->first();
                 if($seo) {
                     $seo = $seo->home_tags;
@@ -181,9 +175,6 @@ class HomeComponent extends Component
 					->limit(10)->get();
 
                 $new_products = Product::setProductsRating($new_products);
-
-//                dd($clone_info['city_slug'], $clone_info['direction_slug']);
-//                redirect()->route('shop', ['city_slug'=>$clone_info['city_slug'], 'direction_slug'=>$clone_info['direction_slug']]);
 
                 return view('livewire.for-clone.clone-home-page', compact(
                     'popular_products',

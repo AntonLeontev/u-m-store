@@ -53,7 +53,7 @@
         <section class="profile">
             <div class="container">
                 <div class="profile__inner">
-                    <div class="profile__title active">Профиль партнера</div>
+                    <div class="profile__title active">Настройка верхнего слайдера</div>
                     <div class="profile__wrapper">
                         @include('livewire.admin.includes.main-menu')
                         <div class="set__inner">
@@ -73,7 +73,7 @@
                                                     </div>
                                                     <div>
 
-                                                        <img class="logo mb-3"
+                                                        <img class="mb-3 logo"
                                                              src="{{asset('storage/'.$uploaded_banners[$key]->image)}}"
                                                              alt="logo"
                                                              width="500"
@@ -95,7 +95,7 @@
                                                         {{--                                                        <input type="color" value="#ffffff" >--}}
                                                         @error('uploaded_banners.*.text_slider') <span
                                                             class="error">{{ $message }}</span> @enderror
-                                                        <div class="set__pos mb-2">Текст на кнопке:</div>
+                                                        <div class="mb-2 set__pos">Текст на кнопке:</div>
                                                         <input type="text"
                                                                wire:model.deounce.800ms="uploaded_banners.{{$key}}.text_button"
                                                                placeholder="Купить" maxlength="20"
@@ -112,13 +112,13 @@
                                                         @error('uploaded_banners.*.text_button') <span
                                                             class="error">{{ $message }}</span> @enderror
 
-                                                        <div class="set__pos mb-2">Ссылка на кнопке:</div>
+                                                        <div class="mb-2 set__pos">Ссылка на кнопке:</div>
                                                         <input type="text"
                                                                wire:model.deounce.800ms="uploaded_banners.{{$key}}.url"
                                                                placeholder="https://ourlink.com/" maxlength="200">
                                                         @error('uploaded_banners.*.url') <span
                                                             class="error">{{ $message }}</span> @enderror
-                                                        <div class="set__pos mb-2">Порядок сортировки</div>
+                                                        <div class="mb-2 set__pos">Порядок сортировки</div>
                                                         <input type="number"
                                                                wire:model.deounce.800ms="uploaded_banners.{{$key}}.sort"
                                                                placeholder="Цифра от 1 до 10" maxlength="3">
@@ -161,12 +161,12 @@
                                                 Изображение для баннера:<span class="label__partner"></span></div>
                                             <div>
                                                 @if(isset($banner_image) and is_object($banner_image))
-                                                    <img class="logo mb-3" src="{{ $banner_image->temporaryUrl() }}"
+                                                    <img class="mb-3 logo" src="{{ $banner_image->temporaryUrl() }}"
                                                          alt="logo"
                                                          width="500"
                                                          style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 8px;">
 
-                                                    <div class="set__pos mb-2">Текст на слайдере:</div>
+                                                    <div class="mb-2 set__pos">Текст на слайдере:</div>
                                                     <input type="text" wire:model="text_slider"
                                                            placeholder="До 32 символов." maxlength="32"
                                                            style="color: {{$color_text_slider}}">
@@ -178,7 +178,7 @@
 
                                                     @error('text_slider') <span
                                                         class="error">{{ $message }}</span> @enderror
-                                                    <div class="set__pos mb-2">Текст на кнопке:</div>
+                                                    <div class="mb-2 set__pos">Текст на кнопке:</div>
                                                     <input type="text" wire:model="text_button"
                                                            placeholder="Купить" maxlength="20"
                                                            style="color: {{$color_text_button}}; background: {{$color_button}}">
@@ -195,11 +195,11 @@
 
                                                     @error('text_button') <span
                                                         class="error">{{ $message }}</span> @enderror
-                                                    <div class="set__pos mb-2">Ссылка на кнопке:</div>
+                                                    <div class="mb-2 set__pos">Ссылка на кнопке:</div>
                                                     <input type="text" wire:model="url"
                                                            placeholder="https://ourlink.com/" maxlength="200">
                                                     @error('url') <span class="error">{{ $message }}</span> @enderror
-                                                    <div class="set__pos mb-2">Порядок сортировки</div>
+                                                    <div class="mb-2 set__pos">Порядок сортировки</div>
                                                     <input type="number" wire:model="sort"
                                                            placeholder="Цифра от 1 до 10" maxlength="3">
                                                     @error('sort') <span class="error">{{ $message }}</span> @enderror

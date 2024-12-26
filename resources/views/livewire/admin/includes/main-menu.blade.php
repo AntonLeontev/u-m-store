@@ -22,10 +22,15 @@
         @if(Str::contains(Request::path(),  'admin/site') )
             <li @if(Route::is('admin.site.settings')) class="active" @endif><a
                     href="{{ route('admin.site.settings') }}">Информация на сайте</a></li>
-            <li @if(Route::is('admin.shop.slider')) class="active" @endif><a
-                    href="{{ route('admin.shop.slider') }}">Настройки слайдера</a></li>
-                            <li @if(Route::is('admin.seo.settings')) class="active" @endif><a
-                                    href="{{ route('admin.seo.settings') }}">Настройки SEO</a></li>
+            <li @if(Route::is('admin.shop.slider')) class="active" @endif>
+				<a href="{{ route('admin.shop.slider') }}">Настройки верхнего слайдера</a>
+			</li>
+            <li @if(Route::is('admin.shop.slider-bottom')) class="active" @endif>
+				<a href="{{ route('admin.shop.slider-bottom') }}">Настройки нижнего слайдера</a>
+			</li>
+			<li @if(Route::is('admin.seo.settings')) class="active" @endif>
+				<a href="{{ route('admin.seo.settings') }}">Настройки SEO</a>
+			</li>
         @else
 			<li @if(Route::is('admin.site.settings')) class="active" @endif>
 				<a href="{{ route('admin.site.settings') }}">Настройки сайта</a>

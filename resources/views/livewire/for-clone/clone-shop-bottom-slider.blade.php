@@ -1,15 +1,15 @@
 @push('head')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.css"
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.css"
           integrity="sha512-85xVunKWH9+w3fBf0ndSXOkkCuEWPbhAtnKKaFM7032omgb+gpRZXxs3bzs8mICAi8lASiYxHBxMcLYJdeJozA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="{{ asset('css/clone_styles/clone.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/clone_styles/clone.css') }}"> --}}
 @endpush
 <div>
     <section class="slider slider--clone">
         <div class="container">
             <div class="slider__inner">
                 <div class="swiper">
-                    <div class="swiper-container swiper-container-3">
+                    <div class="swiper-container swiper-container-bottom">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
@@ -46,11 +46,11 @@
     </section>
 </div>
 @push('footer')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0/swiper-bundle.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0/swiper-bundle.min.js"></script> --}}
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
-                const slideSwiper3 = document.querySelector('.swiper-container-3');
+                const slideSwiper3 = document.querySelector('.swiper-container-bottom');
 
                 const swiper3 = new Swiper(slideSwiper3, {
                     loop: true,
