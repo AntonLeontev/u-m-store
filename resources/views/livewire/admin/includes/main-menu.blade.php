@@ -11,14 +11,11 @@
                     профиля</a></li>
             <li @if(Route::is('admin.orders')) class="active" @endif><a href="{{ route('admin.orders') }}">Заказы</a></li>
             <li @if(Route::is('admin.categories')) class="active" @endif><a href="{{ route('admin.categories') }}">Категории</a></li>
-{{--            <li><a href="{{ route('soc.auth', ['service' => 'vk']) }}">привязать vk.com</a></li>--}}
-{{--            <li><a href="{{ route('soc.auth', ['service' => 'ya']) }}">привязать yandex.ru</a></li>--}}
-{{--            <li><a href="{{ route('soc.auth', ['service' => 'google']) }}">привязать google.com</a></li>--}}
-{{--            <li><a href="{{ route('soc.auth', ['service' => 'ok']) }}">привязать ok.ru</a></li>--}}
-
-            @if (session()->has('partner_info') and session('partner_info')['type'])
-{{--                <li><a href="{{ route('download.contract') }}">Скачать договор</a></li>--}}
-            @endif
+			
+			<li><span href="" disabled>Реклама</span></li>
+			<li><span href="" disabled>Маркетплейсы</span></li>
+			<li><a href="{{ route('admin.accounting') }}" disabled>Бухгалтерия бесплатно</a></li>
+			<li><span href="" disabled>Партнеры</span></li>
         @endif
 
 {{--        Меню для настрое сайтов клонов --}}
@@ -39,11 +36,6 @@
                 <li><a href="" disabled style="color: #2bbf69">Телеграм уведомления Активны</a></li>
             @endif
 		@endif
-
-		<li><span href="" disabled>Реклама</span></li>
-		<li><span href="" disabled>Маркетплейсы</span></li>
-		<li><a href="{{ route('admin.accounting') }}" disabled>Бухгалтерия бесплатно</a></li>
-		<li><span href="" disabled>Партнеры</span></li>
 
         <li class="exit">
             <form method="POST" action="{{ route('logout') }}">
