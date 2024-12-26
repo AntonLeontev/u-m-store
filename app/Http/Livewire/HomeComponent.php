@@ -5,9 +5,11 @@ namespace App\Http\Livewire;
 
 use App\Helpers\SiteClone\CloneInfo;
 use App\Helpers\UmHelp;
+use App\Models\ClonePromotion;
 use App\Models\CloneSiteInformation;
 use App\Models\Product;
 use App\Models\Product_to_store;
+use App\Models\Promotion;
 use App\Models\QuestionsRemainGeneralPartner;
 use App\Models\SEO\PartnerSeo;
 use App\Models\Store;
@@ -176,10 +178,13 @@ class HomeComponent extends Component
 
                 $new_products = Product::setProductsRating($new_products);
 
+				$promotions = ClonePromotion::where('partner_id', CloneInfo::getParnterId())->get();
+
                 return view('livewire.for-clone.clone-home-page', compact(
                     'popular_products',
                     'new_products',
                     'seo',
+					'promotions',
                 ))->layout('layouts.base');
 
 

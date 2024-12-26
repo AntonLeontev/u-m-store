@@ -28,6 +28,9 @@
             <li @if(Route::is('admin.shop.slider-bottom')) class="active" @endif>
 				<a href="{{ route('admin.shop.slider-bottom') }}">Настройки нижнего слайдера</a>
 			</li>
+            <li @if(Route::is('admin.shop.promotion')) class="active" @endif>
+				<a href="{{ route('admin.shop.promotion') }}">Настройки акций</a>
+			</li>
 			<li @if(Route::is('admin.seo.settings')) class="active" @endif>
 				<a href="{{ route('admin.seo.settings') }}">Настройки SEO</a>
 			</li>

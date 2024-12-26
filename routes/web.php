@@ -23,6 +23,7 @@ use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminOrdersComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\Admin\AdminSettingsComponent;
+use App\Http\Livewire\Admin\CloneWebSite\SiteClonePromotionSettings;
 use App\Http\Livewire\Admin\CloneWebSite\SiteCloneSeoSetting;
 use App\Http\Livewire\Admin\CloneWebSite\SiteCloneSettingsComponent;
 use App\Http\Livewire\Admin\CloneWebSite\SiteCloneShopBottomSliderSettings;
@@ -368,6 +369,7 @@ Route::group(['middleware' => 'firewall.all'], function () {
             Route::get('/site_settings', SiteCloneSettingsComponent::class)->name('admin.site.settings');
             Route::get('/shops_slider', SiteCloneShopSliderSettings::class)->name('admin.shop.slider');
             Route::get('/shops_slider_bottom', SiteCloneShopBottomSliderSettings::class)->name('admin.shop.slider-bottom');
+            Route::get('/shops_promotion', SiteClonePromotionSettings::class)->name('admin.shop.promotion');
             Route::get('/site_seo_settings', SiteCloneSeoSetting::class)->name('admin.seo.settings');
         });
 

@@ -25,49 +25,32 @@
                 </div>
             </div>
         </section>
-        <section class="stock" wire:ignore>
-            <div class="container">
-                <div class="stock__inner">
-                    <h2 class="stock__title">акции</h2>
-                    <div class="stock__slider">
-                        <div class="swiper-container swiper-container-2">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide">
-                                    <div class="stock__item">
-                                        <a href="#">
-                                            <img src="{{ asset('images/stocks/stocks-1.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="stock__item">
-                                        <a href="#">
-                                            <img src="{{ asset('images/stocks/stocks-2.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="stock__item">
-                                        <a href="#">
-                                            <img src="{{ asset('images/stocks/stocks-3.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="stock__item">
-                                        <a href="#">
-                                            <img src="{{ asset('images/stocks/stocks-4.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+		@if ($promotions->isNotEmpty())
+			<section class="stock" wire:ignore>
+				<div class="container">
+					<div class="stock__inner">
+						<h2 class="stock__title">акции</h2>
+						<div class="stock__slider">
+							<div class="swiper-container swiper-container-2">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									@foreach ($promotions as $promotion)
+										<div class="swiper-slide">
+											<div class="stock__item">
+												<a href="{{ $promotion->url }}">
+													<img src="{{ asset('storage/'.$promotion->image) }}" alt="">
+												</a>
+											</div>
+										</div>
+									@endforeach
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		@endif
         <section class="new">
             <div class="container">
                 <div class="new__inner">
@@ -200,13 +183,15 @@
     <script src="{{ asset('js/main.js') }}"></script>
     <script>
         const swiper2 = new Swiper('.swiper-container-2', {
-            loop: true,
+            loop: false,
             slidesPerView: 4,
+			loopFillGroupWithBlank: true,
+			centeredSlides: true,
             breakpoints: {
                 0: {
                     slidesPerView: 1,
                     spaceBetween: 20,
-                    slidesPerView: 'auto'
+                    // slidesPerView: 'auto'
                 },
                 768: {
                     slidesPerView: 2,
