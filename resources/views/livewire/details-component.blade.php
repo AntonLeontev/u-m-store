@@ -132,48 +132,6 @@
 
         <form class="um-feature-product um-product-info__um-feature-product" action="#">
 
-{{--            <div class="um-flower-length-product">--}}
-{{--                <h3 class="um-flower-length-product__title">Длина цветка, см</h3>--}}
-{{--                <ul class="um-flower-length-product__list">--}}
-{{--                    <li class="um-flower-length-product__item">--}}
-{{--                        <label class="um-flower-length-product__label">--}}
-{{--                            <input class="um-flower-length-product__input" type="radio" name="flower-length"  value="40">--}}
-{{--                            <span class="um-flower-length-product__elem">40</span>--}}
-{{--                        </label>--}}
-{{--                    </li>--}}
-{{--                    <li class="um-flower-length-product__item">--}}
-{{--                        <label class="um-flower-length-product__label">--}}
-{{--                            <input class="um-flower-length-product__input" type="radio" name="flower-length"  value="50" checked>--}}
-{{--                            <span class="um-flower-length-product__elem">50</span>--}}
-{{--                        </label>--}}
-{{--                    </li>--}}
-{{--                    <li class="um-flower-length-product__item">--}}
-{{--                        <label class="um-flower-length-product__label">--}}
-{{--                            <input class="um-flower-length-product__input" name="flower-length" type="radio" name="radiobutton" value="60">--}}
-{{--                            <span class="um-flower-length-product__elem">60</span>--}}
-{{--                        </label>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-
-{{--            <div class="um-color-product">--}}
-{{--                <h3 class="um-color-product__title">Доступные цвета</h3>--}}
-{{--                <ul class="um-color-product__list">--}}
-{{--                    <li class="um-color-product__item">--}}
-{{--                        <label class="um-color-product__label">--}}
-{{--                            <input class="um-color-product__input" type="radio" name="color" value="красный" checked>--}}
-{{--                            <span class="um-color-product__elem um-color-product__elem--red"><span class="visually-hidden">красный</span></span>--}}
-{{--                        </label>--}}
-{{--                    </li>--}}
-{{--                    <li class="um-color-product__item">--}}
-{{--                        <label class="um-color-product__label">--}}
-{{--                            <input class="um-color-product__input" type="radio" name="color" value="белый">--}}
-{{--                            <span class="um-color-product__elem um-color-product__elem--white"><span class="visually-hidden">белый</span></span>--}}
-{{--                        </label>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-
             <div class="um-quantity-product">
                 <h3 class="um-quantity-product__title">Количество:</h3>
                 <div class="um-quantity-product__wrap">
@@ -241,13 +199,7 @@
             </div>
         </form>
 
-        <div class="product__item">Доставка от 40 минут</div>
         <ul class="um-terms-product um-product-info__um-terms-product">
-
-            <li class="um-terms-product__item">
-                <span class="um-terms-product__text">время доставки</span>
-                <span class="um-terms-product__icon"><i class="icon-um-clock"></i>от 40 минут</span>
-            </li>
 
             @if($partner && $partner->delivery_price && $product->store_price<2000)
                 <li class="um-terms-product__item">
@@ -260,12 +212,12 @@
                     <span class="um-terms-product__icon"><i class="icon-um-car"></i>0&#8381;</span>
                 </li>
             @endif
-            @if($bonuses)
+            {{-- @if($bonuses)
                 <li class="um-terms-product__item">
                     <span class="um-terms-product__text">бонусы за покупку</span>
                     <span class="um-terms-product__icon">{{ $bonuses->qty }}&#8381;</span>
                 </li>
-            @endif
+            @endif --}}
 
 
 
@@ -531,7 +483,7 @@
                                             {{ $product->name }}
                                         </a>
                                     </div>
-                                    <div class="popular__description">Авторская композиция в роскошной упаковке</div>
+                                    {{-- <div class="popular__description">Авторская композиция в роскошной упаковке</div> --}}
                                     <div class="popular__bottom">
 
                                         <div class="popular__price">{{ $product->store_price }} ₽</div>
@@ -605,210 +557,6 @@
         <article class="product" style="margin-bottom: 150px ">
             <div class="container">
                 <div class="product__inner">
-                    {{--                    <div class="row">--}}
-                    {{--                        <div class="col-12 d-flex product__topClass">--}}
-                    {{--                            <header><h1 class="product__title">{{ $product->name }}</h1></header>--}}
-                    {{--                            @if(count($reviews) > 0 && $rating)--}}
-                    {{--                                <div class="product__ocenka">--}}
-                    {{--                                    <div class="product__stars">--}}
-                    {{--                                        @php--}}
-                    {{--                                            $stars = 0;--}}
-                    {{--                                        @endphp--}}
-                    {{--                                        @while($stars < 5)--}}
-                    {{--                                            @if($rating > $stars)--}}
-                    {{--                                                <div class="product__star">--}}
-                    {{--                                                    <img src="{{ asset('images/fullStarSmall.svg') }}" alt="star">--}}
-                    {{--                                                </div>--}}
-                    {{--                                            @else--}}
-                    {{--                                                <div class="product__star">--}}
-                    {{--                                                    <img src="{{ asset('images/emptyStarSmall.svg') }}" alt="star">--}}
-                    {{--                                                </div>--}}
-                    {{--                                            @endif--}}
-                    {{--                                            @php $stars +=1; @endphp--}}
-                    {{--                                        @endwhile--}}
-                    {{--                                    </div>--}}
-                    {{--                                    <div class="product__point">{{ $rating }}</div>--}}
-                    {{--                                    <div class="product__number">({{ count($reviews) }}--}}
-                    {{--                                        {{ App\Models\Product::incline(count($reviews)) }})--}}
-                    {{--                                    </div>--}}
-                    {{--                                </div>--}}
-                    {{--                            @endif--}}
-                    {{--                        </div>--}}
-                    {{--                        <div class="col-12 col-xl-4 col-sm-5 col__first">--}}
-                    {{--                            <div class="product-slider">--}}
-                    {{--                                <div class="swiper-container product__image--tovar__thumbs js-thumbs-slider">--}}
-                    {{--                                    <div class="swiper-wrapper">--}}
-                    {{--                                        <div class="swiper-slide product-image__thumbs-slide">--}}
-                    {{--                                            <img--}}
-                    {{--                                                style="max-width: 100%;"--}}
-                    {{--                                                src="{{ asset('storage') }}/{{$product->image}}"--}}
-                    {{--                                                alt="{{ $product->name }}"--}}
-                    {{--                                                title="{{ $product->name }}">--}}
-                    {{--                                        </div>--}}
-
-                    {{--                                        @foreach($media as $image)--}}
-                    {{--                                            <div class="swiper-slide product-image__thumbs-slide">--}}
-                    {{--                                                <img--}}
-                    {{--                                                    style="max-width: 100%;"--}}
-                    {{--                                                    src="{{ asset('storage') }}/{{$image->image_path}}"--}}
-                    {{--                                                    alt="{{ $product->name }}"--}}
-                    {{--                                                    title="{{ $product->name }}">--}}
-                    {{--                                            </div>--}}
-                    {{--                                        @endforeach--}}
-                    {{--                                    </div>--}}
-                    {{--                                </div>--}}
-
-                    {{--                                <div class="swiper-container product__image product__image--tovar js-product-slider" id="photoProduct">--}}
-                    {{--                                    <div class="swiper-wrapper">--}}
-                    {{--                                        <div class="swiper-slide">--}}
-                    {{--                                            <img--}}
-                    {{--                                                style="max-width: 100%;"--}}
-                    {{--                                                src="{{ asset('storage') }}/{{$product->image}}"--}}
-                    {{--                                                alt="{{ $product->name }}"--}}
-                    {{--                                                title="{{ $product->name }}">--}}
-                    {{--                                        </div>--}}
-                    {{--                                    </div>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-
-                    {{--                            <div class="product__text">--}}
-                    {{--                                Артикул: {{ $product->id }}--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                        <div class="col-xl-1 d-sm-none"></div>--}}
-                    {{--                        <div class="col-12 col-sm-7 productTop">--}}
-                    {{--                            <div class="row">--}}
-                    {{--                                <div class="col-6 col-sm-2 product__price">--}}
-                    {{--                                    @if($old_price)--}}
-                    {{--                                        <div class="product__grey">{{ $old_price }} <span class="ruble-icon">₽</span>--}}
-                    {{--                                        </div>--}}
-                    {{--                                        <div class="product__pink">{{ $price }} <span class="ruble-icon"> ₽</span></div>--}}
-                    {{--                                    @else--}}
-                    {{--                                        <div class="product__pink">{{ $price }} <span class="ruble-icon"> ₽</span></div>--}}
-                    {{--                                    @endif--}}
-                    {{--                                </div>--}}
-                    {{--                                <div class="col-2 empty__col"></div>--}}
-                    {{--                            </div>--}}
-                    {{--                            <div class="row product__flower" id="productFlower">--}}
-                    {{--                                <div class="col-12">--}}
-                    {{--                                    Отключили вывод опций продуктов--}}
-                    {{--                                    @if($options)--}}
-                    {{--                                        @foreach($options as $name=>$option)--}}
-                    {{--                                            <div class="product__structure product__structure--ruler"--}}
-                    {{--                                                 id="productRuler">{{ $name }}:--}}
-                    {{--                                            </div>--}}
-                    {{--                                            <div class="product__choose" id="productChoose">--}}
-                    {{--                                                @foreach($option as $val)--}}
-                    {{--                                                    <div class="promotion__br">--}}
-                    {{--                                                        <input class="custom-checkbox" wire:ignore--}}
-                    {{--                                                               id="checkbox{{ $val['id']}}" type="checkbox"--}}
-                    {{--                                                               name="{{ $val['id']}}" value="{{ $val['id']}}"--}}
-                    {{--                                                               onclick="checkedOption(this)"--}}
-                    {{--                                                               wire:change.prevent="recalculatePrice( {{ $val['price'] }},'{{ $name }}', '{{ $val['name'] }}', {{ $val['id'] }})">--}}
-                    {{--                                                        <label for="checkbox{{ $val['id']}}" wire:ignore--}}
-                    {{--                                                               @if($val['selected']) style="background-color: rgb(11, 19, 49); color: rgb(255, 255, 255);" @endif>{{ $val['name'] }}</label>--}}
-                    {{--                                                    </div>--}}
-                    {{--                                                @endforeach--}}
-                    {{--                                            </div>--}}
-                    {{--                                        @endforeach--}}
-                    {{--                                    @endif--}}
-                    {{--                                    <div class="product__num">--}}
-                    {{--                                        <div class="product__kol">Количество:</div>--}}
-                    {{--                                        <div class="basket__kol">--}}
-                    {{--                                            <div class="basket__min" wire:click.prevent="decreaseQuantity()">--}}
-                    {{--                                                <img src="{{ asset('images/minus.svg') }}" alt="-">--}}
-                    {{--                                            </div>--}}
-                    {{--                                            <div class="basket__num">{{ $qty }}</div>--}}
-                    {{--                                            <div class="basket__plus" wire:click.prevent="increaseQuantity()">--}}
-                    {{--                                                <img src="{{ asset('images/plusProduct.svg') }}" alt="+">--}}
-                    {{--                                            </div>--}}
-                    {{--                                        </div>--}}
-                    {{--                                    </div>--}}
-                    {{--                                    @php--}}
-                    {{--                                        $product_items = Cart::instance('cart')->content()->pluck('id');--}}
-                    {{--                                    @endphp--}}
-                    {{--                                    <div class="product__other">--}}
-                    {{--                                        --}}{{--                                            @if($product_items->contains($product->product_id) )--}}
-                    {{--                                        @if($product_added)--}}
-                    {{--                                            <div class="product__btn common__buy added" id="productBuy">--}}
-                    {{--                                                <a href="{{ route('product.cart') }}"--}}
-                    {{--                                                   onclick="location.href='{{ route('product.cart') }}'"><img--}}
-                    {{--                                                        src=" {{ asset('images/doneBuy.svg') }}"--}}
-                    {{--                                                        style="margin-top: -9px;">--}}
-                    {{--                                                    <span>В корзине</span>--}}
-                    {{--                                                </a>--}}
-                    {{--                                            </div>--}}
-                    {{--                                        @else--}}
-                    {{--                                            <div class="product__btn common__buy" id="productBuy">--}}
-                    {{--                                                <a href="#"--}}
-                    {{--                                                   wire:click.prevent="store({{$product->product_id}},'{{$product->name}}','{{$product->store_price}}','{{$product->image}}')">--}}
-                    {{--                                                    <svg width="17" height="23" viewBox="0 0 17 23" fill="none"--}}
-                    {{--                                                         xmlns="http://www.w3.org/2000/svg">--}}
-                    {{--                                                        <path--}}
-                    {{--                                                            d="M5 9L5 4.5C5 2.567 6.567 1 8.5 1V1C10.433 1 12 2.567 12 4.5L12 9"--}}
-                    {{--                                                            stroke="white" stroke-width="2" stroke-linecap="round"/>--}}
-                    {{--                                                        <path--}}
-                    {{--                                                            d="M1 10.832C1 8.94641 1 8.0036 1.58579 7.41782C2.17157 6.83203 3.11438 6.83203 5 6.83203H12C13.8856 6.83203 14.8284 6.83203 15.4142 7.41782C16 8.0036 16 8.94641 16 10.832V17.832C16 19.7176 16 20.6605 15.4142 21.2462C14.8284 21.832 13.8856 21.832 12 21.832H5C3.11438 21.832 2.17157 21.832 1.58579 21.2462C1 20.6605 1 19.7176 1 17.832V10.832Z"--}}
-                    {{--                                                            stroke="white" stroke-width="2"/>--}}
-                    {{--                                                    </svg>--}}
-                    {{--                                                    <span>Добавить в корзину</span>--}}
-                    {{--                                                </a>--}}
-                    {{--                                            </div>--}}
-                    {{--                                        @endif--}}
-                    {{--                                        @php--}}
-                    {{--                                            $wish_items = Cart::instance('wishlist')->content()->pluck('id');--}}
-                    {{--                                        @endphp--}}
-                    {{--                                        @if($wish_items->contains($product->product_id))--}}
-                    {{--                                            <div class="product__like added" id="likeProduct"--}}
-                    {{--                                                 wire:click.prevent="removeFromWishList({{ $product->product_id }})">--}}
-                    {{--                                                <a href="#"--}}
-                    {{--                                                   style="background: rgb(255, 255, 255) none repeat scroll 0% 0%;">--}}
-                    {{--                                                    <svg width="28" height="26" viewBox="0 0 28 26" fill="none"--}}
-                    {{--                                                         xmlns="http://www.w3.org/2000/svg">--}}
-                    {{--                                                        <path--}}
-                    {{--                                                            d="M25.4473 2.75435C23.9628 1.19651 21.9951 0.245686 19.8995 0.0736445C17.8039 -0.0983972 15.7187 0.519683 14.0204 1.81624C12.2386 0.429055 10.0209 -0.199961 7.81387 0.0558604C5.60681 0.311682 3.57432 1.43334 2.1257 3.19495C0.677073 4.95657 -0.0800771 7.22729 0.00671527 9.54985C0.0935077 11.8724 1.0178 14.0743 2.59345 15.7121L11.2897 24.8294C12.0179 25.5796 12.9986 26 14.0204 26C15.0421 26 16.0228 25.5796 16.7511 24.8294L25.4473 15.7121C27.0823 13.9901 28 11.661 28 9.23322C28 6.80544 27.0823 4.47628 25.4473 2.75435ZM23.4728 13.6893L14.7765 22.7919C14.6776 22.8965 14.5598 22.9795 14.43 23.0362C14.3002 23.0929 14.161 23.122 14.0204 23.122C13.8797 23.122 13.7405 23.0929 13.6107 23.0362C13.4809 22.9795 13.3631 22.8965 13.2642 22.7919L4.56795 13.6453C3.46974 12.4702 2.85477 10.8917 2.85477 9.24787C2.85477 7.60402 3.46974 6.02553 4.56795 4.85046C5.68706 3.69392 7.19638 3.04542 8.76902 3.04542C10.3417 3.04542 11.851 3.69392 12.9701 4.85046C13.1003 4.98784 13.2552 5.09689 13.4258 5.17131C13.5964 5.24573 13.7795 5.28404 13.9643 5.28404C14.1492 5.28404 14.3322 5.24573 14.5029 5.17131C14.6735 5.09689 14.8284 4.98784 14.9586 4.85046C16.0777 3.69392 17.587 3.04542 19.1597 3.04542C20.7323 3.04542 22.2416 3.69392 23.3607 4.85046C24.474 6.01013 25.1092 7.58007 25.1301 9.22396C25.1511 10.8679 24.5561 12.455 23.4728 13.6453V13.6893Z"--}}
-                    {{--                                                            style="fill: rgb(210, 75, 108);"></path>--}}
-                    {{--                                                    </svg>--}}
-                    {{--                                                </a>--}}
-                    {{--                                            </div>--}}
-                    {{--                                        @else--}}
-                    {{--                                            <div class="product__like" id="likeProduct"--}}
-                    {{--                                                 wire:click.prevent="addToWishList({{ $product->product_id }},'{{ $product->name }}','{{ $product->store_price }}')">--}}
-                    {{--                                                <a href="#">--}}
-                    {{--                                                    <svg width="28" height="26" viewBox="0 0 28 26" fill="none"--}}
-                    {{--                                                         xmlns="http://www.w3.org/2000/svg">--}}
-                    {{--                                                        <path--}}
-                    {{--                                                            d="M25.4473 2.75435C23.9628 1.19651 21.9951 0.245686 19.8995 0.0736445C17.8039 -0.0983972 15.7187 0.519683 14.0204 1.81624C12.2386 0.429055 10.0209 -0.199961 7.81387 0.0558604C5.60681 0.311682 3.57432 1.43334 2.1257 3.19495C0.677073 4.95657 -0.0800771 7.22729 0.00671527 9.54985C0.0935077 11.8724 1.0178 14.0743 2.59345 15.7121L11.2897 24.8294C12.0179 25.5796 12.9986 26 14.0204 26C15.0421 26 16.0228 25.5796 16.7511 24.8294L25.4473 15.7121C27.0823 13.9901 28 11.661 28 9.23322C28 6.80544 27.0823 4.47628 25.4473 2.75435ZM23.4728 13.6893L14.7765 22.7919C14.6776 22.8965 14.5598 22.9795 14.43 23.0362C14.3002 23.0929 14.161 23.122 14.0204 23.122C13.8797 23.122 13.7405 23.0929 13.6107 23.0362C13.4809 22.9795 13.3631 22.8965 13.2642 22.7919L4.56795 13.6453C3.46974 12.4702 2.85477 10.8917 2.85477 9.24787C2.85477 7.60402 3.46974 6.02553 4.56795 4.85046C5.68706 3.69392 7.19638 3.04542 8.76902 3.04542C10.3417 3.04542 11.851 3.69392 12.9701 4.85046C13.1003 4.98784 13.2552 5.09689 13.4258 5.17131C13.5964 5.24573 13.7795 5.28404 13.9643 5.28404C14.1492 5.28404 14.3322 5.24573 14.5029 5.17131C14.6735 5.09689 14.8284 4.98784 14.9586 4.85046C16.0777 3.69392 17.587 3.04542 19.1597 3.04542C20.7323 3.04542 22.2416 3.69392 23.3607 4.85046C24.474 6.01013 25.1092 7.58007 25.1301 9.22396C25.1511 10.8679 24.5561 12.455 23.4728 13.6453V13.6893Z"/>--}}
-                    {{--                                                    </svg>--}}
-                    {{--                                                </a>--}}
-                    {{--                                            </div>--}}
-                    {{--                                        @endif--}}
-
-                    {{--                                    </div>--}}
-                    {{--                                    <div class="col-12 col-sm-12 col-lg-8 product__icons">--}}
-                    {{--                                        <div class="product__item">Доставка 40 минут</div>--}}
-                    {{--                                        @if($partner && $partner->delivery_price && $product->store_price<2000)--}}
-                    {{--                                            <div class="product__item">{{ $partner->delivery_price }} <span--}}
-                    {{--                                                    class="ruble-icon">₽</span></div>--}}
-                    {{--                                        @elseif($partner && $partner->delivery_price && $product->store_price>2000)--}}
-                    {{--                                            <div class="product__item">0<span--}}
-                    {{--                                                    class="ruble-icon">₽</span></div>--}}
-                    {{--                                        @endif--}}
-                    {{--                                        @if($bonuses)--}}
-                    {{--                                            <div class="product__item">{{ $bonuses->qty }} бонусов за покупку</div>--}}
-                    {{--                                        @endif--}}
-                    {{--                                    </div>--}}
-                    {{--                                </div>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
-                    {{--                    <div class="row product__one">--}}
-                    {{--                        <div class="col-12">--}}
-                    {{--                            <div class="product__structure">О товаре:</div>--}}
-                    {{--                            <p class="product__description">{!! htmlspecialchars_decode($product->description) !!}</p>--}}
-                    {{--                            <p class="product__description product__description--another">{{$seo['seo_description']}}</p>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
                     <div class="row">
                         <div class="col-12">
                             <div class="product__wrapper">
