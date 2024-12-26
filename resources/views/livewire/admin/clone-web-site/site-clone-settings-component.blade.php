@@ -31,28 +31,53 @@
 
                             <div class="set__one">
                                 <div class="set__step">Информация о вашем сайте:</div>
-                                <div class="set__form" style="max-width: 550px; width: 100%">
-                                    <form enctype="multipart/form-data" wire:submit.prevent="saveSiteSettings">
-                                        @csrf
+
+								<div class="set__form" style="max-width: 550px; width: 100%">
+									<form enctype="multipart/form-data" wire:submit.prevent="orderDomain"
+										x-data="{
+											domain: '{{ $domain }}',
+											newDomain: '{{ $domain }}',
+										}"
+									>
+										@csrf
                                         <div class="set__pos">
-                                            Домен вашего сайта:<span class="label__partner"></span></div>
-                                        <input type="text" wire:model="domain" placeholder="onionmarket.ru">
+                                            Домен вашего сайта:<span class="label__partner"></span>
+										</div>
+                                        <input type="text" wire:model="domain" placeholder="yoursite.ru" required @input="newDomain = $event.target.value">
                                         <div>
                                             @error('domain') <span class="error">{{ $message }}</span> @enderror
                                         </div>
 
-                                        <div class="set__pos">
+										@if ($domainOrdered)
+											<button style="max-width: 100%; padding: 10px">Заявка отправлена</button>
+										@else
+											<button 
+												style="max-width: 100%; padding: 10px" 
+												type="submit"
+												x-show="domain !== newDomain"
+											>
+												Запросить изменение домена
+											</button>
+										@endif
+									</form>
+								</div>
+
+                                <div class="set__form" style="max-width: 550px; width: 100%; margin-top: 50px">
+                                    <form enctype="multipart/form-data" wire:submit.prevent="saveSiteSettings">
+                                        @csrf
+
+                                        {{-- <div class="set__pos">
                                             Название вашего города:<span class="label__partner"></span>
                                         </div>
                                         <input type="text" wire:model="city_name" readonly>
                                         <div>
                                             @error('city_name') <span class="error">{{ $message }}</span> @enderror
-                                        </div>
+                                        </div> --}}
 
                                         <div class="set__pos">
-                                            Название компании отображаемое на сайте:<span class="label__partner"></span>
+                                            Название компании и ИНН:<span class="label__partner"></span>
                                         </div>
-                                        <input type="text" wire:model="company_name" placeholder="Флора">
+                                        <input type="text" wire:model="company_name" placeholder="ИП Иванов ИИ ИНН 1231244124">
                                         <div>
                                             @error('company_name') <span class="error">{{ $message }}</span> @enderror
                                         </div>
@@ -90,55 +115,54 @@
                                             @error('vk_link') <span class="error">{{ $message }}</span> @enderror
                                         </div>
 
-{{--                                        <div class="set__pos">--}}
-{{--                                            Ссылка на Инстаграм:--}}
-{{--                                        </div>--}}
-{{--                                        <input type="text" wire:model="inst_link"--}}
-{{--                                               placeholder="https://www.instagram.com/unitedmarketorg/">--}}
-{{--                                        <div>--}}
-{{--                                            @error('inst_link') <span class="error">{{ $message }}</span> @enderror--}}
-{{--                                        </div>--}}
-
-{{--                                        <div class="set__pos">--}}
-{{--                                            Ссылка на Facebook:--}}
-{{--                                        </div>--}}
-{{--                                        <input type="text" wire:model="fb_link"--}}
-{{--                                               placeholder="https://www.facebook.com/United-Market-160182772502217">--}}
-{{--                                        <div>--}}
-{{--                                            @error('fb_link') <span class="error">{{ $message }}</span> @enderror--}}
-{{--                                        </div>--}}
                                         <div class="set__pos">
-                                            Ссылка на Yotube:
+                                            Ссылка на Rutube:
                                         </div>
 
                                         <input type="text" wire:model="youtube_link"
-                                               placeholder="https://www.youtube.com/channel/UCns7aIJwqWZFPPwWXd6iq6g">
+                                               placeholder="https://www.rutube.ru/channel/UCns7aIJwqWZFPPwWXd6iq6g">
                                         <div>
                                             @error('youtube_link') <span class="error">{{ $message }}</span> @enderror
                                         </div>
 
+										<style>
+											.btn_order {
+												margin: 0!important;
+												font-size: 0.875rem!important;
+												padding: 0 10px!important;
+												width: auto!important;
+											}
+										</style>
 
-                                        <div class="set__pos">
-                                            Логотип на сайте:<span class="label__partner"></span></div>
+                                        <div class="set__pos" style="display: flex; justify-content: space-between">
+											<div>
+												Логотип на сайте:<span class="label__partner"></span>
+											</div>
+											@if ($logoOrdered)
+												<button class="btn_order" disabled>Заявка отправлена</button>
+											@else
+												<button class="btn_order" wire:click="orderLogo" type="button">Заказать логотип</button>
+											@endif
+										</div>
                                         <div>
                                             @if(is_string($logo))
                                                 <img class="logo" src="{{ asset('storage/SiteClone/Logo').'/'.$logo }}" alt="logo"
-                                                     width="100"
-                                                     style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 8px"; >
+													width="100"
+													style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 8px"; >
                                             @elseif(is_object($logo))
 
                                                 <img class="logo" src="{{ $logo->temporaryUrl() }}" alt="logo"
-                                                     width="100"
-                                                     style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 8px;">
+													width="100"
+													style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 8px;">
                                             @endif
                                         </div>
                                         <input type="file" wire:model.debounce.300ms="logo">
+										<div>Логотип должен быть изображением с соотношением сторон 1:1, не более 8мб</div>
                                         <div>
                                             @error('logo') <span class="error">{{ $message }}</span> @enderror
                                         </div>
                                         <div class="reg__flex">
                                             <button style="display: block; margin-left: auto; margin-right: auto;" type="submit">Сохранить</button>
-
                                         </div>
                                     </form>
                                     @if(session()->has('success'))
@@ -164,4 +188,6 @@
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 @endpush

@@ -384,7 +384,7 @@ Route::group(['middleware' => 'firewall.all'], function () {
         Route::get('/admin/category/add', AdminAddCategoryComponent::class)->name('admin.addcategory');
         Route::get('/admin/category/edit/category_id={category_id}', AdminEditCategoryComponent::class)->name('admin.editcategory');
         Route::get('/admin/products', AdminProductComponent::class)->name('admin.products');
-        Route::get('/admin/add/product', AdminAddProductComponent::class)->name('admin.addproduct');
+	Route::get('/admin/add/product', AdminAddProductComponent::class)->name('admin.addproduct');
         Route::get('/admin/product/edit/product_id={product_id}', AdminEditProductComponent::class)->name('admin.editproduct');
         Route::get('/admin/settings', AdminSettingsComponent::class)->name('admin.settings');
         Route::get('/admin/orders', AdminOrdersComponent::class)->name('admin.orders');

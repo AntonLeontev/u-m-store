@@ -19,8 +19,8 @@ use Livewire\WithFileUploads;
 
 class AdminAddProductComponent extends Component
 {
-
     // трейт необходим для загрузки изображений
+	use WithFileUploads;
 
 
     public $name;
@@ -282,7 +282,7 @@ class AdminAddProductComponent extends Component
         // сообщение об обновлении описания
         session()->flash('update_image', 'Изображения товара успешно обновлены!');
     }
-    use WithFileUploads;
+    
     private function resizeImg($image, $resize_px, $folder_with_month, $timestamp) {
 
 

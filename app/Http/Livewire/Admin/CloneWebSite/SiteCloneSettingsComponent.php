@@ -14,6 +14,8 @@ use Intervention\Image\ImageServiceProvider;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Manny\Manny;
+use Telegram\Bot\Laravel\Facades\Telegram;
+
 use function Symfony\Component\String\s;
 
 class SiteCloneSettingsComponent extends Component
@@ -31,6 +33,9 @@ class SiteCloneSettingsComponent extends Component
     public $fb_link;
     public $youtube_link;
 
+	public $logoOrdered = false;
+	public $domainOrdered = false;
+
     #IMAGES
     public $logo;
 //    public $banners = [];
@@ -38,8 +43,8 @@ class SiteCloneSettingsComponent extends Component
     protected function rules()
     {
         $rules = [
-            'domain' => 'required|max:50',
-            'city_name' => 'required|max:100',
+            'domain' => 'sometimes|nullable|max:50',
+            // 'city_name' => 'required|max:100',
             'company_name' => 'required|max:100',
             'phone_number' => 'required|max:20',
             'email' => 'required|email|max:50',
@@ -109,7 +114,7 @@ class SiteCloneSettingsComponent extends Component
             $this->fb_link = $site_info->fb_link;
             $this->youtube_link = $site_info->youtube_link;
 
-            session()->put('site_info_id',$site_info->id);
+            session()->put('site_info_id', $site_info->id);
         } else {
             $parntner = Partners::find(Auth::user()->partner_id);
 
@@ -177,7 +182,7 @@ class SiteCloneSettingsComponent extends Component
                 [
                     'store_id' => $partner->store_id,
                     'direction_id' => $partner->direction_id,
-                    'domain' => $this->domain,
+                    // 'domain' => $this->domain,
                     'city_name' => $this->city_name,
                     'company_name' => $this->company_name,
                     'phone' => $this->phone_number,
@@ -198,6 +203,34 @@ class SiteCloneSettingsComponent extends Component
         }
 
     }
+
+	public function orderDomain() {
+		$user = auth()->user();
+
+		$message = "Пользователь $user->id " . $user->name . ' ' . $user->email . ' ' . $user->phone . ' хочет установить домен ' . $this->domain;
+
+		Telegram::sendMessage([
+			'chat_id' => config('telegram.chats.applications'),
+			'text' => $message,
+		]);
+
+		$this->domainOrdered = true;
+
+		return view('livewire.admin.clone-web-site.site-clone-settings-component')->layout('layouts.base');
+	}
+
+	public function orderLogo() {
+		$user = auth()->user();
+
+		Telegram::sendMessage([
+			'chat_id' => config('telegram.chats.applications'),
+			'text' => "Пользователь $user->id " . $user->name . ' ' . $user->email . ' ' . $user->phone . ' хочет заказать логотип на сайте',
+		]);
+
+		$this->logoOrdered = true;
+
+		return view('livewire.admin.clone-web-site.site-clone-settings-component')->layout('layouts.base');
+	}
 
     public function render()
     {
