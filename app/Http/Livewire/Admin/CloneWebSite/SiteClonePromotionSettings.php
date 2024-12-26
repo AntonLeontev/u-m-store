@@ -7,6 +7,7 @@ use App\Models\Clones\CloneSliders;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -94,6 +95,11 @@ class SiteClonePromotionSettings extends Component
 
         if ($this->banner_image->extension()) {
             $imageName = 'SiteClone/Promotions' . Carbon::now()->format('FY') . '/' .$partner_id . '_' . Carbon::now()->timestamp . '.' . $this->banner_image->extension();
+
+			if (!Storage::exists('SiteClone/Promotions' . Carbon::now()->format('FY'))) {
+				Storage::makeDirectory('SiteClone/Promotions' . Carbon::now()->format('FY'));
+			}
+
 			Image::make($this->banner_image->temporaryUrl())->fit(300, 250)->save(public_path('storage/' . $imageName));
 
             if (session()->has('site_info_id')) {
