@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\DeliveryPrice;
 use App\Models\Directions;
 use App\Models\Partner\DeliveryAddresses;
 use App\Models\Partners;
@@ -26,7 +27,8 @@ class AdminSettingsComponent extends Component
     public $legal_address;
     public $actual_address;
     public $delivery_price;
-    public $delivery_addresses = array();
+    public $delivery_prices = [];
+    public $delivery_addresses = [];
 
     public $partner_type;
     public $organistion_name;
@@ -56,72 +58,70 @@ class AdminSettingsComponent extends Component
 
     public function mount()
     {
-        $user = User::find(Auth::id());
+        $user = auth()->user();
 
-        if($user)
-            {
-                $partner = Partners::find($user->partner_id);
-                if($partner)
-                {
+        if($user) {
+			$partner = Partners::find($user->partner_id);
+			if($partner) {
 
-                    $this->site_status = $partner->site_status;
+				$this->site_status = $partner->site_status;
 
-                    $this->org_name = $partner->organisation_name;
+				$this->org_name = $partner->organisation_name;
 
-                        $this->org_short_name = $partner->partner_name;
-                        $this->telephone = $partner->telephone;
-                        $this->socials = $partner->socials;
-                        $this->email = $partner->email;
-                        $this->inn = $partner->inn;
-                        $this->ogrn = $partner->ogrn;
-                        $this->bik = $partner->bik;
-                        $this->kor_account = $partner->kor_account;
-                        $this->bank_account = $partner->bank_account;
-                        $this->legal_address = $partner->legal_address;
-                        $this->actual_address = $partner->actual_address;
-                        $this->delivery_price = $partner->delivery_price;
+				$this->org_short_name = $partner->partner_name;
+				$this->telephone = $partner->telephone;
+				$this->socials = $partner->socials;
+				$this->email = $partner->email;
+				$this->inn = $partner->inn;
+				$this->ogrn = $partner->ogrn;
+				$this->bik = $partner->bik;
+				$this->kor_account = $partner->kor_account;
+				$this->bank_account = $partner->bank_account;
+				$this->legal_address = $partner->legal_address;
+				$this->actual_address = $partner->actual_address;
+				$this->delivery_price = $partner->delivery_price;
+				$this->delivery_prices = $partner->deliveryPrices;
 
-                        //Добавил переменные для разных типов партнеров.
-                        $this->city_name = Store::find($partner->store_id)->real_name;
-                        $this->direction = Directions::find($partner->direction_id)->name;
-                        $this->partner_type = $partner->partner_type;
-                        $this->organistion_name = $partner->organistion_name;
-                        $this->org_full_name = $partner->org_full_name;
-                        $this->director_name = $partner->director_name;
-                        $this->bohalter_name = $partner->bohalter_name;
-                        $this->mobile_tel_owner = $partner->mobile_tel_owner;
-                        $this->bank_name = $partner->bank_name;
-                        $this->kpp = $partner->kpp;
-                        $this->ogrn_ip = $partner->ogrn_ip;
-                        $this->post_address = $partner->post_address;
-                        $this->fio = $partner->fio;
-                        $this->passport_data = $partner->passport_data;
-                        $this->reg_address = $partner->reg_address;
-                        $this->who_gave = $partner->who_gave;
-                        $this->shop_name = $partner->organisation_name;
-
+				//Добавил переменные для разных типов партнеров.
+				$this->city_name = Store::find($partner->store_id)->real_name;
+				$this->direction = Directions::find($partner->direction_id)->name;
+				$this->partner_type = $partner->partner_type;
+				$this->organistion_name = $partner->organistion_name;
+				$this->org_full_name = $partner->org_full_name;
+				$this->director_name = $partner->director_name;
+				$this->bohalter_name = $partner->bohalter_name;
+				$this->mobile_tel_owner = $partner->mobile_tel_owner;
+				$this->bank_name = $partner->bank_name;
+				$this->kpp = $partner->kpp;
+				$this->ogrn_ip = $partner->ogrn_ip;
+				$this->post_address = $partner->post_address;
+				$this->fio = $partner->fio;
+				$this->passport_data = $partner->passport_data;
+				$this->reg_address = $partner->reg_address;
+				$this->who_gave = $partner->who_gave;
+				$this->shop_name = $partner->organisation_name;
 
 
-                        $ready_delivery_addresses = DeliveryAddresses::where('partner_id', $partner->id)->get();
-                        if($ready_delivery_addresses)
-                        {
-                            foreach($ready_delivery_addresses as $address)
-                            {
-                                $this->delivery_addresses[] = $address->address;
-                            }
 
-                        }
+				$ready_delivery_addresses = DeliveryAddresses::where('partner_id', $partner->id)->get();
+				if($ready_delivery_addresses)
+				{
+					foreach($ready_delivery_addresses as $address)
+					{
+						$this->delivery_addresses[] = $address->address;
+					}
+
+				}
 
 
-                    }
-            }
+			}
+		}
     }
 
 
     public function setSettings()
     {
-
-        $user = User::find(Auth::id());
+        $user = auth()->user();
 
         if($user)
         {
@@ -145,20 +145,20 @@ class AdminSettingsComponent extends Component
                 $partner->delivery_price = $this->delivery_price ? : NULL;
 
                 //Добавил переменные для разных типов партнеров  январь 2022.
-                 $partner->partner_type = $this->partner_type;
-                 $partner->org_full_name = $this->org_full_name;
-                 $partner->director_name = $this->director_name;
-                 $partner->bohalter_name = $this->bohalter_name;
-                 $partner->mobile_tel_owner = $this->mobile_tel_owner;
-                 $partner->bank_name = $this->bank_name;
-                 $partner->kpp = $this->kpp;
-                 $partner->ogrn_ip = $this->ogrn_ip;
-                 $partner->post_address = $this->post_address;
-                 $partner->fio = $this->fio;
-                 $partner->passport_data = $this->passport_data;
-                 $partner->reg_address = $this->reg_address;
-                 $partner->who_gave = $this->who_gave;
-                 $partner->organisation_name = $this->shop_name;
+				$partner->partner_type = $this->partner_type;
+				$partner->org_full_name = $this->org_full_name;
+				$partner->director_name = $this->director_name;
+				$partner->bohalter_name = $this->bohalter_name;
+				$partner->mobile_tel_owner = $this->mobile_tel_owner;
+				$partner->bank_name = $this->bank_name;
+				$partner->kpp = $this->kpp;
+				$partner->ogrn_ip = $this->ogrn_ip;
+				$partner->post_address = $this->post_address;
+				$partner->fio = $this->fio;
+				$partner->passport_data = $this->passport_data;
+				$partner->reg_address = $this->reg_address;
+				$partner->who_gave = $this->who_gave;
+				$partner->organisation_name = $this->shop_name;
 
 
                 $partner->save();
@@ -178,10 +178,37 @@ class AdminSettingsComponent extends Component
                         }
                     }
                 }
+
+				if($this->delivery_prices && count($this->delivery_prices) > 0)
+				{
+					foreach ($this->delivery_prices as $price) {
+						if(isset($price['id'])) {
+							DeliveryPrice::where('id', $price['id'])->update([
+								'region' => $price['region'],
+								'price' => $price['price']
+							]);
+						} else {
+							DeliveryPrice::create([
+								'partner_id' => $partner->id,
+								'region' => $price['region'],
+								'price' => $price['price']
+							]);
+						}
+					}
+				}
+
                 session()->flash('success', true);
             }
         }
     }
+
+	protected function rules() {
+		return [
+			'delivery_prices' => ['array', 'nullable'],
+			'delivery_prices.*.region' => ['required', 'string', 'max:250'],
+			'delivery_prices.*.price' => ['required', 'numeric', 'min:0'],
+		];
+	}
 
     public function render()
     {

@@ -11,6 +11,7 @@ use App\Models\Checkout\OrderProduct;
 use App\Models\Checkout\Transaction;
 use App\Models\Coupon;
 use App\Models\CouponHistory;
+use App\Models\DeliveryPrice;
 use App\Models\Directions;
 use App\Models\GiftCertificate;
 use App\Models\Notifications;
@@ -22,13 +23,13 @@ use App\Models\User;
 use App\Models\UserDetails\ReferralUser;
 use App\Services\YookassaService;
 use Carbon\Carbon;
+use Cart;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Livewire\Component;
-use Cart;
 use Manny\Manny;
-use Illuminate\Http\Request;
 
 class CartComponent extends Component
 {
@@ -44,6 +45,7 @@ class CartComponent extends Component
     public $bonuses;
     public $use_bonuses;
     public $delivery_price;
+    public $delivery_prices;
     public $delivery_price_sochi;
     public $partner;
 
@@ -114,7 +116,6 @@ class CartComponent extends Component
         ];
         if ($this->social_delivery) {
             $rules['recipient'] = '';
-//            ^(https:\/\/vk\.com\/|https:\/\/www\.instagram\.com\/|https:\/\/www\.facebook\.com\/|@)
             if ($this->social_telegram_recipient) {
                 $rules['telegram_recipient'] = array('required', 'regex:/^@(?=\w{5,32}\b)[a-z_A-Z0-9]*/im');
             } else {
@@ -125,7 +126,6 @@ class CartComponent extends Component
             } else {
                 $rules['url_sender'] = array('required', 'url', 'regex:/^(https:\/\/ok\.ru\/|https:\/\/vk\.com\/|https:\/\/www\.vk\.com\/|https:\/\/www\.instagram\.com\/|https:\/\/www\.facebook\.com\/|https:\/\/instagram\.com\/|https:\/\/facebook\.com\/)/i');
             }
-//            $rules['url_sender'] = array('required','url','regex:/^(https:\/\/vk\.com\/|https:\/\/www\.instagram\.com\/|https:\/\/www\.facebook\.com\/|@(?=\w{5,32}\b)[a-z_A-Z0-9]*)/im');
 
         }
         if (Auth::check()) {
@@ -136,7 +136,6 @@ class CartComponent extends Component
 
         if ($this->recipient && !$this->social_delivery) {
             $rules['recipient_name'] = 'required|min:3';
-//            $rules['recipient_surname'] = 'required|min:3';
             $rules['recipient_phone'] = 'required|min:10';
         }
         if ($this->delivery_time) {
@@ -161,13 +160,11 @@ class CartComponent extends Component
                 $this->delivery_city_sochi = 1;
             }
         }
-        if(session()->has('direction_id'))
-        {
-            $partner = Partners::where('store_id', Store::store_id())->where('direction_id',session()->get('direction_id'))->first();
-//
-        } else{
-            $partner = Partners::firstWhere('store_id', Store::store_id());
-        }
+        // if(session()->has('direction_id')) {
+        //     $partner = Partners::where('store_id', Store::store_id())->where('direction_id',session()->get('direction_id'))->first();
+        // } else {
+		// }
+		$partner = Partners::firstWhere('store_id', Store::store_id());
 
 
         if ($partner) {
@@ -186,9 +183,10 @@ class CartComponent extends Component
 
                 $this->delivery = true;
             }
-
-
         }
+
+		$this->delivery_prices = DeliveryPrice::where('partner_id', $partner->id)->get();
+
         if (Auth::check()) {
             $this->bonuses_total = BonusTransactions::where('user_id', Auth::id())->where('status', StatusEnum::BUYED)->sum('qty');
             $this->delivery_address = Auth::user()->address ? Auth::user()->address : '';

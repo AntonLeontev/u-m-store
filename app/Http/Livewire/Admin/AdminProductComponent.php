@@ -216,11 +216,11 @@ class AdminProductComponent extends Component
                 ->orderBy('products.created_at', 'DESC')
                 ->paginate($this->pagesize);
         } else {
-            $products = Product::select('product_to_stores.id', 'product_id', 'name', 'image', 'product_to_stores.store_price', 'product_to_stores.partner_price', 'products.partner_id', 'products.direction_id', 'moderated', 'products.status', 'product_status')
+            $products = Product::select('product_to_stores.id', 'product_id', 'name', 'image', 'product_to_stores.store_price', 'product_to_stores.partner_price', 'products.partner_id', 'products.direction_id', 'moderated', 'products.status', 'product_status', 'product_to_stores.partner_id')
                 ->leftJoin('product_to_stores', 'products.id', '=', 'product_to_stores.product_id')
                 ->where('products.status', 1)
                 ->where('products.direction_id', $this->partner->direction_id)
-                ->where($products_to_stores_id, $partner_id)
+                ->where('product_to_stores.partner_id', auth()->user()->partner_id)
                 ->orderBy('products.created_at', 'DESC')
                 ->paginate($this->pagesize);
         }

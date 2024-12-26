@@ -32,7 +32,7 @@
                                     <form wire:submit.prevent="setSettings" wire:ignore>
                                         @csrf
 {{--                                        Новые поля ввода--}}
-                                        <div class="set__pos" style="color: red">Эти данные изменяются через менеджера.<span
+                                        {{-- <div class="set__pos" style="color: red">Эти данные изменяются через менеджера.<span
                                                 class="label__partner"></span></div>
                                         <div class="set__pos">Сфера услуг/товаров:<span
                                                 class="label__partner"></span></div>
@@ -130,27 +130,57 @@
 
 
 
-                                        @endif
+                                        @endif --}}
 
                                         <div class="set__pos" style="color: #00bf3f">Эти данные можно изменить самостоятельно.</div>
                                         <div class="set__pos">Название которое будет отображаться на сайте:</div>
-                                        <input type="text" wire:model="shop_name"
-                                               placeholder="Салон цветов Fantasy">
+                                        <input type="text" wire:model="shop_name" placeholder="Салон цветов Fantasy">
                                         <div class="set__pos">E-mail</div>
                                         <input type="email" wire:model.defer="email" placeholder="admin@gmail.com">
-                                        <div class="set__pos">Цена доставки руб.</div>
-                                        <input type="text" wire:model.defer="delivery_price">
+                                        {{-- <div class="set__pos">Цена доставки руб.</div>
+                                        <input type="text" wire:model.defer="delivery_price"> --}}
                                         @if($partner_type !='Самозанятый')
-                                        <div class="set__pos">Номер телефона предприятия</div>
-                                        <input type="text" wire:model.defer="telephone" placeholder="+7-999-99-99">
+											<div class="set__pos">Номер телефона предприятия</div>
+											<input type="text" wire:model.defer="telephone" placeholder="+7-999-99-99">
                                         @endif
                                         <div class="set__pos">Соц. сети</div>
                                         <input type="text" wire:model.defer="socials" placeholder="https://vk.com/flowerexpress">
+
+										<div x-data="deliveryPrices">
+											<template x-for="(price, key) in prices">
+												<div class="">
+													<div class="set__pos" x-text="'Цена доставки' + (key + 1)"></div>
+													<input style="margin-bottom: 10px" 
+														type="text" placeholder="По городу" 
+														@change="setDeliveryPrices(key, 'region')"
+														:value="price.region"
+													>
+													<input type="number" @change="setDeliveryPrices(key, 'price')" :value="price.price">
+												</div>
+											</template>
+											<div class="reg__plus" @click="prices.push({region: '', price: 0})">Добавить стоимость доставки</div>
+										</div>
+
+										<script>
+											document.addEventListener('alpine:init', () => {
+												Alpine.data('deliveryPrices', () => ({
+													prices: @json($delivery_prices),
+
+													setDeliveryPrices(key, priceKey) {
+														this.prices[key][priceKey] = this.$event.target.value;
+
+														@this.set('delivery_prices', this.prices);
+													},
+												}))
+											})
+										</script>
+
                                         @foreach($delivery_addresses as $key=>$address)
                                             <div class="set__pos">Адрес для самовывоза#{{$key + 1}}</div>
                                             <input type="text" onchange="setAddress(this, {{ $key }})" value="{{ $address }}" placeholder="201234, г. Москва, ул. Тимирязевская, д.14, офис 56">
                                         @endforeach
-                                        <div class="reg__plus" id="addAddress" onclick="addAddress()">Добавить адрес</div>
+                                        <div class="reg__plus" id="addAddress" onclick="addAddress()">Добавить адрес самовывоза</div>
+
                                         <script>
                                             let counter = {{ count($delivery_addresses)}} - 1;
                                             function addAddress()
@@ -162,10 +192,11 @@
                                             }
                                             function setAddress(input_address , key=false)
                                             {
-                                                    @this.set('delivery_addresses.'+ key, $(input_address).val());
-                                                    console.log(key);
+												@this.set('delivery_addresses.'+ key, $(input_address).val());
+												console.log(key);
                                             }
                                         </script>
+
                                         <div class="reg__flex">
                                             <button type="submit">Сохранить</button>
 {{--                                            <a href="#" class="set__logout">Выйти</a>--}}
@@ -183,9 +214,6 @@
 </div>
 
 @push('footer')
-
-<script src="{{ asset('js/jquery-3.6.0.min.js') }}">
-
-
-</script>
+	<script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 @endpush

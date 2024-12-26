@@ -49,12 +49,12 @@
                         <div class="basket__wrapper">
                             <div class="basket__item">
                                     <div class="basket__info">
-                                        @if($delivery_city_sochi)
+                                        {{-- @if($delivery_city_sochi)
                                             <span style="color: #00bf3f">При заказе на сумму от 2000 рублей доставка по г. Сочи бесплатная! <br> В других городах района Сочи доставка платная.
                                             <br>Доставка круглосуточная при размещении заказа до 18.00 по мск, все заказы размещенные после 18.00 будут доставлены на следующий день</span>
                                         @else
                                         <span style="color: #00bf3f">При заказе на сумму от 2000 рублей  доставка по городу бесплатная!</span>
-                                        @endif
+                                        @endif --}}
                                     </div>
 
                                 </div>
@@ -187,18 +187,18 @@
                                                     <span class="ruble-icon">₽</span>
                                                 </div>
                                             </div>
-                                            @else
-                                        <div class="basket__row">
-                                            <div class="basket__pos" style="color: red; text-decoration: line-through">
-                                                Доставка, руб.
-                                            </div>
-                                            <div class="basket__znac"
-                                                 style="color: red; text-decoration: line-through">{{ $delivery_price }}
-                                                {{--                                Обнуляем стоимость доставки перед выводом итоговой цены--}}
-                                                @php($delivery_price = 0)
-                                                <span class="ruble-icon">₽</span>
-                                            </div>
-                                        </div>
+										@else
+											<div class="basket__row">
+												<div class="basket__pos" style="color: red; text-decoration: line-through">
+													Доставка, руб.
+												</div>
+												<div class="basket__znac"
+													style="color: red; text-decoration: line-through">{{ $delivery_price }}
+													{{--                                Обнуляем стоимость доставки перед выводом итоговой цены--}}
+													@php($delivery_price = 0)
+													<span class="ruble-icon">₽</span>
+												</div>
+											</div>
                                         @endif
 
                                     @endif
@@ -517,16 +517,13 @@
                                                 @if($delivery)
                                                     <div class="reg__another another__city" id="anotherCity"
                                                          style="display: block !important; margin-top: 8px;">
-                                                        @if($delivery_city_sochi >= 1)
+                                                        @if(count($delivery_prices) > 0)
                                                             <label class="um-basket-shipping__label">
-                                                                <span class="um-basket-shipping__text">Города доставки<span class="um-basket-shipping__asterisk">&#42;</span></span>
+                                                                {{-- <span class="um-basket-shipping__text">Города доставки<span class="um-basket-shipping__asterisk">&#42;</span></span> --}}
                                                                 <select class="um-basket-shipping__input" placeholder="ID торговой точки" required wire:change="setCity($event.target.value)" wire:ignore >
-                                                                    <option value="Cочи-{{ $delivery_price }}"  selected>Cочи - {{ $delivery_price }}₽</option>
-                                                                    <option value="Хоста-600" >Хоста - 600₽</option>
-                                                                    <option value="Кудепста-700" >Кудепста - 700₽</option>
-                                                                    <option value="Адлер-1200" >Адлер - 1200₽</option>
-                                                                    <option value="Красная Поляна-2500" >Красная Поляна - 2500₽</option>
-                                                                    <option value="Дагомыс-700" >Дагомыс - 700₽</option>
+																	@foreach ($delivery_prices as $delivery_price)
+                                                                        <option value="Cочи-{{ $delivery_price['price'] }}">{{ $delivery_price['region'] }} - {{ $delivery_price['price'] }}₽</option>
+																	@endforeach
                                                                 </select>
                                                             </label>
                                                         @else
@@ -561,14 +558,14 @@
                                                         <div class="reg__how">
                                                             <label class="label__block">
                                                                 <input type="radio"
-                                                                       class="reg__time__now"
-                                                                       name="reg__time__now"
-                                                                       wire:model="delivery_time"
-                                                                       value="0"><span></span>Как
+																	class="reg__time__now"
+																	name="reg__time__now"
+																	wire:model="delivery_time"
+																	value="0"><span></span>Как
                                                                 можно скорее</label>
                                                         </div>
                                                         <div class="reg__how reg__how--cash">
-                                                            <label class="label__block  "><input type="radio"
+                                                            <label class="label__block "><input type="radio"
                                                                                                  class="reg__time__now--two"
                                                                                                  name="reg__time__now"
                                                                                                  wire:model="delivery_time"
