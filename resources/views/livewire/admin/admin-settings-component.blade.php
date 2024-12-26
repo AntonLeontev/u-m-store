@@ -146,6 +146,25 @@
                                         <div class="set__pos">Соц. сети</div>
                                         <input type="text" wire:model.defer="socials" placeholder="https://vk.com/flowerexpress">
 
+										<style>
+											.textarea {
+												max-width: 550px;
+												width: 100%;
+												border: 2px solid #bfc6e0;
+												border-radius: 38px;
+												outline: none;
+												padding: 10px 28px;
+												font-weight: 600;
+												font-size: 16px;
+												line-height: 160%;
+												letter-spacing: 0.05em;
+												color: #0b1331;
+											}
+										</style>
+
+                                        <div class="set__pos">Описание магазина</div>
+                                        <textarea class="textarea" wire:model.defer="description">{{ $description }}</textarea>
+
 										<div x-data="deliveryPrices">
 											<template x-for="(price, key) in prices">
 												<div class="">

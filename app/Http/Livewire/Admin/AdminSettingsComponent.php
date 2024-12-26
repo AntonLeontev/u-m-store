@@ -29,6 +29,7 @@ class AdminSettingsComponent extends Component
     public $delivery_price;
     public $delivery_prices = [];
     public $delivery_addresses = [];
+    public $description;
 
     public $partner_type;
     public $organistion_name;
@@ -81,6 +82,7 @@ class AdminSettingsComponent extends Component
 				$this->actual_address = $partner->actual_address;
 				$this->delivery_price = $partner->delivery_price;
 				$this->delivery_prices = $partner->deliveryPrices;
+				$this->description = $partner->description;
 
 				//Добавил переменные для разных типов партнеров.
 				$this->city_name = Store::find($partner->store_id)->real_name;
@@ -143,6 +145,7 @@ class AdminSettingsComponent extends Component
                 $partner->legal_address = $this->legal_address;
                 $partner->actual_address = $this->actual_address;
                 $partner->delivery_price = $this->delivery_price ? : NULL;
+				$partner->description = $this->description;
 
                 //Добавил переменные для разных типов партнеров  январь 2022.
 				$partner->partner_type = $this->partner_type;
