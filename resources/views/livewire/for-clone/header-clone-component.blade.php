@@ -25,9 +25,7 @@
                         <div class="header__mobmenu" id="headerMobMenu" style="display: none">
                             <img src="{{asset('images/btn.svg')}}" alt="menu">
                         </div>
-                        <form action="{{route('product.search')}}" id="form-search-top" name="form-search-top"
-
-                              class="header__search" wire:ignore>
+                        <form action="{{route('product.search')}}" id="form-search-top" name="form-search-top" class="header__search" wire:ignore>
                             @csrf
                             @livewire('header-search-component')
                         </form>
@@ -41,7 +39,7 @@
                         <div class="header__catalog">
                             <ul style="justify-content: flex-start">
                                 <li class="header__click" style="margin-right: 10px;">
-                                    {{-- <a href="#" class="header__a" id="headerA">каталог</a> --}}
+                                    <a href="#" class="header__a" id="headerA">каталог</a>
                                     <div class="header__window" id="headerWindow" wire:ignore.self>
                                         <div class="window__close" id="windowClose" style="display: block">
                                             <img src="{{asset('images/katclose.svg')}}" alt="">
@@ -92,12 +90,12 @@
                                                     @endif
                                                 </ul>
                                             </div>
-								@foreach($main_directions as $direction)
+								{{-- @foreach($main_directions as $direction)
 									<li style="margin-right: 10px;"><a
 											href="{{ route('shop', [session('city')['slug'], $direction->slug])}}"
 											class="click__flower">{{ $direction->name }}</a>
 									</li>
-								@endforeach
+								@endforeach --}}
 
                                 @foreach($main_categories as $category)
                                     <li style="margin-right: 10px;"><a

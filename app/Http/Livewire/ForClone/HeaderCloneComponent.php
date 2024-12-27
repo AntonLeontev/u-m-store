@@ -79,9 +79,9 @@ class HeaderCloneComponent extends Component
 
 
     public function getCategories($direction_id, $direction_slug)
-    {
-
-        $this->categories = Category::where('direction_id', $direction_id)->where('partner_id', $this->partner_id)->orderBY('parent_id', 'ASC')->limit(5)->get();
+    {	
+		
+		$this->categories = Category::where('partner_id', $this->partner_id)->orderBY('parent_id', 'ASC')->limit(5)->get();
 
         foreach ($this->categories as $key => $category)
         {
