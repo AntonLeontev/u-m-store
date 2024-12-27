@@ -5,20 +5,31 @@ namespace App\Services;
 
 
 use App\Http\Livewire\CheckoutComponent;
+use App\Models\Partners;
 use App\Models\Store;
-use YooKassa\Client;
 use Cart;
+use Illuminate\Support\Str;
+use YooKassa\Client;
 
 class YookassaService
 {
-    public function getClient(): CLient
+	private string $shopId;
+	private string $secretKey;
+
+	public function __construct(string $shopId, string $secretKey)
+	{
+		$this->shopId = $shopId;
+		$this->secretKey = $secretKey;
+	}
+
+    public function getClient(): Client
     {
         $client = new Client();
-        $client->setAuth(config('services.yookassa.shop_id'), config('services.yookassa.secret_key'));
+        $client->setAuth($this->shopId, $this->secretKey);
         return $client;
     }
 
-    public function createPayment(float $amount, string $description, array $options = [])
+    public function createPayment(float $amount, string $description, int $transactionId, array $options = [])
     {
         $client  = $this->getClient();
         $payment = $client->createPayment([
@@ -26,10 +37,10 @@ class YookassaService
                 'value' => $amount,
                 'currency' => 'RUB',
             ],
-            'capture' => false,
+            'capture' => true,
             'confirmation' => [
                 'type' => 'redirect',
-                'return_url' => route('success')
+                'return_url' => route('success', ['transactionId' => $transactionId])
             ],
             'metadata' => $options,
             'description' => $description
@@ -38,6 +49,20 @@ class YookassaService
 
         return $payment;
     }
+
+	/**
+	 * Проверка оплаты
+	 * 
+	 * @param string $id - id платежа в yookassa
+	 * @return boolean
+	 */
+	public function checkPayment(string $id): bool
+	{
+		$client  = $this->getClient();
+		$payment = $client->getPaymentInfo($id);
+
+		return $payment->status === 'succeeded';
+	}
 
 
     public function createTokenPayment($token, float $amount, string $description, array $options = [])

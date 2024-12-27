@@ -23,7 +23,7 @@ use App\Models\User;
 use App\Models\UserDetails\ReferralUser;
 use App\Services\YookassaService;
 use Carbon\Carbon;
-use Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -474,7 +474,7 @@ class CartComponent extends Component
 
         }
 
-// Способ доставки
+		// Способ доставки
 
         if ($this->delivery) {
             session()->put('shipping', [
@@ -498,24 +498,35 @@ class CartComponent extends Component
         $transaction->save();
 
         $order = $this->setOrder($transaction->id);
-        if ($order and session('checkout')['total']>0) {
-            $description = 'Оформление заказа №' . $order->id;
-            $transaction->order_id = $order->id;
 
-            #Создание платежа через Yookassa
-            $service = new  YookassaService();
-            $payment = $service->createPayment(session('checkout')['total'], $description, [
-                'transaction_id' => $transaction->id,
-                'order_id' => $order->id,
-                'store_id' => Store::store_id(),
-//                'partner_id' => Store::find(Store::store_id())->partner_id,
-                'partner_id' => $this->partner->id,
-            ]);
-            $transaction->payment_id = $payment->_id;
-            $transaction->mode = 'yoomoney';
-            $transaction->save();
-            return redirect()->away($payment->getConfirmation()->getConfirmationUrl());
-        }
+		$partner = Partners::firstWhere('store_id', Store::store_id());
+
+		if (!empty($partner?->yookassa_shop_id) && !empty($partner?->yookassa_secret_key)) {
+			if ($order and session('checkout')['total']>0) {
+				$description = 'Оформление заказа №' . $order->id;
+				$transaction->order_id = $order->id;
+	
+				#Создание платежа через Yookassa
+				$service = new YookassaService($partner?->yookassa_shop_id, $partner?->yookassa_secret_key);
+				$payment = $service->createPayment(
+					session('checkout')['total'], 
+					$description, 
+					$transaction->id,
+					[
+						'transaction_id' => $transaction->id,
+						'order_id' => $order->id,
+						'store_id' => Store::store_id(),
+						'partner_id' => $this->partner->id,
+					]
+				);
+				$transaction->payment_id = $payment->_id;
+				$transaction->mode = 'yoomoney';
+				$transaction->save();
+				return redirect()->away($payment->getConfirmation()->getConfirmationUrl());
+			}
+		}
+
+		return redirect(route('product.cart'));
     }
 
     #Удаление отдельного товара в корзине
@@ -722,9 +733,9 @@ class CartComponent extends Component
 
         if (App::environment('local') or session('checkout')['total']==0) {
 
-            (new MailController())->sendOrderMail($order);
-            GiftCertificate::useCertificate($this->gift_certificate);
-            return redirect()->route('success');
+            // (new MailController())->sendOrderMail($order);
+            // GiftCertificate::useCertificate($this->gift_certificate);
+            // return redirect()->route('success');
         }
 
 

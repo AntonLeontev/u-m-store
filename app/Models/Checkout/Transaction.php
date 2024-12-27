@@ -2,6 +2,7 @@
 
 namespace App\Models\Checkout;
 
+use App\Enums\TransactionStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

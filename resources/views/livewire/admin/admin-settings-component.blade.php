@@ -165,6 +165,12 @@
                                         <div class="set__pos">Описание магазина</div>
                                         <textarea class="textarea" wire:model.defer="description">{{ $description }}</textarea>
 
+										<div class="set__pos">ID магазина в Yookassa</div>
+                                        <input type="text" wire:model.defer="yookassa_shop_id">
+
+										<div class="set__pos">Yookassa secret key</div>
+                                        <input type="text" wire:model.defer="yookassa_secret_key">
+
 										<div x-data="deliveryPrices">
 											<template x-for="(price, key) in prices">
 												<div class="">

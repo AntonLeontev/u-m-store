@@ -316,7 +316,7 @@ Route::group(['middleware' => 'firewall.all'], function () {
     Route::get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
     Route::get('/search', SearchComponent::class)->name('product.search');
     Route::get('/wishlist', WishlistComponent::class)->name('product.wishlist');
-    Route::get('/success', SuccessComponent::class)->name('success');
+    Route::get('/success/{transactionId}', SuccessComponent::class)->name('success');
     Route::get('/info/{slug}', InformationComponent::class)->name('info');
     Route::get('/no-partner', NoPartnerComponent::class)->name('nopartner');
     Route::get('/promotions', PromotionsComponent::class)->name('promotions');

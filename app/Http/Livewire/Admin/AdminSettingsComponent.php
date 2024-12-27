@@ -30,6 +30,8 @@ class AdminSettingsComponent extends Component
     public $delivery_prices = [];
     public $delivery_addresses = [];
     public $description;
+    public $yookassa_shop_id;
+    public $yookassa_secret_key;
 
     public $partner_type;
     public $organistion_name;
@@ -83,6 +85,8 @@ class AdminSettingsComponent extends Component
 				$this->delivery_price = $partner->delivery_price;
 				$this->delivery_prices = $partner->deliveryPrices;
 				$this->description = $partner->description;
+				$this->yookassa_shop_id = $partner->yookassa_shop_id;
+				$this->yookassa_secret_key = $partner->yookassa_secret_key;
 
 				//Добавил переменные для разных типов партнеров.
 				$this->city_name = Store::find($partner->store_id)->real_name;
@@ -146,6 +150,8 @@ class AdminSettingsComponent extends Component
                 $partner->actual_address = $this->actual_address;
                 $partner->delivery_price = $this->delivery_price ? : NULL;
 				$partner->description = $this->description;
+				$partner->yookassa_shop_id = $this->yookassa_shop_id;
+				$partner->yookassa_secret_key = $this->yookassa_secret_key;
 
                 //Добавил переменные для разных типов партнеров  январь 2022.
 				$partner->partner_type = $this->partner_type;
