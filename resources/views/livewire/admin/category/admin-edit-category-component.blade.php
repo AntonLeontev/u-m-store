@@ -1,5 +1,5 @@
 @push('head')
-    <link rel="stylesheet" href="https://umclone.pp.ua/css/download-product.css">
+    <link rel="stylesheet" href="/css/download-product.css">
 @endpush
 
 <div class="container" style="padding: 30px 0;">
