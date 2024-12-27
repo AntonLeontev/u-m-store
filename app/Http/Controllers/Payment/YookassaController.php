@@ -20,7 +20,7 @@ class YookassaController extends Controller
 
 
 
-    public function callback(Request $request, YookassaService $service)
+    public function callback(Request $request)
     {
         $source = file_get_contents('php://input');
         $requestBody = json_decode($source, true);
@@ -28,14 +28,6 @@ class YookassaController extends Controller
             ? new NotificationSucceeded($requestBody)
             : new NotificationWaitingForCapture($requestBody);
         $payment = $notifocation->getObject();
-
-        if(isset($payment->status) && $payment->status === 'waiting_for_capture')
-        {
-            $service->getClient()->capturePayment(
-                [
-                   'amount' => $payment->amount
-                ], $payment->id, uniqid('', true));
-        }
 
         if(isset($payment->status) && $payment->status === 'succeeded')
         {
@@ -54,7 +46,7 @@ class YookassaController extends Controller
                             $order->total = $payment->amount->value;
                             $order->status = StatusEnum::PAYED;
                             $order->save();
-                            (new MailController())->sendOrderMail($order);
+                            // (new MailController())->sendOrderMail($order);
 
 
                         }

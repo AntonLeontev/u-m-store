@@ -97,6 +97,7 @@ use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use TCG\Voyager\Facades\Voyager;
+use Telegram\Bot\Laravel\Facades\Telegram;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -255,11 +256,11 @@ Route::get('/blockchaintest', function () {
 //        ->setWebhook(['url' => 'https://unitedmarket.org/fdmafqc1fq1qaz8yttgfsq2t311l97kz27qm4ypm8tchmwf1c4ntfew1kh12of05t9qur01tdx0e5ku82u03i6h1sstl5a65zg6k/webhook']);
 //    dd($response);
 //});
-////Установка вебхука для телеграм бота UMНelp
-//Route::get('/setwebhook-umhelp', function () {
-//    $response = Telegram::bot('UMHelp')->setWebhook(['url' => 'https://unitedmarket.org/eeekcitlzk9pjvp5t8upm6dp1pq7y9p39qu1iechklm7bgaole70c29lkcy58ys61eidvtmxtj2stidbh7eb76qqwih5zb0i3gnj/webhook']);
-//    dd($response);
-//});
+//Установка вебхука для телеграм бота UMНelp
+Route::get('/setwebhook-umhelp', function () {
+   $response = Telegram::bot('UMHelp')->setWebhook(['url' => config('app.url').'/eeekcitlzk9pjvp5t8upm6dp1pq7y9p39qu1iechklm7bgaole70c29lkcy58ys61eidvtmxtj2stidbh7eb76qqwih5zb0i3gnj/webhook']);
+   dd($response);
+});
 
 // Авторизация через соц.сети
 Route::get('{service}/auth', [SocialController::class, 'index'])->name('soc.auth');
@@ -269,12 +270,12 @@ Route::get('{service}/auth/callback', [SocialController::class, 'callback']);
 Route::post('/fdmafqc1fq1qaz8yttgfsq2t311l97kz27qm4ypm8tchmwf1c4ntfew1kh12of05t9qur01tdx0e5ku82u03i6h1sstl5a65zg6k/webhook', function () {
     $update = Telegram::bot('UMSend')->commandsHandler(true);
     return 'ok';
-});
+})->name('webhooks.telegram.umsend');
 //Webhook для бота UMHelp
 Route::post('/eeekcitlzk9pjvp5t8upm6dp1pq7y9p39qu1iechklm7bgaole70c29lkcy58ys61eidvtmxtj2stidbh7eb76qqwih5zb0i3gnj/webhook', function () {
     $update = Telegram::bot('UMHelp')->commandsHandler(true);
     return 'ok';
-});
+})->name('webhooks.telegram.umhelp');
 Route::post('/error500_send', [SendError500Component::class, 'sendError500'])->name('error_500');
 /**
  * Вебхук для yookassa и контроллер yookassa

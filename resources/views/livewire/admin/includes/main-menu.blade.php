@@ -39,7 +39,7 @@
 				<a href="{{ route('admin.site.settings') }}">Настройки сайта</a>
 			</li>
             @if (!is_numeric($hash = Auth::user()->telegram_id))
-                <li><a href="http://t.me/umhelp_bot?start={{$hash}}">Телеграм уведомления</a></li>
+                <li><a href="https://t.me/umhelp_bot?start={{$hash}}" target="_blank">Телеграм уведомления</a></li>
             @else
                 <li><a href="" disabled style="color: #2bbf69">Телеграм уведомления Активны</a></li>
             @endif

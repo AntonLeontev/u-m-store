@@ -36,7 +36,7 @@ return [
             'username'            => env('TELEGRAM_BOT_NAME', 'YOUR_BOT_NAME'),
             'token'               => env('TELEGRAM_BOT_TOKEN', 'YOUR-BOT-TOKEN'),
             'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
-            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', 'YOUR-BOT-WEBHOOK-URL'),
+            'webhook_url'         => route('webhooks.telegram.umsend'),
             'commands'            => [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
                 App\Telegram\Commands\UmSend\StartCommand::class,
@@ -45,10 +45,10 @@ return [
             ],
         ],
         'UMHelp' => [
-            'username'            => 'UMHelp',
-            'token'               => '5176502418:AAH_OGPGumItbUe-yE-qiXYMR-VaGrV5-KU',
+            'username'            => env('UMHELP_TELEGRAM_BOT_NAME'),
+            'token'               => env('UMHELP_TELEGRAM_BOT_TOKEN'),
             'certificate_path'    => 'YOUR-CERTIFICATE-PATH',
-            'webhook_url'         => 'https://unitedmarket.org/eeekcitlzk9pjvp5t8upm6dp1pq7y9p39qu1iechklm7bgaole70c29lkcy58ys61eidvtmxtj2stidbh7eb76qqwih5zb0i3gnj/webhook',
+            'webhook_url'         => route('webhooks.telegram.umhelp'),
             'commands'            => [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
                 App\Telegram\Commands\UmHelp\StartCommand::class,
