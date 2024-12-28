@@ -40,13 +40,13 @@
         <div class="major__inner">
             <div class="major__breadcrumbs">
                 <ul>
-                    <li><a href="/">{{session()->get('city')['name']}}</a></li>
+                    <li><a href="/">Главная</a></li>
                     {{--                                <li><a href="{{route('shop', [session('city')['slug'], $direction_slug ])}}">{{session('direction_name')}}</a></li>--}}
-                    @if(Session::has('parent_category_name'))
+                    {{-- @if(Session::has('parent_category_name'))
                         <li>
                             <a href="{{session()->get('parent_category_url')}}">{{session()->get('parent_category_name')}}</a>
                         </li>
-                    @endif
+                    @endif --}}
                     @if(session()->get('category_name'))
                         <li>
                             <a href="{{session()->get('category_url')}}">{{session()->get('category_name')}}</a>
