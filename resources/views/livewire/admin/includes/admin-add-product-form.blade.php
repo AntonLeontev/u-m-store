@@ -302,7 +302,7 @@
                 информация</button>
 
             <div wire:ignore.self class="download-product__content">
-                <div class="download-product__form-group">
+                {{-- <div class="download-product__form-group">
                     <input type="number" placeholder="Вес, кг"
                            class="download-product__form-input"  onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="add_info.weight">
                 </div>
@@ -321,7 +321,7 @@
                 <div class="download-product__form-group">
                     <input type="number" placeholder="Диаметр, см"
                            class="download-product__form-input"  onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="add_info.diameter">
-                </div>
+                </div> --}}
                 <div class="download-product__form-group">
                     <input type="text" placeholder="Особенности"
                            class="download-product__form-input" wire:model.lazy="add_info.peculiarities">
@@ -355,7 +355,7 @@
                            class="download-product__form-input" wire:model.defer="add_info.equipment">
                 </div>
 
-                @if($additional_infos)
+                {{-- @if($additional_infos)
                     @foreach($additional_infos as $key => $value)
                         <div class="download-product__form-group">
                             <input type="text" placeholder="Дополнительная информация о товаре"
@@ -363,15 +363,15 @@
                             @error("additional_infos.$key.additional_info") <span class="error">{{ $message }}</span> @enderror
                         </div>
                     @endforeach
-                @endif
+                @endif --}}
 
-                <div class="download-product__form-group">
+                {{-- <div class="download-product__form-group">
                     <button class="download-product__add" wire:click="addAdditionalInfos">+ Добавить поле</button>
-                </div>
+                </div> --}}
 
                 <div class="download-product__form-group">
 
-                    <h3 class="download-product__um-title">Цвет</h3>
+                    {{-- <h3 class="download-product__um-title">Цвет</h3>
 
                     <div class="download-product__form-label">
                         Выберете цвет товара
@@ -460,7 +460,7 @@
                             <input class="download-product__um-color-input" wire:model.defer="add_info.color_hex" type="color">
                         </label>
                         <!-- конец блока -->
-                    </div>
+                    </div> --}}
 
                     <!-- Добавил блок 30.05.22-->
 

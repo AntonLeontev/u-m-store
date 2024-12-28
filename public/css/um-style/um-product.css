@@ -555,10 +555,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 16px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 171px;
+  width: 300px;
   margin-bottom: 8px;
 }
 

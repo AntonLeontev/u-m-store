@@ -234,80 +234,165 @@
         </ul>
 
         <div class="um-description-product um-features-desc-feat um-features-desc-feat--active " data-tabs-target="description-product">
-            <h3 class="um-description-product__title-h3">Описание</h3>
-            <h4 class="um-description-product__title-h4">О товаре</h4>
+			@if(!empty($product->description))
+				<h3 class="um-description-product__title-h3">Описание</h3>
+				<h4 class="um-description-product__title-h4">О товаре</h4>
 
-            <p class="um-description-product__text">{!! htmlspecialchars_decode($product->description) !!}</p>
-            <br>
+				<p class="um-description-product__text">{!! htmlspecialchars_decode($product->description) !!}</p>
+				<br>
+			@endif
             @if(isset($seo['seo_description']))
                 <p class="um-description-product__text">{{$seo['seo_description']}}</p>
-            @else
             @endif
-
         </div>
+		
         @if($compounds && count($compounds) > 0 || $parameters )
-        <div class="um-features-product um-features-desc-feat" data-tabs-target="features-product">
-            <h3 class="um-features-product__title-h3">Характеристики</h3>
-            @if($compounds && count($compounds) > 0)
-            <h4 class="um-features-product__title-h4">Состав</h4>
-            <ul class="um-features-product__list">
-                @foreach($compounds as $item)
-                <li class="um-features-product__item">
-                    <span class="um-features-product__elem">{{ $item->compound }}</span>
-                    <span class="um-features-product__elem">{{ $item->number }}шт</span>
-                </li>
-{{--                <li class="um-features-product__item">Упаковка крафт</li>--}}
-                @endforeach
-            </ul>
-            @endif
-            @if($parameters)
-            <h4 class="um-features-product__title-h4">Параметры</h4>
-                <ul class="um-features-product__list">
-                    @if($parameters->height)
-                        <li class="um-features-product__item">
-                            <span class="um-features-product__elem">Высота</span>
-                            <span class="um-features-product__elem">{{$parameters->height}}см</span>
-                        </li>
-                    @endif
-                    @if($parameters->width)
-                        <li class="um-features-product__item">
-                            <span class="um-features-product__elem">Ширина</span>
-                            <span class="um-features-product__elem">{{$parameters->width}}см</span>
-                        </li>
-                    @endif
-                        @if($parameters->depth)
-                            <li class="um-features-product__item">
-                                <span class="um-features-product__elem">Глубина</span>
-                                <span class="um-features-product__elem">{{$parameters->depth}}см</span>
-                            </li>
-                        @endif
-                        @if($parameters->weight)
-                            <li class="um-features-product__item">
-                                <span class="um-features-product__elem">Вес</span>
-                                <span class="um-features-product__elem">{{$parameters->weight}}кг</span>
-                            </li>
-                        @endif
-                        @if($parameters->volume)
-                            <li class="um-features-product__item">
-                                <span class="um-features-product__elem">Объем</span>
-                                <span class="um-features-product__elem">{{$parameters->volume}}л</span>
-                            </li>
-                        @endif
-                        @if($parameters->warranty)
-                            <li class="um-features-product__item">
-                                <span class="um-features-product__elem">Гарантия</span>
-                                <span class="um-features-product__elem">{{$parameters->warranty}}месяцев</span>
-                            </li>
-                        @endif
-                        @if($parameters->model)
-                            <li class="um-features-product__item">
-                                <span class="um-features-product__elem">Модель</span>
-                                <span class="um-features-product__elem">{{$parameters->model}}</span>
-                            </li>
-                        @endif
-                </ul>
-            @endif
-        </div>
+			<div class="um-features-product um-features-desc-feat" data-tabs-target="features-product">
+				{{-- <h3 class="um-features-product__title-h3">Характеристики</h3> --}}
+				@if($compounds && count($compounds) > 0)
+					<h4 class="um-features-product__title-h4">Состав</h4>
+					<ul class="um-features-product__list">
+						@foreach($compounds as $item)
+						<li class="um-features-product__item">
+							<span class="um-features-product__elem">{{ $item->compound }}</span>
+							<span class="um-features-product__elem">{{ $item->number }}шт</span>
+						</li>
+						@endforeach
+					</ul>
+				@endif
+				@if($parameters)
+					<h4 class="um-features-product__title-h4">Параметры</h4>
+					<ul class="um-features-product__list">
+						@if($parameters->height)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Высота</span>
+								<span class="um-features-product__elem">{{$parameters->height}}см</span>
+							</li>
+						@endif
+						@if($parameters->width)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Ширина</span>
+								<span class="um-features-product__elem">{{$parameters->width}}см</span>
+							</li>
+						@endif
+						@if($parameters->depth)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Глубина</span>
+								<span class="um-features-product__elem">{{$parameters->depth}}см</span>
+							</li>
+						@endif
+						@if($parameters->weight)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Вес</span>
+								<span class="um-features-product__elem">{{$parameters->weight}}кг</span>
+							</li>
+						@endif
+						@if($parameters->volume)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Объем</span>
+								<span class="um-features-product__elem">{{$parameters->volume}}л</span>
+							</li>
+						@endif
+						@if($parameters->warranty)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Гарантия</span>
+								<span class="um-features-product__elem">{{$parameters->warranty}}месяцев</span>
+							</li>
+						@endif
+						@if($parameters->model)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Модель</span>
+								<span class="um-features-product__elem">{{$parameters->model}}</span>
+							</li>
+						@endif
+					</ul>
+				@endif
+
+				@if($specifications->isNotEmpty())
+					<h4 class="um-features-product__title-h4">Характеристики</h4>
+					
+					<ul class="um-features-product__list">
+						@foreach($specifications as $item)
+						<li class="um-features-product__item">
+							<span class="um-features-product__elem">{{ $item->specification }}</span>
+						</li>
+						@endforeach
+					</ul>
+				@endif
+
+				@if($info)
+					<h4 class="um-features-product__title-h4">Информация</h4>
+					
+					<ul class="um-features-product__list">
+						@if($info->peculiarities)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Особенности</span>
+								<span class="um-features-product__elem">{{$info->peculiarities}}</span>
+							</li>
+						@endif
+						@if($info->age_limit)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Ограничение по возрасту</span>
+								<span class="um-features-product__elem">{{$info->age_limit}}</span>
+							</li>
+						@endif
+						@if($info->number_elements)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Количество элементов</span>
+								<span class="um-features-product__elem">{{$info->number_elements}}</span>
+							</li>
+						@endif
+						@if($info->appointment)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Назначение</span>
+								<span class="um-features-product__elem">{{$info->appointment}}</span>
+							</li>
+						@endif
+						@if($info->taste)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Вкус</span>
+								<span class="um-features-product__elem">{{$info->taste}}</span>
+							</li>
+						@endif
+						@if($info->shelf_life)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Срок годности</span>
+								<span class="um-features-product__elem">{{$info->shelf_life}}</span>
+							</li>
+						@endif
+						@if($info->package)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Упаковка</span>
+								<span class="um-features-product__elem">{{$info->package}}</span>
+							</li>
+						@endif
+						@if($info->producing_country)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Страна производитель</span>
+								<span class="um-features-product__elem">{{$info->producing_country}}</span>
+							</li>
+						@endif
+						@if($info->equipment)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Комплектация</span>
+								<span class="um-features-product__elem">{{$info->equipment}}</span>
+							</li>
+						@endif
+						@if($info->brand)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Бренд</span>
+								<span class="um-features-product__elem">{{$info->brand}}</span>
+							</li>
+						@endif
+						@if($info->vendor_code)
+							<li class="um-features-product__item">
+								<span class="um-features-product__elem">Артикул</span>
+								<span class="um-features-product__elem">{{$info->vendor_code}}</span>
+							</li>
+						@endif
+					</ul>
+				@endif
+			</div>
         @endif
     </div>
 </div>

@@ -98,7 +98,7 @@
                         @endif
                     </select>
                     <span class="download-product__arrow">
-                         <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+                         <img src="/images/timeArrow.svg" alt="time">
                     </span>
                     <div class="overSelect"></div>
                 </div>
@@ -128,7 +128,7 @@
                     </select>
                     <div class="overSelect"></div>
                     <span class="download-product__arrow">
-                         <img src="https://umclone.pp.ua/images/timeArrow.svg" alt="time">
+                         <img src="/images/timeArrow.svg" alt="time">
                     </span>
                 </div>
                 @if(count($categories) > 0)
@@ -329,7 +329,7 @@
                 информация</button>
 
             <div wire:ignore.self class="download-product__content">
-                <div class="download-product__form-group mb2">
+                {{-- <div class="download-product__form-group mb2">
                     <label for="um-8" class="download-product__um-label">Вес, кг</label>
                     <input type="number" id="um-8" placeholder="Вес, кг"
                            class="download-product__form-input"  onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="additional_info.weight">
@@ -353,7 +353,7 @@
                     <label for="um-12" class="download-product__um-label">Диаметр, см</label>
                     <input type="number" id="um-12" placeholder="Диаметр, см"
                            class="download-product__form-input" onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="additional_info.diameter">
-                </div>
+                </div> --}}
                 <div class="download-product__form-group">
                     <label for="um-13" class="download-product__um-label">Особенности</label>
                     <input type="text" id="um-13" placeholder="Особенности"
@@ -404,13 +404,13 @@
                     @endforeach
                 @endif
 
-                <div class="download-product__form-group">
+                {{-- <div class="download-product__form-group">
                     <button class="download-product__add" wire:click.prevent="addMoreInfo">+ Добавить поле</button>
-                </div>
+                </div> --}}
 
                 <div class="download-product__form-group">
 
-                    <h3 class="download-product__um-title">Цвет</h3>
+                    {{-- <h3 class="download-product__um-title">Цвет</h3>
 
                     <div class="download-product__form-label">
                         Выберете цвет товара
@@ -499,7 +499,7 @@
                             <input class="download-product__um-color-input" wire:model.defer="additional_info.color_hex" type="color">
                         </label>
                         <!-- конец блока -->
-                    </div>
+                    </div> --}}
 
                     <!-- Добавил блок 30.05.22-->
 
@@ -566,7 +566,7 @@
                         </select>
 
                         <span class="download-product__arrow">
-                            <img src="https://umclone.pp.ua/images/timeArrow.svg"
+                            <img src="/images/timeArrow.svg"
                                  alt="time">
                         </span>
                     </span>
@@ -581,7 +581,7 @@
                         </select>
 
                         <span class="download-product__arrow">
-                            <img src="https://umclone.pp.ua/images/timeArrow.svg"
+                            <img src="/images/timeArrow.svg"
                                  alt="time">
                         </span>
                     </span>

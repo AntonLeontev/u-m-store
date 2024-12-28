@@ -220,7 +220,7 @@ class AdminProductComponent extends Component
                 ->leftJoin('product_to_stores', 'products.id', '=', 'product_to_stores.product_id')
                 ->where('products.status', 1)
                 ->where('products.direction_id', $this->partner->direction_id)
-                ->where('product_to_stores.partner_id', auth()->user()->partner_id)
+                ->where('<product_t></product_t>o_stores.partner_id', auth()->user()->partner_id)
                 ->orderBy('products.created_at', 'DESC')
                 ->paginate($this->pagesize);
         }

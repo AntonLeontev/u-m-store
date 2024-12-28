@@ -191,8 +191,8 @@ class DetailsComponent extends Component
 
             session()->put('category_url', route('product.shop', [session('city')['slug'], $direction->slug, $category_id]));
         }
+		// end bread
 
-// end bread
         $product_option_values = ProductOptionValue::select()->where('store_id', Store::store_id())
             ->where('product_id', $this->slug)
             ->leftJoin('options', 'options.id', '=', 'product_option_values.option_id')
@@ -281,10 +281,16 @@ class DetailsComponent extends Component
         }
 //        dd($media);.
         $compounds = DB::table('products_to_compound')
-        ->where('product_id', $product->id)->get();
+        	->where('product_id', $product->id)->get();
 
         $parameters = DB::table('products_to_parameters')
-        ->where('product_id', $product->id)->get();
+        	->where('product_id', $product->id)->get();
+
+        $specifications = DB::table('products_to_specifications')
+        	->where('product_id', $product->id)->get();
+
+        $info = DB::table('products_to_info')
+        	->where('product_id', $product->id)->first();
 
         if(isset($parameters[0])) $parameters = $parameters[0];
         else $parameters = false;
@@ -304,6 +310,8 @@ class DetailsComponent extends Component
             'media',
             'compounds',
             'parameters',
+			'specifications',
+			'info',
             'buy_products'
         ))->layout('layouts.base');
     }
