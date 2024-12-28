@@ -6,7 +6,7 @@
                     <div class="footer__major">
                         <div class="footer__logo">
                             <a href="/">
-                                <img src="{{ asset('images/footerlogo.svg') }}" alt="logo">
+                                <img src="{{ asset('images/footerlogo-notext.svg') }}" alt="logo">
                             </a>
                             <div class="footer__description">
                                 Сервис по доставке товаров и оказанию услуг в России

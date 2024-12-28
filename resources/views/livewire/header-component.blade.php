@@ -21,7 +21,7 @@
                         </div>
                         <div class="header__moblogo">
                             <a href="/">
-                                <img src="{{asset('images/logo.svg')}}" alt="logo">
+                                <img src="{{asset('images/headerLogo.svg')}}" alt="logo">
                             </a>
                         </div>
                         <div class="header__phone">
@@ -39,7 +39,7 @@
                             @livewire('header-search-component')
                         </form>
                         <div class="header__logo">
-                            <a href="/"><img src="{{asset('images/logo.svg')}}" alt="logo"></a>
+                            <a href="/"><img height="70" src="{{asset('images/headerLogo.svg')}}" alt="logo"></a>
                         </div>
                     </div>
                     @include('livewire.includes.login-component')
@@ -49,7 +49,7 @@
 							<div class="header__catalog">
 								<ul style="justify-content: flex-start">
 									<li class="header__click" style="margin-right: 10px;">
-										<a href="#" class="header__a" id="headerA">каталог</a>
+										{{-- <a href="#" class="header__a" id="headerA">каталог</a> --}}
 										<div class="header__window" id="headerWindow" wire:ignore.self>
 											<div class="window__close" id="windowClose" style="display: block">
 												<img src="{{asset('images/katclose.svg')}}" alt="">
@@ -100,11 +100,11 @@
 														@endif
 													</ul>
 												</div>
-									@foreach($main_directions as $direction)
+									{{-- @foreach($main_directions as $direction)
 										<li style="margin-right: 10px;"><a
 												href="{{ route('shop', [session('city')['slug'], $direction->slug])}}"
 												class="click__flower">{{ $direction->name }}</a></li>
-									@endforeach
+									@endforeach --}}
 								</ul>
 							</div>
 						</div>
