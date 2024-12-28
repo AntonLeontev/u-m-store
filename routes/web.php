@@ -257,10 +257,10 @@ Route::get('/blockchaintest', function () {
 //    dd($response);
 //});
 //Установка вебхука для телеграм бота UMНelp
-Route::get('/setwebhook-umhelp', function () {
-   $response = Telegram::bot('UMHelp')->setWebhook(['url' => config('app.url').'/eeekcitlzk9pjvp5t8upm6dp1pq7y9p39qu1iechklm7bgaole70c29lkcy58ys61eidvtmxtj2stidbh7eb76qqwih5zb0i3gnj/webhook']);
-   dd($response);
-});
+// Route::get('/setwebhook-umhelp', function () {
+//    $response = Telegram::bot('UMHelp')->setWebhook(['url' => config('app.url').'/eeekcitlzk9pjvp5t8upm6dp1pq7y9p39qu1iechklm7bgaole70c29lkcy58ys61eidvtmxtj2stidbh7eb76qqwih5zb0i3gnj/webhook']);
+//    dd($response);
+// });
 
 // Авторизация через соц.сети
 Route::get('{service}/auth', [SocialController::class, 'index'])->name('soc.auth');
