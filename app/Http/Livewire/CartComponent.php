@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Enums\StatusEnum;
+use App\Helpers\UmHelp;
 use App\Http\Controllers\MailController\MailController;
 use App\Models\Bonus;
 use App\Models\BonusTransactions;
@@ -398,9 +399,9 @@ class CartComponent extends Component
     {
         /** Обнуление доставки при заказе на сумму более 2000руб
          * код добавлен в феврале 2022  */
-        if (Cart::instance('cart')->total() > 2000 && $this->delivery_city_sochi !=2) {
-            $this->delivery_price = 0;
-        }
+        // if (Cart::instance('cart')->total() > 2000 && $this->delivery_city_sochi !=2) {
+        //     $this->delivery_price = 0;
+        // }
 //        if($this->gift_certificate_nominal)
 //        {
 //            Cart::istance('cart');
@@ -499,6 +500,10 @@ class CartComponent extends Component
 
         $order = $this->setOrder($transaction->id);
 
+		if ($order) {
+			$this->destroyAll();
+		}
+
 		$partner = Partners::firstWhere('store_id', Store::store_id());
 
 		if (!empty($partner?->yookassa_shop_id) && !empty($partner?->yookassa_secret_key)) {
@@ -570,13 +575,10 @@ class CartComponent extends Component
     #Оформление заказа
     public function checkout()
     {
-
         $this->validate();
 
         if (session()->has('discount')) $this->calculateDiscount();
         $this->setAmountForCheckout();
-//        return redirect()->route('checkout');
-
     }
 
     public function getDate($value)
@@ -738,13 +740,15 @@ class CartComponent extends Component
             // return redirect()->route('success');
         }
 
+		$partner = Partners::find($order->partner_id);
+		UmHelp::sendOrderToTelegram($order, $partner, config('telegram.chats.applications'), 'НОВЫЙ ЗАКАЗ НА САЙТЕ U-M.STORE');
 
-        $new_notification = new Notifications();
-        $new_notification->user_id = $order->user_id;
-        $new_notification->url = 'ordered';
-        $new_notification->title = 'Новый заказ';
-        $new_notification->date = Carbon::parse(Carbon::now())->format('d.m.Y');
-        $new_notification->save();
+        // $new_notification = new Notifications();
+        // $new_notification->user_id = $order->user_id;
+        // $new_notification->url = 'ordered';
+        // $new_notification->title = 'Новый заказ';
+        // $new_notification->date = Carbon::parse(Carbon::now())->format('d.m.Y');
+        // $new_notification->save();
         return $order;
     }
 

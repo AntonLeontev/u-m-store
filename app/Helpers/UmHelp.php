@@ -139,42 +139,6 @@ class UmHelp
      */
     public static function sendOrderToTelegram($order, $partner, $chat_id = '-1001741300676', $title = 'НОВЫЙ ЗАКАЗ НА САЙТЕ UM.ORG')
     {
-        $user_wallet = UserWallet::returnWalletByUserId($order->user_id);
-
-        if($user_wallet)
-        {
-            //Формируем массив цепочки очередей.
-            $array_chain = [];
-            //Подтверждаем снятие средств с кошелька покупателя в размере общей суммы в корзине.
-            $array_chain[]=new UMTApproveBuyerToMarketplace($order->total,$user_wallet->wallet_address);
-            //Зачисляем на кошелек покупателя сумму в размере общей суммы в корзине.
-            $array_chain[]=new UMTIssue($order->total,$user_wallet->wallet_address);
-            //Перебераем все товары в корзине и добавляем в очередь.
-            foreach (OrderProduct::where('order_id',$order->id)->get() as $order_item) {
-                $array_chain[] = new MarketplaceBuyProduct($order_item->product_store_id, $order_item->quantity, $user_wallet->wallet_address);
-            }
-
-            //Запуск цепочки очередей.
-            Bus::chain($array_chain)->dispatch();
-//            Bus::chain([
-//                //Подтверждаем снятие средств с кошелька покупателя в размере общей суммы в корзине.
-//                new UMTApproveBuyerToMarketplace($order->total,$user_wallet->wallet_address),
-//                //Зачисляем на кошелек покупателя сумму в размере общей суммы в корзине.
-//                new UMTIssue($order->total,$user_wallet->wallet_address),
-//                 new MarketplaceBuyProduct($order->product_store_id, $order->quantity,
-//                     $user_wallet->wallet_address)
-//            ])->dispatch();
-
-            $array_chain = [];
-            //Перебираем все товары в корзине и запускаем очереди на фиксацию покупки товара в блокчейне.
-//            foreach (OrderProduct::where('order_id',$order->id)->get() as $order_item)
-//            {
-//                MarketplaceBuyProduct::dispatch($order_item->product_store_id, $order_item->quantity, $user_wallet->wallet_address);
-//            }
-        }
-
-
-
 //        https://api.telegram.org/bot<YourBOTToken>/getUpdates
 
 
@@ -184,7 +148,7 @@ class UmHelp
         #Информация о партнере
         $partner_info = [
             'ID партнера' => $partner->id,
-            'Город партнера' => $city_name,
+            // 'Город партнера' => $city_name,
             'Тип партнера' => $partner->partner_type,
             'Название на сайте' => $partner->organisation_name,
             'Короткое название организации' => PHP_EOL . $partner->partner_name,
@@ -288,11 +252,11 @@ class UmHelp
 //        }
         #Отправка информации о заказе партнеру.
 
-        if ($chat_id_partner = User::find($partner->user_id)) $chat_id_partner->telegram_id;
-        if (is_numeric($chat_id_partner)) {
+		$user = User::find($partner->user_id);
+        if (is_numeric($user->telegram_id)) {
             $partner_info = false;
-            $response2 = Telegram::sendMessage([
-                'chat_id' => $chat_id_partner,
+            $response2 = Telegram::bot('UMHelp')->sendMessage([
+                'chat_id' => $user->telegram_id,
                 'parse_mode' => 'HTML',
                 'text' => view($view, compact('order_info', 'partner_info', 'order_product_array', 'title'))->render()
             ]);

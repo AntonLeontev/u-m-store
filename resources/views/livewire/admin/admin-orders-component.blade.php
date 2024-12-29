@@ -119,6 +119,11 @@
                                                         <option  value="{{ \App\Enums\StatusEnum::PAYED }}" style="color: yellowgreen;">Оплачен</option>
                                                         <option selected value="{{ \App\Enums\StatusEnum::DELIVERED }}" style="color: green;">Доставлен</option>
                                                         <option value="{{ \App\Enums\StatusEnum::CANCELED }}" style="color: red;">Отменён</option>
+                                                    @elseif($order->status === \App\Enums\StatusEnum::ORDERED)
+                                                        <option value="{{ \App\Enums\StatusEnum::ORDERED }}" style="color: yellowgreen;">Новый</option>
+                                                        <option value="{{ \App\Enums\StatusEnum::PAYED }}" style="color: yellowgreen;">Оплачен</option>
+                                                        <option value="{{ \App\Enums\StatusEnum::DELIVERED }}" style="color: green;">Доставлен</option>
+                                                        <option value="{{ \App\Enums\StatusEnum::CANCELED }}" style="color: red;">Отменён</option>
                                                     @else
                                                         <option  value="{{ \App\Enums\StatusEnum::PAYED }}" style="color: yellowgreen;">Оплачен</option>
                                                         <option  value="{{ \App\Enums\StatusEnum::DELIVERED }}" style="color: green;">Доставлен</option>

@@ -40,7 +40,7 @@ class AdminOrdersComponent extends Component
     public function selectMonth($month) {
 //        dd($month);
         if($month == 0) {
-            $this->orders = Order::where('status','!=', StatusEnum::ORDERED)->orderBy('id', 'DESC')->get();
+            $this->orders = Order::orderBy('id', 'DESC')->get();
         } else {
             $this->orders = Order::whereBetween('created_at', ['2022-'.$month.'-01', '2022-'.$month.'-31'])
                 ->orderBy('id', 'DESC')
