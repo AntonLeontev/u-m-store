@@ -648,9 +648,11 @@ class AdminAddProductComponent extends Component
     private function getPartnerByStore() {
 //        dd(Partners::where('store_id', Store::store_id())->where('status', 1));
 
-        return $this->user_role ?
-            Partners::where('store_id', Store::store_id())->where('status', 1)->first()->id :
-            Auth::user()->partner_id;
+		return Auth::user()->partner_id;
+
+        // return $this->user_role ?
+        //     Partners::where('store_id', Store::store_id())->where('status', 1)->first()->id :
+        //     Auth::user()->partner_id;
     }
 
     /**

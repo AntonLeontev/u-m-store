@@ -185,21 +185,6 @@ class AdminProductComponent extends Component
 
     public function render(Request $request)
     {
-//        dd($request->input('search'));
-
-//        $products = Product::leftJoin('product_to_stores', 'products.id','=', 'product_to_stores.product_id')
-//            ->where('store_id', $this->store_id)
-//            ->where('products.status', 1)
-//            ->paginate($this->pagesize);
-//        if (Auth::user()->role_id === 1 || Auth::user()->role_id === 3) {
-//            $products_to_stores_id = 'product_to_stores.store_id';
-//            $partner_id = Store::store_id();
-//
-//        } else {
-            $products_to_stores_id = 'product_to_stores.partner_id';
-            $partner_id = $this->partner_id;
-//        }
-
         if($request->input('search') !== null) {
             $this->search = $request->input('search');
         }
@@ -209,8 +194,8 @@ class AdminProductComponent extends Component
             $products = Product::select('product_to_stores.id', 'product_id', 'name','description', 'image', 'product_to_stores.store_price', 'product_to_stores.partner_price', 'products.partner_id', 'products.direction_id', 'moderated', 'products.status', 'product_status')
                 ->leftJoin('product_to_stores', 'products.id', '=', 'product_to_stores.product_id')
                 ->where('products.status', 1)
-                ->where('products.direction_id', $this->partner->direction_id)
-                ->where($products_to_stores_id, $partner_id)
+                // ->where('products.direction_id', $this->partner->direction_id)
+                ->where('products.partner_id', $this->partner_id)
                 ->where('name', 'like' , '%'.$this->search.'%')
 //                ->orWhere('description', 'LIKE' ,'%'.$this->search.'%')
                 ->orderBy('products.created_at', 'DESC')
@@ -219,8 +204,8 @@ class AdminProductComponent extends Component
             $products = Product::select('product_to_stores.id', 'product_id', 'name', 'image', 'product_to_stores.store_price', 'product_to_stores.partner_price', 'products.partner_id', 'products.direction_id', 'moderated', 'products.status', 'product_status', 'product_to_stores.partner_id')
                 ->leftJoin('product_to_stores', 'products.id', '=', 'product_to_stores.product_id')
                 ->where('products.status', 1)
-                ->where('products.direction_id', $this->partner->direction_id)
-                ->where('product_to_stores.partner_id', auth()->user()->partner_id)
+                // ->where('products.direction_id', $this->partner->direction_id)
+                ->where('products.partner_id', $this->partner_id)
                 ->orderBy('products.created_at', 'DESC')
                 ->paginate($this->pagesize);
         }
