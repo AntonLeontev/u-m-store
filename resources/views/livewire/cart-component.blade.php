@@ -528,7 +528,7 @@
                                                             </label>
                                                         @else
                                                             <div class="reg__town">
-                                                                {{ $delivery_city }}, {{  $delivery_address }}
+                                                                {{  $delivery_address }}
                                                             </div>
                                                         @endif
                                                         <br>

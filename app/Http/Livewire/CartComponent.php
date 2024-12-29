@@ -531,7 +531,7 @@ class CartComponent extends Component
 			}
 		}
 
-		return redirect(route('product.cart'));
+		return redirect(route('success', ['transactionId' => $transaction->id]));
     }
 
     #Удаление отдельного товара в корзине
