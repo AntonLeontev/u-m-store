@@ -171,6 +171,9 @@
 										<div class="set__pos">Yookassa secret key</div>
                                         <input type="text" wire:model.defer="yookassa_secret_key">
 
+										<div class="set__pos" style="max-width: 550px; margin-bottom:0;">Для обновления статуса оплаты заказов, настройте отправку вебхука в Yookassa на адрес</div>
+										<div class="set__pos" style="margin-top: 0;">{{ route('payment.callback') }}</div>
+
 										<div x-data="deliveryPrices">
 											<template x-for="(price, key) in prices">
 												<div class="">
