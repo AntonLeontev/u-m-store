@@ -179,7 +179,7 @@
                 session()->forget('needCity')
             @endphp
         @elseif(session()->has('needCity') and Route::currentRouteName()!='home' and Route::currentRouteName()!='info' and Route::currentRouteName()!='info.cooperation' and Route::currentRouteName()!='general.partner')
-            <div class="gorod" style="display: block !important;" wire:ignore.self>
+            {{-- <div class="gorod" style="display: block !important;" wire:ignore.self>
                 <div class="gorod__title">Ваш город {{$location_city}}?</div>
 
                 <div class="gorod__choose">
@@ -191,7 +191,7 @@
                         нет
                     </div>
                 </div>
-            </div>
+            </div> --}}
         @endif
 
 
