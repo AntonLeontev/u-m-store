@@ -30,6 +30,7 @@ class UserCreateShopComponent extends Component
 	{
 		$message = "Заявка на создание магазина u-m.store\n";
 
+		$message .= "ID: " . auth()->user()->id . "\n";
 		$message .= "Имя: " . auth()->user()->name . "\n";
 		$message .= "Телефон: " . auth()->user()->phone . "\n";
 		$message .= "E-mail: " . auth()->user()->email . "\n";
