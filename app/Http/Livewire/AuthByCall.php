@@ -147,11 +147,7 @@ class AuthByCall extends Component
             $new_user->markEmailAsVerified();
         }
 
-        if (session()->has('previous_url')) {
-            $this->redirect(session('previous_url'));
-        } else {
-            $this->redirect('/');
-        }
+		$this->redirect('/user/dashboard');
     }
 
 
