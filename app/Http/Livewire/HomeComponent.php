@@ -196,7 +196,8 @@ class HomeComponent extends Component
             //     'seo',
             // ));
 
-			return view('livewire.info.cooperration-no-option')->layout('layouts.base');
+			// return view('livewire.info.cooperration-no-option')->layout('layouts.base');
+			return view('landing');
         }
 
     }
