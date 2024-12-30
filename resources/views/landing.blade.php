@@ -25,7 +25,7 @@
 								<li class="menu__item"><a href="#" class="menu__link" data-goto=".cases">Примеры использования</a></li>
 								<li class="menu__item"><a href="#" class="menu__link" data-goto=".how-work">Как это работает</a></li>
 								<li class="menu__item"><a href="#" class="menu__link" data-goto=".tariffs">Тарифы</a></li>
-								<li class="menu__item"><a href="/auth" class="menu__link"><strong>Войти</strong></a></li>
+								<li class="menu__item"><a href="/admin/dashboard" class="menu__link"><strong>Войти</strong></a></li>
 								<li class="menu__item"><a href="/auth" class="button" data-da=".header__menu, 767.98">Начать</a></li>
 							</ul>
 						</nav>
