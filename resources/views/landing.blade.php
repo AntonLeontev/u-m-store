@@ -404,7 +404,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="create section-bottom">
+			{{-- <div class="create section-bottom">
 				<div class="create__container">
 					<div class="now-start">
 						<div class="now-start__wrapper">
@@ -425,7 +425,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 			<section class="try section-bottom">
 				<div class="try__container">
 					<img src="img/try_bg.svg" alt="Image" class="try__dec">
