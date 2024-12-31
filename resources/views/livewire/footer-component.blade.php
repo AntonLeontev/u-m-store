@@ -9,7 +9,7 @@
                                 <img src="{{ asset('images/footerlogo-notext.svg') }}" alt="logo">
                             </a>
                             <div class="footer__description">
-                                Сервис по доставке товаров и оказанию услуг в России
+                                Конструктор интернет-магазинов
                             </div>
                         </div>
                     </div>
