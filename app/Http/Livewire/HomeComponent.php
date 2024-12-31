@@ -25,6 +25,13 @@ class HomeComponent extends Component
     public $questions_email;
     public $questions_message;
 
+	public function mount()
+	{
+		if (auth()->user()->partner_id !== null && auth()->user()->role_id == 1) {
+			return redirect()->route('admin.dashboard');
+		}
+	}
+
     public function questionsRemain()
     {
         $this->validate([
