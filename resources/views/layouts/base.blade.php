@@ -41,7 +41,6 @@
         @laravelPWA
 
     @endif
-{{--    @include('livewire.includes.yandex-metrika')--}}
     @stack('head')
     @livewireStyles
     <style>
