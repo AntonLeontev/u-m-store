@@ -165,6 +165,8 @@
                                         <div class="set__pos">Описание магазина</div>
                                         <textarea class="textarea" wire:model.defer="description">{{ $description }}</textarea>
 
+										<div class="set__pos" style="max-width: 550px; margin-bottom:0; margin-top: 40px;">Чтобы подключить онлайн оплату заказов, <a href="https://trk.ppdu.ru/click/Cwc1rIME?erid=2SDnjeo3nno">зарегистрируйтесь в Yookassa</a> и заполните ID магазина и Yookassa secret key в полях ниже</div>
+
 										<div class="set__pos">ID магазина в Yookassa</div>
                                         <input type="text" wire:model.defer="yookassa_shop_id">
 
