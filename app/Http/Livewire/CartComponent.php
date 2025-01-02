@@ -511,23 +511,26 @@ class CartComponent extends Component
 				$description = 'Оформление заказа №' . $order->id;
 				$transaction->order_id = $order->id;
 	
-				#Создание платежа через Yookassa
-				$service = new YookassaService($partner?->yookassa_shop_id, $partner?->yookassa_secret_key);
-				$payment = $service->createPayment(
-					session('checkout')['total'], 
-					$description, 
-					$transaction->id,
-					[
-						'transaction_id' => $transaction->id,
-						'order_id' => $order->id,
-						'store_id' => Store::store_id(),
-						'partner_id' => $this->partner->id,
-					]
-				);
-				$transaction->payment_id = $payment->_id;
-				$transaction->mode = 'yoomoney';
-				$transaction->save();
-				return redirect()->away($payment->getConfirmation()->getConfirmationUrl());
+				try {
+					#Создание платежа через Yookassa
+					$service = new YookassaService($partner?->yookassa_shop_id, $partner?->yookassa_secret_key);
+					$payment = $service->createPayment(
+						session('checkout')['total'], 
+						$description, 
+						$transaction->id,
+						[
+							'transaction_id' => $transaction->id,
+							'order_id' => $order->id,
+							'store_id' => Store::store_id(),
+							'partner_id' => $this->partner->id,
+						]
+					);
+					$transaction->payment_id = $payment->id;
+					$transaction->mode = 'yoomoney';
+					$transaction->save();
+					return redirect()->away($payment->getConfirmation()->getConfirmationUrl());
+				} catch (\Throwable $th) {
+				}
 			}
 		}
 

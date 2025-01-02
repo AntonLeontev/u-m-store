@@ -37,17 +37,20 @@ class SuccessComponent extends Component
 			$partner = Partners::firstWhere('store_id', Store::store_id());
 
 			if (!empty($partner?->yookassa_shop_id) && !empty($partner?->yookassa_secret_key)) {
-				$service = new YookassaService($partner?->yookassa_shop_id, $partner?->yookassa_secret_key);
-				if (!$service->checkPayment($transaction->payment_id)) {
-					return redirect(route('product.cart'));
-				}
+				try {
+					$service = new YookassaService($partner?->yookassa_shop_id, $partner?->yookassa_secret_key);
+					if (!$service->checkPayment($transaction->payment_id)) {
+						return redirect(route('product.cart'));
+					}
+					$transaction->status = TransactionStatus::CONFIRMED;
+					$transaction->save();
+		
+					$order = Order::find($transaction->order_id);
+					$order->status = StatusEnum::PAYED;
+					$order->save();
+				} catch (\Throwable $th) {
+				}				
 	
-				$transaction->status = TransactionStatus::CONFIRMED;
-				$transaction->save();
-	
-				$order = Order::find($transaction->order_id);
-				$order->status = StatusEnum::PAYED;
-				$order->save();
 			}
         }
 
