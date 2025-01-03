@@ -27,7 +27,7 @@ class HomeComponent extends Component
 
 	public function mount()
 	{
-		if (auth()->user()->partner_id !== null && auth()->user()->role_id == 1) {
+		if (auth()->user()?->partner_id !== null && auth()->user()?->role_id == 1) {
 			return redirect()->route('admin.dashboard');
 		}
 	}
