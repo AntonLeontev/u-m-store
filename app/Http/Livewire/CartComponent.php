@@ -744,7 +744,7 @@ class CartComponent extends Component
         }
 
 		$partner = Partners::find($order->partner_id);
-		UmHelp::sendOrderToTelegram($order, $partner, config('telegram.chats.applications'), 'НОВЫЙ ЗАКАЗ НА САЙТЕ U-M.STORE');
+		UmHelp::sendOrderToTelegram($order, $partner, config('telegram.chats.applications'), 'НОВЫЙ ЗАКАЗ НА САЙТЕ '.config('app.name'));
 
         // $new_notification = new Notifications();
         // $new_notification->user_id = $order->user_id;

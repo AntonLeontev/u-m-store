@@ -28,7 +28,7 @@ class UserCreateShopComponent extends Component
 
 	public function submit(Request $request)
 	{
-		$message = "Заявка на создание магазина u-m.store\n";
+		$message = "Заявка на создание магазина " . config('app.name') . "\n";
 
 		$message .= "ID: " . auth()->user()->id . "\n";
 		$message .= "Имя: " . auth()->user()->name . "\n";
