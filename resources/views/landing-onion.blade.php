@@ -48,8 +48,8 @@
 								<li class="menu__item"><a href="#" class="menu__link" data-goto=".cases">Примеры использования</a></li>
 								<li class="menu__item"><a href="#" class="menu__link" data-goto=".how-work">Как это работает</a></li>
 								<li class="menu__item"><a href="#" class="menu__link" data-goto=".tariffs">Тарифы</a></li>
-								<li class="menu__item"><a href="/auth" class="menu__link"><strong>Войти</strong></a></li>
-								<li class="menu__item"><a href="/auth" class="button" data-da=".header__menu, 767.98">Начать</a></li>
+								<li class="menu__item"><a href="{{ route('user.dashboard') }}" class="menu__link"><strong>Войти</strong></a></li>
+								<li class="menu__item"><a href="{{ route('user.create_shop') }}" class="button" data-da=".header__menu, 767.98">Начать</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -171,7 +171,7 @@
 									года бесплатно!
 								</div>
 								<div class="now-start__avtion">
-									<a href="https:///auth" class="now-start__btn button">Попробовать бесплатно</a>
+									<a href="{{ route('user.create_shop') }}" class="now-start__btn button">Попробовать бесплатно</a>
 								</div>
 							</div>
 						</div>
@@ -440,7 +440,7 @@
 										<div class="price__current">2000 <small><strong>₽</strong> /месяц</small></div>
 									</div>
 									<div class="tariff__footer">
-										<a href="/auth" class="tariff__btn button">Попробовать
+										<a href="{{ route('user.create_shop') }}" class="tariff__btn button">Попробовать
 											бесплатно</a>
 									</div>
 								</div>
@@ -460,7 +460,7 @@
 										<small>Только до 31.01.2025 специальная новогодняя акция</small>
 									</div>
 									<div class="tariff__footer">
-										<a href="/auth" class="tariff__btn button">Попробовать
+										<a href="{{ route('user.create_shop') }}" class="tariff__btn button">Попробовать
 											бесплатно</a>
 									</div>
 								</div>
@@ -476,7 +476,7 @@
 										<div class="price__current">9600 <small><strong>₽</strong> /месяц</small></div>
 									</div>
 									<div class="tariff__footer">
-										<a href="/auth" class="tariff__btn button">Попробовать
+										<a href="{{ route('user.create_shop') }}" class="tariff__btn button">Попробовать
 											бесплатно</a>
 									</div>
 								</div>
@@ -539,7 +539,7 @@
 					<div class="try__text">Ваш бизнес начинается с&nbsp;сайта — запустите его за&nbsp;15 минут, без
 						программистов и&nbsp;дизайнеров
 					</div>
-					<a href="/auth" class="try__btn button">Создать интернет-магазин</a>
+					<a href="{{ route('user.create_shop') }}" class="try__btn button">Создать интернет-магазин</a>
 				</div>
 			</section>
 		</main>
