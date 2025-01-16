@@ -26,6 +26,16 @@
                             @include('livewire.user.includes.user-mobile-menu')
 
 							<style>
+								.create-text {
+									background: rgba(191, 198, 224, .4); 
+									padding: 42px 75px;
+								}
+								@media screen and (max-width: 768px) {
+									.create-text {
+										padding: 20px 20px;
+									}
+									
+								}
 								.create-text p {
 									margin-bottom: 20px;
 								}
@@ -50,7 +60,7 @@
 									margin-top: 30px;
 								}
 							</style>
-                            <div class="create-text" style="background: rgba(191, 198, 224, .4); padding: 42px 75px;">
+                            <div class="create-text">
 								<p>
 									Мы рады, что вы выбрали наш конструктор для создания своего интернет-магазина! Мы стремимся сделать процесс простым, удобным и безопасным как для вас, так и для ваших клиентов.
 								</p>
