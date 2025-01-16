@@ -57,7 +57,7 @@ class Store extends Model
         }
         else
         {
-            return Store::firstWhere('real_name', 'Менделеево')->id;
+            return Store::firstWhere('real_name', 'Менделеево')?->id;
         }
 
     }

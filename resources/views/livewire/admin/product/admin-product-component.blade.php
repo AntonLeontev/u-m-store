@@ -179,6 +179,6 @@
         </div>
     </div>
     <div class="exiting__close" id="exitClose">
-        <img src="images/closeImage.svg" alt="">
+        <img src="/images/closeImage.svg" alt="">
     </div>
 </div>
