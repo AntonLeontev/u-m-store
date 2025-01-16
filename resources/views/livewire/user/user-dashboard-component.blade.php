@@ -122,9 +122,9 @@
                                                 <br>
                                                 @endforeach
 
-                                            </div>
-                                            <div class="profile__more">
-                                               <a href="{{ route('user.promo') }}">Подробнее</a>
+												<div class="profile__more">
+												   <a href="{{ route('user.promo') }}">Подробнее</a>
+												</div>
                                             </div>
                                             @endif
                                 </div>

@@ -204,7 +204,7 @@ class HomeComponent extends Component
             // ));
 
 			// return view('livewire.info.cooperration-no-option')->layout('layouts.base');
-			if (request()->fullUrlIs('*onionmarket*')) {
+			if (request()->fullUrlIs('*onionmarket*') || request()->fullUrlIs('*u-m.loc*')) {
 				return view('landing-onion');
 			}
 			return view('landing');
