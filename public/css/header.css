@@ -1803,13 +1803,13 @@ body {
     .header__phone {
         text-align: right;
     }
-    .header__phone a:not(.header__phone_partners a)::before {
+    /* .header__phone a:not(.header__phone_partners a)::before {
         top: -18px;
         left: -4px;
         background-image: url('../images/mobPhone.svg');
         height: 27px;
         width: 27px;
-    }
+    } */
     .header__moblogo {
         text-align: center;
     }

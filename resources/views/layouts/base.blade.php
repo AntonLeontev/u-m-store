@@ -21,7 +21,7 @@
     <link rel="icon" href="/favicon.ico">
 	<link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="{{ asset('css/normilze.css?3') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css?3') }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css?v=2') }}">
     <link rel="stylesheet" href="{{ asset('css/file.css?1') }}">
     <link rel="stylesheet" href="{{ asset('css/index.css?3') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css?3') }}">

@@ -14,11 +14,12 @@
                     {{--                        </div>--}}
                     {{--                    </div>--}}
                     <div class="header__top">
-                        <div class="header__city" id="headerCity" wire:ignore>
+						<div></div>
+                        {{-- <div class="header__city" id="headerCity" wire:ignore>
                             @if(session()->has('city'))
                                 {{ session('city')['name'] }}
                             @endif
-                        </div>
+                        </div> --}}
                         <div class="header__moblogo">
                             <a href="/">
                                 <img src="{{asset('images/headerLogo.svg')}}" alt="logo">
