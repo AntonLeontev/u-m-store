@@ -1,4 +1,5 @@
 <!-- Yandex.Metrika counter -->
+@if (config('services.yandex_metrica_counter'))
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
@@ -14,4 +15,5 @@
    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/{{ config('services.yandex_metrica_counter') }}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+@endif
 <!-- /Yandex.Metrika counter -->
