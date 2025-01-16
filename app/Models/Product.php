@@ -46,7 +46,7 @@ class Product extends Model
 
         $product_id = $product_id ?: Product::firstWhere('slug', $slug)->id;
 
-        return Product_to_store::where('store_id', Store::store()->id)->leftJoin('products', 'products.id', '=', 'product_to_stores.product_id')
+        return Product_to_store::where('store_id', Store::store()?->id)->leftJoin('products', 'products.id', '=', 'product_to_stores.product_id')
             ->where('store_id', Store::store_id())
             ->where('status', 1)
             ->where('moderated', 1)

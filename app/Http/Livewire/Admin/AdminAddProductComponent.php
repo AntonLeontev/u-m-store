@@ -634,9 +634,10 @@ class AdminAddProductComponent extends Component
      * @return mixed
      */
     private function getPartnerByUserRole() {
-        $partner_id = $this->user_role ?
-            Store::find(Store::store_id())->partner_id :
-            Auth::user()->partner_id;
+        // $partner_id = $this->user_role ?
+        //     Store::find(Store::store_id())->partner_id :
+        //     Auth::user()->partner_id;
+        $partner_id = Auth::user()->partner_id;
 
         return Partners::find($partner_id);
     }
