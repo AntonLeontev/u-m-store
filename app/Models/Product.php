@@ -63,7 +63,7 @@ class Product extends Model
 
     public static function getProducts()
     {
-        return Product_to_store::where('store_id', Store::store()->id)->leftJoin('products', 'products.id', '=', 'product_to_stores.product_id')
+        return Product_to_store::where('store_id', Store::store()?->id)->leftJoin('products', 'products.id', '=', 'product_to_stores.product_id')
             ->where('status', 1)
             ->where('product_status', 1)
             ->where('moderated', 1)

@@ -34,41 +34,15 @@
                             @include('livewire.admin.includes.mobile-main-menu')
 
                             <div class="profile__info profile__info--investor">
-{{--                                <div class="profile__welcome" style="padding-bottom: 25px;">--}}
-{{--                                    <div class="investor__welcomeback">С возвращением, Иван!</div>--}}
-{{--                                    <div class="investor__bottom">--}}
-{{--                                        <img src="images/investorBottom.svg" alt="">--}}
-{{--                                    </div>--}}
-{{--                                    <div class="investor__logo">--}}
-{{--                                        <img src="images/investorLogo.svg" alt="">--}}
-{{--                                    </div>--}}
-{{--                                    <div class="investor__image">--}}
-{{--                                        <div class="investor__photo">--}}
-{{--                                            <img src="images/investorPhoto.png" alt="">--}}
-{{--                                        </div>--}}
-{{--                                        <div class="investor__newphoto">--}}
-{{--                                            <img src="images/investorAddPhoto.png" alt="">--}}
-{{--                                        </div>--}}
-{{--                                        <div class="investor__addPhoto">--}}
-{{--                                            <div class="investor__addPhoto--text">Обновить фото профиля</div>--}}
-{{--                                            <div class="investor__addPhoto--add">--}}
-{{--                                                <input type="file" class="investor__addPhoto--download">--}}
-{{--                                                <a href="#" class="investor__addPhoto--fake">Загрузить фото</a>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="investor__addPhoto--close">--}}
-{{--                                                <img src="images/close.svg" alt="">--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-                                </div>
+							</div>
                                 <div class="profile__investor">
                                     <div class="investor__item">
                                         <div class="profile__description">Организация</div>
-                                        <div class="profile__row profile__row--top">
+                                        {{-- <div class="profile__row profile__row--top">
                                             <div class="profile__one">Город:</div>
                                             <div class="profile__one">{{ $store_city }}</div>
-                                        </div>
-                                        <div class="profile__row">
+                                        </div> --}}
+                                        <div class="profile__row profile__row--top">
                                             <div class="profile__one">Название:</div>
                                             <div class="profile__one">{{ $partner->organisation_name }}</div>
                                         </div>
