@@ -34,13 +34,13 @@
             <!-- вывод новодобавленных изображений -->
             @if ($images)
                 @foreach($images as $key => $image)
-                        <div class="download-product__file-item">
-                                <img class="download-product__file-img" src="{{ $image->temporaryUrl() }}" alt="img_2.jpg">
-                                <input class="download-product__file" wire:model="edit_images.{{ $key }}.edit_image" type="file" accept=".jpg, .jpeg, .png, .webp" id="file-edit-image-uploader-{{$key}}">
-                                <label for="file-edit-image-uploader-{{$key}}"><span class="download-product__file-setting"></span></label>
-                                <div class="download-product__file-del" wire:click="deleteTmpFile('{{$image->getFilename()}}')">
-                            </div>
-                        </div>
+					<div class="download-product__file-item">
+						<img class="download-product__file-img" src="{{ $image->temporaryUrl() }}" alt="img_2.jpg">
+						<input class="download-product__file" wire:model="edit_images.{{ $key }}.edit_image" type="file" accept=".jpg, .jpeg, .png, .webp" id="file-edit-image-uploader-{{$key}}">
+						<label for="file-edit-image-uploader-{{$key}}"><span class="download-product__file-setting"></span></label>
+						<div class="download-product__file-del" wire:click="deleteTmpFile('{{$image->getFilename()}}')">
+						</div>
+					</div>
                 @endforeach
             @endif
 
@@ -62,37 +62,11 @@
 
     <div wire:ignore.self class="download-product__form js-tab-item" id="tab-info">
 
-        <!-- фильры товара -->
-        {{-- <div class="download-product__form-group">
-            <!-- вывод ошибок валидации -->
-            @error('over_filter_count') <span class="error">{{ $message }}</span> @enderror
-            <div class="selectBox js-download-product-select">
-                <select class="download-product__form-input">
-                    @if(count($filters) > 0)
-                        <option>Выберите фильтры</option>
-                    @else
-                        <option>Для вашего партнера нет фильтров</option>
-                    @endif
-                </select>
-                <span class="download-product__arrow">
-                     <img src="/images/timeArrow.svg" alt="time">
-                </span>
-                <div class="overSelect"></div>
-            </div>
-            @if(count($filters) > 0)
-                <div class="download-product__um-checkboxes" id="checkboxes" wire:ignore.self>
-
-                        @foreach($filters as $filter)
-                            <label for="{{$filter->name}}"> <input wire:model.defer="sFilters" value="{{$filter->id}}" type="checkbox">{{$filter->name}}</label>
-                        @endforeach
-                </div>
-            @endif
-        </div> --}}
-
         <!-- категории товара -->
         <div class="download-product__form-group">
             <!-- вывод ошибок валидации -->
             @error('over_category_count') <span class="error">{{ $message }}</span> @enderror
+
             <div class="selectBox js-download-product-select">
                 <select class="download-product__form-input">
                     @if(count($categories) > 0)
@@ -145,43 +119,47 @@
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </div>
 
-        <!-- состав товара -->
+		<!-- состав товара -->
         <div class="download-product__form-group">
             <button wire:ignore.self class="download-product__acc-btn js-acc-action is-active">Состав</button>
             <div wire:ignore.self class="download-product__content is-visible">
                 <div class="download-product__form-label">
-                    Состав. Впишите в поля составляющие товары и укажите их количество
+                    Состав. Впишите в поля составляющие товара и укажите их количество. Например: Полиэтилен,% 50
                 </div>
 
                 @if(!empty($compounds))
                 @foreach($compounds as $key => $value)
                     <div class="download-product__form-group">
                         <div class="download-product__counter-wrapper">
-                            <input type="text" placeholder="Составляющее {{ $key + 1 }}"
-                                   class="download-product__form-input"  wire:model.lazy="compounds.{{$key}}.compound">
+                            <input type="text" placeholder="Хлопок, %"
+								class="download-product__form-input"  wire:model.lazy="compounds.{{$key}}.compound">
 
                             <div class="download-product__counter">
                                 <button class="download-product__counter-btn"  wire:click.prevent="changeCompoundNum({{$key}}, {{0}})">
                                     <svg width="14" height="2" viewBox="0 0 14 2"
-                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+										fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <line x1="0.75" y1="1.25" x2="13.25" y2="1.25"
-                                              stroke="#BFC6E0" stroke-width="1.5"
-                                              stroke-linecap="round" />
+											stroke="#BFC6E0" stroke-width="1.5"
+											stroke-linecap="round" />
                                     </svg>
                                 </button>
                                 <input type="text" class="download-product__input-number" wire:model="compounds.{{$key}}.number">
                                 <button class="download-product__counter-btn" wire:click.prevent="changeCompoundNum({{$key}})">
                                     <svg width="14" height="14" viewBox="0 0 14 14"
-                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+										fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <line x1="0.75" y1="6.66406" x2="13.25" y2="6.66406"
-                                              stroke="white" stroke-width="1.5"
-                                              stroke-linecap="round" />
+											stroke="white" stroke-width="1.5"
+											stroke-linecap="round" />
                                         <line x1="7.33789" y1="0.75" x2="7.33789" y2="13.25"
-                                              stroke="white" stroke-width="1.5"
-                                              stroke-linecap="round" />
+											stroke="white" stroke-width="1.5"
+											stroke-linecap="round" />
                                     </svg>
                                 </button>
                             </div>
+
+							<button type="button" wire:click="deleteCompound({{ $key }})" style="width: 35px">
+								<img src="{{ asset('images/basket(2).svg') }}" alt="del">
+							</button>
                         </div>
                         @error("compounds.$key.compound") <span class="error">{{ $message }}</span><br> @enderror
                         @error("compounds.$key.number") <span class="error">{{ $message }}</span> @enderror
@@ -194,13 +172,55 @@
                 @endif
 
                 <div class="download-product__form-group">
-                    <button class="download-product__add" wire:click="addCompound">+ Добавить поле</button>
+                    <button type="button" class="download-product__add" wire:click="addCompound">+ Добавить поле</button>
+                </div>
+            </div>
+        </div>
+
+		<!-- options -->
+        <div class="download-product__form-group">
+            <button wire:ignore.self class="download-product__acc-btn js-acc-action is-active">
+				Характеристики
+			</button>
+
+            <div wire:ignore.self class="download-product__content is-visible">
+
+                @if($this->options)
+                    @foreach($this->options as $key => $option)
+                        <div class="download-product__form-group">
+							<div style="display: flex; gap: 5px">
+								<div>
+									<input type="text" class="download-product__form-input" 
+										wire:model.lazy="options.{{$key}}.name" 
+										style="margin-bottom: 5px"
+										placeholder="Имя характеристики. Например - размер"
+									>
+									<input type="text" class="download-product__form-input" 
+										wire:model.lazy="options.{{$key}}.value"
+										placeholder="Значение характеристики. Например - XL"
+									>
+								</div>
+
+								<button type="button"  wire:click="deleteOption({{ $key }})"><img src="{{ asset('images/basket(2).svg') }}" alt="del"></button>
+							</div>
+                            @error("options.$key.name") <span class="error">{{ $message }}</span> @enderror
+                            @error("options.$key.value") <span class="error">{{ $message }}</span> @enderror
+                        </div>
+                    @endforeach
+                @else
+                        <div class="download-product__form-group">
+                            Нет ни одной характеристики
+                        </div>
+                @endif
+
+                <div class="download-product__form-group">
+                    <button type="button" class="download-product__add" wire:click="addOption">+ Добавить характеристику</button>
                 </div>
             </div>
         </div>
 
         <!-- параметры товара -->
-        <div class="download-product__form-group">
+        {{-- <div class="download-product__form-group">
             <button wire:ignore.self class="download-product__acc-btn js-acc-action">Параметры</button>
 
             <div wire:ignore.self class="download-product__content">
@@ -242,10 +262,10 @@
                            class="download-product__form-input" wire:model.defer="parameters.model">
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- технические характеристики -->
-        <div class="download-product__form-group">
+        {{-- <div class="download-product__form-group">
             <button wire:ignore.self class="download-product__acc-btn js-acc-action">Технические
                 характеристики</button>
 
@@ -268,9 +288,9 @@
                     <button class="download-product__add" wire:click="addSpecification">+ Добавить поле</button>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div wire:ignore.self class="download-product__form-group">
+        {{-- <div wire:ignore.self class="download-product__form-group">
             <button class="download-product__acc-btn js-acc-action">Материалы</button>
 
             <div wire:ignore.self class="download-product__content">
@@ -294,34 +314,14 @@
                 </div>
                 <!-- конец блока -->
             </div>
-        </div>
+        </div> --}}
 
         <!-- дополнительная информация -->
-        <div wire:ignore.self class="download-product__form-group">
+        {{-- <div wire:ignore.self class="download-product__form-group">
             <button class="download-product__acc-btn js-acc-action">Дополнительная
                 информация</button>
 
             <div wire:ignore.self class="download-product__content">
-                {{-- <div class="download-product__form-group">
-                    <input type="number" placeholder="Вес, кг"
-                           class="download-product__form-input"  onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="add_info.weight">
-                </div>
-                <div class="download-product__form-group">
-                    <input type="text" placeholder="Вид"
-                           class="download-product__form-input" wire:model.lazy="add_info.type">
-                </div>
-                <div class="download-product__form-group">
-                    <input type="number" placeholder="Глубина, см"
-                           class="download-product__form-input"  onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="add_info.depth">
-                </div>
-                <div class="download-product__form-group">
-                    <input type="number" placeholder="Высота, см"
-                           class="download-product__form-input"  onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="add_info.height">
-                </div>
-                <div class="download-product__form-group">
-                    <input type="number" placeholder="Диаметр, см"
-                           class="download-product__form-input"  onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" wire:model.defer="add_info.diameter">
-                </div> --}}
                 <div class="download-product__form-group">
                     <input type="text" placeholder="Особенности"
                            class="download-product__form-input" wire:model.lazy="add_info.peculiarities">
@@ -355,114 +355,9 @@
                            class="download-product__form-input" wire:model.defer="add_info.equipment">
                 </div>
 
-                {{-- @if($additional_infos)
-                    @foreach($additional_infos as $key => $value)
-                        <div class="download-product__form-group">
-                            <input type="text" placeholder="Дополнительная информация о товаре"
-                                   class="download-product__form-input" wire:model.lazy="additional_infos.{{$key}}.additional_info">
-                            @error("additional_infos.$key.additional_info") <span class="error">{{ $message }}</span> @enderror
-                        </div>
-                    @endforeach
-                @endif --}}
-
-                {{-- <div class="download-product__form-group">
-                    <button class="download-product__add" wire:click="addAdditionalInfos">+ Добавить поле</button>
-                </div> --}}
 
                 <div class="download-product__form-group">
 
-                    {{-- <h3 class="download-product__um-title">Цвет</h3>
-
-                    <div class="download-product__form-label">
-                        Выберете цвет товара
-                    </div>
-
-                    <div class="download-product__radio-wrapper">
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" checked value="red"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #FF0000;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="white"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #FFFFFF; border: 1px solid #BFC6E0"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="pink"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #FF92D3;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="green"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #4CD964;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="yellow"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #FFD600;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="burgundy"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #AB0000;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="dark_blue"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #6803B8;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="dark_green"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #228300;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="orange"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #FF6C01;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="something"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #AD7BFF;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="pomade"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #EC126E;"></span>
-                        </div>
-                        <div class="download-product__radio-item">
-                            <input type="radio" name="product_color" value="dark_blue"
-                                   class="download-product__form-radio" wire:model.defer="add_info.color">
-                            <span class="download-product__radio-bg"
-                                  style="background-color: #3657C8;"></span>
-                        </div>
-
-                        <!-- Добавил блок 30.05.22-->
-                        <label class="download-product__um-color">
-                            <span class="download-product__um-color-text">Добавить цвет</span>
-                            <span class="download-product__um-color-pluse">
-                                <i class="icon-um-pluse3"></i>
-                            </span>
-                            <input class="download-product__um-color-input" wire:model.defer="add_info.color_hex" type="color">
-                        </label>
-                        <!-- конец блока -->
-                    </div> --}}
-
-                    <!-- Добавил блок 30.05.22-->
 
                     <div class="download-product__form-group">
                         <h3 class="download-product__um-title">Бренд</h3>
@@ -505,10 +400,10 @@
                     </div>
                 @endif
             </div>
-        </div>
+        </div> --}}
 
         <!-- другие функции -->
-        <div wire:ignore.self class="download-product__form-group">
+        {{-- <div wire:ignore.self class="download-product__form-group">
             <button class="download-product__acc-btn js-acc-action">Другие
                 функции</button>
 
@@ -543,7 +438,7 @@
                                                     </span>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <button class="download-product__btn js-next-btn">Продолжить</button>
     </div>

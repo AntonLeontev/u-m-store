@@ -41,6 +41,7 @@ class DetailsComponent extends Component
     public $review_text;
     public $direction_slug;
     public $direction_id;
+	public $options;
 
     public function mount($city_slug, $slug)
     {
@@ -63,6 +64,7 @@ class DetailsComponent extends Component
             $this->review_theme = 'Пожелания/ Замечания';
             $this->review_rating = 4;
             $this->direction_id = $product->direction_id;
+			$this->options = json_decode($product->options, true);
             session()->put('previous_url', url()->current());
         } else {
             $this->redirect(route('shop', [Route::current()->city_slug, Route::current()->direction_slug]));

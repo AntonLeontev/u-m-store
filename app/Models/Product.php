@@ -13,6 +13,10 @@ class Product extends Model
     use HasFactory;
     protected $table="products";
 
+	protected $casts = [
+		'options' => 'array',
+	];
+
     public function category()
     {
         return $this->hasMany(Product_to_category::class, 'category_id');

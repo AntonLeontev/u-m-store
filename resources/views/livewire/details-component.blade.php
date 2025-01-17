@@ -255,12 +255,25 @@
 						@foreach($compounds as $item)
 						<li class="um-features-product__item">
 							<span class="um-features-product__elem">{{ $item->compound }}</span>
-							<span class="um-features-product__elem">{{ $item->number }}шт</span>
+							<span class="um-features-product__elem">{{ $item->number }}</span>
 						</li>
 						@endforeach
 					</ul>
 				@endif
-				@if($parameters)
+
+				@if ($options && count($options) > 0)
+					<h4 class="um-features-product__title-h4">Характеристики</h4>
+					<ul class="um-features-product__list">
+						@foreach($options as $option)
+						<li class="um-features-product__item">
+							<span class="um-features-product__elem">{{ $option['name'] }}</span>
+							<span class="um-features-product__elem">{{ $option['value'] }}</span>
+						</li>
+						@endforeach
+					</ul>
+				@endif
+
+				{{-- @if($parameters)
 					<h4 class="um-features-product__title-h4">Параметры</h4>
 					<ul class="um-features-product__list">
 						@if($parameters->height)
@@ -306,9 +319,9 @@
 							</li>
 						@endif
 					</ul>
-				@endif
+				@endif --}}
 
-				@if($specifications->isNotEmpty())
+				{{-- @if($specifications->isNotEmpty())
 					<h4 class="um-features-product__title-h4">Характеристики</h4>
 					
 					<ul class="um-features-product__list">
@@ -318,9 +331,9 @@
 						</li>
 						@endforeach
 					</ul>
-				@endif
+				@endif --}}
 
-				@if($info)
+				{{-- @if($info)
 					<h4 class="um-features-product__title-h4">Информация</h4>
 					
 					<ul class="um-features-product__list">
@@ -391,7 +404,7 @@
 							</li>
 						@endif
 					</ul>
-				@endif
+				@endif --}}
 			</div>
         @endif
     </div>

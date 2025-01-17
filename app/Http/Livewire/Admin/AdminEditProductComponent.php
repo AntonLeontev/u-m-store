@@ -58,6 +58,7 @@ class AdminEditProductComponent extends Component
     public array $additional_videos = []; // видео продукта
     public array $more_additional_info = [];
     public array $another_option = [];
+	public array $options = [];
     // цена/партнерская цена/старая цена/нацена/скидка (для старой цены)
     public $price, $partner_price, $discount, $store_old_price, $markup;
 
@@ -79,6 +80,9 @@ class AdminEditProductComponent extends Component
             'specifications.*.value' => 'required|max:30',
             'materials.*.value' => 'required|max:30',
             'additional_videos.*.value' => 'required|url',
+			'options' => ['array', 'nullable'],
+			'options.*.name' => ['required', 'string', 'max:50'],
+			'options.*.value' => ['required', 'string', 'max:150'],
         ];
     }
 
@@ -105,12 +109,14 @@ class AdminEditProductComponent extends Component
             'materials.*.value.max' => 'Материал не может быть больше 30 символов',
             'additional_videos.*.value.required' => 'Необходимо указать ссылку на видео',
             'additional_videos.*.value.url' => 'Введенное значение должно быть ссылкой',
+			'options.*.name.required' => 'Нужно заполнить имя характеристики.',
+			'options.*.value.required' => 'Нужно заполнить значение характеристики.',
         ];
     }
 
     public function mount($product_id) {
 
-        $product = Product::getProduct($product_id);
+        $product = Product::find($product_id);
         if ($product) {
             $this->price = $product->store_price;
         }
@@ -119,6 +125,7 @@ class AdminEditProductComponent extends Component
         $this->getImages($this->product_id);
         // генерируется блоки описания товара
         $this->renderDescBlocks($product_id);
+		$this->options = $product->options;
     }
 
     /*
@@ -184,6 +191,17 @@ class AdminEditProductComponent extends Component
             }
         }
     }
+
+	public function addOption()
+	{
+		$this->options[] = ['name' => '', 'value' => ''];
+	}
+
+	public function deleteOption(int $key)
+	{
+		unset($this->options[$key]);
+	}
+
     // создает блоки описания товара
     private function renderDescBlocks($product_id) {
         foreach(self::EDIT_DESCRIPTION as $field => $table) {
@@ -420,6 +438,11 @@ class AdminEditProductComponent extends Component
             'number' => 0
         ];
     }
+
+	public function deleteCompound(int $key)
+	{
+		unset($this->compounds[$key]);
+	}
 
     /*
     * добавить новую спецификацию
@@ -793,12 +816,19 @@ class AdminEditProductComponent extends Component
         }
 
         // 3. СОСТАВ товара
+		$existingCompoundsIds = DB::table('products_to_compound')
+			->where('product_id', $this->product_id)
+			->get()->pluck('id');
+
         foreach($this->compounds as $compound) {
 
-            // берем только измененные компоненты
-            if(!$compound['modified']) continue;
-
             if(!empty($compound['compound_id'])) {
+				$existingCompoundsIds = $existingCompoundsIds->reject(function ($item) use ($compound) {
+					return $item == $compound['compound_id'];
+				});
+
+				if(!$compound['modified']) continue;
+
                 DB::table('products_to_compound')
                     ->where('id', $compound['compound_id'])
                     ->update([
@@ -809,12 +839,19 @@ class AdminEditProductComponent extends Component
             } else if(!empty($compound['value']) && $compound['number'] != 0) {
                 DB::table('products_to_compound')
                     ->insert([
-                            'product_id' => $this->product_id,
-                            'compound' => $compound['value'],
-                            'number' => $compound['number']
+						'product_id' => $this->product_id,
+						'compound' => $compound['value'],
+						'number' => $compound['number']
                     ]);
             }
         }
+
+		if ($existingCompoundsIds->isNotEmpty()) {
+			DB::table('products_to_compound')
+				->whereIn('id', $existingCompoundsIds)
+				->delete();
+		}
+
         // 4. ПАРАМЕТРЫ товара
         if(DB::table('products_to_parameters')
             ->where('product_id', $this->product_id)->exists()) {
@@ -955,6 +992,10 @@ class AdminEditProductComponent extends Component
                     ]);
             }
         }
+
+		Product::where('id', $this->product_id)->update([
+			'options' => $this->options,
+		]);
 
         // сообщение об обновлении описания
         session()->flash('update_description', 'Товар успешно обновлен!');

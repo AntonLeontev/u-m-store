@@ -43,8 +43,7 @@ class AdminAddProductComponent extends Component
     public $add_info = []; // доп информация
     public $additional_infos = []; // доп. поля информации
     public $another_opt = []; // другие функции
-    // public $quantity;
-    // public $options;
+    public $options = [];
 
     public bool $user_role;
     public $product_id;
@@ -99,6 +98,16 @@ class AdminAddProductComponent extends Component
         }
     }
 
+	public function addOption()
+	{
+		$this->options[] = ['name' => '', 'value' => ''];
+	}
+
+	public function deleteOption(int $key)
+	{
+		unset($this->options[$key]);
+	}
+
     /*
      * добававить категорию
      */
@@ -119,9 +128,13 @@ class AdminAddProductComponent extends Component
     * добавить составляющее
     */
     public function addCompound() {
-
-        $this->compounds[] = ['compound' => null, 'number' => 0];
+        $this->compounds[] = ['compound' => '', 'number' => 0];
     }
+
+	public function deleteCompound(int $key)
+	{
+		unset($this->compounds[$key]);
+	}
 
     /*
      * добавляем спецификацию
@@ -172,7 +185,7 @@ class AdminAddProductComponent extends Component
      * @var string[]
      */
     protected $rules = [
-        'name' => 'required|min:5',
+        'name' => 'required|min:2|max:100',
         'price' => 'required|not_in:0',
         'additional_categories.*.name' => 'required|max:20',
         'additional_infos.*.additional_info' => 'required|max:20',
@@ -185,9 +198,15 @@ class AdminAddProductComponent extends Component
         'images' => 'required|array|max:10', // максимально 10 фотографий
         'images.*' => 'mimes:jpeg,jpg,png,webp|max:10000',
         'video_links.*.video_link' => 'required|url',
-        // 'sFilters' => 'max:3',
-        // 'sCategories' => 'max:3',
+		'options' => ['array', 'nullable'],
+		'options.*.name' => ['required', 'string', 'max:50'],
+		'options.*.value' => ['required', 'string', 'max:150'],
     ];
+
+	protected $attributes = [
+		'options.*.name' => 'Название характеристики',
+		'options.*.value' => 'Значение характеристики',
+	];
 
     /**
      * сообщения валидации
@@ -220,6 +239,8 @@ class AdminAddProductComponent extends Component
         'additional_infos.*.additional_info.max' => 'Дополнительная информация не может быть больше 20 cимволов',
         'video_links.*.video_link.url' => 'Указанное значение должно быть ссылкой',
         'video_links.*.video_link.required' => 'Необходимо указать ccылку на видео товара',
+		'options.*.name.required' => 'Нужно заполнить имя характеристики.',
+		'options.*.value.required' => 'Нужно заполнить значение характеристики.',
     ];
 
     /**
@@ -624,6 +645,7 @@ class AdminAddProductComponent extends Component
         $product->status = 1;
         $product->partner_id = $this->getPartnerByStore();
         $product->moderated = $this->user_role ? '1' : '0';
+		$product->options = $this->options;
         $product->save();
 
         return $product->id;
