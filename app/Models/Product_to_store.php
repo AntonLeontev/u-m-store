@@ -16,7 +16,8 @@ class Product_to_store extends Model
         'product_id',
         'partner_price',
         'store_price',
-        'updated_at'];
+        'updated_at'
+	];
 
 }
 

@@ -23,7 +23,8 @@
                 <div class="profile__inner">
                     <div class="profile__title active">Профиль партнера</div>
                     <div class="profile__wrapper">
-                      @include('livewire.admin.includes.main-menu')
+
+					@include('livewire.admin.includes.main-menu')
 
                         <div class="tovar__inner">
                             @include('livewire.admin.includes.mobile-main-menu')
@@ -69,27 +70,34 @@
                                             </div>
                                         <div class="tovar__status"> @if($product->moderated) Опубликован @else На рассмотрении  @endif </div>
                                         <div class="tovar__status">
-                                                                                    <select class="form-control" style="{{$product->product_status ? 'color: green' : 'color: red'}};background: #fff;" wire:change="updateStatus({{$product->id}},$event.target.value)">
-                                                                                        @if ($product->product_status)
-                                                                                                <option selected value="1" style="color: green">Включен</option>
-                                                                                                <option value="0" style="color: red">Выключен</option>
-                                                                                        @else
-                                                                                                <option  value="1" style="color: green">Включен</option>
-                                                                                                <option  value="0" selected value="0" style="color: red">Выключен</option>
-
-                                                                                        @endif
-
-                                                                                    </select>
-
+											<select class="form-control" 
+												style="{{$product->product_status ? 'color: green' : 'color: red'}};background: #fff;" 
+												wire:change="updateStatus({{$product->id}},$event.target.value)"
+											>
+												@if ($product->product_status)
+													<option selected value="1" style="color: green">Включен</option>
+													<option value="0" style="color: red">Выключен</option>
+												@else
+													<option  value="1" style="color: green">Включен</option>
+													<option  value="0" selected value="0" style="color: red">Выключен</option>
+												@endif
+											</select>
                                         </div>
-                                            <div class="action">
-                                            <a href="{{route('admin.editproduct', ['product_id'=>$product->product_id])}}" title="Редактировать"><img src="{{ asset('images/edit.svg') }}" alt="edit"></a>
-                                                @if($product->partner_id === Auth::user()->partner_id || Auth::user()->role_id === 1 || Auth::user()->role_id === 3 )
+										<div class="action">
+                                            <a href="{{route('admin.editproduct', ['product_id'=>$product->product_id])}}" title="Редактировать">
+												<img src="{{ asset('images/edit.svg') }}" alt="edit">
+											</a>
+
+											<button type="button" wire:click.prevent="copyProduct({{$product->product_id}})">
+												<img width="24" src="{{ asset('images/copy.svg') }}" alt="copy" tytile="Создать копию товара">
+											</button>
+                                                
+											@if($product->partner_id === Auth::user()->partner_id || Auth::user()->role_id === 1 || Auth::user()->role_id === 3 )
                                                  <div class="tovar__delete" onclick="confirm('Вы уверены что хотите удалить?') || event.stopImmediatePropagation()" wire:click.prevent="deleteProduct({{$product->product_id}})">
                                                     <img src="{{ asset('images/basket(2).svg') }}" alt="del">
                                                 </div>
-                                                @endif
-                                            </div>
+											@endif
+										</div>
 
                                     </div>
 
@@ -101,14 +109,6 @@
                                                 <img src="{{asset('storage/'.$product->image)}}" width="80" alt="img">
                                             </div>
                                             <div class="tovar__info">
-{{--                                                <div class="tovar__row">--}}
-{{--                                                    <div class="tovar__data">Дата</div>--}}
-{{--                                                    <div class="tovar__when">10.06.2021</div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="tovar__row">--}}
-{{--                                                    <div class="tovar__data">Категория</div>--}}
-{{--                                                    <div class="tovar__kategory">Доставка букетов</div>--}}
-{{--                                                </div>--}}
                                                 <div class="tovar__row">
                                                     <div class="tovar__naz">Название</div>
                                                     <div class="tovar__name">{{ $product->name }}</div>
@@ -142,6 +142,11 @@
 
                                                 <div class="action">
                                                     <a href="{{route('admin.editproduct', ['product_id'=>$product->product_id])}}" title="Редактировать"><img src="{{ asset('images/edit.svg') }}" alt="edit"></a>
+
+													<button type="button">
+														<img src="{{ asset('images/copy.svg') }}" alt="copy">
+													</button>
+
                                                     @if($product->partner_id === Auth::user()->partner_id)
                                                     <div class="tovar__delete" onclick="confirm('Вы уверены что хотите удалить?') || event.stopImmediatePropagation()" wire:click.prevent="deleteProduct({{$product->product_id}})">
                                                         <img src="{{ asset('images/basket(2).svg') }}" alt="del">

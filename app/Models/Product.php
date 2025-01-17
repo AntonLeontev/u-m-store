@@ -17,6 +17,8 @@ class Product extends Model
 		'options' => 'array',
 	];
 
+	protected $guarded = [];
+
     public function category()
     {
         return $this->hasMany(Product_to_category::class, 'category_id');

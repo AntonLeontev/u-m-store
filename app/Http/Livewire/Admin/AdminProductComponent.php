@@ -12,8 +12,11 @@ use App\Models\ProductsToFilters;
 use App\Models\Store;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -130,6 +133,63 @@ class AdminProductComponent extends Component
         return $newprice;
     }
 
+	public function copyProduct(int $id)
+	{
+		$product = Product::find($id);
+		$product_to_store = Product_to_store::where('partner_id', $this->partner_id)->where('product_id', $id)->first();
+		$images = DB::table('media')->where('product_id', $id)->get();
+
+		$newProductData = Arr::except($product->toArray(), ['id', 'created_at', 'updated_at', 'image']);
+		$newProductData['name'] = $product->name . ' (копия)';
+
+		$newProduct = Product::create($newProductData);
+
+		if ($product && $product_to_store) {
+			$data = Arr::except($product_to_store->toArray(), ['id', 'created_at', 'updated_at']);
+			$data['product_id'] = $newProduct->id;
+			Product_to_store::create($data);
+		}
+
+		$compounds = DB::table('products_to_compound')->where('product_id', $id)->get();
+		foreach ($compounds as $compound) {
+			$data = Arr::except($compound->toArray(), ['id', 'created_at', 'updated_at']);
+			$data['product_id'] = $newProduct->id;
+			DB::table('products_to_compound')->insert($data);
+		}
+
+		if (file_exists('storage/'.$product->image)) {
+			$previewExtention = Str::afterLast($product->image, '.');
+			$previewPath = Str::beforeLast($product->image, '/');
+			copy('storage/'.$product->image, 'storage/'.$previewPath.'/'.$newProduct->id.'.'.$previewExtention);
+			$newProduct->image = $previewPath.'/'.$newProduct->id.'.'.$previewExtention;
+			$newProduct->save();
+		}
+
+		foreach ($images as $image) {
+			$previewExtention = Str::afterLast($image->image_path, '.');
+			$previewPath = Str::beforeLast($image->image_path, '/');
+			$fullImagePath = $previewPath.'/'.$newProduct->id.'_full.'.$previewExtention;
+
+			if (file_exists('storage/'.$image->image_path)) {
+				copy('storage/'.$image->image_path, 'storage/'.$fullImagePath);
+			}
+
+			$previewExtention = Str::afterLast($image->resize_image_path, '.');
+			$previewPath = Str::beforeLast($image->resize_image_path, '/');
+			$resizeImagePath = $previewPath.'/'.$newProduct->id.'_resize.'.$previewExtention;
+
+			if (file_exists('storage/'.$image->resize_image_path)) {
+				copy('storage/'.$image->resize_image_path, 'storage/'.$resizeImagePath);
+			}
+
+			DB::table('media')->insert([
+				'product_id' => $newProduct->id,
+				'image_path' => $fullImagePath,
+				'resize_image_path' => $resizeImagePath
+			]);
+		}
+	}
+
     public function deleteProduct($id)
     {
 
@@ -142,8 +202,8 @@ class AdminProductComponent extends Component
 
         if ($product) {
 
-//            unlink('storage/'.$product->image);
-
+			$path = 'storage/'.$product->image;
+			if(file_exists($path)) unlink($path);
             DB::table('media')
                 ->where('product_id', $id)
                 ->get()->map(function($img) {
