@@ -152,9 +152,11 @@ class AdminProductComponent extends Component
 
 		$compounds = DB::table('products_to_compound')->where('product_id', $id)->get();
 		foreach ($compounds as $compound) {
-			$data = Arr::except($compound->toArray(), ['id', 'created_at', 'updated_at']);
-			$data['product_id'] = $newProduct->id;
-			DB::table('products_to_compound')->insert($data);
+			DB::table('products_to_compound')->insert([
+				'product_id' => $newProduct->id,
+				'compound' => $compound->compound,
+				'number' => $compound->number,
+			]);
 		}
 
 		if (file_exists('storage/'.$product->image)) {
@@ -202,8 +204,10 @@ class AdminProductComponent extends Component
 
         if ($product) {
 
-			$path = 'storage/'.$product->image;
-			if(file_exists($path)) unlink($path);
+			if ($product->image) {
+				$path = 'storage/'.$product->image;
+				if(file_exists($path)) unlink($path);
+			}
             DB::table('media')
                 ->where('product_id', $id)
                 ->get()->map(function($img) {
