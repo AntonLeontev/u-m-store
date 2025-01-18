@@ -400,7 +400,7 @@ Route::group(['middleware' => 'firewall.all'], function () {
         Route::get('/admin/partners', AdminPartnersComponent::class)->name('admin.partners');
 
 		Route::get('/admin/cities/{regionCode}', function(string $regionCode) {
-			return DB::table('cities')->where('region_fias', $regionCode)->get();
+			return DB::table('cities')->where('region_fias', $regionCode)->orderBy('name')->get();
 		})->name('admin.cities');
 		Route::post('admin/alfabank', AlfabankController::class)->name('admin.alfabank');
 

@@ -20,7 +20,7 @@ class AdminPartnersComponent extends Component
 
 	public function mount()
 	{
-		$this->regions = DB::table('regions')->get();
+		$this->regions = DB::table('regions')->orderBy('name')->get();
 		$this->cities = collect();
 	}
 
