@@ -38,4 +38,14 @@ class AlfabankService
 
 		return $this->api->createLead($data)->json('id');
 	}
+
+	public function getCities(): array
+	{
+		return $this->api->getCities()->json('values');
+	}
+
+	public function getRegions(): array
+	{
+		return $this->api->getRegions()->json('values');
+	}
 }
