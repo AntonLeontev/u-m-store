@@ -28,4 +28,7 @@ return [
 		'redirect' => env('TELEGRAM_REDIRECT_URI'),
 	],
 	'yandex_metrica_counter' => env('YANDEX_METRICA_COUNTER'),
+	'alfabank' => [
+		'key' => env('ALFABANK_KEY'),
+	],
 ];

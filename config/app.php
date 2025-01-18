@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\HttpServiceProvider::class,
 //        App\Providers\TelescopeServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,

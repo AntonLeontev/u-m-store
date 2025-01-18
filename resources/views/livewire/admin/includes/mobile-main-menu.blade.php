@@ -44,7 +44,7 @@
         <input class="custom-checkbox" id="checkbox9" name="menu" onclick="location.href = '{{ route('admin.accounting') }}'" class="promotions__mobClick" type="checkbox"><label for="checkbox9">Бухгалтерия бесплатно</label>
     </div>
 	<div class="promotion__br">
-		<input class="custom-checkbox" id="checkbox8" name="menu" class="promotions__mobClick" type="checkbox" disabled><label for="checkbox8">Партнеры</label>
+		<input class="custom-checkbox" id="checkbox8" name="menu" onclick="location.href = '{{ route('admin.partners') }}'" class="promotions__mobClick" type="checkbox" disabled><label for="checkbox8">Партнеры</label>
 	</div>
 </div>
 

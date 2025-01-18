@@ -22,7 +22,11 @@
                         </div> --}}
                         <div class="header__moblogo">
                             <a href="/">
-                                <img src="{{asset('images/headerLogo.svg')}}" alt="logo">
+								@if (request()->fullUrlIs('*onionmarket*') || request()->fullUrlIs('*u-m.loc*'))
+									<img src="{{asset('/onion/img/logo_m.webp')}}" alt="logo">
+								@else	
+                                	<img src="{{asset('images/headerLogo.svg')}}" alt="logo">
+								@endif
                             </a>
                         </div>
                         <div class="header__phone">
@@ -40,7 +44,13 @@
                             @livewire('header-search-component')
                         </form>
                         <div class="header__logo">
-                            <a href="/"><img height="70" src="{{asset('images/headerLogo.svg')}}" alt="logo"></a>
+							<a href="/">
+								@if (request()->fullUrlIs('*onionmarket*') || request()->fullUrlIs('*u-m.loc*'))
+									<img height="70" src="{{asset('/onion/img/logo.webp')}}" alt="logo" style="width: auto">
+								@else	
+									<img height="70" src="{{asset('images/headerLogo.svg')}}" alt="logo">
+								@endif
+							</a>
                         </div>
                     </div>
                     @include('livewire.includes.login-component')

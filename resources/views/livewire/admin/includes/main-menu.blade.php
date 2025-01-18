@@ -14,8 +14,8 @@
 			
 			<li><span href="" disabled>Реклама</span></li>
 			<li><span href="" disabled>Маркетплейсы</span></li>
-			<li><a href="{{ route('admin.accounting') }}" disabled>Бухгалтерия бесплатно</a></li>
-			<li><span href="" disabled>Партнеры</span></li>
+			<li><a href="{{ route('admin.accounting') }}">Бухгалтерия бесплатно</a></li>
+			<li><a href="{{ route('admin.partners') }}">Партнеры</a></li>
         @endif
 
 {{--        Меню для настрое сайтов клонов --}}

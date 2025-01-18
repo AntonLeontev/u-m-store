@@ -3,6 +3,7 @@
 use App\Helpers\BlockChain\RunNodeJsScript;
 use App\Helpers\BlockChain\UmcApi;
 use App\Helpers\BlockChain\UmtApi;
+use App\Http\Controllers\AlfabankController;
 use App\Http\Controllers\auth\VerificationController;
 #For Partner
 use App\Http\Controllers\Feed\GetOrdersController;
@@ -21,6 +22,7 @@ use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 
 use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminOrdersComponent;
+use App\Http\Livewire\Admin\AdminPartnersComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\Admin\AdminSettingsComponent;
 use App\Http\Livewire\Admin\CloneWebSite\SiteClonePromotionSettings;
@@ -52,48 +54,49 @@ use App\Http\Livewire\Partner\FormUpdateDataForContract;
 use App\Http\Livewire\Partner\FranchiseSaleAprile;
 use App\Http\Livewire\Partner\FranchiseSaleComponet;
 use App\Http\Livewire\PromotionsComponent;
-use App\Http\Livewire\PWA\OfflineComponent;
 
+use App\Http\Livewire\PWA\OfflineComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\SEO\SiteMapComponent;
 use App\Http\Livewire\ShopComponent;
-use App\Http\Livewire\SuccessComponent;
 
+use App\Http\Livewire\SuccessComponent;
 use App\Http\Livewire\Telegram\SendError500Component;
 use App\Http\Livewire\User\UserBonusComponent;
-use App\Http\Livewire\User\UserCreateShopComponent;
 
 // For manager
+use App\Http\Livewire\User\UserCreateShopComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\User\UserDeliveryComponent;
 use App\Http\Livewire\User\UserNotificationsComponent;
-use App\Http\Livewire\User\UserOrdersHistoryComponent;
 
 //For SiteClone
+use App\Http\Livewire\User\UserOrdersHistoryComponent;
 use App\Http\Livewire\User\UserPromoComponent;
 use App\Http\Livewire\User\UserReferralComponent;
 use App\Http\Livewire\User\UserReviewComponent;
 use App\Http\Livewire\User\UserSettingsComponent;
 use App\Http\Livewire\WishlistComponent;
-use App\Jobs\ChainApi\generateWallet;
 
 //For new INFO
+use App\Jobs\ChainApi\generateWallet;
 use App\Jobs\ChainApi\MarketplaceBuyProduct;
-use App\Jobs\ChainApi\MarketplaceCreateProduct;
 //For Auth
-use App\Jobs\ChainApi\MarketplaceRegisterBuyer;
+use App\Jobs\ChainApi\MarketplaceCreateProduct;
 //Blockchain
+use App\Jobs\ChainApi\MarketplaceRegisterBuyer;
 use App\Jobs\ChainApi\UMTApproveBuyerToMarketplace;
 use App\Jobs\ChainApi\UMTIssue;
 use App\Models\ChainStatusTransaction;
 use App\Models\User;
+
+
+
 use Illuminate\Http\Request;
-
-
-
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Bus;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use TCG\Voyager\Facades\Voyager;
@@ -394,6 +397,12 @@ Route::group(['middleware' => 'firewall.all'], function () {
         Route::get('/admin/settings', AdminSettingsComponent::class)->name('admin.settings');
         Route::get('/admin/orders', AdminOrdersComponent::class)->name('admin.orders');
         Route::get('/admin/accounting', AdminAccountingComponent::class)->name('admin.accounting');
+        Route::get('/admin/partners', AdminPartnersComponent::class)->name('admin.partners');
+
+		Route::get('/admin/cities/{regionCode}', function(string $regionCode) {
+			return DB::table('cities')->where('region_fias', $regionCode)->get();
+		})->name('admin.cities');
+		Route::post('admin/alfabank', AlfabankController::class)->name('admin.alfabank');
 
 
         Route::get('/admin/download_contract', [PDFController::class, 'generatePDF'])->name('download.contract');

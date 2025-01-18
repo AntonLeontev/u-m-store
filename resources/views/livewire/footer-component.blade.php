@@ -6,7 +6,11 @@
                     <div class="footer__major">
                         <div class="footer__logo">
                             <a href="/">
-                                <img src="{{ asset('images/footerlogo-notext.svg') }}" alt="logo">
+								@if (request()->fullUrlIs('*onionmarket*') || request()->fullUrlIs('*u-m.loc*'))
+									<img height="70" src="{{asset('/onion/img/logo_m.webp')}}" alt="logo">
+								@else	
+									<img src="{{ asset('images/footerlogo-notext.svg') }}" alt="logo">
+								@endif
                             </a>
                             <div class="footer__description">
                                 Конструктор интернет-магазинов
