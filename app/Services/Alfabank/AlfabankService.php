@@ -36,8 +36,6 @@ class AlfabankService
 			$data['productInfo'][] = ['productCode' => $product];
 		}
 
-		dump($data);
-
 		return $this->api->createLead($data)->json('id');
 	}
 }
