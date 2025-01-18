@@ -14,7 +14,7 @@
 			
 			<li><span href="" disabled>Реклама</span></li>
 			<li><span href="" disabled>Маркетплейсы</span></li>
-			<li><a href="{{ route('admin.accounting') }}">Бухгалтерия бесплатно</a></li>
+			<li><a href="{{ route('admin.accounting') }}">Активировать магазин</a></li>
 			<li><a href="{{ route('admin.partners') }}">Партнеры</a></li>
         @endif
 
