@@ -95,7 +95,7 @@ class Product extends Model
                 'products.created_at'
             )->leftJoin('product_to_stores', 'product_to_stores.product_id', '=', 'products.id')
                 ->leftJoin('partners', 'partners.id', '=', 'product_to_stores.partner_id')
-                ->where('products.direction_id', $direction_id)
+                // ->where('products.direction_id', $direction_id)
                 ->where('product_to_stores.store_id', $store->id)
                 ->where('store_price', '>', 0)
                 ->where('products.status', 1)
@@ -119,7 +119,7 @@ class Product extends Model
                 'products.created_at'
             )->leftJoin('product_to_stores', 'product_to_stores.product_id', '=', 'products.id')
                 ->leftJoin('partners', 'partners.id', '=', 'product_to_stores.partner_id')
-                ->where('products.direction_id', $direction_id)
+                // ->where('products.direction_id', $direction_id)
                 ->where('product_to_stores.store_id', $store->id)
                 ->where('store_price', '>', 0)
                 ->where('products.status', 1)
@@ -144,7 +144,7 @@ class Product extends Model
                 'products.created_at'
             )->leftJoin('product_to_stores', 'product_to_stores.product_id', '=', 'products.id')
                 ->leftJoin('partners', 'partners.id', '=', 'product_to_stores.partner_id')
-                ->where('products.direction_id', $direction_id)
+                // ->where('products.direction_id', $direction_id)
                 ->where('product_to_stores.store_id', $store->id)
                 ->where('store_price', '>', 0)
                 ->where('products.status', 1)
@@ -169,7 +169,7 @@ class Product extends Model
                 'products.created_at'
             )->leftJoin('product_to_stores', 'product_to_stores.product_id', '=', 'products.id')
                 ->leftJoin('partners', 'partners.id', '=', 'product_to_stores.partner_id')
-                ->where('products.direction_id', $direction_id)
+                // ->where('products.direction_id', $direction_id)
                 ->where('product_to_stores.store_id', $store->id)
                 ->where('store_price', '>', 0)
                 ->where('products.status', 1)

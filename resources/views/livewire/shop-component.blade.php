@@ -32,11 +32,14 @@
                 <div class="major__inner">
                     <div class="major__breadcrumbs">
                         <ul>
-                            <li><a href="/">{{session()->get('city')['name']}}</a></li>
+                            <li><a href="/">Главная</a></li>
                             <li>
-                                <a href="{{route('shop', [session('city')['slug'], $direction_slug])}}">{{ session('direction_name') }}</a>
+                                <span>Каталог</span>
                             </li>
-                            @if(Session::has('parent_category_name'))
+                            {{-- <li>
+                                <a href="{{route('shop', [session('city')['slug'], $direction_slug])}}">{{ session('direction_name') }}</a>
+                            </li> --}}
+                            {{-- @if(Session::has('parent_category_name'))
                                 <li>
                                     <a href="{{session()->get('parent_category_url')}}">{{session()->get('parent_category_name')}}</a>
                                 </li>
@@ -46,7 +49,7 @@
                                     <a href="{{url()->current()}}"><span>{{ session()->get('category_name') }}</span></a>
                                 </li>
 
-                            @endif
+                            @endif --}}
                         </ul>
                     </div>
                 </div>
@@ -57,7 +60,8 @@
                 <div class="flowers__inner">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="flowers__delivery">{{ session('direction_name') }}</h1>
+                            {{-- <h1 class="flowers__delivery">{{ session('direction_name') }}</h1> --}}
+                            <h1 class="flowers__delivery">Каталог</h1>
                             <div class="promotions__choose" id="promotionsChoose">Фильтры</div>
                             <div class="flowers__sorting" id="flowersSorting">Сортировать</div>
                             <div class="sorting__hide" id="sortingHide">

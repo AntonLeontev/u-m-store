@@ -35,7 +35,7 @@ class ShopComponent extends Component
 //    public $lastPage;
     use WithPagination;
 
-    public function mount($direction_slug ,$slug = 0)
+    public function mount($direction_slug, $slug = 0)
     {
         $this->direction_slug = $direction_slug;
         $direction = Directions::firstWhere('slug', $direction_slug);

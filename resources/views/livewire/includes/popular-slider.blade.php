@@ -198,7 +198,7 @@
         <div class="swiper-button-next"></div>
     </div>
     <div class="popular__btn index__btn">
-        <a href="{{ route('product.shop',[session('city')['slug'],'flowers', 81 ]) }}">Показать все</a>
+        <a href="{{ route('product.shop',['city_slug' => session('city')['slug']]) }}">Показать все</a>
     </div>
 </div>
 @push('footer')
