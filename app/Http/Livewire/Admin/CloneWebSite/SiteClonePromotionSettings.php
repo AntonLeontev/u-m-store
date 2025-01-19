@@ -28,7 +28,7 @@ class SiteClonePromotionSettings extends Component
 //           'uploaded_banners.*.image'=>'max:8024|dimensions:min_width= 1300, max_width=1380, max_height=450',
             'uploaded_banners.*.sort' => 'numeric|min:1|max:20',
             'uploaded_banners.*.url' => 'url|max:250',
-            'banner_image' => 'max:8024|dimensions:min_width= 1300, max_width=1380, max_height=450',
+            'banner_image' => 'max:1024|dimensions:min_width=300, max_width=250',
             'sort' => 'numeric|min:1|max:20',
             'url' => 'url|max:250',
         ];
