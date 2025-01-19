@@ -36,9 +36,10 @@ class HeaderCloneComponent extends Component
             $this->partner_id = $this->clone_info->partner_id;
 //            dd($this->clone_info);
             $clone_info = $this->clone_info;
+			$direction_slug = Directions::find($clone_info->direction_id)->slug;
             $clone_info_arr = [
                 'city_slug' => Store::find($clone_info->store_id)?->slug,
-                'direction_slug' => Directions::find($clone_info->direction_id)->slug,
+                'direction_slug' => $direction_slug,
                 'city_name' => $clone_info->city_name,
                 'partner_id' => $clone_info->partner_id,
                 'store_id' => $clone_info->store_id,
@@ -73,7 +74,7 @@ class HeaderCloneComponent extends Component
 //            session()->put('domain', false);
 //            return redirect()->to('/');
 //        }
-        $this->getCategories(1, 'flowers');
+        $this->getCategories($clone_info->direction_id, $direction_slug);
 
     }
 

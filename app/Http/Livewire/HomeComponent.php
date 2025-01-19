@@ -27,6 +27,10 @@ class HomeComponent extends Component
 
 	public function mount()
 	{
+		if (session()->get('domain') && $clone_info = CloneSiteInformation::getInfo()) {
+			return;
+		}
+		
 		if (auth()->user()?->partner_id !== null && auth()->user()?->role_id == 1) {
 			return redirect()->route('admin.dashboard');
 		}

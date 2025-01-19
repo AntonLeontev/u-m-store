@@ -232,7 +232,7 @@
                                                 @php
                                                     $discount = ($product->store_old_price - $product->store_price) * 100 / $product->store_old_price;
                                                 @endphp
-                                            <div class="popular__new popular__new_discount" style="z-index: 500; padding: 10px !important;">-{{ round($discount) }}%</div>
+                                            <div class="popular__new popular__new_discount" style="z-index: 10; padding: 10px !important;">-{{ round($discount) }}%</div>
                                             @endif
                                             <div class="popular__img popularImg">
                                                 <a href="{{ route('product.details', [ 'city_slug'=>session('city')['slug'] ,'slug'=>$product->product_id]) }}"
