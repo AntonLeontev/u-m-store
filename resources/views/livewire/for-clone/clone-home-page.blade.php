@@ -186,7 +186,7 @@
             loop: false,
             slidesPerView: 4,
 			loopFillGroupWithBlank: true,
-			centeredSlides: true,
+			centeredSlides: false,
             breakpoints: {
                 0: {
                     slidesPerView: 1,
