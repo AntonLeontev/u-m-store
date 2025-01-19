@@ -120,7 +120,7 @@
 
 
                             @endif
-{{--                            @if(session()->has('site_info_id') and (count($uploaded_banners)<4))--}}
+							@if(count($uploaded_banners)<4)
                                 <div class="set__one">
                                     <div class="set__step">Загрузите изображения для акций (300Х250):</div>
                                     <div class="set__form" style="max-width: 550px; width: 100%">
@@ -132,18 +132,18 @@
                                             <div>
                                                 @if(isset($banner_image) and is_object($banner_image))
                                                     <img class="mb-3 logo" src="{{ $banner_image->temporaryUrl() }}"
-                                                         alt="logo"
-                                                         width="500"
-                                                         style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 8px;">
+														alt="logo"
+														width="500"
+														style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 8px;">
 
 
                                                     <div class="mb-2 set__pos">Ссылка на кнопке:</div>
                                                     <input type="text" wire:model="url"
-                                                           placeholder="https://ourlink.com/" maxlength="200">
+														placeholder="https://ourlink.com/" maxlength="200">
                                                     @error('url') <span class="error">{{ $message }}</span> @enderror
                                                     <div class="mb-2 set__pos">Порядок сортировки</div>
                                                     <input type="number" wire:model="sort"
-                                                           placeholder="Цифра от 1 до 10" maxlength="3">
+														placeholder="Цифра от 1 до 10" maxlength="3">
                                                     @error('sort') <span class="error">{{ $message }}</span> @enderror
                                                 @endif
                                             </div>
@@ -175,11 +175,11 @@
                                         @endif
                                     </div>
                                 </div>
-{{--                            @else--}}
+							@else
                                 <div class="set__one">
                                     <div class="set__step">Можно загрузить 4 изображения для акций</div>
                                 </div>
-{{--                            @endif--}}
+							@endif
                         </div>
                     </div>
                 </div>
