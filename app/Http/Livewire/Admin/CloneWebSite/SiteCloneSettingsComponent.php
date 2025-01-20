@@ -148,6 +148,10 @@ class SiteCloneSettingsComponent extends Component
 
             // Если загружено новое фото кропаем его 250*250 пикселей и сохраняем.
             if (is_object($this->logo)) {
+				if (!file_exists(public_path('storage/SiteClone/Logo/'))) {
+					mkdir(public_path('storage/SiteClone/Logo/'), 0777, true);
+				}
+
                 if ($this->logo->extension()) {
                     $imageName = $partner->id . '_' . Carbon::now()->timestamp . '.' . $this->logo->extension();
 			//      $imageName = $this->logo->storeAs('SiteClone/Logo' . Carbon::now()->format('FY'), $imageName);
