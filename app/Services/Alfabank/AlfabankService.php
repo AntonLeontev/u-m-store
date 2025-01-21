@@ -21,8 +21,10 @@ class AlfabankService
 				'inn' => $inn,
 			],
 			'contactInfo' => [
-				'fullName' => $fullName,
-				'phoneNumber' => $phone,
+				[
+					'fullName' => $fullName,
+					'phoneNumber' => $phone,
+				],
 			],
 			'requestInfo' => [
 				'cityCode' => $cityCode,
