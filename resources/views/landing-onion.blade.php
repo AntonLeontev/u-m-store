@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="/onion/css/style.min.css?_v=20250113092226">
+	<link rel="stylesheet" href="/onion/css/style.min.css?_v=20250113092227">
 	<link rel="shortcut icon" href="/onion/favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -427,62 +427,534 @@
 			<section class="tariffs section-bottom">
 				<div class="tariffs__container">
 					<h2 class="tariffs__title title">Тарифы</h2>
-					<div class="tariffs__body swiper">
-						<div class="tariffs__wrapper swiper-wrapper">
-							<div class="tariffs__slide swiper-slide">
-								<div class="tariff">
-									<div class="tariff__header">
-										<strong>1 месяц</strong>
-										<!--                                    <div class="sale">20%</div>-->
+					<div class="tabs" data-tabs="">
+						<div class="tabs__navigation-wrapper">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">1 месяц</button>
+								<button type="button" class="tabs__title">1 год</button>
+								<button type="button" class="tabs__title">Премиум</button>
+								<button type="button" class="tabs__title">Индивидуальный</button>
+							</nav>
+						</div>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body">
+								<div class="tariffs__body swiper">
+									<div class="tariffs__wrapper swiper-wrapper">
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Базовый</div>
+														<div class="tariff__price">2000 <small><strong>₽</strong>
+																/месяц</small></div>
+														<!--                                                    <small>2 мес. бесплатно</small>-->
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>До 5000 товаров</strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Техподдержка 24/7 в&nbsp;мессенджере</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для малого бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Базовая</strong> система аналитики</span>
+														</li>
+														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-close">Подключение маркетплейсов</li>
+														<li class="li-close">Реклама</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Продвинутый</div>
+														<div class="tariff__price">4000 <small><strong>₽</strong>
+																/месяц</small></div>
+														<!--                                                    <small>2 мес. бесплатно</small>-->
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>До 20 000 товаров</strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Приоритетная техподдержка</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для растущего бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Расширенная</strong> система аналитики</span>
+														</li>
+														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-close">Подключение маркетплейсов</li>
+														<li class="li-close">Реклама</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Профессиональный</div>
+														<div class="tariff__price">8000 <small><strong>₽</strong>
+																/месяц</small></div>
+														<!--                                                    <small>2 мес. бесплатно</small>-->
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>Количество товаров без ограничений </strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Техподдержка VIP</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для среднего бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Полный доступ</strong> к системе аналитики</span>
+														</li>
+														<li class="li-add">Эквайринг и платежи</li>
+														<li class="li-add"><span>Подключение маркетплейсов: <strong>1&nbsp;платформа</strong></span>
+														</li>
+														<li class="li-add">Реклама: Настройка 1 кампании в&nbsp;Яндекс
+															Директ
+														</li>
+														<li class="li-close">SEO-оптимизация</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Оптимальный</div>
+														<div class="tariff__price">40 000 <small><strong>₽</strong>
+																/месяц</small></div>
+														<!--                                                    <small>2 мес. бесплатно</small>-->
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>Количество товаров без ограничений </strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Техподдержка VIP</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для среднего бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Полный доступ</strong> к системе аналитики</span>
+														</li>
+														<li class="li-add">Эквайринг и платежи</li>
+														<li class="li-add"><span>Подключение маркетплейсов: <strong>3&nbsp;платформы</strong></span>
+														</li>
+														<li class="li-add">Реклама: Полное управление Яндекс Директ</li>
+														<li class="li-close">SEO-оптимизация</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="tariff__price price">
-										<!--                                    <del class="price__old">12000₽</del>-->
-										<div class="price__current">2000 <small><strong>₽</strong> /месяц</small></div>
-									</div>
-									<div class="tariff__footer">
-										<a href="{{ route('user.create-shop') }}" class="tariff__btn button">Попробовать
-											бесплатно</a>
-									</div>
+									<div class="swiper-pagination"></div>
 								</div>
 							</div>
-							<div class="tariffs__slide swiper-slide">
-								<div class="tariff _center" style="background: #7F96E6;">
-									<div class="tariff__header">
-										<strong>12 месяцев</strong>
-										<!--                                    <div class="sale">20%</div>-->
+							<div class="tabs__body">
+								<div class="tariffs__body swiper">
+									<div class="tariffs__wrapper swiper-wrapper">
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Базовый</div>
+														<div class="tariff__price">20 000 ₽</div>
+														<small>2 мес. бесплатно</small>
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>До 5000 товаров</strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Техподдержка 24/7 в&nbsp;мессенджере</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для малого бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Базовая</strong> система аналитики</span>
+														</li>
+														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-close">Подключение маркетплейсов</li>
+														<li class="li-close">Реклама</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Продвинутый</div>
+														<div class="tariff__price">40 000 ₽</div>
+														<small>2 мес. бесплатно</small>
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>До 20 000 товаров</strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Приоритетная техподдержка</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для растущего бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Расширенная</strong> система аналитики</span>
+														</li>
+														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-close">Подключение маркетплейсов</li>
+														<li class="li-close">Реклама</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Профессиональный</div>
+														<div class="tariff__price">80 000 ₽</div>
+														<small>2 мес. бесплатно</small>
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>Количество товаров без ограничений </strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Техподдержка VIP</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для среднего бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Полный доступ</strong> к системе аналитики</span>
+														</li>
+														<li class="li-add">Эквайринг и платежи</li>
+														<li class="li-add"><span>Подключение маркетплейсов: <strong>1&nbsp;платформа</strong></span>
+														</li>
+														<li class="li-add">Реклама: Настройка 1 кампании в&nbsp;Яндекс
+															Директ
+														</li>
+														<li class="li-close">SEO-оптимизация</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Оптимальный</div>
+														<div class="tariff__price">400 000 ₽</div>
+														<small>2 мес. бесплатно</small>
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+															<strong>Количество товаров без ограничений </strong>
+														</div>
+														<div class="info-header-tariff__item">
+															<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+															<strong>Техподдержка VIP</strong>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для среднего бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
+														<li class="li-add"><span><strong>Полный доступ</strong> к системе аналитики</span>
+														</li>
+														<li class="li-add">Эквайринг и платежи</li>
+														<li class="li-add"><span>Подключение маркетплейсов: <strong>3&nbsp;платформы</strong></span>
+														</li>
+														<li class="li-add">Реклама: Полное управление Яндекс Директ</li>
+														<li class="li-close">SEO-оптимизация</li>
+														<li class="li-close">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="tariff__price price">
-										<del class="price__old">12000₽</del>
-										<!--                                    <div class="price__current">2000 <small><strong>₽</strong> /месяц</small></div>-->
-									</div>
-									<div class="tariff__info">
-										<strong>первый год БЕСПЛАТНО!</strong>
-										<small>Только до 31.01.2025 специальная новогодняя акция</small>
-									</div>
-									<div class="tariff__footer">
-										<a href="{{ route('user.create-shop') }}" class="tariff__btn button">Попробовать
-											бесплатно</a>
-									</div>
+									<div class="swiper-pagination"></div>
 								</div>
 							</div>
-							<div class="tariffs__slide swiper-slide">
-								<div class="tariff">
-									<div class="tariff__header">
-										<strong>6 месяцев</strong>
-										<div class="sale">20%</div>
+							<div class="tabs__body">
+								<div class="premium-slider swiper">
+									<div class="tariffs__wrapper swiper-wrapper">
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Премиум</div>
+														<div class="tariff__price premium-price">
+															<div class="premium-price__item">
+																100 000 <small><strong>₽</strong>
+																	/месяц</small>
+															</div>
+															<div class="price-label">1 год</div>
+															<div class="premium-price__item">
+																1 000 000 ₽ <small>2 мес. бесплатно</small>
+															</div>
+														</div>
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__wrapper">
+															<div class="info-header-tariff__item">
+																<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+																<strong>Количество товаров без ограничений </strong>
+															</div>
+															<div class="info-header-tariff__item">
+																<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+																<strong>Индивидуальная техподдержка </strong>
+															</div>
+														</div>
+													</div>
+													<div class="header-tariff__text">Подходит для крупного бизнеса</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add"><span><strong>Индивидуальная</strong> система аналитики</span>
+														</li>
+														<li class="li-add">Эквайринг и платежи</li>
+														<li class="li-add"><span>Подключение маркетплейсов: <strong>все доступные платформы</strong></span>
+														</li>
+														<li class="li-add">Реклама: Яндекс.Директ + ВКонтакте, Telegram
+															Ads
+														</li>
+														<li class="li-add">SEO-оптимизация</li>
+														<li class="li-add">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="tariff__price price">
-										<del class="price__old">12000₽</del>
-										<div class="price__current">9600 <small><strong>₽</strong> /месяц</small></div>
+									<!--                                <div class="swiper-pagination"></div>-->
+								</div>
+							</div>
+							<div class="tabs__body">
+								<div class="premium-slider swiper">
+									<div class="tariffs__wrapper swiper-wrapper">
+										<div class="tariffs__slide swiper-slide">
+											<div class="tariff">
+												<div class="tariff__header header-tariff">
+													<div class="header-tariff__top">
+														<div class="tariff__label">Индивидуальный</div>
+														<div class="tariff__price premium-price _no-border">
+															<div class="premium-price__item">
+																<small>Цена:</small> По договоренности
+															</div>
+
+														</div>
+													</div>
+													<div class="header-tariff__info info-header-tariff">
+														<div class="info-header-tariff__wrapper">
+															<div class="info-header-tariff__item">
+																<img src="/onion/img/icons/shopping.svg" width="24" height="24" alt="Image">
+																<strong>Количество товаров без ограничений</strong>
+															</div>
+															<div class="info-header-tariff__item">
+																<img src="/onion/img/icons/headset.svg" width="24" height="24" alt="Image">
+																<strong>Индивидуальная техподдержка </strong>
+															</div>
+														</div>
+													</div>
+													<div class="header-tariff__text">Для тех, кому нужен индивидуальный
+														подход
+													</div>
+												</div>
+												<div class="tariff__body">
+													<ul class="list-rules">
+														<li class="li-add">Для тех, кому нужен индивидуальный подход</li>
+														<li class="li-add"><span><strong>Персональная</strong> система аналитики
+															</span></li>
+														<li class="li-add">Эквайринг и платежи</li>
+														<li class="li-add"><span>Подключение маркетплейсов: <strong>все
+																	платформы</strong></span></li>
+														<li class="li-add"><span>Реклама: <strong></strong>: Яндекс Директ,
+																ВКонтакте, Telegram Ads, Метрика, Аналитика, Маркетплейсы,
+																таргетированная реклама</span>
+														</li>
+														<li class="li-add">SEO-оптимизация</li>
+														<li class="li-add">Аналитика бизнеса</li>
+													</ul>
+												</div>
+												<div class="tariff__footer">
+													<a href="{{ route('user.create-shop') }}" class="button">Попробовать сейчас</a>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="tariff__footer">
-										<a href="{{ route('user.create-shop') }}" class="tariff__btn button">Попробовать
-											бесплатно</a>
-									</div>
+									<!--                                <div class="swiper-pagination"></div>-->
 								</div>
 							</div>
 						</div>
-						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<section class="alfabank section-bottom">
+				<div class="alfabank__container">
+					<div class="alfabank__item">
+						<h2 class="alfabank__title title">Откройте расчётный счёт <br> в&nbsp;Альфа-Банке — первый год
+							бесплатно!</h2>
+						<div class="alfabank__clients clients-alfa">
+							<div class="clients-alfa__text">Только для наших клиентов — специальное предложение от
+								Альфа-Банка
+							</div>
+							<div class="clients-alfa__items">
+								<div class="clients-alfa-item" style="background-color: #8C6CFF;">
+									Полностью бесплатное обслуживание первого года при открытии РК!
+								</div>
+								<div class="clients-alfa-item" style="background-color: #7F96E6;">
+									Экономия до 24 000 ₽ на&nbsp;обслуживании
+								</div>
+								<div class="clients-alfa-item" style="background-color: #3657C8;">
+									Доступ к&nbsp;современным банковским инструментам для управления бизнесом
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alfabank__item">
+						<div class="alfabank__accent">
+							<div class="accent-block _one">
+								<img src="/onion/img/accent-block-bg.svg" alt="Image" class="accent-block__bg">
+								<div class="accent-block__content">
+									<div class="accent-block__title title">Что вы получаете с&nbsp;расчетным счетом в&nbsp;Альфа-Банке?</div>
+									<ul class="accent-block__list ul-list">
+										<li>Бесплатное открытие и&nbsp;обслуживание: никаких скрытых платежей.</li>
+										<li>Бухгалтерия включена: автоматизация налогов, отчётов и&nbsp;взносов.</li>
+										<li>Интеграция с&nbsp;маркетплейсами: автоматические выплаты и&nbsp;синхронизация
+											заказов.
+										</li>
+										<li>Эквайринг по&nbsp;выгодным ставкам: увеличение продаж до 30%.</li>
+										<li>Кэшбэк до 10% на&nbsp;бизнес-расходы.</li>
+										<li>300 000 ₽ бонусов на&nbsp;развитие бизнеса.</li>
+										<li>Сервис "Индикатор риска": предупреждение блокировок операций.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alfabank__item">
+						<h2 class="alfabank__title title">Как воспользоваться предложением?</h2>
+						<div class="alfabank__offer offer-alfa">
+							<div class="offer-alfa__item">
+								<img src="/onion/img/icons/alfa-offer/01.webp" alt="Image" class="offer-alfa__icon">
+								<div class="offer-alfa__text">
+									<strong>Подключитесь</strong> к&nbsp;нашему сервису и&nbsp;выберите подходящий тариф.
+								</div>
+							</div>
+							<div class="offer-alfa__item">
+								<img src="/onion/img/icons/alfa-offer/02.webp" alt="Image" class="offer-alfa__icon">
+								<div class="offer-alfa__text">
+									<strong>Откройте расчётный счёт в&nbsp;Альфа-Банке через нашу платформу.</strong>
+								</div>
+							</div>
+							<div class="offer-alfa__item">
+								<img src="/onion/img/icons/alfa-offer/03.webp" alt="Image" class="offer-alfa__icon">
+								<div class="offer-alfa__text">
+									Начните пользоваться всеми возможностями для вашего бизнеса бесплатно в&nbsp;первый год!
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alfabank__item">
+						<h2 class="alfabank__title title">
+							Почему это выгодно?
+						</h2>
+						<div class="alfabank__why">
+							<ul class="ul-list _fw-semi">
+								<li>Полная интеграция с нашим сервисом.</li>
+								<li>Гарантированная экономия при старте бизнеса.</li>
+								<li>Поддержка на каждом этапе: от регистрации счета до настройки платежей и аналитики.</li>
+								<li>Начните ваш бизнес легко и без лишних затрат!</li>
+							</ul>
+						</div>
+					</div>
+					<div class="alfabank__item">
+						<div class="btn-group">
+							<a href="{{ route('user.create-shop') }}" class="btn-group__btn button">Активировать бесплатный код</a>
+							<a href="{{ route('user.create-shop') }}" class="btn-group__btn button button_white">Оплатить напрямую — 20 000 ₽</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -502,6 +974,7 @@
 					</div>
 				</div>
 			</section>
+
 			<!--        <div class="members section-bottom">-->
 			<!--            <div class="members__container">-->
 			<!--                <div class="members__inner">-->
@@ -525,7 +998,7 @@
 			<!--                                первого года бесплатно!-->
 			<!--                            </div>-->
 			<!--                            <div class="now-start__avtion">-->
-			<!--                                <a href="/auth" class="now-start__btn button">Попробовать бесплатно</a>-->
+			<!--                                <a href="https://u-m.store/auth" class="now-start__btn button">Попробовать бесплатно</a>-->
 			<!--                            </div>-->
 			<!--                        </div>-->
 			<!--                    </div>-->
@@ -550,7 +1023,8 @@
 		</footer>
 
 	</div>
-	<script src="/onion/js/app.min.js?_v=20250113092226"></script>
+
+	<script src="/onion/js/app.min.js?_v=20250113092227"></script>
 </body>
 
 </html>
