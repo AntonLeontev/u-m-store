@@ -199,7 +199,7 @@
         @endif
 
 
-        <div class="city" id="cityWindow" wire:ignore.self>
+        {{-- <div class="city" id="cityWindow" wire:ignore.self>
             <div class="city__name">Ваш город:
                 <div class="city__itog" id="cityItog">
                     @if(session()->has('city'))
@@ -229,11 +229,11 @@
                     @endforeach
                 </ul>
             </div>
-            {{-- <div class="city__close" id="cityClose"
+            <div class="city__close" id="cityClose"
                  onclick="document.querySelector('#cityWindow').style.display = 'none'">
                 <img src="{{ asset('images/close.svg') }}" alt="close">
-            </div> --}}
-        </div>
+            </div>
+        </div> --}}
 {{--        @if(!Cookie::has('beta_test') and Route::currentRouteName()=='product.details')--}}
 {{--            <div class="betatest">--}}
 {{--                <div class="beta__window" id="betaWindow" style="z-index: 500">--}}
