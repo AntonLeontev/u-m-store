@@ -8,6 +8,7 @@
 	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="stylesheet" href="/onion/css/style.min.css?_v=20250113092227">
 	<link rel="shortcut icon" href="/onion/favicon.ico">
+	<link rel="stylesheet" href="{{ asset('css/footer.css?3') }}">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1016,6 +1017,7 @@
 				</div>
 			</section>
 		</main>
+		@livewire('footer-component')
 		<footer class="footer">
 			<div class="footer__container">
 

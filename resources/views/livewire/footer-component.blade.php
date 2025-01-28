@@ -229,10 +229,10 @@
                     @endforeach
                 </ul>
             </div>
-            <div class="city__close" id="cityClose"
+            {{-- <div class="city__close" id="cityClose"
                  onclick="document.querySelector('#cityWindow').style.display = 'none'">
                 <img src="{{ asset('images/close.svg') }}" alt="close">
-            </div>
+            </div> --}}
         </div>
 {{--        @if(!Cookie::has('beta_test') and Route::currentRouteName()=='product.details')--}}
 {{--            <div class="betatest">--}}
