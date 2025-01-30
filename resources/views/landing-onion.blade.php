@@ -12,6 +12,8 @@
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	@laravelPWA
+
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript" >
 	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -467,7 +469,7 @@
 														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
 														<li class="li-add"><span><strong>Базовая</strong> система аналитики</span>
 														</li>
-														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-add">Эквайринг и платежи</li>
 														<li class="li-close">Подключение маркетплейсов</li>
 														<li class="li-close">Реклама</li>
 														<li class="li-close">Аналитика бизнеса</li>
@@ -504,7 +506,7 @@
 														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
 														<li class="li-add"><span><strong>Расширенная</strong> система аналитики</span>
 														</li>
-														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-add">Эквайринг и платежи</li>
 														<li class="li-close">Подключение маркетплейсов</li>
 														<li class="li-close">Реклама</li>
 														<li class="li-close">Аналитика бизнеса</li>
@@ -627,7 +629,7 @@
 														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
 														<li class="li-add"><span><strong>Базовая</strong> система аналитики</span>
 														</li>
-														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-add">Эквайринг и платежи</li>
 														<li class="li-close">Подключение маркетплейсов</li>
 														<li class="li-close">Реклама</li>
 														<li class="li-close">Аналитика бизнеса</li>
@@ -663,7 +665,7 @@
 														<li class="li-add">Техподдержка 24/7 в мессенджере</li>
 														<li class="li-add"><span><strong>Расширенная</strong> система аналитики</span>
 														</li>
-														<li class="li-close">Эквайринг и платежи</li>
+														<li class="li-add">Эквайринг и платежи</li>
 														<li class="li-close">Подключение маркетплейсов</li>
 														<li class="li-close">Реклама</li>
 														<li class="li-close">Аналитика бизнеса</li>
