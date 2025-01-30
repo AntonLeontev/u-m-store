@@ -79,8 +79,8 @@ class InformationComponent extends Component
 
         }
 
-//        $article = Information::firstWhere('slug', $this->slug);
+       $article = Information::firstWhere('slug', $this->slug);
 
-        return view('livewire.information-component', compact('article_name'))->layout('layouts.base');
+        return view('livewire.information-component', compact('article_name', 'article'))->layout('layouts.base');
     }
 }

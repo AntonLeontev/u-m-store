@@ -30,9 +30,27 @@
             @elseif($slug=='oplata')
                 @livewire('info.oplata-component')
             @elseif($slug=='politika-konfidencialnosti')
-                @livewire('info.politika-konfidencialnosti-component')
+                {{-- @livewire('info.politika-konfidencialnosti-component', ['article' => $article->description]) --}}
+				<section class="privacy">
+					<div class="container">
+						<div class="privacy__inner">
+							<div class="privacy__text">
+								{!! $article->description !!}
+							</div>
+						</div>
+					</div>
+				</section>
             @elseif($slug=='polzovatelskoe-soglashenie')
-                @livewire('info.polzovatelskoe-soglashenie-component')
+                {{-- @livewire('info.polzovatelskoe-soglashenie-component') --}}
+				<section class="agreement">
+					<div class="container">
+						<div class="agreement__inner">
+							<div class="agreement__text">
+								{!! $article->description !!}
+							</div>
+						</div>
+					</div>
+				</section>
             @elseif($slug=='referalnaya-programma')
                 @livewire('info.referalnaya-programma-component')
             @elseif($slug=='sotrudnichestvo')
