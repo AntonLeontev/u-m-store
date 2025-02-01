@@ -737,13 +737,19 @@ class AdminEditProductComponent extends Component
     private function resizeImg($image, $resize_px, $folder_with_month, $timestamp) {
 
         if($image['url']) {
-        $preview_folder = $resize_px == 300 ? 'preview/' : '';
-        $imgName = $timestamp . "_".$resize_px."px." . $image['url']->extension();
-        $image_path = public_path('storage/products/'.$folder_with_month . "/$preview_folder" . $imgName);
-        Image::make($image['url']->temporaryUrl())->resize($resize_px, $resize_px)->save($image_path);
+			$preview_folder = $resize_px == 300 ? 'preview/' : '';
+			$imgName = $timestamp . "_".$resize_px."px." . $image['url']->extension();
+			$path = public_path('storage/products/'.$folder_with_month . "/$preview_folder");
+			$image_path = public_path('storage/products/'.$folder_with_month . "/$preview_folder" . $imgName);
 
-      if($preview_folder) return 'products/'. $folder_with_month .'/preview/'. $imgName;
-      else return 'products/'. $folder_with_month .'/'. $imgName;
+			if (!file_exists($path)) {
+                mkdir($path, 0777, true);
+            }
+
+			Image::make($image['url']->temporaryUrl())->resize($resize_px, $resize_px)->save($image_path);
+
+			if($preview_folder) return 'products/'. $folder_with_month .'/preview/'. $imgName;
+			else return 'products/'. $folder_with_month .'/'. $imgName;
         }
         return false;
     }
