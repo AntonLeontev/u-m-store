@@ -402,10 +402,10 @@ class CartComponent extends Component
         // if (Cart::instance('cart')->total() > 2000 && $this->delivery_city_sochi !=2) {
         //     $this->delivery_price = 0;
         // }
-//        if($this->gift_certificate_nominal)
-//        {
-//            Cart::istance('cart');
-//        }
+		//        if($this->gift_certificate_nominal)
+		//        {
+		//            Cart::istance('cart');
+		//        }
 
         if ($this->delivery && !$this->delivery_address && !$this->social_delivery) {
             session()->flash('delivery_address_error', 'Укажите адрес*');

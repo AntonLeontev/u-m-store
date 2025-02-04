@@ -1028,6 +1028,21 @@
 
 	</div>
 
+	<!-- /Chatra {/literal} -->
+	<script>
+		(function(d, w, c) {
+			w.ChatraID = 'ahq2M3nrdgCyWzXbn';
+			var s = d.createElement('script');
+			w[c] = w[c] || function() {
+				(w[c].q = w[c].q || []).push(arguments);
+			};
+			s.async = true;
+			s.src = 'https://call.chatra.io/chatra.js';
+			if (d.head) d.head.appendChild(s);
+		})(document, window, 'Chatra');
+	</script>
+	<!-- Chatra {literal} -->
+
 	<script src="/onion/js/app.min.js?_v=20250113092227"></script>
 </body>
 
