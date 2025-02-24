@@ -125,7 +125,7 @@ class AdminEditProductComponent extends Component
         $this->getImages($this->product_id);
         // генерируется блоки описания товара
         $this->renderDescBlocks($product_id);
-		$this->options = $product->options;
+		$this->options = $product->options ?? [];
     }
 
     /*
