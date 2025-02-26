@@ -75,7 +75,7 @@
                                         </div> --}}
 
                                         <div class="set__pos">
-                                            Название компании и ИНН:<span class="label__partner"></span>
+                                            Рекзвиты компании (ИНН ОГРН ИП/ООО):<span class="label__partner"></span>
                                         </div>
                                         <input type="text" wire:model="company_name" placeholder="ИП Иванов ИИ ИНН 1231244124">
                                         <div>

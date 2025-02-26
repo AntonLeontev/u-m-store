@@ -40,8 +40,8 @@
                         </div>
                         <form action="{{route('product.search')}}" id="form-search-top" name="form-search-top"
                               class="header__search" wire:ignore>
-                            @csrf
-                            @livewire('header-search-component')
+                            {{-- @csrf
+                            @livewire('header-search-component') --}}
                         </form>
                         <div class="header__logo">
 							<a href="/">

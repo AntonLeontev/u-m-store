@@ -22,7 +22,7 @@
                         <ul class="footer__list footerList">
                             {{-- <li><a href="{{route('info',['slug'=> 'katalog'])}}">Каталог</a></li> --}}
 {{--                            <li><a href="{{route('info',['slug'=> 'dostavka'])}}">Доставка</a></li>--}}
-                            <li><a href="{{route('info',['slug'=> 'oplata'])}} ">Оплата</a></li>
+                            {{-- <li><a href="{{route('info',['slug'=> 'oplata'])}} ">Оплата</a></li> --}}
 {{--                            <li><a href="#">Как сделать заказ</a></li>--}}
 {{--                            <li><a href="{{route('info',['slug'=> 'politika-konfidencialnosti'])}}">Политика--}}
 {{--                                    Конфиденциальности</a></li>--}}

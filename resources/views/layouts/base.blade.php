@@ -87,7 +87,7 @@
 								<div class="footer__title footerTitle">Покупателям</div>
 								<ul class="footer__list footerList">
 									{{--                            <li><a href="#">Доставка</a></li> --}}
-									<li><a href="{{ route('clone.oplata') }}">Оплата</a></li>
+									{{-- <li><a href="{{ route('clone.oplata') }}">Оплата</a></li> --}}
 									{{--                            <li><a href="#">Как сделать заказ</a></li> --}}
 									{{--                            <li><a href="#">Гарантия качества</a></li> --}}
 								</ul>
