@@ -32,7 +32,7 @@ class UserCreateShopComponent extends Component
 	public function submit(Request $request)
 	{
 		if (auth()->user()->partner_id !== null) {
-			return redirect(route('admin.dashboard'));
+			return redirect('https://onionmarket.ru/admin/dashboard');
 		}
 
 		$direction = Directions::firstWhere('slug', 'konstruktor');
@@ -56,7 +56,7 @@ class UserCreateShopComponent extends Component
 
 		$this->sendTelegramNotification();
 
-		return redirect(route('admin.dashboard'));
+		return redirect('https://onionmarket.ru/admin/dashboard');
 	}
 
 	private function createPartner(int $directionId): Partners
