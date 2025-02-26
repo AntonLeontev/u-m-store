@@ -5,6 +5,7 @@ use App\Models\Category;
 use App\Models\Filters;
 use App\Models\Product;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Storage;
@@ -45,6 +46,7 @@ class AdminEditProductComponent extends Component
         'store_old_price' => 'product_to_stores',
         'markup' => 'partners',
     ];
+
 
     public array $filters = [];
     public array $categories = [];
@@ -1043,6 +1045,18 @@ class AdminEditProductComponent extends Component
         // перед отображением изображений
         // проверяет наличие ново добавленных
         $this->addImages();
+
+		$partnerCategories = Category::where('partner_id', Auth::user()->partner_id)
+			->get(['id'])
+			->pluck('id')
+			->toArray()
+		;
+
+		$result = array_filter($this->categories, function ($category) use ($partnerCategories) {
+			return in_array($category['category_id'], $partnerCategories);
+		});
+
+		$this->categories = $result;
 
         return view('livewire.admin.product.admin-edit-product-component', [
             'need_uploader' => $this->needUploader()

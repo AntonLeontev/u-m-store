@@ -140,6 +140,7 @@
                 @endif
             </div>
         @endif
+		
 
         @if(!empty($add_categories))
             @for ($key = 0; $key < count($add_categories); $key++)
