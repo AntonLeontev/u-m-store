@@ -1,14 +1,14 @@
 @section('title')
 	@if ($seo)
-    	<title>{{$seo['title']}}</title>
+    	<title>{{$seo['title'] ?? ''}}</title>
 	@else
 		<title>Onion Market</title>
 	@endif
 @endsection
 @section('meta.description.keywords')
 	@if ($seo)
-    	<meta name="description" content="{{$seo['meta_description']}}"/>
-    	<meta name="keywords" content="{{$seo['meta_keywords']}}"/>
+    	<meta name="description" content="{{$seo['meta_description'] ?? ''}}"/>
+    	<meta name="keywords" content="{{$seo['meta_keywords'] ?? ''}}"/>
 	@endif
 @endsection
 @push('head')
